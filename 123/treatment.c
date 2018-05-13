@@ -1,27 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   parsing_d.c                                        :+:      :+:    :+:   */
+/*   treatment.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amasol <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/08 20:16:56 by amasol            #+#    #+#             */
-/*   Updated: 2018/05/08 20:16:57 by amasol           ###   ########.fr       */
+/*   Created: 2018/05/11 19:35:00 by amasol            #+#    #+#             */
+/*   Updated: 2018/05/11 19:35:02 by amasol           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
-
-int		ft_parsing_d(int d, va_list lst)
-{
-	intmax_t i;
-
-	i = 0;
-	if (i == va_arg(lst, intmax_t))
-	{
-		ft_putnbr(d);
-		printf("%d\n", d);
-		d++;
-	}
-	return (0);
-}
+//#include "ft_printf.h"
+//
+//int		treatment(char *str, va_list lst)
+//{
+//
+//	return (0);
+//}

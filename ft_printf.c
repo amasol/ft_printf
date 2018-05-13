@@ -12,26 +12,25 @@
 
 #include "ft_printf.h"
 
-int				ft_printf(const char *str, ...)
+int				ft_printf(const char *format, ...)
 {
 	va_list		lst;
-	int i;
-	int j;
+//	int i;
+//	int j;
 
-	i = 0;
-	va_start(lst, str);
-//	while (str[i] && va_arg(lst, char *))
-	while (str[i])
+//	i = 0;
+	va_start(lst, format);
+	while (*format)
 	{
-		if (str[i] == '%')
-		{
-			j = parsing((char *)str, lst);
-			i++;
-		}
-		write(1, &str[i], 1);
-		i++;
+//		j = parsing((char *)&str[i]);
+//		i = parsing((char *)&str[i], lst);
+//		i++;
+		find((char *)format);
+		pars((char *)format);
+//		form(&format);
+		format++;
 	}
-	write(1, "\n", 1);
+//	write(1, "\n", 1);
 	va_end(lst);
 	return (0);
 }
@@ -52,3 +51,5 @@ int		main(int ac, char **av)
 	}
 	return (0);
 }
+
+
