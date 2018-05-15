@@ -22,7 +22,10 @@ int		main(void)
 
 int		main()
 {
-	char *str = "111";
-	printf("%hhd\n", 129);
+	int i;
+	i = 0;
+
+	char str[] = "1asd";
+	printf("%C\n", *str);
 	return (0);
 }

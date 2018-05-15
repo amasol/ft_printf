@@ -30,7 +30,7 @@ int			ft_qualifier(char s)
 
 //			refinement - уточнение ..
 //	использовать уже когда пройдут вся возможная длинна, если она есть!
-/*
+
 int			ft_refinement(char s)
 {
 	if (s == 'D' || s == 'd' || s == 'i')
@@ -51,7 +51,7 @@ int			ft_refinement(char s)
 		return (8);
 	return (0);
 }
- */
+
 //---------------------------
 
 /*
@@ -76,8 +76,8 @@ int			ft_length(char *tmp)
 		return (ft_length_h(&tmp[i]));
 	return (0);
 }
- */
- // -------------------------------------------------
+*/
+// -------------------------------------------------
 /*
 int		ft_length_hh(char *tmp)
 {
@@ -90,7 +90,7 @@ int		ft_length_hh(char *tmp)
 	}
 	return (0);
 }
- */
+*/
 /*
 int		ft_length_h(char *tmp)
 {

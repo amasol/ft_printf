@@ -1,37 +1,34 @@
-NAME = ft_printf
+NAME := libftprintf.a
 
-SRCDIR =
-SRCNAMES = $(shell ls $(SRCDIR) | grep -E ".+\.c")
-SRC = $(addprefix $(SRCDIR), $(SRCNAMES))
-INC =
-BUILDDIR = ./
-BUILDOBJS = $(addprefix $(BUILDDIR), $(SRCNAMES:.c=.o))
+SRC := 	ft_printf.c ft_qualifier.c find.c
 
-LIBDIR = ./libft/
-LIBFT = ./libft/libft.a
+OBJ_DIR := obj
 
-CC = gcc
-CFLAGS = -Wall -Wextra -Werror
+FLAGS := -Wall -Wextra -Werror
+
+LIBDIR := ./libft
+
+OBJ := $(addprefix $(OBJ_DIR)/, $(SRC:.c=.o))
 
 all: $(NAME)
 
-$(BUILDDIR)%.o:$(SRCDIR)%.c
-	$(CC) $(CFLAGS) -I$(LIBINC) -I$(INC) -o $@ -c $<
+$(NAME): $(OBJ)
+	@make -C $(LIBDIR)
+	@cd $(LIBDIR) && mv *.o ../obj
+	@ar rc $(NAME) obj/*.o
 
-$(NAME): $(LIBFT) $(BUILDOBJS)
-	$(CC) $(CFLAGS) -o $(NAME) $(BUILDOBJS) $(LIBFT)
-
-$(LIBFT):
-	make -C $(LIBDIR)
+$(OBJ_DIR)/%.o: ./%.c
+	@mkdir -p $(OBJ_DIR)
+	@gcc $(FLAGS) -c $< -o $@
 
 clean:
-	rm -f $(BUILDOBJS)
-	make clean -C $(LIBDIR)
+	@make clean -C $(LIBDIR)
+	@rm -rf obj
 
 fclean: clean
-	rm -rf $(NAME)
-	make fclean -C $(LIBDIR)
+	@/bin/rm -f $(NAME)
+	@make fclean -C $(LIBDIR)
 
 re: fclean all
 
-.PHONY: all fclean clean re
+.PHONY: all clean fclean re

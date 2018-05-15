@@ -34,15 +34,17 @@
 
 
 int				ft_printf(const char *format, ...);
-void			find(char *format);
-void			pars(char *format);
+void			pars(char *format, va_list lst);
 int				ft_qualifier(char s);
 
 //-------------------------------------------------
 //int				parsing(char *format/*, va_list lst*/);
 //int				parsing_d_i(va_list lst);
 //int				station_flags_qualifiers(char *tmp/*, va_list lst*/);
-//int				ft_refinement(char s);
+int				ft_refinement(char s);
+int				ft_flag_Ddi(va_list lst);
+char			*ft_flag_Ss(va_list lst, char *format);
+//void			ft_flag_Cc(va_list lst, char *format);
 
 //----------------------------------------------------
 //static	int		ft_determination_of(char s, va_list lst);
@@ -51,7 +53,7 @@ int				ft_qualifier(char s);
 //--------------------------------------------------
 
 //обработка длинный всех флагов!
-//int				ft_length(char *tmp/*, va_list lst*/);
+int				ft_length(char *tmp/*, va_list lst*/);
 //int				ft_length_hh(char *tmp);
 //int				ft_length_h(char *tmp);
 //int				ft_length_ll(char *tmp);
