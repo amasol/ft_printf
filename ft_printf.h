@@ -32,9 +32,17 @@
 //	int	hh	= 6;
 //}			t_flag;
 
+// hh = char(- 128 +127)
+// h  = short int(- 32768 + 32767)
+// ll = long long int (-----------)
+// l  = long int	(меньше ll)
+// z  = size_t
+// j  = int max;
+
+
 
 int				ft_printf(const char *format, ...);
-void			pars(char *format, va_list lst);
+void			pars(char format, va_list lst);
 int				ft_qualifier(char s);
 
 //-------------------------------------------------
@@ -42,9 +50,9 @@ int				ft_qualifier(char s);
 //int				parsing_d_i(va_list lst);
 //int				station_flags_qualifiers(char *tmp/*, va_list lst*/);
 int				ft_refinement(char s);
-int				ft_flag_Ddi(va_list lst);
-char			*ft_flag_Ss(va_list lst, char *format);
-//void			ft_flag_Cc(va_list lst, char *format);
+int				ft_flag_Ddi(va_list lst, char format);
+int				ft_flag_Ss(va_list lst, char format);
+int				ft_flag_Cc(va_list lst, char format);
 
 //----------------------------------------------------
 //static	int		ft_determination_of(char s, va_list lst);

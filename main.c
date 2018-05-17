@@ -3,9 +3,13 @@
 int		main(void)
 {
 	char str[] = "text";
-	ft_printf("(my)--> %s", str);
-//	ft_printf("(my)--> %s", str);
-	printf("(org)--> %s", str);
-//	ft_printf("TEXT TEXT -> %%d", 1);
-	return 0;
+	int j = 4;
+
+	 ft_printf("(my)--> %i", j);
+	 ft_printf("(my)--> %d", j);
+	 ft_printf("(my)--> %c", 'a');
+	 ft_printf("(my)--> %i%c%d%i%s", j, 's', 1, 2, "a");
+	 ft_printf("(my)--> %s", "text    text\n text");
+	 printf("(org)--> %d", 5);
+	return (0);
 }

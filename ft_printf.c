@@ -6,7 +6,7 @@
 /*   By: amasol <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/12 13:21:09 by amasol            #+#    #+#             */
-/*   Updated: 2018/05/02 20:38:46 by amasol           ###   ########.fr       */
+/*   Updated: 2018/05/16 15:06:23 by amasol           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,13 @@ int				ft_printf(const char *format, ...)
 		if (*format == '%')
 		{
 			format++;
-			pars((char *) format, lst);
+			pars(*format, lst);
 		}
 		else
 		{
 			ft_putchar(*format);
 		}
-		//pars((char *)format, lst);
+//		pars((char *)format, lst);
 //		form(&format);
 		format++;
 	}
