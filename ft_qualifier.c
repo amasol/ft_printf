@@ -28,7 +28,7 @@ int			ft_qualifier(char s)
 		return (0);
 }
 
-//			refinement - уточнение ..
+//			refinement - уточнение ...
 //	использовать уже когда пройдут вся возможная длинна, если она есть!
 
 int			ft_refinement(char s)

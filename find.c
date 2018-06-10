@@ -46,7 +46,7 @@ int			ft_flag_Cc(va_list lst, char format)
 
 // Если указан модификатор l, то строка интерпитируется как wchar_t*.
 // Для функции wprintf строка по умолчанию обрабатывается как wchar_t*.
-//
+
 int			ft_flag_Ss(va_list lst, char format)
 {
 	char *str;
