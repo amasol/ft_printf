@@ -4,9 +4,12 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
+  "/Users/amasol/amasol/project/ft_printf/cast.c" "/Users/amasol/amasol/project/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/cast.c.o"
   "/Users/amasol/amasol/project/ft_printf/find.c" "/Users/amasol/amasol/project/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/find.c.o"
   "/Users/amasol/amasol/project/ft_printf/ft_printf.c" "/Users/amasol/amasol/project/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_printf.c.o"
   "/Users/amasol/amasol/project/ft_printf/ft_qualifier.c" "/Users/amasol/amasol/project/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_qualifier.c.o"
+  "/Users/amasol/amasol/project/ft_printf/itoa_b.c" "/Users/amasol/amasol/project/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/itoa_b.c.o"
+  "/Users/amasol/amasol/project/ft_printf/itoa_b_uintmax.c" "/Users/amasol/amasol/project/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/itoa_b_uintmax.c.o"
   "/Users/amasol/amasol/project/ft_printf/libft/ft_atoi.c" "/Users/amasol/amasol/project/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/libft/ft_atoi.c.o"
   "/Users/amasol/amasol/project/ft_printf/libft/ft_bzero.c" "/Users/amasol/amasol/project/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/libft/ft_bzero.c.o"
   "/Users/amasol/amasol/project/ft_printf/libft/ft_fact.c" "/Users/amasol/amasol/project/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/libft/ft_fact.c.o"

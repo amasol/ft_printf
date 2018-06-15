@@ -123,6 +123,33 @@ ft_printf/fast:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/build
 .PHONY : ft_printf/fast
 
+cast.o: cast.c.o
+
+.PHONY : cast.o
+
+# target to build an object file
+cast.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/cast.c.o
+.PHONY : cast.c.o
+
+cast.i: cast.c.i
+
+.PHONY : cast.i
+
+# target to preprocess a source file
+cast.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/cast.c.i
+.PHONY : cast.c.i
+
+cast.s: cast.c.s
+
+.PHONY : cast.s
+
+# target to generate assembly for a file
+cast.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/cast.c.s
+.PHONY : cast.c.s
+
 find.o: find.c.o
 
 .PHONY : find.o
@@ -203,6 +230,60 @@ ft_qualifier.s: ft_qualifier.c.s
 ft_qualifier.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_qualifier.c.s
 .PHONY : ft_qualifier.c.s
+
+itoa_b.o: itoa_b.c.o
+
+.PHONY : itoa_b.o
+
+# target to build an object file
+itoa_b.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/itoa_b.c.o
+.PHONY : itoa_b.c.o
+
+itoa_b.i: itoa_b.c.i
+
+.PHONY : itoa_b.i
+
+# target to preprocess a source file
+itoa_b.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/itoa_b.c.i
+.PHONY : itoa_b.c.i
+
+itoa_b.s: itoa_b.c.s
+
+.PHONY : itoa_b.s
+
+# target to generate assembly for a file
+itoa_b.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/itoa_b.c.s
+.PHONY : itoa_b.c.s
+
+itoa_b_uintmax.o: itoa_b_uintmax.c.o
+
+.PHONY : itoa_b_uintmax.o
+
+# target to build an object file
+itoa_b_uintmax.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/itoa_b_uintmax.c.o
+.PHONY : itoa_b_uintmax.c.o
+
+itoa_b_uintmax.i: itoa_b_uintmax.c.i
+
+.PHONY : itoa_b_uintmax.i
+
+# target to preprocess a source file
+itoa_b_uintmax.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/itoa_b_uintmax.c.i
+.PHONY : itoa_b_uintmax.c.i
+
+itoa_b_uintmax.s: itoa_b_uintmax.c.s
+
+.PHONY : itoa_b_uintmax.s
+
+# target to generate assembly for a file
+itoa_b_uintmax.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/itoa_b_uintmax.c.s
+.PHONY : itoa_b_uintmax.c.s
 
 libft/ft_atoi.o: libft/ft_atoi.c.o
 
@@ -1914,6 +1995,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... ft_printf"
+	@echo "... cast.o"
+	@echo "... cast.i"
+	@echo "... cast.s"
 	@echo "... find.o"
 	@echo "... find.i"
 	@echo "... find.s"
@@ -1923,6 +2007,12 @@ help:
 	@echo "... ft_qualifier.o"
 	@echo "... ft_qualifier.i"
 	@echo "... ft_qualifier.s"
+	@echo "... itoa_b.o"
+	@echo "... itoa_b.i"
+	@echo "... itoa_b.s"
+	@echo "... itoa_b_uintmax.o"
+	@echo "... itoa_b_uintmax.i"
+	@echo "... itoa_b_uintmax.s"
 	@echo "... libft/ft_atoi.o"
 	@echo "... libft/ft_atoi.i"
 	@echo "... libft/ft_atoi.s"

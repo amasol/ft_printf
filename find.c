@@ -11,23 +11,31 @@ void		pars(char format, va_list lst)
 			ft_flag_Cc(lst, format);
 		else if (ft_refinement(format) == 3)
 			ft_flag_Ss(lst, format);
-	/*	else if (ft_refinement(format) == 4)
-			ft_flag_Xx();
+		else if (ft_refinement(format) == 4)
+			ft_flag_Xx(lst, format);
 		else if (ft_refinement(format) == 5)
-			ft_flag_Oo();
+			ft_flag_Oo(lst, format);
 		else if (ft_refinement(format) == 6)
-			ft_flag_Uu();
+			ft_flag_Uu(lst, format);
 		else if (ft_refinement(format) == 7)
-			ft_flag_p();*/
+			ft_flag_p(lst, format);
 	}
 }
 int			ft_flag_Ddi(va_list lst, char format)
 {
-	int	i;
+	int		i;
+	long	j;
 
-	i = va_arg(lst, int);
 	if (format == 'd' || format == 'i')
+	{
+		i = va_arg(lst, int);
 		ft_putnbr(i);
+	}
+	else if (format == 'D')
+	{
+		j = va_arg(lst, long);
+		ft_putnbr(j);
+	}
 	 return (1);
 }
 
@@ -49,7 +57,7 @@ int			ft_flag_Cc(va_list lst, char format)
 
 int			ft_flag_Ss(va_list lst, char format)
 {
-	char *str;
+	char	*str;
 
 	if (format == 's')
 	{
@@ -59,3 +67,65 @@ int			ft_flag_Ss(va_list lst, char format)
 	return (1);
 }
 
+int			ft_flag_Xx(va_list lst, char format)
+{
+	uintmax_t i;
+	char	*str;
+
+	if (format == 'x')
+	{
+		i = va_arg(lst, uintmax_t);
+		str = ft_itoa_base_uintmax(i, 16, 'x');
+		ft_putstr(str);
+	}
+	else if (format == 'X')
+	{
+		i = va_arg(lst, uintmax_t);
+		str = ft_itoa_base_uintmax(i, 16, 'X');
+		ft_putstr(str);
+	}
+	return (1);
+}
+
+int 		ft_flag_Uu(va_list lst, char format)
+{
+	uintmax_t i;
+	char	*str;
+	// спецификатор (U) стоит в формате uintmax_t...какой должен быть маленькая (U)
+	if (format == 'u' || format == 'U')
+	{
+		i = va_arg(lst, uintmax_t);
+		str = ft_itoa_base_uintmax(i, 10, 'u');
+		ft_putstr(str);
+	}
+	return (1);
+}
+
+int			ft_flag_Oo(va_list lst, char format)
+{
+	uintmax_t i;
+	char	*str;
+	// спецификатор (O) стоит в формате uintmax_t...какой должен быть маленькая (о)
+	if (format == 'o' || format == 'O')
+	{
+		i = va_arg(lst, uintmax_t);
+		str = ft_itoa_base_uintmax(i, 8, 'o');
+		ft_putstr(str);
+	}
+	return (1);
+}
+
+int 		ft_flag_p(va_list lst, char format)
+{
+	uintmax_t	i;
+	char		*str;
+
+	if (format == 'p')
+	{
+		i = va_arg(lst, uintmax_t);
+		str = ft_itoa_base_uintmax(i, 16, 'x');
+		ft_putstr("0x");
+		ft_putstr(str);
+	}
+	return (1);
+}

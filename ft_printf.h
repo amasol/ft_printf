@@ -19,8 +19,8 @@
 # include <stdarg.h>
 #include <unistd.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <stdarg.h>
-
 
 //typedef struct s_flag
 //{
@@ -40,10 +40,13 @@
 // j  = int max;
 
 
-
 int				ft_printf(const char *format, ...);
 void			pars(char format, va_list lst);
 int				ft_qualifier(char s);
+char			*ft_itoa_base(intmax_t num, int base, char c);
+char			*ft_itoa_base_uintmax(uintmax_t nbr, int base, char c);
+//intmax_t		cats_intmax(char format, va_list lst);
+//uintmax_t		cats_uintmax(char format, va_list lst);
 
 //-------------------------------------------------
 //int				parsing(char *format/*, va_list lst*/);
@@ -53,7 +56,10 @@ int				ft_refinement(char s);
 int				ft_flag_Ddi(va_list lst, char format);
 int				ft_flag_Ss(va_list lst, char format);
 int				ft_flag_Cc(va_list lst, char format);
-
+int				ft_flag_Xx(va_list lst, char format);
+int				ft_flag_Uu(va_list lst, char format);
+int				ft_flag_Oo(va_list lst, char format);
+int				ft_flag_p(va_list lst, char format);
 //----------------------------------------------------
 //static	int		ft_determination_of(char s, va_list lst);
 
@@ -61,7 +67,7 @@ int				ft_flag_Cc(va_list lst, char format);
 //--------------------------------------------------
 
 //обработка длинный всех флагов!
-int				ft_length(char *tmp/*, va_list lst*/);
+int					ft_length(char *tmp/*, va_list lst*/);
 //int				ft_length_hh(char *tmp);
 //int				ft_length_h(char *tmp);
 //int				ft_length_ll(char *tmp);

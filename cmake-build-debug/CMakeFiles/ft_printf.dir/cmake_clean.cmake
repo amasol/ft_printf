@@ -65,6 +65,9 @@ file(REMOVE_RECURSE
   "CMakeFiles/ft_printf.dir/ft_printf.c.o"
   "CMakeFiles/ft_printf.dir/ft_qualifier.c.o"
   "CMakeFiles/ft_printf.dir/main.c.o"
+  "CMakeFiles/ft_printf.dir/itoa_b.c.o"
+  "CMakeFiles/ft_printf.dir/itoa_b_uintmax.c.o"
+  "CMakeFiles/ft_printf.dir/cast.c.o"
   "ft_printf.pdb"
   "ft_printf"
 )

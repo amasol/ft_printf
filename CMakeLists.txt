@@ -71,4 +71,7 @@ add_executable(ft_printf
         ft_printf.c
         ft_printf.h
         ft_qualifier.c
-        main.c)
+        main.c
+        itoa_b.c
+        itoa_b_uintmax.c
+        cast.c)
