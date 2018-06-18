@@ -22,12 +22,17 @@ int		main(void)
 //	ft_printf("(my)--> (8)->%o", -1512321312);
 //	ft_printf("(my)--> (8)->%O", -1512321312);
 //	printf("(org)--> (8)->%o\n", -1512321312);
-	ft_printf("(my)--> (16)->%x", a);
-	ft_printf("(my)--> (16)->%p", a);
-	printf("(org)--> (16)->%p\n", a);
+//	ft_printf("(my)--> (16)->%x", a);
+//	ft_printf("(my)--> (16)->%p", a);
+//	printf("(org)--> (16)->%p\n", a);
 
 
-//	int i = 123;
-//	printf("(org)-->%O\n", i);
+
+
+	ft_printf("(my)--> %h");
+
+
+
+
 	return (0);
 }

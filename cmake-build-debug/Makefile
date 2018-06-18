@@ -123,33 +123,6 @@ ft_printf/fast:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/build
 .PHONY : ft_printf/fast
 
-cast.o: cast.c.o
-
-.PHONY : cast.o
-
-# target to build an object file
-cast.c.o:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/cast.c.o
-.PHONY : cast.c.o
-
-cast.i: cast.c.i
-
-.PHONY : cast.i
-
-# target to preprocess a source file
-cast.c.i:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/cast.c.i
-.PHONY : cast.c.i
-
-cast.s: cast.c.s
-
-.PHONY : cast.s
-
-# target to generate assembly for a file
-cast.c.s:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/cast.c.s
-.PHONY : cast.c.s
-
 find.o: find.c.o
 
 .PHONY : find.o
@@ -1986,6 +1959,33 @@ main.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/main.c.s
 .PHONY : main.c.s
 
+parsing.o: parsing.c.o
+
+.PHONY : parsing.o
+
+# target to build an object file
+parsing.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/parsing.c.o
+.PHONY : parsing.c.o
+
+parsing.i: parsing.c.i
+
+.PHONY : parsing.i
+
+# target to preprocess a source file
+parsing.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/parsing.c.i
+.PHONY : parsing.c.i
+
+parsing.s: parsing.c.s
+
+.PHONY : parsing.s
+
+# target to generate assembly for a file
+parsing.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/parsing.c.s
+.PHONY : parsing.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1995,9 +1995,6 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... ft_printf"
-	@echo "... cast.o"
-	@echo "... cast.i"
-	@echo "... cast.s"
 	@echo "... find.o"
 	@echo "... find.i"
 	@echo "... find.s"
@@ -2202,6 +2199,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... parsing.o"
+	@echo "... parsing.i"
+	@echo "... parsing.s"
 .PHONY : help
 
 

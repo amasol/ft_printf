@@ -47,50 +47,65 @@ int			ft_refinement(char s)
 		return (6);
 	else if (s == 'p')
 		return (7);
-	else if (s == '%')
-		return (8);
 	return (0);
 }
 
-//---------------------------
 
-/*
+
 //-------------------проверить отдельно функцию ....
-//			lenght - длинна
-int			ft_length(char *tmp)
-{
-	int i;
 
-	i = 0;
-	if (tmp[i] == 'h' && tmp[i + 1] == 'h')
-		return (ft_length_hh(&tmp[i]));
-	else if (tmp[i] == 'l' && tmp[i + 1] == 'l')
-		return (ft_length_ll(&tmp[i]));
-	else if (tmp[i] == 'z')
-		return (ft_length_z(&tmp[i]));
-	else if (tmp[i] == 'j')
-		return (ft_length_j(&tmp[i]));
-	else if (tmp[i] == 'l')
-		return (ft_length_l(&tmp[i]));
-	else if (tmp[i] == 'h')
-		return (ft_length_h(&tmp[i]));
+int			ft_flag_check(char c)
+{
+	if (c == 'h' || c == 'l'
+		|| c == 'j' || c == 'z'
+		|| c == '+' || c == '-'
+		|| c == '0' || c == '#'
+		|| c == '%')
+		return (1);
+	else
+		return (0);
+}
+
+int			ft_flag(char format)
+{
+	if (format == 'h' && format + 1 == 'h')
+		return (1);
+	else if (format == 'l' && format + 1 == 'l')
+		return (2);
+	else if (format == 'z')
+		return (3);
+	else if (format == 'j')
+		return (4);
+	else if (format == 'l')
+		return (5);
+	else if (format == 'h')
+		return (6);
+	else if (format == '+')
+		return (7);
+	else if (format == '-')
+		return (8);
+	else if (format == '0')
+		return (9);
+	else if (format == '#')
+		return (10);
+	else if (format == '%' && format + 1 == '%')
+		return (11);
 	return (0);
 }
-*/
+
 // -------------------------------------------------
-/*
-int		ft_length_hh(char *tmp)
+int		ft_length_hh(char format)
 {
-	int i;
-
-	i = 0;
-	if (tmp[i])
+	write(1, "--->>>> ", 15);
+//	if (format == 'h' && format + 1 == 'h')
+	if (format == 'h')
 	{
-		tmp = (char)va_arg(int, lst);
+//		format = (char)va_arg(int, lst);
+		write(1, "hello world", 15);
 	}
-	return (0);
+	return (1);
 }
-*/
+
 /*
 int		ft_length_h(char *tmp)
 {

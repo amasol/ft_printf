@@ -1689,28 +1689,28 @@ CMakeFiles/ft_printf.dir/itoa_b_uintmax.c.o.provides: CMakeFiles/ft_printf.dir/i
 CMakeFiles/ft_printf.dir/itoa_b_uintmax.c.o.provides.build: CMakeFiles/ft_printf.dir/itoa_b_uintmax.c.o
 
 
-CMakeFiles/ft_printf.dir/cast.c.o: CMakeFiles/ft_printf.dir/flags.make
-CMakeFiles/ft_printf.dir/cast.c.o: ../cast.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/amasol/amasol/project/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building C object CMakeFiles/ft_printf.dir/cast.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf.dir/cast.c.o   -c /Users/amasol/amasol/project/ft_printf/cast.c
+CMakeFiles/ft_printf.dir/parsing.c.o: CMakeFiles/ft_printf.dir/flags.make
+CMakeFiles/ft_printf.dir/parsing.c.o: ../parsing.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/amasol/amasol/project/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building C object CMakeFiles/ft_printf.dir/parsing.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf.dir/parsing.c.o   -c /Users/amasol/amasol/project/ft_printf/parsing.c
 
-CMakeFiles/ft_printf.dir/cast.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_printf.dir/cast.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/amasol/amasol/project/ft_printf/cast.c > CMakeFiles/ft_printf.dir/cast.c.i
+CMakeFiles/ft_printf.dir/parsing.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_printf.dir/parsing.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/amasol/amasol/project/ft_printf/parsing.c > CMakeFiles/ft_printf.dir/parsing.c.i
 
-CMakeFiles/ft_printf.dir/cast.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf.dir/cast.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/amasol/amasol/project/ft_printf/cast.c -o CMakeFiles/ft_printf.dir/cast.c.s
+CMakeFiles/ft_printf.dir/parsing.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf.dir/parsing.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/amasol/amasol/project/ft_printf/parsing.c -o CMakeFiles/ft_printf.dir/parsing.c.s
 
-CMakeFiles/ft_printf.dir/cast.c.o.requires:
+CMakeFiles/ft_printf.dir/parsing.c.o.requires:
 
-.PHONY : CMakeFiles/ft_printf.dir/cast.c.o.requires
+.PHONY : CMakeFiles/ft_printf.dir/parsing.c.o.requires
 
-CMakeFiles/ft_printf.dir/cast.c.o.provides: CMakeFiles/ft_printf.dir/cast.c.o.requires
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/cast.c.o.provides.build
-.PHONY : CMakeFiles/ft_printf.dir/cast.c.o.provides
+CMakeFiles/ft_printf.dir/parsing.c.o.provides: CMakeFiles/ft_printf.dir/parsing.c.o.requires
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/parsing.c.o.provides.build
+.PHONY : CMakeFiles/ft_printf.dir/parsing.c.o.provides
 
-CMakeFiles/ft_printf.dir/cast.c.o.provides.build: CMakeFiles/ft_printf.dir/cast.c.o
+CMakeFiles/ft_printf.dir/parsing.c.o.provides.build: CMakeFiles/ft_printf.dir/parsing.c.o
 
 
 # Object files for target ft_printf
@@ -1783,7 +1783,7 @@ ft_printf_OBJECTS = \
 "CMakeFiles/ft_printf.dir/main.c.o" \
 "CMakeFiles/ft_printf.dir/itoa_b.c.o" \
 "CMakeFiles/ft_printf.dir/itoa_b_uintmax.c.o" \
-"CMakeFiles/ft_printf.dir/cast.c.o"
+"CMakeFiles/ft_printf.dir/parsing.c.o"
 
 # External object files for target ft_printf
 ft_printf_EXTERNAL_OBJECTS =
@@ -1856,7 +1856,7 @@ ft_printf: CMakeFiles/ft_printf.dir/ft_qualifier.c.o
 ft_printf: CMakeFiles/ft_printf.dir/main.c.o
 ft_printf: CMakeFiles/ft_printf.dir/itoa_b.c.o
 ft_printf: CMakeFiles/ft_printf.dir/itoa_b_uintmax.c.o
-ft_printf: CMakeFiles/ft_printf.dir/cast.c.o
+ft_printf: CMakeFiles/ft_printf.dir/parsing.c.o
 ft_printf: CMakeFiles/ft_printf.dir/build.make
 ft_printf: CMakeFiles/ft_printf.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/amasol/amasol/project/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Linking C executable ft_printf"
@@ -1935,7 +1935,7 @@ CMakeFiles/ft_printf.dir/requires: CMakeFiles/ft_printf.dir/ft_qualifier.c.o.req
 CMakeFiles/ft_printf.dir/requires: CMakeFiles/ft_printf.dir/main.c.o.requires
 CMakeFiles/ft_printf.dir/requires: CMakeFiles/ft_printf.dir/itoa_b.c.o.requires
 CMakeFiles/ft_printf.dir/requires: CMakeFiles/ft_printf.dir/itoa_b_uintmax.c.o.requires
-CMakeFiles/ft_printf.dir/requires: CMakeFiles/ft_printf.dir/cast.c.o.requires
+CMakeFiles/ft_printf.dir/requires: CMakeFiles/ft_printf.dir/parsing.c.o.requires
 
 .PHONY : CMakeFiles/ft_printf.dir/requires
 

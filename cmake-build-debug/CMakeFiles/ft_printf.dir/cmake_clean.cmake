@@ -67,7 +67,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/ft_printf.dir/main.c.o"
   "CMakeFiles/ft_printf.dir/itoa_b.c.o"
   "CMakeFiles/ft_printf.dir/itoa_b_uintmax.c.o"
-  "CMakeFiles/ft_printf.dir/cast.c.o"
+  "CMakeFiles/ft_printf.dir/parsing.c.o"
   "ft_printf.pdb"
   "ft_printf"
 )

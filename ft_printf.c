@@ -23,7 +23,8 @@ int				ft_printf(const char *format, ...)
 		if (*format == '%')
 		{
 			format++;
-			pars(*format, lst);
+			parsing(*format);
+//			pars(*format, lst);
 		}
 		else
 		{
