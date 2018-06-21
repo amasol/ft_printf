@@ -10,13 +10,116 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+
+//	char c;
+//	c = str[i];  для дебагера ! удобно!
+//		printf("str[%d] = %c\n", i, str[i]);
+
 #include "ft_printf.h"
 
-void			parsing(char format)
+void			parsing(char *str)
 {
-//	создать тут структуры по которым будем идти и писать все влаги!!!!
-	if ()
+	t_flag	flag;
+	int 	i;
+
+	i = 0;
+//	возможно не должно быть \0;
+	if (str[i])
+		initialization_flag(&flag);
+	while (str[i] != '\0')
+	{
+		parsing_one(&str[i], &flag);
+		parsing_two(&str[i], &flag);
+		i++;
+	}
 }
+
+void			initialization_flag(t_flag *flag)
+{
+	flag->plus				= 0;
+	flag->minus				= 0;
+	flag->slash				= 0;
+	flag->space				= 0;
+	flag->zero				= 0;
+	flag->width				= 0;
+	flag->precision			= 0;
+	flag->zero_precision	= 0;
+
+	flag->hh 				= 0;
+	flag->h 				= 0;
+	flag->ll 				= 0;
+	flag->l 				= 0;
+	flag->j 				= 0;
+	flag->z 				= 0;
+}
+
+void			parsing_one(char *str, t_flag *flag)
+{
+	int i;
+
+	i = 0;
+//	while (str[i])
+	if (str[i])
+	{
+		if (str[i] == '+')
+			flag->plus = 1;
+		if (str[i] == '-')
+			flag->minus = 1;
+		if (str[i] == '#')
+			flag->slash = 1;
+		if (str[i] == ' ')
+			flag->space = 1;
+		if (str[i] == '0')
+			flag->zero = 1;
+//		i++;
+	}
+}
+
+
+void			parsing_two(char *str, t_flag *flag)
+{
+	int i;
+
+	i = 0;
+	if (str[i])
+	{
+		if (str[i] == 'h' && str[i + 1] == 'h')
+			flag->hh = 1;
+		if (str[i] == 'h')
+			flag->h = 1;
+		if (str[i] == 'l' && str[i + 1] == 'l')
+			flag->ll = 1;
+		if (str[i] == 'l')
+			flag->l = 1;
+		if (str[i] == 'j')
+			flag->j = 1;
+		if (str[i] == 'z')
+			flag->z = 1;
+//		i++;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*void			parsing(char format)
 {

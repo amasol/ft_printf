@@ -9,9 +9,21 @@ CMakeFiles/ft_printf.dir/ft_printf.c.o: .././libft/libft.h
 CMakeFiles/ft_printf.dir/ft_printf.c.o: ../ft_printf.c
 CMakeFiles/ft_printf.dir/ft_printf.c.o: ../ft_printf.h
 
+CMakeFiles/ft_printf.dir/ft_putnbr_long.c.o: .././libft/libft.h
+CMakeFiles/ft_printf.dir/ft_putnbr_long.c.o: ../ft_printf.h
+CMakeFiles/ft_printf.dir/ft_putnbr_long.c.o: ../ft_putnbr_long.c
+
 CMakeFiles/ft_printf.dir/ft_qualifier.c.o: .././libft/libft.h
 CMakeFiles/ft_printf.dir/ft_qualifier.c.o: ../ft_printf.h
 CMakeFiles/ft_printf.dir/ft_qualifier.c.o: ../ft_qualifier.c
+
+CMakeFiles/ft_printf.dir/itoa_b.c.o: .././libft/libft.h
+CMakeFiles/ft_printf.dir/itoa_b.c.o: ../ft_printf.h
+CMakeFiles/ft_printf.dir/itoa_b.c.o: ../itoa_b.c
+
+CMakeFiles/ft_printf.dir/itoa_b_uintmax.c.o: .././libft/libft.h
+CMakeFiles/ft_printf.dir/itoa_b_uintmax.c.o: ../ft_printf.h
+CMakeFiles/ft_printf.dir/itoa_b_uintmax.c.o: ../itoa_b_uintmax.c
 
 CMakeFiles/ft_printf.dir/libft/ft_atoi.c.o: ../libft/ft_atoi.c
 CMakeFiles/ft_printf.dir/libft/ft_atoi.c.o: ../libft/libft.h
@@ -193,4 +205,8 @@ CMakeFiles/ft_printf.dir/libft/ft_toupper.c.o: ../libft/libft.h
 CMakeFiles/ft_printf.dir/main.c.o: .././libft/libft.h
 CMakeFiles/ft_printf.dir/main.c.o: ../ft_printf.h
 CMakeFiles/ft_printf.dir/main.c.o: ../main.c
+
+CMakeFiles/ft_printf.dir/parsing.c.o: .././libft/libft.h
+CMakeFiles/ft_printf.dir/parsing.c.o: ../ft_printf.h
+CMakeFiles/ft_printf.dir/parsing.c.o: ../parsing.c
 

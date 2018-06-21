@@ -22,6 +22,7 @@
 #include <stdlib.h>
 #include <stdarg.h>
 
+
 typedef struct s_flag
 {
 //	int	z		= 1;
@@ -30,12 +31,24 @@ typedef struct s_flag
 //	int	l		= 4;
 //	int	h		= 5;
 //	int	hh		= 6;
-	int plus	= 0;
-	int minus	= 0;
-	int rechet	= 0;
-	int probel	= 0;
-	int nol		= 0;
+	int		plus;
+	int		minus;
+	int		slash;
+	int		space;
+	int 	zero;
+	int		width;
+	int		precision;
+	int		zero_precision;
+
+	int		hh;
+	int		h;
+	int		ll;
+	int		l;
+	int		j;
+	int		z;
 }				t_flag;
+
+void			initialization_flag(t_flag *flag);
 
 // hh = char(- 128 +127)			(6)
 // h  = short int(- 32768 + 32767)	(5)
@@ -45,7 +58,7 @@ typedef struct s_flag
 // j  = int max;					(0)
 
 int				ft_printf(const char *format, ...);
-void			pars(char format, va_list lst);
+void			pars_spec(char *format, va_list lst);
 int				ft_qualifier(char s);
 char			*ft_itoa_base(intmax_t num, int base, char c);
 char			*ft_itoa_base_uintmax(uintmax_t nbr, int base, char c);
@@ -54,26 +67,30 @@ char			*ft_itoa_base_uintmax(uintmax_t nbr, int base, char c);
 
 //-------------------------специфыкаторы
 int				ft_refinement(char s);
-int				ft_flag_Ddi(va_list lst, char format);
-int				ft_flag_Ss(va_list lst, char format);
-int				ft_flag_Cc(va_list lst, char format);
-int				ft_flag_Xx(va_list lst, char format);
-int				ft_flag_Uu(va_list lst, char format);
-int				ft_flag_Oo(va_list lst, char format);
-int				ft_flag_p(va_list lst, char format);
+int				ft_flag_Ddi(va_list lst, char *format);
+int				ft_flag_Ss(va_list lst, char *format);
+int				ft_flag_Cc(va_list lst, char *format);
+int				ft_flag_Xx(va_list lst, char *format);
+int				ft_flag_Uu(va_list lst, char *format);
+int				ft_flag_Oo(va_list lst, char *format);
+int				ft_flag_p(va_list lst, char *format);
 //----------------------------------------------------
 
 //-------------------флаги
 //---------------обработка длинный всех флагов!
-void				parsing(char format);
-int					ft_flag_check(char c);
-int					ft_flag(char format);
-int					ft_length_hh(char format);
+void				parsing(char *str);
+void				parsing_one(char *str, t_flag *flag);
+void				parsing_two(char *str, t_flag *flag);
+//int					ft_flag_check(char c);
+//int					ft_flag(char format);
+//int					ft_length_hh(char format);
 //int				ft_length_h(char *tmp);
 //int				ft_length_ll(char *tmp);
 //int				ft_length_l(char *tmp);
 //int				ft_length_j(char *tmp);
 //int				ft_length_z(char *tmp);
 //int				treatment(char *str, va_list lst);
+
+void				ft_putnbr_long(long nb);
 
 #endif

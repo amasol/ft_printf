@@ -68,6 +68,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/ft_printf.dir/itoa_b.c.o"
   "CMakeFiles/ft_printf.dir/itoa_b_uintmax.c.o"
   "CMakeFiles/ft_printf.dir/parsing.c.o"
+  "CMakeFiles/ft_printf.dir/ft_putnbr_long.c.o"
   "ft_printf.pdb"
   "ft_printf"
 )

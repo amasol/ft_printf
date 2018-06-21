@@ -22,7 +22,7 @@ int			ft_qualifier(char s)
 		|| s == 'u' || s == 'U'
 		|| s == 'x' || s == 'X'
 		|| s == 'c' || s == 'C'
-		|| s == '%')
+		|| s == '%' || s == 'D')
 		return (1);
 	else
 		return (0);
@@ -53,7 +53,7 @@ int			ft_refinement(char s)
 
 
 //-------------------проверить отдельно функцию ....
-
+/*
 int			ft_flag_check(char c)
 {
 	if (c == 'h' || c == 'l'
@@ -92,11 +92,11 @@ int			ft_flag(char format)
 		return (11);
 	return (0);
 }
-
+*/
 // -------------------------------------------------
+/*
 int		ft_length_hh(char format)
 {
-	write(1, "--->>>> ", 15);
 //	if (format == 'h' && format + 1 == 'h')
 	if (format == 'h')
 	{
@@ -105,7 +105,7 @@ int		ft_length_hh(char format)
 	}
 	return (1);
 }
-
+*/
 /*
 int		ft_length_h(char *tmp)
 {

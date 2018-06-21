@@ -19,17 +19,14 @@ int				ft_printf(const char *format, ...)
 	va_start(lst, format);
 	while (*format)
 	{
-
 		if (*format == '%')
 		{
 			format++;
-			parsing(*format);
-//			pars(*format, lst);
+			parsing((char *)format);
+			pars_spec((char *)format, lst);
 		}
 		else
-		{
 			ft_putchar(*format);
-		}
 //		pars((char *)format, lst);
 //		form(&format);
 		format++;
@@ -38,3 +35,34 @@ int				ft_printf(const char *format, ...)
 	va_end(lst);
 	return (0);
 }
+
+
+
+/*
+int				ft_printf(const char *format, ...)
+{
+	int i;
+	va_list		lst;
+
+	i = 0;
+	va_start(lst, format);
+	while (format[i])
+	{
+		if (format[i] == '%')
+		{
+			i++;
+//			parsing(*format);
+			parsing((char *)&format[i]);
+//			pars(*format, lst);
+		}
+		else
+			ft_putchar(format[i]);
+//		pars((char *)format, lst);
+//		form(&format);
+		i++;
+	}
+//	write(1, "\n", 1);
+	va_end(lst);
+	return (0);
+}
+*/

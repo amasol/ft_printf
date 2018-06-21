@@ -89,6 +89,9 @@
 		<Unit filename="/Users/amasol/amasol/project/ft_printf/ft_printf.h">
 			<Option target="ft_printf"/>
 		</Unit>
+		<Unit filename="/Users/amasol/amasol/project/ft_printf/ft_putnbr_long.c">
+			<Option target="ft_printf"/>
+		</Unit>
 		<Unit filename="/Users/amasol/amasol/project/ft_printf/ft_qualifier.c">
 			<Option target="ft_printf"/>
 		</Unit>

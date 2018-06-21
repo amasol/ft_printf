@@ -177,6 +177,33 @@ ft_printf.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_printf.c.s
 .PHONY : ft_printf.c.s
 
+ft_putnbr_long.o: ft_putnbr_long.c.o
+
+.PHONY : ft_putnbr_long.o
+
+# target to build an object file
+ft_putnbr_long.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_putnbr_long.c.o
+.PHONY : ft_putnbr_long.c.o
+
+ft_putnbr_long.i: ft_putnbr_long.c.i
+
+.PHONY : ft_putnbr_long.i
+
+# target to preprocess a source file
+ft_putnbr_long.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_putnbr_long.c.i
+.PHONY : ft_putnbr_long.c.i
+
+ft_putnbr_long.s: ft_putnbr_long.c.s
+
+.PHONY : ft_putnbr_long.s
+
+# target to generate assembly for a file
+ft_putnbr_long.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_putnbr_long.c.s
+.PHONY : ft_putnbr_long.c.s
+
 ft_qualifier.o: ft_qualifier.c.o
 
 .PHONY : ft_qualifier.o
@@ -2001,6 +2028,9 @@ help:
 	@echo "... ft_printf.o"
 	@echo "... ft_printf.i"
 	@echo "... ft_printf.s"
+	@echo "... ft_putnbr_long.o"
+	@echo "... ft_putnbr_long.i"
+	@echo "... ft_putnbr_long.s"
 	@echo "... ft_qualifier.o"
 	@echo "... ft_qualifier.i"
 	@echo "... ft_qualifier.s"

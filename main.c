@@ -8,9 +8,11 @@ int		main(void)
 	int 	*a;
 	int 	i = 1;
 	a = &i;
+
+
 //	ft_printf("(my)--> %i", j);
 //	ft_printf("(my)--> %d", j);
-//	ft_printf("(my)--> %D", j);
+//	ft_printf("(my)-->D %D", j);
 //	ft_printf("(my)--> %c", 'a');
 //	ft_printf("(my)--> %i%c%d%i%s", j, 's', 1, 2, "a");
 //	ft_printf("(my)--> %s", "text");
@@ -22,17 +24,17 @@ int		main(void)
 //	ft_printf("(my)--> (8)->%o", -1512321312);
 //	ft_printf("(my)--> (8)->%O", -1512321312);
 //	printf("(org)--> (8)->%o\n", -1512321312);
-//	ft_printf("(my)--> (16)->%x", a);
-//	ft_printf("(my)--> (16)->%p", a);
+//	ft_printf("(my)-->x (16)->%x", a);
+//	ft_printf("(my)-->p (16)->%p", a);
 //	printf("(org)--> (16)->%p\n", a);
 
+	ft_printf("(my)-->[d] |%# hd", j);
+//	ft_printf("(my)-->d % d", j);
+//	printf("(org)--> (D)->%# hd\n", j);
 
 
 
-	ft_printf("(my)--> %h");
-
-
-
+//	ft_printf("%d", 123);
 
 	return (0);
 }

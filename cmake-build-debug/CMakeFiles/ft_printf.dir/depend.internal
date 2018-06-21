@@ -9,10 +9,22 @@ CMakeFiles/ft_printf.dir/ft_printf.c.o
  /Users/amasol/amasol/project/ft_printf/./libft/libft.h
  /Users/amasol/amasol/project/ft_printf/ft_printf.c
  /Users/amasol/amasol/project/ft_printf/ft_printf.h
+CMakeFiles/ft_printf.dir/ft_putnbr_long.c.o
+ /Users/amasol/amasol/project/ft_printf/./libft/libft.h
+ /Users/amasol/amasol/project/ft_printf/ft_printf.h
+ /Users/amasol/amasol/project/ft_printf/ft_putnbr_long.c
 CMakeFiles/ft_printf.dir/ft_qualifier.c.o
  /Users/amasol/amasol/project/ft_printf/./libft/libft.h
  /Users/amasol/amasol/project/ft_printf/ft_printf.h
  /Users/amasol/amasol/project/ft_printf/ft_qualifier.c
+CMakeFiles/ft_printf.dir/itoa_b.c.o
+ /Users/amasol/amasol/project/ft_printf/./libft/libft.h
+ /Users/amasol/amasol/project/ft_printf/ft_printf.h
+ /Users/amasol/amasol/project/ft_printf/itoa_b.c
+CMakeFiles/ft_printf.dir/itoa_b_uintmax.c.o
+ /Users/amasol/amasol/project/ft_printf/./libft/libft.h
+ /Users/amasol/amasol/project/ft_printf/ft_printf.h
+ /Users/amasol/amasol/project/ft_printf/itoa_b_uintmax.c
 CMakeFiles/ft_printf.dir/libft/ft_atoi.c.o
  /Users/amasol/amasol/project/ft_printf/libft/ft_atoi.c
  /Users/amasol/amasol/project/ft_printf/libft/libft.h
@@ -194,3 +206,7 @@ CMakeFiles/ft_printf.dir/main.c.o
  /Users/amasol/amasol/project/ft_printf/./libft/libft.h
  /Users/amasol/amasol/project/ft_printf/ft_printf.h
  /Users/amasol/amasol/project/ft_printf/main.c
+CMakeFiles/ft_printf.dir/parsing.c.o
+ /Users/amasol/amasol/project/ft_printf/./libft/libft.h
+ /Users/amasol/amasol/project/ft_printf/ft_printf.h
+ /Users/amasol/amasol/project/ft_printf/parsing.c
