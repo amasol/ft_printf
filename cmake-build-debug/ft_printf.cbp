@@ -80,6 +80,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/amasol/amasol/project/ft_printf/cast.c">
+			<Option target="ft_printf"/>
+		</Unit>
 		<Unit filename="/Users/amasol/amasol/project/ft_printf/find.c">
 			<Option target="ft_printf"/>
 		</Unit>

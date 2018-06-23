@@ -12,7 +12,8 @@
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
-//# define CAST (f->hh || f->h || f->l || f->ll || f->j || f->z)
+
+# define APPLY (flag->hh || flag->h || flag->l || flag->ll || flag->j || flag->z)
 
 # include "./libft/libft.h"
 
@@ -21,6 +22,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
+#include <stdint.h>
 
 
 typedef struct s_flag
@@ -58,31 +60,33 @@ void			initialization_flag(t_flag *flag);
 // j  = int max;					(0)
 
 int				ft_printf(const char *format, ...);
-void			pars_spec(char *format, va_list lst);
+void			pars_spec(char *format, va_list lst, t_flag *flag);
 int				ft_qualifier(char s);
 char			*ft_itoa_base(intmax_t num, int base, char c);
 char			*ft_itoa_base_uintmax(uintmax_t nbr, int base, char c);
 //void			cast(va_list lst, char *format);
-//intmax_t		cats_intmax(char format, va_list lst);
-//uintmax_t		cats_uintmax(char format, va_list lst);
+intmax_t		cats_intmax(intmax_t i, t_flag *flag);
+uintmax_t		cats_uintmax(uintmax_t i, t_flag *flag);
 
 //-------------------------специфыкаторы
 int				ft_refinement(char s);
-int				ft_flag_Ddi(va_list lst, char *format);
+int				ft_flag_Ddi(va_list lst, char *format, t_flag *flag);
 int				ft_flag_Ss(va_list lst, char *format);
-int				ft_flag_Cc(va_list lst, char *format);
-int				ft_flag_Xx(va_list lst, char *format);
-int				ft_flag_Uu(va_list lst, char *format);
-int				ft_flag_Oo(va_list lst, char *format);
+int				ft_flag_Cc(va_list lst, char *format, t_flag *flag);
+int				ft_flag_Xx(va_list lst, char *format, t_flag *flag);
+int				ft_flag_Uu(va_list lst, char *format, t_flag *flag);
+int				ft_flag_Oo(va_list lst, char *format, t_flag *flag);
 int				ft_flag_p(va_list lst, char *format);
 //----------------------------------------------------
 
 //-------------------флаги
 //---------------обработка длинный всех флагов!
-void				parsing(char *str);
+void				parsing(char *str, va_list lst);
 void				parsing_one(char *str, t_flag *flag);
 void				parsing_two(char *str, t_flag *flag);
-//int					ft_flag_check(char c);
+int					ft_flag_check(char c);
+
+
 //int					ft_flag(char format);
 //int					ft_length_hh(char format);
 //int				ft_length_h(char *tmp);
@@ -92,6 +96,6 @@ void				parsing_two(char *str, t_flag *flag);
 //int				ft_length_z(char *tmp);
 //int				treatment(char *str, va_list lst);
 
-void				ft_putnbr_long(long nb);
+void				ft_putnbr_intmax(long nb);
 
 #endif

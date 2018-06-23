@@ -53,6 +53,17 @@ int			ft_refinement(char s)
 
 
 //-------------------проверить отдельно функцию ....
+
+int			ft_flag_check(char c)
+{
+	if (c == 'h' || c == 'l'
+		|| c == 'j' || c == 'z'
+		|| c == '#' || c == '%')
+		return (1);
+	else
+		return (0);
+}
+
 /*
 int			ft_flag_check(char c)
 {

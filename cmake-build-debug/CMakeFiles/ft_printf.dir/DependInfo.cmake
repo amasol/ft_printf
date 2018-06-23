@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
+  "/Users/amasol/amasol/project/ft_printf/cast.c" "/Users/amasol/amasol/project/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/cast.c.o"
   "/Users/amasol/amasol/project/ft_printf/find.c" "/Users/amasol/amasol/project/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/find.c.o"
   "/Users/amasol/amasol/project/ft_printf/ft_printf.c" "/Users/amasol/amasol/project/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_printf.c.o"
   "/Users/amasol/amasol/project/ft_printf/ft_putnbr_long.c" "/Users/amasol/amasol/project/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_putnbr_long.c.o"

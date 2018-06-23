@@ -123,6 +123,33 @@ ft_printf/fast:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/build
 .PHONY : ft_printf/fast
 
+cast.o: cast.c.o
+
+.PHONY : cast.o
+
+# target to build an object file
+cast.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/cast.c.o
+.PHONY : cast.c.o
+
+cast.i: cast.c.i
+
+.PHONY : cast.i
+
+# target to preprocess a source file
+cast.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/cast.c.i
+.PHONY : cast.c.i
+
+cast.s: cast.c.s
+
+.PHONY : cast.s
+
+# target to generate assembly for a file
+cast.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/cast.c.s
+.PHONY : cast.c.s
+
 find.o: find.c.o
 
 .PHONY : find.o
@@ -2022,6 +2049,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... ft_printf"
+	@echo "... cast.o"
+	@echo "... cast.i"
+	@echo "... cast.s"
 	@echo "... find.o"
 	@echo "... find.i"
 	@echo "... find.s"

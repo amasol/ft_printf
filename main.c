@@ -3,10 +3,12 @@
 int		main(void)
 {
 	char str[] = "123";
-	int j = 4123;
 
+	int j = 12;
+//	intmax_t j = 9223372036854775807;
 	int 	*a;
 	int 	i = 1;
+
 	a = &i;
 
 
@@ -16,27 +18,32 @@ int		main(void)
 //	ft_printf("(my)--> %c", 'a');
 //	ft_printf("(my)--> %i%c%d%i%s", j, 's', 1, 2, "a");
 //	ft_printf("(my)--> %s", "text");
-//	ft_printf("(my)--> (16)->%X", 151231241);
-//	printf("(org)--> (16)->%X\n", 151231241);
-//	ft_printf("(my)--> (10)->%u", 1512321312);
-//	ft_printf("(my)--> (10)->%U", 1512321312);
-//	printf("(org)--> (10)->%u\n", 1512321312);
-//	ft_printf("(my)--> (8)->%o", -1512321312);
-//	ft_printf("(my)--> (8)->%O", -1512321312);
-//	printf("(org)--> (8)->%o\n", -1512321312);
-//	ft_printf("(my)-->x (16)->%x", a);
+//	ft_printf("(my)--> (16-X)->%X", 151231241);
+//	printf("(org)--> (16-X)->%X\n", 151231241);
+//	ft_printf("(my)--> (10-u)->%hu", 1512321312);
+//	ft_printf("(my)--> (10-U)->%hU", 1512321312);
+//	printf("(org)--> (10-u)->%hu\n", 1512321312);
+//	printf("(org)--> (10-U)->%u\n", 1512321312);
+//	ft_printf("(my)--> (8-o)->%o", -1512321312);
+//	ft_printf("(my)--> (8-O)->%O", -1512321312);
+//	printf("(org)--> (8-o)->%o\n", -1512321312);
+//	printf("(org)--> (8-O)->%o\n", -1512321312);
+//	ft_printf("(my)-->x (16)->%x", j);
+//	printf("(org)-->x (16)-> %x", j);
 //	ft_printf("(my)-->p (16)->%p", a);
-//	printf("(org)--> (16)->%p\n", a);
+//	printf("(org)-->p (16)->%p\n", a);
 
-//	ft_printf("(my)--> %i%c%d%i%s", j, 's', 1, 2, "a");
-	ft_printf("(my)-->[d] |%#lhd", j);
+//	ft_printf("(my)-->%d%c%d%i%s", j, 's', 1, 2, "a");
+//	printf("(org)-->%text%c%d%i%s", j, 's', 1, 2, "a");
 //	ft_printf("(my)-->d % d", j);
 //	printf("(org)--> (D)->%# hd\n", j);
 
-//	ft_printf("%stest\n", str);
-//	printf("%123s\n", str);
+//	ft_printf("%s\n", str);
+//	printf("%s\n", str);
 
-//	ft_printf("%d", 123);
+
+	ft_printf("(my)-->[d] %hhhd", j);
+	printf("(my)-->[d] %hhhd", j);
 
 	return (0);
 }

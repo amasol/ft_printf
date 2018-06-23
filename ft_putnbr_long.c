@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-void	ft_putnbr_long(long nb)
+void	ft_putnbr_intmax(intmax_t nb)
 {
 	char c;
 
@@ -23,8 +23,8 @@ void	ft_putnbr_long(long nb)
 	}
 	if (nb > 9)
 	{
-		ft_putnbr_long(nb / 10);
-		ft_putnbr_long((nb % 10));
+		ft_putnbr_intmax(nb / 10);
+		ft_putnbr_intmax((nb % 10));
 	}
 	if (nb < 10)
 	{

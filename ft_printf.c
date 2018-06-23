@@ -17,16 +17,22 @@ int				ft_printf(const char *format, ...)
 	va_list		lst;
 
 	va_start(lst, format);
+	while (*format != '%')
+//	while ((*format != '%') && (!(ft_flag_check(*format))))
+	{
+		ft_putchar(*format);
+		format++;
+	}
 	while (*format)
 	{
 		if (*format == '%')
 		{
 			format++;
-			parsing((char *)format);
+			parsing((char *)format, lst);
 //			pars_spec((char *)format, lst);
 		}
-		else
-			ft_putchar(*format);
+//		else
+//			ft_putchar(*format);
 		format++;
 	}
 	write(1, "\n", 1);

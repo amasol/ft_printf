@@ -1,7 +1,7 @@
 
 #include "ft_printf.h"
 
-void		pars_spec(char *format, va_list lst)
+void		pars_spec(char *format, va_list lst, t_flag *flag)
 {
 	int i;
 
@@ -11,61 +11,78 @@ void		pars_spec(char *format, va_list lst)
 		if (ft_qualifier(format[i]))
 		{
 			if (ft_refinement(format[i]) == 1)
-				ft_flag_Ddi(lst, &format[i]);
+				ft_flag_Ddi(lst, &format[i], flag);
 			else if (ft_refinement(format[i]) == 2)
-				ft_flag_Cc(lst, &format[i]);
+				ft_flag_Cc(lst, &format[i], flag);
 			else if (ft_refinement(format[i]) == 3)
 				ft_flag_Ss(lst, &format[i]);
 			else if (ft_refinement(format[i]) == 4)
-				ft_flag_Xx(lst, &format[i]);
+				ft_flag_Xx(lst, &format[i], flag);
 			else if (ft_refinement(format[i]) == 5)
-				ft_flag_Oo(lst, &format[i]);
+				ft_flag_Oo(lst, &format[i], flag);
 			else if (ft_refinement(format[i]) == 6)
-				ft_flag_Uu(lst, &format[i]);
+				ft_flag_Uu(lst, &format[i], flag);
 			else if (ft_refinement(format[i]) == 7)
 				ft_flag_p(lst, &format[i]);
 		}
 		i++;
 	}
 }
-int			ft_flag_Ddi(va_list lst, char *format)
-{
-	int 	k;
-	int		i;
-	long	j;
 
+//if (flag->h == 1)
+//{
+//	i = (unsigned char)va_arg(lst, int);
+//	ft_putnbr(i);
+//}
+
+//if (c == 'd' || c == 'i')
+//{
+	//i = (CAST) ? (ft_cast_to_signed(i, f)) : (int)i;
+	//return (ft_collect_for_decimal(i, f));
+//}
+
+int			ft_flag_Ddi(va_list lst, char *format, t_flag *flag)
+{
+	int 		k;
+	intmax_t	i;
+//	long		j;
+
+//	j = 0;
 	k = 0;
-	j = 0;
+	i = 0;
+	i = va_arg(lst, intmax_t);
 	if (format[k] == 'd' || format[k] == 'i')
 	{
-//		if (flag->hh == 1)
-//		{
-//			кастуем все...
-//		}
-		i = va_arg(lst, int);
-		ft_putnbr(i);
+		i = (APPLY) ? (cats_intmax(i, flag)) : (int)i;
+		ft_putnbr_intmax(i);
+//		ft_putnbr(i);
 	}
 	if (format[k] == 'D')
 	{
-		j = va_arg(lst, long);
-		ft_putnbr_long(j);
+//		j = va_arg(lst, long);
+		i = (APPLY) ? (cats_intmax(i, flag)) : (long)i;
+		ft_putnbr_intmax(i);
 	}
 	 return (1);
 }
 
 //(С) рассматриваеться как (с) с подификатором (l)
-int			ft_flag_Cc(va_list lst, char *format)
+int			ft_flag_Cc(va_list lst, char *format, t_flag *flag)
 {
-	int i;
-	int	j;
+	int 		k;
+	uintmax_t	j;
 
-	i = 0;
-//	j = 0;
-	if (format[i] == 'c')
+	k = 0;
+	j = 0;
+	j = va_arg(lst, uintmax_t);
+	if (format[k] == 'c')
 	{
-		j = va_arg(lst, int);
+		j = (APPLY) ? (cats_uintmax(j, flag)) : (unsigned char)j;
 		ft_putchar(j);
 	}
+//	if (format[k] == 'C')
+//	{
+//	}
 	return (1);
 }
 
@@ -74,67 +91,73 @@ int			ft_flag_Cc(va_list lst, char *format)
 
 int			ft_flag_Ss(va_list lst, char *format)
 {
-	int i;
+	int 	i;
 	char	*str;
+//	wchar_t	*str;
 
 	i = 0;
+//	str = va_arg(lst, wchar_t *);
+	str = va_arg(lst, char *);
 	if (format[i] == 's')
-	{
-		str = va_arg(lst, char *);
 		ft_putstr(str);
-	}
 	return (1);
+//	посмотреть приминение ft_putstr c wchar_t!!!!!
 }
 
-int			ft_flag_Xx(va_list lst, char *format)
+int			ft_flag_Xx(va_list lst, char *format, t_flag *flag)
 {
+//	флаг j -требует что бы мы вытягивали intmax_t..
 	int 		k;
 	uintmax_t	i;
 	char		*str;
 
 	k = 0;
 //	i = 0;
+	i = va_arg(lst, uintmax_t);
 	if (format[k] == 'x')
 	{
-		i = va_arg(lst, uintmax_t);
+		i = (APPLY) ? (cats_uintmax(i, flag)) : (unsigned int)i;
 		str = ft_itoa_base_uintmax(i, 16, 'x');
 		ft_putstr(str);
 	}
 	else if (format[k] == 'X')
 	{
-		i = va_arg(lst, uintmax_t);
+		i = (APPLY) ? (cats_uintmax(i, flag)) : (unsigned int)i;
 		str = ft_itoa_base_uintmax(i, 16, 'X');
 		ft_putstr(str);
 	}
 	return (1);
 }
 
-int 		ft_flag_Uu(va_list lst, char *format)
+int 		ft_flag_Uu(va_list lst, char *format, t_flag *flag)
 {
+//	флаг j -требует что бы мы вытягивали intmax_t..
 	int			k;
 	uintmax_t	i;
 	char		*str;
 	// спецификатор (U) стоит в формате uintmax_t...какой должен быть маленькая (U)
 	k = 0;
+	i = va_arg(lst, uintmax_t);
 	if (format[k] == 'u' || format[k] == 'U')
 	{
-		i = va_arg(lst, uintmax_t);
+		i = (APPLY) ? (cats_uintmax(i, flag)) : (unsigned int)i;
 		str = ft_itoa_base_uintmax(i, 10, 'u');
 		ft_putstr(str);
 	}
 	return (1);
 }
 
-int			ft_flag_Oo(va_list lst, char *format)
+int			ft_flag_Oo(va_list lst, char *format, t_flag *flag)
 {
 	int			k;
 	uintmax_t	i;
 	char		*str;
 	// спецификатор (O) стоит в формате uintmax_t...какой должен быть маленькая (о)
 	k = 0;
+	i = va_arg(lst, uintmax_t);
 	if (format[k] == 'o' || format[k] == 'O')
 	{
-		i = va_arg(lst, uintmax_t);
+		i = (APPLY) ? (cats_uintmax(i, flag)) : (unsigned int)i;
 		str = ft_itoa_base_uintmax(i, 8, 'o');
 		ft_putstr(str);
 	}
@@ -148,9 +171,9 @@ int 		ft_flag_p(va_list lst, char *format)
 	char		*str;
 
 	k = 0;
+	i = va_arg(lst, uintmax_t);
 	if (format[k] == 'p')
 	{
-		i = va_arg(lst, uintmax_t);
 		str = ft_itoa_base_uintmax(i, 16, 'x');
 		ft_putstr("0x");
 		ft_putstr(str);

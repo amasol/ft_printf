@@ -17,23 +17,24 @@
 
 #include "ft_printf.h"
 
-void			parsing(char *str)
+void			parsing(char *str, va_list lst)
 {
 	t_flag	flag;
 	int 	i;
 
 	i = 0;
-//	возможно не должно быть \0;
 	if (str[i])
 		initialization_flag(&flag);
-	while (str[i] != '\0')
+	while (!(ft_qualifier(str[i])))
 	{
 		parsing_one(&str[i], &flag);
 		parsing_two(&str[i], &flag);
 		i++;
 	}
+	if (ft_qualifier(str[i]))
+		pars_spec(&str[i], lst, &flag);
 //	printf("slash[%d]\n", flag.slash);
-//	printf("space[%d]\n", flag.space);
+//	printf("space[%d]\n", flag.l);
 //	printf("h[%d]\n", flag.h);
 }
 

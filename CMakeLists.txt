@@ -75,4 +75,5 @@ add_executable(ft_printf
         itoa_b.c
         itoa_b_uintmax.c
         parsing.c
-        ft_putnbr_long.c)
+        ft_putnbr_long.c
+        cast.c)
