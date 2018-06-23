@@ -32,6 +32,9 @@ void			parsing(char *str)
 		parsing_two(&str[i], &flag);
 		i++;
 	}
+//	printf("slash[%d]\n", flag.slash);
+//	printf("space[%d]\n", flag.space);
+//	printf("h[%d]\n", flag.h);
 }
 
 void			initialization_flag(t_flag *flag)

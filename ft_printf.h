@@ -62,6 +62,7 @@ void			pars_spec(char *format, va_list lst);
 int				ft_qualifier(char s);
 char			*ft_itoa_base(intmax_t num, int base, char c);
 char			*ft_itoa_base_uintmax(uintmax_t nbr, int base, char c);
+//void			cast(va_list lst, char *format);
 //intmax_t		cats_intmax(char format, va_list lst);
 //uintmax_t		cats_uintmax(char format, va_list lst);
 

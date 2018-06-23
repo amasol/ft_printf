@@ -2,8 +2,8 @@
 
 int		main(void)
 {
-	char str[] = "text";
-	int j = 412345412;
+	char str[] = "123";
+	int j = 4123;
 
 	int 	*a;
 	int 	i = 1;
@@ -28,11 +28,13 @@ int		main(void)
 //	ft_printf("(my)-->p (16)->%p", a);
 //	printf("(org)--> (16)->%p\n", a);
 
-	ft_printf("(my)-->[d] |%# hd", j);
+//	ft_printf("(my)--> %i%c%d%i%s", j, 's', 1, 2, "a");
+	ft_printf("(my)-->[d] |%#lhd", j);
 //	ft_printf("(my)-->d % d", j);
 //	printf("(org)--> (D)->%# hd\n", j);
 
-
+//	ft_printf("%stest\n", str);
+//	printf("%123s\n", str);
 
 //	ft_printf("%d", 123);
 

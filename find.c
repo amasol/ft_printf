@@ -6,7 +6,7 @@ void		pars_spec(char *format, va_list lst)
 	int i;
 
 	i = 0;
-	while (format[i])
+	if (format[i])
 	{
 		if (ft_qualifier(format[i]))
 		{
@@ -38,6 +38,10 @@ int			ft_flag_Ddi(va_list lst, char *format)
 	j = 0;
 	if (format[k] == 'd' || format[k] == 'i')
 	{
+//		if (flag->hh == 1)
+//		{
+//			кастуем все...
+//		}
 		i = va_arg(lst, int);
 		ft_putnbr(i);
 	}
@@ -56,6 +60,7 @@ int			ft_flag_Cc(va_list lst, char *format)
 	int	j;
 
 	i = 0;
+//	j = 0;
 	if (format[i] == 'c')
 	{
 		j = va_arg(lst, int);
@@ -88,6 +93,7 @@ int			ft_flag_Xx(va_list lst, char *format)
 	char		*str;
 
 	k = 0;
+//	i = 0;
 	if (format[k] == 'x')
 	{
 		i = va_arg(lst, uintmax_t);
