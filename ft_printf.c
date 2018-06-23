@@ -22,7 +22,7 @@ int				ft_printf(const char *format, ...)
 		if (*format == '%')
 		{
 			format++;
-			parsing((char *)format, lst);
+			parsing((char *)format);
 //			pars_spec((char *)format, lst);
 		}
 		else
