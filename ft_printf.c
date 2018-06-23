@@ -22,11 +22,8 @@ int				ft_printf(const char *format, ...)
 		if (*format == '%')
 		{
 			format++;
-//			if (*format)
-//			{
-				parsing((char *)format);
-//				pars_spec((char *)format, lst);
-//			}
+			parsing((char *)format, lst);
+//			pars_spec((char *)format, lst);
 		}
 		else
 			ft_putchar(*format);

@@ -17,7 +17,7 @@
 
 #include "ft_printf.h"
 
-void			parsing(char *str)
+void			parsing(char *str, va_list lst)
 {
 	t_flag	flag;
 	int 	i;
@@ -30,6 +30,7 @@ void			parsing(char *str)
 	{
 		parsing_one(&str[i], &flag);
 		parsing_two(&str[i], &flag);
+		pars_spec(&str[i], lst);
 		i++;
 	}
 //	printf("slash[%d]\n", flag.slash);

@@ -79,7 +79,8 @@ int				ft_flag_p(va_list lst, char *format);
 
 //-------------------флаги
 //---------------обработка длинный всех флагов!
-void				parsing(char *str);
+void				parsing(char *str, va_list lst);
+//void				parsing(char *str);
 void				parsing_one(char *str, t_flag *flag);
 void				parsing_two(char *str, t_flag *flag);
 //int					ft_flag_check(char c);
