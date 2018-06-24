@@ -1,7 +1,7 @@
 
 #include "ft_printf.h"
 
-intmax_t		cats_intmax(intmax_t i, t_flag *flag)
+intmax_t		cast_intmax(intmax_t i, t_flag *flag)
 {
 	if (flag->z == 1)
 		return ((size_t)i);
@@ -19,7 +19,7 @@ intmax_t		cats_intmax(intmax_t i, t_flag *flag)
 }
 
 
-uintmax_t		cats_uintmax(uintmax_t i, t_flag *flag)
+uintmax_t		cast_uintmax(uintmax_t i, t_flag *flag)
 {
 	if (flag->z)
 		return ((size_t)i);
@@ -34,4 +34,38 @@ uintmax_t		cats_uintmax(uintmax_t i, t_flag *flag)
 	if (flag->hh)
 		return ((unsigned char)i);
 	return (0);
+}
+
+intmax_t	cast_minus(intmax_t i, t_inf *inf)
+{
+	int	k;
+	int j;
+
+	k = 0;
+	j = 0;
+	inf->count = 0;
+
+	j = ft_count(i);
+	k = ft_atoi(inf->minus);
+
+	inf->count = (j < k) ? k - j : j;
+	return (0);
+}
+
+intmax_t 	ft_count(intmax_t n)
+{
+	intmax_t i;
+
+	i = 0;
+	if (n <= 0)
+	{
+		i++;
+		n *= -1;
+	}
+	while (n != 0)
+	{
+		n = n / 10;
+		i++;
+	}
+	return (i);
 }

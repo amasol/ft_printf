@@ -1,7 +1,7 @@
 
 #include "ft_printf.h"
 
-void		pars_spec(char *format, va_list lst, t_flag *flag)
+void		pars_spec(char *format, va_list lst, t_flag *flag, t_inf *inf)
 {
 	int i;
 
@@ -11,7 +11,7 @@ void		pars_spec(char *format, va_list lst, t_flag *flag)
 		if (ft_qualifier(format[i]))
 		{
 			if (ft_refinement(format[i]) == 1)
-				ft_flag_Ddi(lst, &format[i], flag);
+				ft_flag_Ddi(lst, &format[i], flag, inf);
 			else if (ft_refinement(format[i]) == 2)
 				ft_flag_Cc(lst, &format[i], flag);
 			else if (ft_refinement(format[i]) == 3)
@@ -41,9 +41,10 @@ void		pars_spec(char *format, va_list lst, t_flag *flag)
 	//return (ft_collect_for_decimal(i, f));
 //}
 
-int			ft_flag_Ddi(va_list lst, char *format, t_flag *flag)
+int			ft_flag_Ddi(va_list lst, char *format, t_flag *flag, t_inf *inf)
 {
 	int 		k;
+	int 		j = 0;
 	intmax_t	i;
 //	long		j;
 
@@ -53,14 +54,19 @@ int			ft_flag_Ddi(va_list lst, char *format, t_flag *flag)
 	i = va_arg(lst, intmax_t);
 	if (format[k] == 'd' || format[k] == 'i')
 	{
-		i = (APPLY) ? (cats_intmax(i, flag)) : (int)i;
+		i = (APPLY) ? (cast_intmax(i, flag)) : (int)i;
+		j = (LY) ? (cast_minus(i, inf)) : i;
 		ft_putnbr_intmax(i);
-//		ft_putnbr(i);
+		while (inf->count > 0)
+		{
+			write(1, " ", 1);
+			inf->count--;
+		}
 	}
 	if (format[k] == 'D')
 	{
 //		j = va_arg(lst, long);
-		i = (APPLY) ? (cats_intmax(i, flag)) : (long)i;
+		i = (APPLY) ? (cast_intmax(i, flag)) : (long)i;
 		ft_putnbr_intmax(i);
 	}
 	 return (1);
@@ -77,7 +83,7 @@ int			ft_flag_Cc(va_list lst, char *format, t_flag *flag)
 	j = va_arg(lst, uintmax_t);
 	if (format[k] == 'c')
 	{
-		j = (APPLY) ? (cats_uintmax(j, flag)) : (unsigned char)j;
+		j = (APPLY) ? (cast_uintmax(j, flag)) : (unsigned char)j;
 		ft_putchar(j);
 	}
 //	if (format[k] == 'C')
@@ -116,13 +122,13 @@ int			ft_flag_Xx(va_list lst, char *format, t_flag *flag)
 	i = va_arg(lst, uintmax_t);
 	if (format[k] == 'x')
 	{
-		i = (APPLY) ? (cats_uintmax(i, flag)) : (unsigned int)i;
+		i = (APPLY) ? (cast_uintmax(i, flag)) : (unsigned int)i;
 		str = ft_itoa_base_uintmax(i, 16, 'x');
 		ft_putstr(str);
 	}
 	else if (format[k] == 'X')
 	{
-		i = (APPLY) ? (cats_uintmax(i, flag)) : (unsigned int)i;
+		i = (APPLY) ? (cast_uintmax(i, flag)) : (unsigned int)i;
 		str = ft_itoa_base_uintmax(i, 16, 'X');
 		ft_putstr(str);
 	}
@@ -140,7 +146,7 @@ int 		ft_flag_Uu(va_list lst, char *format, t_flag *flag)
 	i = va_arg(lst, uintmax_t);
 	if (format[k] == 'u' || format[k] == 'U')
 	{
-		i = (APPLY) ? (cats_uintmax(i, flag)) : (unsigned int)i;
+		i = (APPLY) ? (cast_uintmax(i, flag)) : (unsigned int)i;
 		str = ft_itoa_base_uintmax(i, 10, 'u');
 		ft_putstr(str);
 	}
@@ -157,7 +163,7 @@ int			ft_flag_Oo(va_list lst, char *format, t_flag *flag)
 	i = va_arg(lst, uintmax_t);
 	if (format[k] == 'o' || format[k] == 'O')
 	{
-		i = (APPLY) ? (cats_uintmax(i, flag)) : (unsigned int)i;
+		i = (APPLY) ? (cast_uintmax(i, flag)) : (unsigned int)i;
 		str = ft_itoa_base_uintmax(i, 8, 'o');
 		ft_putstr(str);
 	}

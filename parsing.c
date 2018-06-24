@@ -17,9 +17,10 @@
 
 #include "ft_printf.h"
 
-void			parsing(char *str, va_list lst)
+void				parsing(char *str, va_list lst)
 {
 	t_flag	flag;
+	t_inf 	inf;
 	int 	i;
 
 	i = 0;
@@ -29,13 +30,13 @@ void			parsing(char *str, va_list lst)
 	{
 		parsing_one(&str[i], &flag);
 		parsing_two(&str[i], &flag);
+		parsing_three(&str[i], &inf, &flag);
 		i++;
 	}
 	if (ft_qualifier(str[i]))
-		pars_spec(&str[i], lst, &flag);
+		pars_spec(&str[i], lst, &flag, &inf);
 //	printf("slash[%d]\n", flag.slash);
 //	printf("space[%d]\n", flag.l);
-//	printf("h[%d]\n", flag.h);
 }
 
 void			initialization_flag(t_flag *flag)
@@ -103,10 +104,31 @@ void			parsing_two(char *str, t_flag *flag)
 	}
 }
 
+int			parsing_three(char *str, t_inf *inf, t_flag *flag)
+{
+	// нету диклорации итератора k...если дикларирую то итератор слитает!
+//	не правильно выделяю malloc! не работает условие если не !
+	// нужно как то добавить что бы только если знак - был...заходило сюда и записывало!
+	int i;
+	int k;
 
-
-
-
+	i = 0;
+//	k = 0;
+//	if (!(inf->minus = (char *)malloc(sizeof(char))))
+//		return (0);
+	if (flag->minus == 1)
+	{
+		if (k == 0)
+			inf->minus = (char *)malloc(sizeof(1000));
+		if (str[i] >= '0' && str[i] <= '9')
+		{
+			inf->minus[k] = str[i];
+			k++;
+		}
+	}
+//	printf("minus->%s\n", inf->minus);
+	return (1);
+}
 
 
 

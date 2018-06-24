@@ -14,6 +14,7 @@
 # define FT_PRINTF_H
 
 # define APPLY (flag->hh || flag->h || flag->l || flag->ll || flag->j || flag->z)
+# define LY (inf->minus)
 
 # include "./libft/libft.h"
 
@@ -50,6 +51,12 @@ typedef struct s_flag
 	int		z;
 }				t_flag;
 
+typedef	struct	s_inf
+{
+	char		*minus;
+	int 		count;
+}				t_inf;
+
 void			initialization_flag(t_flag *flag);
 
 // hh = char(- 128 +127)			(6)
@@ -60,17 +67,20 @@ void			initialization_flag(t_flag *flag);
 // j  = int max;					(0)
 
 int				ft_printf(const char *format, ...);
-void			pars_spec(char *format, va_list lst, t_flag *flag);
+void			pars_spec(char *format, va_list lst, t_flag *flag, t_inf *inf);
 int				ft_qualifier(char s);
 char			*ft_itoa_base(intmax_t num, int base, char c);
 char			*ft_itoa_base_uintmax(uintmax_t nbr, int base, char c);
+
+//----------------------------------------------------
 //void			cast(va_list lst, char *format);
-intmax_t		cats_intmax(intmax_t i, t_flag *flag);
-uintmax_t		cats_uintmax(uintmax_t i, t_flag *flag);
+intmax_t		cast_intmax(intmax_t i, t_flag *flag);
+uintmax_t		cast_uintmax(uintmax_t i, t_flag *flag);
+intmax_t		cast_minus(intmax_t i, t_inf *inf);
 
 //-------------------------специфыкаторы
 int				ft_refinement(char s);
-int				ft_flag_Ddi(va_list lst, char *format, t_flag *flag);
+int				ft_flag_Ddi(va_list lst, char *format, t_flag *flag, t_inf *inf);
 int				ft_flag_Ss(va_list lst, char *format);
 int				ft_flag_Cc(va_list lst, char *format, t_flag *flag);
 int				ft_flag_Xx(va_list lst, char *format, t_flag *flag);
@@ -84,6 +94,7 @@ int				ft_flag_p(va_list lst, char *format);
 void				parsing(char *str, va_list lst);
 void				parsing_one(char *str, t_flag *flag);
 void				parsing_two(char *str, t_flag *flag);
+int					parsing_three(char *str, t_inf *inf, t_flag *flag);
 int					ft_flag_check(char c);
 
 
@@ -97,5 +108,6 @@ int					ft_flag_check(char c);
 //int				treatment(char *str, va_list lst);
 
 void				ft_putnbr_intmax(long nb);
+intmax_t		 	ft_count(intmax_t n);
 
 #endif

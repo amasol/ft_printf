@@ -16,6 +16,10 @@ unistd.h
 fcntl.h
 -
 
+/Users/amasol/amasol/project/ft_printf/cast.c
+ft_printf.h
+/Users/amasol/amasol/project/ft_printf/ft_printf.h
+
 /Users/amasol/amasol/project/ft_printf/find.c
 ft_printf.h
 /Users/amasol/amasol/project/ft_printf/ft_printf.h
@@ -36,6 +40,8 @@ stdio.h
 stdlib.h
 -
 stdarg.h
+-
+stdint.h
 -
 
 /Users/amasol/amasol/project/ft_printf/ft_putnbr_long.c

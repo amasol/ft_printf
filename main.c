@@ -2,7 +2,7 @@
 
 int		main(void)
 {
-	char str[] = "123";
+	char str[] = "text123";
 
 	int j = 12;
 //	intmax_t j = 9223372036854775807;
@@ -16,7 +16,7 @@ int		main(void)
 //	ft_printf("(my)--> %d", j);
 //	ft_printf("(my)-->D %D", j);
 //	ft_printf("(my)--> %c", 'a');
-//	ft_printf("(my)--> %i%c%d%i%s", j, 's', 1, 2, "a");
+//	ft_printf("(my)--> %i%c%-10d%i%s", j, 's', 1, 2, "a");
 //	ft_printf("(my)--> %s", "text");
 //	ft_printf("(my)--> (16-X)->%X", 151231241);
 //	printf("(org)--> (16-X)->%X\n", 151231241);
@@ -42,8 +42,25 @@ int		main(void)
 //	printf("%s\n", str);
 
 
-	ft_printf("(my)-->[d] %hhhd", j);
-	printf("(my)-->[d] %hhhd", j);
+//	ft_printf("(my)-->[d] %hhd", j);
+//	printf("(org)-->[d] %hd", j);
 
+
+//	printf("1[%-6d]\n", 123);
+//	printf("2[%10d]\n", 123);
+
+
+//	ft_printf("[%-5d]\n", 123);
+//	ft_printf("%-5d\n", 567);
+//	ft_printf("(may)[%-15d]\n", 567);
+
+
+
+
+//появилась сега !
+	//	ft_printf("(my)--> %i%c%-10d%i%s", j, 's', 1, 2, "a");
+
+//	printf("1[%-6d]\n", 123);
+//	ft_printf("(my)[%-6d]\n", 567);
 	return (0);
 }
