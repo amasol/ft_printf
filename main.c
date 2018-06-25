@@ -58,9 +58,10 @@ int		main(void)
 
 
 //появилась сега !
-	//	ft_printf("(my)--> %i%c%-10d%i%s", j, 's', 1, 2, "a");
+//		ft_printf("(my)-->%i%c%-30d%i%s", j, 's', 1, 2, "a");
 
-//	printf("1[%-6d]\n", 123);
-//	ft_printf("(my)[%-6d]\n", 567);
+//	printf("(org)[%04d]\n", 123);
+	printf("(org)[%-6d]\n", 123);
+	ft_printf("(my)[%-6d]\n", 567);
 	return (0);
 }

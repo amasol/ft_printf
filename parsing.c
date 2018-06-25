@@ -110,23 +110,21 @@ int			parsing_three(char *str, t_inf *inf, t_flag *flag)
 //	не правильно выделяю malloc! не работает условие если не !
 	// нужно как то добавить что бы только если знак - был...заходило сюда и записывало!
 	int i;
-	int k;
 
 	i = 0;
-//	k = 0;
+//	inf->minus = 0;
 //	if (!(inf->minus = (char *)malloc(sizeof(char))))
 //		return (0);
 	if (flag->minus == 1)
 	{
-		if (k == 0)
-			inf->minus = (char *)malloc(sizeof(1000));
 		if (str[i] >= '0' && str[i] <= '9')
 		{
-			inf->minus[k] = str[i];
-			k++;
+//			inf->minus = str[i];
+			inf->width = ft_atoi(&str[i]);
+			flag->minus = 0;
 		}
 	}
-//	printf("minus->%s\n", inf->minus);
+//	printf("minus->[%d]\n", inf->minus);
 	return (1);
 }
 

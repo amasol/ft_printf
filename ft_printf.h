@@ -14,7 +14,7 @@
 # define FT_PRINTF_H
 
 # define APPLY (flag->hh || flag->h || flag->l || flag->ll || flag->j || flag->z)
-# define LY (inf->minus)
+# define LY (inf->width)
 
 # include "./libft/libft.h"
 
@@ -53,7 +53,8 @@ typedef struct s_flag
 
 typedef	struct	s_inf
 {
-	char		*minus;
+//	char		*minus;
+	int			width;
 	int 		count;
 }				t_inf;
 

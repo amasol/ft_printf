@@ -37,18 +37,14 @@ uintmax_t		cast_uintmax(uintmax_t i, t_flag *flag)
 }
 
 intmax_t	cast_minus(intmax_t i, t_inf *inf)
-{
-	int	k;
+{// можно приминить эту функцию как для ширины так и для минуса !!!
 	int j;
 
-	k = 0;
 	j = 0;
 	inf->count = 0;
 
 	j = ft_count(i);
-	k = ft_atoi(inf->minus);
-
-	inf->count = (j < k) ? k - j : j;
+	inf->count = (j < inf->width) ? inf->width - j : j;
 	return (0);
 }
 

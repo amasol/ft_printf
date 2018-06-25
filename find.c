@@ -44,18 +44,18 @@ void		pars_spec(char *format, va_list lst, t_flag *flag, t_inf *inf)
 int			ft_flag_Ddi(va_list lst, char *format, t_flag *flag, t_inf *inf)
 {
 	int 		k;
-	int 		j = 0;
+	int 		j;
 	intmax_t	i;
-//	long		j;
 
-//	j = 0;
+	j = 0;
 	k = 0;
 	i = 0;
 	i = va_arg(lst, intmax_t);
 	if (format[k] == 'd' || format[k] == 'i')
 	{
 		i = (APPLY) ? (cast_intmax(i, flag)) : (int)i;
-		j = (LY) ? (cast_minus(i, inf)) : i;
+		if (LY)
+			cast_minus(i, inf);
 		ft_putnbr_intmax(i);
 		while (inf->count > 0)
 		{
