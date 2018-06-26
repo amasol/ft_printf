@@ -97,6 +97,7 @@ void				parsing_one(char *str, t_flag *flag);
 void				parsing_two(char *str, t_flag *flag);
 int					parsing_three(char *str, t_inf *inf, t_flag *flag);
 int					ft_flag_check(char c);
+void				output_after(char *format);
 
 
 //int					ft_flag(char format);

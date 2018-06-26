@@ -57,11 +57,12 @@ int			ft_flag_Ddi(va_list lst, char *format, t_flag *flag, t_inf *inf)
 		if (LY)
 			cast_minus(i, inf);
 		ft_putnbr_intmax(i);
-		while (inf->count > 0)
-		{
-			write(1, " ", 1);
-			inf->count--;
-		}
+//		while (inf->count > 0)
+//		{
+//			write(1, " ", 1);
+//			inf->count--;
+//		}
+		output_after(&format[k]);
 	}
 	if (format[k] == 'D')
 	{
@@ -185,4 +186,17 @@ int 		ft_flag_p(va_list lst, char *format)
 		ft_putstr(str);
 	}
 	return (1);
+}
+
+void		output_after(char *format)
+{
+	int i;
+
+	i = 0;
+	while ((!ft_qualifier(format[i]) && (format[i])))
+//	while (format[i] != '%' && format[i])
+	{
+		write(1, &format[i], 1);
+		i++;
+	}
 }

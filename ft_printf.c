@@ -35,7 +35,7 @@ int				ft_printf(const char *format, ...)
 //			ft_putchar(*format);
 		format++;
 	}
-	write(1, "\n", 1);
+//	write(1, "\n", 1);
 	va_end(lst);
 	return (0);
 }

@@ -12,7 +12,7 @@ static	int		count(uintmax_t nbr, int base)
 	}
 	return (i);
 }
-
+/*
 static	void		ft_bukv_b(uintmax_t nbr, int len, char *str)
 {
 	if (nbr == 10)
@@ -27,6 +27,23 @@ static	void		ft_bukv_b(uintmax_t nbr, int len, char *str)
 		str[len] = 'E';
 	if (nbr == 15)
 		str[len] = 'F';
+}
+*/
+
+static	void		transform_b(char *str, char c)
+{
+	int j;
+
+	j = 0;
+	if (c == 'X')
+	{
+		while (str[j])
+		{
+			if (str[j] >= 'a' && str[j] <= 'z')
+				str[j] -= 32;
+			j++;
+		}
+	}
 }
 
 static	void		ft_bukv_m(uintmax_t nbr, int len, char *str)
@@ -45,29 +62,19 @@ static	void		ft_bukv_m(uintmax_t nbr, int len, char *str)
 		str[len] = 'f';
 }
 
-static	void		transform(uintmax_t nbr, int len, int base, char *str, char c)
+static	void		transform(uintmax_t nbr, int len, int base, char *str)
 {
 	while (nbr >= base)
 	{
 		if (nbr % base >= 10 && nbr % base <= 15 && base > 10)
-		{
-			if (c == 'X')
-				ft_bukv_b(nbr % base, len, str);
-			else if (c == 'x')
 				ft_bukv_m(nbr % base, len, str);
-		}
 		else
 			str[len] = nbr % base + 48;
 		nbr /= base;
 		len--;
 	}
 	if (nbr % base >= 10 && nbr % base <= 15 && base > 10)
-	{
-		if (c == 'X')
-			ft_bukv_b(nbr % base, len, str);
-		else if (c == 'x')
 			ft_bukv_m(nbr % base, len, str);
-	}
 	else
 		str[len] = nbr % base + 48;
 }
@@ -81,6 +88,7 @@ char			*ft_itoa_base_uintmax(uintmax_t nbr, int base, char c)
 	if (!(str = (char *)malloc(sizeof(char) * (len + 1))))
 		return (NULL);
 	str[len--] = '\0';
-	transform(nbr, len, base, str, c);
+	transform(nbr, len, base, str);
+	transform_b(str, c);
 	return (str);
 }
