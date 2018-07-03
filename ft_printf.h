@@ -13,7 +13,8 @@
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
-# define APPLY (flag->hh || flag->h || flag->l || flag->ll || flag->j || flag->z)
+# define APPLY (flag->hh || flag->h || flag->l \
+			|| flag->ll || flag->j || flag->z)
 # define LY (inf->width)
 
 # include "./libft/libft.h"
@@ -58,7 +59,7 @@ typedef	struct	s_inf
 	int 		count;
 }				t_inf;
 
-void			initialization_flag(t_flag *flag);
+void			initialization_flag(t_flag *flag, t_inf *inf);
 
 // hh = char(- 128 +127)			(6)
 // h  = short int(- 32768 + 32767)	(5)
@@ -97,7 +98,7 @@ void				parsing_one(char *str, t_flag *flag);
 void				parsing_two(char *str, t_flag *flag);
 int					parsing_three(char *str, t_inf *inf, t_flag *flag);
 int					ft_flag_check(char c);
-void				output_after(char *format);
+int					output_after(char *format);
 
 
 //int					ft_flag(char format);

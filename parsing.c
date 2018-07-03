@@ -25,7 +25,7 @@ void				parsing(char *str, va_list lst)
 
 	i = 0;
 	if (str[i])
-		initialization_flag(&flag);
+		initialization_flag(&flag, &inf);
 	while (!(ft_qualifier(str[i])))
 	{
 		parsing_one(&str[i], &flag);
@@ -39,7 +39,7 @@ void				parsing(char *str, va_list lst)
 //	printf("space[%d]\n", flag.l);
 }
 
-void			initialization_flag(t_flag *flag)
+void			initialization_flag(t_flag *flag, t_inf *inf)
 {
 	flag->plus				= 0;
 	flag->minus				= 0;
@@ -56,6 +56,8 @@ void			initialization_flag(t_flag *flag)
 	flag->l 				= 0;
 	flag->j 				= 0;
 	flag->z 				= 0;
+
+	inf->width				= 0;
 }
 
 void			parsing_one(char *str, t_flag *flag)

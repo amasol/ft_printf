@@ -61,8 +61,11 @@ int		main(void)
 //		ft_printf("(my)-->%i%c%-30d%i%s", j, 's', 1, 2, "a");
 
 //	printf("(org)[%04d]\n", 123);
-//	printf("(org)[%-6d]\n", 123);
-//	ft_printf("(my)[%-6d]\n", 567);
-	ft_printf("(my)[%d]\n", 567);
+	printf("(org)[%-66d text]\n", 123);
+	ft_printf("(my)[%--66d text]", 123);
+
+//	printf("(org)[%d->test]\n", 567);
+//	ft_printf("(my)[%d->test]", 567);
+
 	return (0);
 }

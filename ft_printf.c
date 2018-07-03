@@ -23,22 +23,67 @@ int				ft_printf(const char *format, ...)
 		ft_putchar(*format);
 		format++;
 	}
-	while (*format)
+	if (*format)
 	{
 		if (*format == '%')
 		{
 			format++;
 			parsing((char *)format, lst);
-//			pars_spec((char *)format, lst);
+//			pars_spec((char *)format, lst);   перенес в другую функцию!
+
+
+//			if (ft_qualifier(*format))
+//				format++;
+//			while (*format)
+//			{
+//				ft_putchar(*format);
+//				format++;
+//			}
 		}
-//		else
-//			ft_putchar(*format);
-		format++;
+//		int a = 0;
+		while (*format)
+		{
+//			if (ft_qualifier(*format))
+//				a++;
+			while (ft_isdigit(*format) || (*format == '-')/* || ft_qualifier(*format)*/)
+				format++;
+//			if (ft_qualifier(*format))
+			ft_putchar(*format);
+			format++;
+		}
 	}
-//	write(1, "\n", 1);
+	write(1, "\n", 1);
 	va_end(lst);
 	return (0);
 }
+
+/*
+ * //			output_after((char *)format);
+ *
+ *
+int		output_after(char *format)
+{
+	int i;
+	int j;
+
+	i = 0;
+	j = 0;
+	if (format[j])
+	{
+//		if (ft_qualifier(format[j])) // не пропустит если будет какие то флаги без %
+//			i++;
+		if (format[j] && i == 0)
+		{
+			write(1, &format[j], 1);
+			j++;
+		}
+	}
+	return (0);
+}
+*/
+
+
+
 
 
 
