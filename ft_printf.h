@@ -15,7 +15,7 @@
 
 # define APPLY (flag->hh || flag->h || flag->l \
 			|| flag->ll || flag->j || flag->z)
-# define LY (inf->width)
+# define LY (inf->width || flag->zero)
 
 # include "./libft/libft.h"
 
@@ -50,6 +50,8 @@ typedef struct s_flag
 	int		l;
 	int		j;
 	int		z;
+
+	int 	ban;
 }				t_flag;
 
 typedef	struct	s_inf
@@ -57,6 +59,7 @@ typedef	struct	s_inf
 //	char		*minus;
 	int			width;
 	int 		count;
+	int 		count_two;
 }				t_inf;
 
 void			initialization_flag(t_flag *flag, t_inf *inf);

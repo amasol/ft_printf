@@ -35,6 +35,15 @@ void				parsing(char *str, va_list lst)
 	}
 	if (ft_qualifier(str[i]))
 		pars_spec(&str[i], lst, &flag, &inf);
+	while (str[i])
+	{
+		while (ft_isdigit(str[i]) || (str[i] == '-'))
+			i++;
+//		if ((!ft_qualifier(str[i])) && flag.ban == 1)
+//		if (flag.ban == 1)
+			ft_putchar(str[i]);
+		i++;
+	}
 //	printf("slash[%d]\n", flag.slash);
 //	printf("space[%d]\n", flag.l);
 }
@@ -57,6 +66,7 @@ void			initialization_flag(t_flag *flag, t_inf *inf)
 	flag->j 				= 0;
 	flag->z 				= 0;
 
+	flag->ban				= 0;
 	inf->width				= 0;
 }
 
@@ -117,9 +127,9 @@ int			parsing_three(char *str, t_inf *inf, t_flag *flag)
 //	inf->minus = 0;
 //	if (!(inf->minus = (char *)malloc(sizeof(char))))
 //		return (0);
-	if (flag->minus == 1)
+	if (flag->minus == 1 || flag->zero == 1)
 	{
-		if (str[i] >= '0' && str[i] <= '9')
+		if  (str[i] >= '1' && str[i] <= '9')
 		{
 //			inf->minus = str[i];
 			inf->width = ft_atoi(&str[i]);

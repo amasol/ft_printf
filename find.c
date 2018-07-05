@@ -56,12 +56,18 @@ int			ft_flag_Ddi(va_list lst, char *format, t_flag *flag, t_inf *inf)
 		i = (APPLY) ? (cast_intmax(i, flag)) : (int)i;
 		if (LY)
 			cast_minus(i, inf);
-		ft_putnbr_intmax(i);
-		while (inf->count > 0)
+		while (inf->count_two > 0)
 		{
-			write(1, " ", 1);
-			inf->count--;
+			write(1, "0", 1);
+			inf->count_two--;
 		}
+		ft_putnbr_intmax(i);
+//		printf("[%jd]\n", i);
+//		while (inf->count > 0 && (!(inf->width == 1 && i == 1)))
+//		{
+//			write(1, " ", 1);
+//			inf->count--;
+//		}
 	}
 /*	if (format[k] == 'D')
 	{
@@ -69,6 +75,7 @@ int			ft_flag_Ddi(va_list lst, char *format, t_flag *flag, t_inf *inf)
 		i = (APPLY) ? (cast_intmax(i, flag)) : (long)i;
 		ft_putnbr_intmax(i);
 	}*/
+	flag->ban = 1;
 	 return (1);
 }
 

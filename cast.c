@@ -41,14 +41,18 @@ intmax_t	cast_minus(intmax_t i, t_inf *inf)
 	int j;
 
 	j = 0;
-	inf->count = 0;
 
+	inf->count = 0;
 	j = ft_count(i);
-	inf->count = (j < inf->width) ? inf->width - j : j;
+	if (inf->width > 0)
+	{
+		inf->count = (j <= inf->width) ? inf->width - j : j;
+		inf->count_two = (j <= inf->width) ? inf->width - j : j;
+	}
 	return (0);
 }
 
-intmax_t 	ft_count(intmax_t n)
+intmax_t 	ft_count(intmax_t n) // считает кол-во символов в строке
 {
 	intmax_t i;
 

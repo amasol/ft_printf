@@ -40,17 +40,14 @@ int				ft_printf(const char *format, ...)
 //				format++;
 //			}
 		}
-//		int a = 0;
+/*
 		while (*format)
 		{
-//			if (ft_qualifier(*format))
-//				a++;
-			while (ft_isdigit(*format) || (*format == '-')/* || ft_qualifier(*format)*/)
+			while (ft_isdigit(*format) || (*format == '-'))
 				format++;
-//			if (ft_qualifier(*format))
 			ft_putchar(*format);
 			format++;
-		}
+		}*/
 	}
 	write(1, "\n", 1);
 	va_end(lst);
