@@ -31,17 +31,20 @@ int				ft_printf(const char *format, ...)
 			parsing((char *)format, lst);
 //			pars_spec((char *)format, lst);   перенес в другую функцию!
 
-
-//			if (ft_qualifier(*format))
-//				format++;
-//			while (*format)
-//			{
-//				ft_putchar(*format);
-//				format++;
-//			}
+			//вывод
+			while (ft_isdigit(*format) || (*format == '-') || ft_flag_check(*format)
+					/*|| ft_qualifier(*format)*/)
+				format++;
+			if (ft_qualifier(*format))
+				format++;
+			while (*format)
+			{
+				ft_putchar(*format);
+				format++;
+			}
 		}
-/*
-		while (*format)
+
+/*		while (*format)
 		{
 			while (ft_isdigit(*format) || (*format == '-'))
 				format++;

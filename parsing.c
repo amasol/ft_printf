@@ -30,20 +30,12 @@ void				parsing(char *str, va_list lst)
 	{
 		parsing_one(&str[i], &flag);
 		parsing_two(&str[i], &flag);
+		parsing_four(&str[i], &flag);
 		parsing_three(&str[i], &inf, &flag);
 		i++;
 	}
 	if (ft_qualifier(str[i]))
 		pars_spec(&str[i], lst, &flag, &inf);
-	while (str[i])
-	{
-		while (ft_isdigit(str[i]) || (str[i] == '-'))
-			i++;
-//		if ((!ft_qualifier(str[i])) && flag.ban == 1)
-//		if (flag.ban == 1)
-			ft_putchar(str[i]);
-		i++;
-	}
 //	printf("slash[%d]\n", flag.slash);
 //	printf("space[%d]\n", flag.l);
 }
@@ -118,29 +110,25 @@ void			parsing_two(char *str, t_flag *flag)
 
 int			parsing_three(char *str, t_inf *inf, t_flag *flag)
 {
-	// нету диклорации итератора k...если дикларирую то итератор слитает!
-//	не правильно выделяю malloc! не работает условие если не !
-	// нужно как то добавить что бы только если знак - был...заходило сюда и записывало!
 	int i;
 
 	i = 0;
-//	inf->minus = 0;
-//	if (!(inf->minus = (char *)malloc(sizeof(char))))
-//		return (0);
-	if (flag->minus == 1 || flag->zero == 1)
+	if (flag->minus == 1 || flag->zero == 1 || flag->width == 1)
 	{
 		if  (str[i] >= '1' && str[i] <= '9')
 		{
-//			inf->minus = str[i];
 			inf->width = ft_atoi(&str[i]);
-			flag->minus = 0;
+//			flag->minus = 0;
 		}
 	}
-//	printf("minus->[%d]\n", inf->minus);
 	return (1);
 }
 
-
+void			parsing_four(char *str, t_flag *flag)
+{
+	if (ft_isdigit(*str))
+		flag->width = 1;
+}
 
 
 

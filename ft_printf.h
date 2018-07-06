@@ -59,7 +59,7 @@ typedef	struct	s_inf
 //	char		*minus;
 	int			width;
 	int 		count;
-	int 		count_two;
+//	int 		count_two;
 }				t_inf;
 
 void			initialization_flag(t_flag *flag, t_inf *inf);
@@ -81,7 +81,8 @@ char			*ft_itoa_base_uintmax(uintmax_t nbr, int base, char c);
 //void			cast(va_list lst, char *format);
 intmax_t		cast_intmax(intmax_t i, t_flag *flag);
 uintmax_t		cast_uintmax(uintmax_t i, t_flag *flag);
-intmax_t		cast_minus(intmax_t i, t_inf *inf);
+intmax_t		entry_minus(intmax_t i, t_inf *inf);
+void			cast_flag(t_inf *inf, intmax_t i, t_flag *flag);
 
 //-------------------------специфыкаторы
 int				ft_refinement(char s);
@@ -100,6 +101,7 @@ void				parsing(char *str, va_list lst);
 void				parsing_one(char *str, t_flag *flag);
 void				parsing_two(char *str, t_flag *flag);
 int					parsing_three(char *str, t_inf *inf, t_flag *flag);
+void				parsing_four(char *str, t_flag *flag);
 int					ft_flag_check(char c);
 int					output_after(char *format);
 

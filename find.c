@@ -55,26 +55,18 @@ int			ft_flag_Ddi(va_list lst, char *format, t_flag *flag, t_inf *inf)
 	{
 		i = (APPLY) ? (cast_intmax(i, flag)) : (int)i;
 		if (LY)
-			cast_minus(i, inf);
-		while (inf->count_two > 0)
-		{
-			write(1, "0", 1);
-			inf->count_two--;
-		}
-		ft_putnbr_intmax(i);
-//		printf("[%jd]\n", i);
-//		while (inf->count > 0 && (!(inf->width == 1 && i == 1)))
-//		{
-//			write(1, " ", 1);
-//			inf->count--;
-//		}
+			entry_minus(i, inf);
+		cast_flag(inf, i, flag);
 	}
-/*	if (format[k] == 'D')
+	if (format[k] == 'D')
 	{
 //		j = va_arg(lst, long);
 		i = (APPLY) ? (cast_intmax(i, flag)) : (long)i;
-		ft_putnbr_intmax(i);
-	}*/
+		if (LY)
+			entry_minus(i, inf);
+		cast_flag(inf, i, flag);
+//		ft_putnbr_intmax(i);
+	}
 	flag->ban = 1;
 	 return (1);
 }
@@ -192,4 +184,37 @@ int 		ft_flag_p(va_list lst, char *format)
 		ft_putstr(str);
 	}
 	return (1);
+}
+
+void		cast_flag(t_inf *inf, intmax_t i, t_flag *flag)
+{
+	if (inf->count > 0 && flag->minus == 1)
+	{
+		ft_putnbr_intmax(i);
+		while (inf->count > 0 && (!(inf->width == 1 && i == 1)))
+		{
+			write(1, " ", 1);
+			inf->count--;
+		}
+	}
+	else if (inf->count > 0 && flag->zero == 1)
+	{
+		while (inf->count > 0)
+		{
+			write(1, "0", 1);
+			inf->count--;
+		}
+		ft_putnbr_intmax(i);
+	}
+	else if (inf->count > 0 && flag->width == 1)
+	{
+		while (inf->count > 0)
+		{
+			write(1, " ", 1);
+			inf->count--;
+		}
+		ft_putnbr_intmax(i);
+	}
+	else if (flag->zero == 0 || flag->minus == 0)
+		ft_putnbr_intmax(i);
 }
