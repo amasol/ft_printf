@@ -25,13 +25,16 @@ void				parsing(char *str, va_list lst)
 
 	i = 0;
 	if (str[i])
-		initialization_flag(&flag, &inf);
-	while (!(ft_qualifier(str[i])))
 	{
+		initialization_flag(&flag, &inf);
 		parsing_one(&str[i], &flag);
 		parsing_two(&str[i], &flag);
+	}
+	while (!(ft_qualifier(str[i])))
+	{
 		parsing_four(&str[i], &flag);
-		parsing_three(&str[i], &inf, &flag);
+		if (inf.width == 0)
+			parsing_three(&str[i], &inf, &flag);
 		i++;
 	}
 	if (ft_qualifier(str[i]))
@@ -62,13 +65,18 @@ void			initialization_flag(t_flag *flag, t_inf *inf)
 	inf->width				= 0;
 }
 
+//static int  is_width(char *str)
+//{
+//
+//}
+
+
 void			parsing_one(char *str, t_flag *flag)
 {
 	int i;
 
 	i = 0;
-//	while (str[i])
-	if (str[i])
+	while (str[i])
 	{
 		if (str[i] == '+')
 			flag->plus = 1;
@@ -78,18 +86,56 @@ void			parsing_one(char *str, t_flag *flag)
 			flag->slash = 1;
 		if (str[i] == ' ')
 			flag->space = 1;
-		if (str[i] == '0')
+//		if (str[i] == '0' && !ft_atoi(str + i - 1))
+//		if (str[i] == '0' && !is_width(str))
 			flag->zero = 1;
-//		i++;
+		i++;
 	}
 }
 
+/*
+void			parsing_one(char *str, t_flag *flag)
+{
+	int i;
+
+	i = 0;
+	if (str[i])
+	{
+		if (str[i] == '+')
+		{
+			flag->plus = 1;
+			i++;
+		}
+		if (str[i] == '-')
+		{
+			flag->minus = 1;
+			i++;
+		}
+		if (str[i] == '#')
+		{
+			flag->slash = 1;
+			i++;
+		}
+		if (str[i] == ' ')
+		{
+			flag->space = 1;
+			i++;
+		}
+		if (str[i] == '0')
+		{
+			flag->zero = 1;
+			i++;
+		}
+	}
+}
+ */
 
 void			parsing_two(char *str, t_flag *flag)
 {
 	int i;
 
 	i = 0;
+	// поменять местами по приоритетности с z по hh
 	if (str[i])
 	{
 		if (str[i] == 'h' && str[i + 1] == 'h')
@@ -113,8 +159,10 @@ int			parsing_three(char *str, t_inf *inf, t_flag *flag)
 	int i;
 
 	i = 0;
-	if (flag->minus == 1 || flag->zero == 1 || flag->width == 1)
+	if (flag->minus == 1 || flag->zero == 1 || flag->width == 1 || flag->plus == 1)
 	{
+		while (str[i] == '+' || str[i] == '0')
+			i++;
 		if  (str[i] >= '1' && str[i] <= '9')
 		{
 			inf->width = ft_atoi(&str[i]);
@@ -128,6 +176,11 @@ void			parsing_four(char *str, t_flag *flag)
 {
 	if (ft_isdigit(*str))
 		flag->width = 1;
+	if (flag->space == 1)
+	{
+//		flag->minus = 0;
+		flag->width = 0;
+	}
 }
 
 

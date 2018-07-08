@@ -81,7 +81,7 @@ char			*ft_itoa_base_uintmax(uintmax_t nbr, int base, char c);
 //void			cast(va_list lst, char *format);
 intmax_t		cast_intmax(intmax_t i, t_flag *flag);
 uintmax_t		cast_uintmax(uintmax_t i, t_flag *flag);
-intmax_t		entry_minus(intmax_t i, t_inf *inf);
+intmax_t		entry_minus(intmax_t i, t_inf *inf, t_flag *flag);
 void			cast_flag(t_inf *inf, intmax_t i, t_flag *flag);
 
 //-------------------------специфыкаторы

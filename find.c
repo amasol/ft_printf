@@ -44,10 +44,10 @@ void		pars_spec(char *format, va_list lst, t_flag *flag, t_inf *inf)
 int			ft_flag_Ddi(va_list lst, char *format, t_flag *flag, t_inf *inf)
 {
 	int 		k;
-	int 		j;
+//	int 		j;
 	intmax_t	i;
 
-	j = 0;
+//	j = 0;
 	k = 0;
 	i = 0;
 	i = va_arg(lst, intmax_t);
@@ -55,7 +55,7 @@ int			ft_flag_Ddi(va_list lst, char *format, t_flag *flag, t_inf *inf)
 	{
 		i = (APPLY) ? (cast_intmax(i, flag)) : (int)i;
 		if (LY)
-			entry_minus(i, inf);
+			entry_minus(i, inf, flag);
 		cast_flag(inf, i, flag);
 	}
 	if (format[k] == 'D')
@@ -63,7 +63,7 @@ int			ft_flag_Ddi(va_list lst, char *format, t_flag *flag, t_inf *inf)
 //		j = va_arg(lst, long);
 		i = (APPLY) ? (cast_intmax(i, flag)) : (long)i;
 		if (LY)
-			entry_minus(i, inf);
+			entry_minus(i, inf, flag);
 		cast_flag(inf, i, flag);
 //		ft_putnbr_intmax(i);
 	}
@@ -186,10 +186,38 @@ int 		ft_flag_p(va_list lst, char *format)
 	return (1);
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 void		cast_flag(t_inf *inf, intmax_t i, t_flag *flag)
 {
+	// флаг -
 	if (inf->count > 0 && flag->minus == 1)
 	{
+		if (flag->plus == 1)
+			write(1, "+", 1);
 		ft_putnbr_intmax(i);
 		while (inf->count > 0 && (!(inf->width == 1 && i == 1)))
 		{
@@ -197,8 +225,12 @@ void		cast_flag(t_inf *inf, intmax_t i, t_flag *flag)
 			inf->count--;
 		}
 	}
+
+//		флан zero
 	else if (inf->count > 0 && flag->zero == 1)
 	{
+		if (flag->plus == 1)
+			write(1, "+", 1);
 		while (inf->count > 0)
 		{
 			write(1, "0", 1);
@@ -206,6 +238,9 @@ void		cast_flag(t_inf *inf, intmax_t i, t_flag *flag)
 		}
 		ft_putnbr_intmax(i);
 	}
+
+
+		// 		флаг	 ширины (99)
 	else if (inf->count > 0 && flag->width == 1)
 	{
 		while (inf->count > 0)
@@ -213,8 +248,16 @@ void		cast_flag(t_inf *inf, intmax_t i, t_flag *flag)
 			write(1, " ", 1);
 			inf->count--;
 		}
+		if (flag->plus == 1)
+			write(1, "+", 1);
 		ft_putnbr_intmax(i);
 	}
+
+
 	else if (flag->zero == 0 || flag->minus == 0)
+	{
+		if (flag->plus == 1)
+			write(1, "+", 1);
 		ft_putnbr_intmax(i);
+	}
 }

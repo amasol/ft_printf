@@ -32,12 +32,12 @@ int				ft_printf(const char *format, ...)
 //			pars_spec((char *)format, lst);   перенес в другую функцию!
 
 			//вывод
-			while (ft_isdigit(*format) || (*format == '-') || ft_flag_check(*format)
-					/*|| ft_qualifier(*format)*/)
+			while (ft_isdigit(*format) || (*format == '-') || (*format == '+')|| ft_flag_check(*format)
+					/*|| ft_qualifier(*format)*/ || (*format == ' '))
 				format++;
 			if (ft_qualifier(*format))
 				format++;
-			while (*format)
+			while (*format != '\0')
 			{
 				ft_putchar(*format);
 				format++;

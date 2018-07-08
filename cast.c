@@ -36,7 +36,7 @@ uintmax_t		cast_uintmax(uintmax_t i, t_flag *flag)
 	return (0);
 }
 
-intmax_t	entry_minus(intmax_t i, t_inf *inf)
+intmax_t	entry_minus(intmax_t i, t_inf *inf, t_flag *flag)
 {// можно приминить эту функцию как для ширины так и для минуса !!!
 	int j;
 
@@ -46,6 +46,8 @@ intmax_t	entry_minus(intmax_t i, t_inf *inf)
 	j = ft_count(i);
 	if (inf->width > 0)
 		inf->count = (j <= inf->width) ? inf->width - j : j;
+	if (inf->count > 0 && (flag->plus == 1))
+		inf->count = inf->count - 1;
 	return (0);
 }
 
