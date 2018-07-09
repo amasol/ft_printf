@@ -65,12 +65,6 @@ void			initialization_flag(t_flag *flag, t_inf *inf)
 	inf->width				= 0;
 }
 
-//static int  is_width(char *str)
-//{
-//
-//}
-
-
 void			parsing_one(char *str, t_flag *flag)
 {
 	int i;
@@ -86,49 +80,11 @@ void			parsing_one(char *str, t_flag *flag)
 			flag->slash = 1;
 		if (str[i] == ' ')
 			flag->space = 1;
-//		if (str[i] == '0' && !ft_atoi(str + i - 1))
-//		if (str[i] == '0' && !is_width(str))
+		if (!is_zero(str))
 			flag->zero = 1;
 		i++;
 	}
 }
-
-/*
-void			parsing_one(char *str, t_flag *flag)
-{
-	int i;
-
-	i = 0;
-	if (str[i])
-	{
-		if (str[i] == '+')
-		{
-			flag->plus = 1;
-			i++;
-		}
-		if (str[i] == '-')
-		{
-			flag->minus = 1;
-			i++;
-		}
-		if (str[i] == '#')
-		{
-			flag->slash = 1;
-			i++;
-		}
-		if (str[i] == ' ')
-		{
-			flag->space = 1;
-			i++;
-		}
-		if (str[i] == '0')
-		{
-			flag->zero = 1;
-			i++;
-		}
-	}
-}
- */
 
 void			parsing_two(char *str, t_flag *flag)
 {
@@ -183,6 +139,21 @@ void			parsing_four(char *str, t_flag *flag)
 	}
 }
 
+static int		is_zero(char *str)
+{
+	int i;
+
+	i = 0;
+	while (str[i])
+	{
+		if (str[i] >= '1' && str[i] <= '9')
+			return (1);
+		else if (str[i] == '0')
+			return (0);
+		i++;
+	}
+	return (0);
+}
 
 
 

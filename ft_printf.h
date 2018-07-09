@@ -104,6 +104,7 @@ int					parsing_three(char *str, t_inf *inf, t_flag *flag);
 void				parsing_four(char *str, t_flag *flag);
 int					ft_flag_check(char c);
 int					output_after(char *format);
+static int			is_zero(char *str);
 
 
 //int					ft_flag(char format);

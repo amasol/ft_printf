@@ -97,8 +97,10 @@ int		main(void)
 //	printf("(org2)[%+10d]\n", 111);
 
 
-	printf("(org2)[%+010d]\n", 111);
-	ft_printf("(myy2)[%010d]", 111);
+	printf("(org2)[%123+10d]\n", 111);
+	// не работает правильно !!!
+	ft_printf("(myy2)[%123+10d]", 111);
+//	ft_printf("(myy2)[%05d]", 111);
 
 
 //	ft_printf("(myy2)[%+10d]", 111);
