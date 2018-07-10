@@ -17,9 +17,9 @@ void		pars_spec(char *format, va_list lst, t_flag *flag, t_inf *inf)
 			else if (ft_refinement(format[i]) == 3)
 				ft_flag_Ss(lst, &format[i]);
 			else if (ft_refinement(format[i]) == 4)
-				ft_flag_Xx(lst, &format[i], flag);
+				ft_flag_Xx(lst, &format[i], flag, inf);
 			else if (ft_refinement(format[i]) == 5)
-				ft_flag_Oo(lst, &format[i], flag);
+				ft_flag_Oo(lst, &format[i], flag, inf);
 			else if (ft_refinement(format[i]) == 6)
 				ft_flag_Uu(lst, &format[i], flag);
 			else if (ft_refinement(format[i]) == 7)
@@ -56,7 +56,7 @@ int			ft_flag_Ddi(va_list lst, char *format, t_flag *flag, t_inf *inf)
 		i = (APPLY) ? (cast_intmax(i, flag)) : (int)i;
 		if (LY)
 			entry_minus(i, inf, flag);
-		cast_flag(inf, i, flag);
+		cast_flag(inf, i, flag, format);
 	}
 	if (format[k] == 'D')
 	{
@@ -64,7 +64,7 @@ int			ft_flag_Ddi(va_list lst, char *format, t_flag *flag, t_inf *inf)
 		i = (APPLY) ? (cast_intmax(i, flag)) : (long)i;
 		if (LY)
 			entry_minus(i, inf, flag);
-		cast_flag(inf, i, flag);
+		cast_flag(inf, i, flag, format);
 //		ft_putnbr_intmax(i);
 	}
 	flag->ban = 1;
@@ -109,7 +109,7 @@ int			ft_flag_Ss(va_list lst, char *format)
 //	посмотреть приминение ft_putstr c wchar_t!!!!!
 }
 
-int			ft_flag_Xx(va_list lst, char *format, t_flag *flag)
+int			ft_flag_Xx(va_list lst, char *format, t_flag *flag, t_inf *inf)
 {
 //	флаг j -требует что бы мы вытягивали intmax_t..
 	int 		k;
@@ -123,12 +123,14 @@ int			ft_flag_Xx(va_list lst, char *format, t_flag *flag)
 	{
 		i = (APPLY) ? (cast_uintmax(i, flag)) : (unsigned int)i;
 		str = ft_itoa_base_uintmax(i, 16, 'x');
+		cast_flag(inf, i, flag, format);
 		ft_putstr(str);
 	}
 	else if (format[k] == 'X')
 	{
 		i = (APPLY) ? (cast_uintmax(i, flag)) : (unsigned int)i;
 		str = ft_itoa_base_uintmax(i, 16, 'X');
+		cast_flag(inf, i, flag, format);
 		ft_putstr(str);
 	}
 	return (1);
@@ -152,7 +154,7 @@ int 		ft_flag_Uu(va_list lst, char *format, t_flag *flag)
 	return (1);
 }
 
-int			ft_flag_Oo(va_list lst, char *format, t_flag *flag)
+int			ft_flag_Oo(va_list lst, char *format, t_flag *flag, t_inf *inf)
 {
 	int			k;
 	uintmax_t	i;
@@ -164,6 +166,7 @@ int			ft_flag_Oo(va_list lst, char *format, t_flag *flag)
 	{
 		i = (APPLY) ? (cast_uintmax(i, flag)) : (unsigned int)i;
 		str = ft_itoa_base_uintmax(i, 8, 'o');
+		cast_flag(inf, i, flag, format);
 		ft_putstr(str);
 	}
 	return (1);
@@ -211,7 +214,7 @@ int 		ft_flag_p(va_list lst, char *format)
 
 
 
-void		cast_flag(t_inf *inf, intmax_t i, t_flag *flag)
+void		cast_flag(t_inf *inf, intmax_t i, t_flag *flag, char *str)
 {
 	// флаг -
 	if (inf->count > 0 && flag->minus == 1)
@@ -241,7 +244,8 @@ void		cast_flag(t_inf *inf, intmax_t i, t_flag *flag)
 
 
 		// 		флаг	 ширины (99)
-	else if (inf->count > 0 && flag->width == 1)
+		// не коректное добавление флага precision так как не будет работать...
+	else if (inf->count > 0 && flag->width == 1 && flag->precision == 0)
 	{
 		while (inf->count > 0)
 		{
@@ -252,12 +256,43 @@ void		cast_flag(t_inf *inf, intmax_t i, t_flag *flag)
 			write(1, "+", 1);
 		ft_putnbr_intmax(i);
 	}
-
-
-	else if (flag->zero == 0 || flag->minus == 0)
+	else if ((flag->zero == 0 || flag->minus == 0) && flag->plus == 1)
 	{
 		if (flag->plus == 1)
 			write(1, "+", 1);
 		ft_putnbr_intmax(i);
 	}
+	else if (flag->space == 1)
+	{
+//		if (*str == ' ')
+			write(1, " ", 1);
+//		while (*str == ' ')
+//			str++;
+		ft_putnbr_intmax(i);
+	}
+	else if (flag->precision == 1 && inf->count > 0)
+	{
+		if (flag->plus == 1)
+			write(1, "+", 1);
+		while (inf->count > 0)
+		{
+			write(1, "0", 1);
+			inf->count--;
+		}
+		ft_putnbr_intmax(i);
+	}
+	else if (flag->slash == 1)
+	{
+		if (*str == 'X')
+			write(1, "0X", 2);
+		if (*str == 'x')
+			write(1, "0x", 2);
+		if (*str == 'o' || *str == 'O')
+			write(1, "0", 1);
+	}
+		// не правильно работает если у нас нету флагов и мы должны вывести остачу || у нас
+//		есть флаг и мы должны вывести остачу послу отработки тут !!!
+	else if (flag->plus == 0 && flag->minus == 0 && flag->slash == 0 && flag->space == 0
+		&& flag->zero == 0 && flag->width == 0 && flag->precision == 0)
+		ft_putnbr_intmax(i);
 }

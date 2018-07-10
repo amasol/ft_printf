@@ -82,6 +82,8 @@ void			parsing_one(char *str, t_flag *flag)
 			flag->space = 1;
 		if (!is_zero(str))
 			flag->zero = 1;
+		if (str[i] == '.')
+			flag->precision = 1;
 		i++;
 	}
 }
@@ -115,7 +117,8 @@ int			parsing_three(char *str, t_inf *inf, t_flag *flag)
 	int i;
 
 	i = 0;
-	if (flag->minus == 1 || flag->zero == 1 || flag->width == 1 || flag->plus == 1)
+	if (flag->minus == 1 || flag->zero == 1 || flag->width == 1 ||
+		flag->plus == 1 || flag->precision == 1)
 	{
 		while (str[i] == '+' || str[i] == '0')
 			i++;

@@ -33,7 +33,7 @@ int				ft_printf(const char *format, ...)
 
 			//вывод
 			while (ft_isdigit(*format) || (*format == '-') || (*format == '+')|| ft_flag_check(*format)
-					/*|| ft_qualifier(*format)*/ || (*format == ' '))
+					/*|| ft_qualifier(*format)*/ || (*format == ' ') || (*format == '.'))
 				format++;
 			if (ft_qualifier(*format))
 				format++;
