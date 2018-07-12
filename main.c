@@ -135,9 +135,9 @@ int		main(void)
 //	printf("(org[X])[%#X]\n", 111);
 //	ft_printf("(myy[X])[%#X]", 111);
 
-
-	printf("(org[o])[%o]\n", 111);
-	ft_printf("(myy[o])[%o]", 111);
+// передалть если есть точность отрабатывает не то число
+	ft_printf("(myy[d])[%+15.+6d]", 111);
+	printf("(org[d])[%+15.+6d]\n", 111);
 
 
 //	printf("(org)[%10.6d]", 111);

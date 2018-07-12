@@ -32,7 +32,8 @@ void				parsing(char *str, va_list lst)
 	}
 	while (!(ft_qualifier(str[i])))
 	{
-		parsing_four(&str[i], &flag);
+		if (inf.width_two == 0)
+			parsing_four(&str[i], &flag, &inf);
 		if (inf.width == 0)
 			parsing_three(&str[i], &inf, &flag);
 		i++;
@@ -63,6 +64,7 @@ void			initialization_flag(t_flag *flag, t_inf *inf)
 
 	flag->ban				= 0;
 	inf->width				= 0;
+	inf->width_two			= 0;
 }
 
 void			parsing_one(char *str, t_flag *flag)
@@ -117,28 +119,46 @@ int			parsing_three(char *str, t_inf *inf, t_flag *flag)
 	int i;
 
 	i = 0;
+	while (!(*str == '+' ||  *str == '-') && (flag->plus == 1 || flag->minus == 1))
+		str++;
+	if (*str == '+' || *str == '-')
+	{
+		if (ft_isdigit(*str - 1))
+			inf->width = 0;
+	}
 	if (flag->minus == 1 || flag->zero == 1 || flag->width == 1 ||
 		flag->plus == 1 || flag->precision == 1)
 	{
-		while (str[i] == '+' || str[i] == '0')
+		while (str[i] == '+' || str[i] == '0' || str[i] == '-')
 			i++;
+		// передалть если есть точность отрабатывает не то число
 		if  (str[i] >= '1' && str[i] <= '9')
 		{
 			inf->width = ft_atoi(&str[i]);
-//			flag->minus = 0;
 		}
 	}
 	return (1);
 }
 
-void			parsing_four(char *str, t_flag *flag)
+void			parsing_four(char *str, t_flag *flag, t_inf *inf)
 {
-	if (ft_isdigit(*str))
+	int i;
+
+	i = 0;
+	if (ft_isdigit(*str)) //  перенести в флаги
 		flag->width = 1;
-	if (flag->space == 1)
+	if (flag->space == 1) // просмотреть что делает и зачем
 	{
 //		flag->minus = 0;
 		flag->width = 0;
+	}
+	while (str[i] == '+' || str[i] == '0' || str[i] == '-')
+		i++;
+	if (str[i] == '.' && flag->precision == 1)
+	{
+		i++;
+		if  (str[i] >= '1' && str[i] <= '9')
+			inf->width_two = ft_atoi(&str[i]);
 	}
 }
 
@@ -157,11 +177,6 @@ static int		is_zero(char *str)
 	}
 	return (0);
 }
-
-
-
-
-
 
 
 

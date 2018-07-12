@@ -42,12 +42,21 @@ intmax_t	entry_minus(intmax_t i, t_inf *inf, t_flag *flag)
 
 	j = 0;
 
-	inf->count = 0;
+	inf->count 		= 0;
+	inf->count_two	= 0;
 	j = ft_count(i);
+//	if (inf->width_two > 0 && flag->precision == 1)
+//		inf->count_two = (j <= inf->width_two) ? inf->width_two - j : j;
 	if (inf->width > 0)
 		inf->count = (j <= inf->width) ? inf->width - j : j;
 	if (inf->count > 0 && (flag->plus == 1))
 		inf->count = inf->count - 1;
+	if (inf->width > 0 && inf->width_two > 0)
+	{
+		if (inf->width_two > 0 && flag->precision == 1)
+			inf->count_two = (j <= inf->width_two) ? inf->width_two - j : j;
+		inf->count = inf->width - inf->width_two;
+	}
 	return (0);
 }
 

@@ -58,8 +58,9 @@ typedef	struct	s_inf
 {
 //	char		*minus;
 	int			width;
+	int			width_two;
 	int 		count;
-//	int 		count_two;
+	int 		count_two;
 }				t_inf;
 
 void			initialization_flag(t_flag *flag, t_inf *inf);
@@ -101,7 +102,7 @@ void				parsing(char *str, va_list lst);
 void				parsing_one(char *str, t_flag *flag);
 void				parsing_two(char *str, t_flag *flag);
 int					parsing_three(char *str, t_inf *inf, t_flag *flag);
-void				parsing_four(char *str, t_flag *flag);
+void				parsing_four(char *str, t_flag *flag, t_inf *inf);
 int					ft_flag_check(char c);
 int					output_after(char *format);
 static int			is_zero(char *str);

@@ -256,12 +256,16 @@ void		cast_flag(t_inf *inf, intmax_t i, t_flag *flag, char *str)
 			write(1, "+", 1);
 		ft_putnbr_intmax(i);
 	}
-	else if ((flag->zero == 0 || flag->minus == 0) && flag->plus == 1)
+
+
+	else if ((flag->zero == 0 || flag->minus == 0) && flag->plus == 1 && flag->precision == 0)
 	{
 		if (flag->plus == 1)
 			write(1, "+", 1);
 		ft_putnbr_intmax(i);
 	}
+
+
 	else if (flag->space == 1)
 	{
 //		if (*str == ' ')
@@ -270,7 +274,9 @@ void		cast_flag(t_inf *inf, intmax_t i, t_flag *flag, char *str)
 //			str++;
 		ft_putnbr_intmax(i);
 	}
-	else if (flag->precision == 1 && inf->count > 0)
+
+//		точность (.)
+	else if (flag->precision == 1 && inf->count > 0 && flag->width == 0)
 	{
 		if (flag->plus == 1)
 			write(1, "+", 1);
@@ -281,6 +287,8 @@ void		cast_flag(t_inf *inf, intmax_t i, t_flag *flag, char *str)
 		}
 		ft_putnbr_intmax(i);
 	}
+
+
 	else if (flag->slash == 1)
 	{
 		if (*str == 'X')
@@ -290,8 +298,39 @@ void		cast_flag(t_inf *inf, intmax_t i, t_flag *flag, char *str)
 		if (*str == 'o' || *str == 'O')
 			write(1, "0", 1);
 	}
+
+
+	else if (flag->precision == 1 && flag->width == 1 && inf->count > 0 && flag->plus == 0)
+	{
+//		inf->width = inf->width - inf->width_two;
+		while (inf->count > 0)
+		{
+			write(1, " ", 1);
+			inf->count--;
+		}
+		while (inf->count_two > 0)
+		{
+			write(1, "0", 1);
+			inf->count_two--;
+		}
+		ft_putnbr_intmax(i);
+	}
+
+
+	else if (flag->precision == 1 && flag->plus == 1)
+	{
+		while (inf->count > 0)
+		{
+			write(1, " ", 1);
+			inf->count--;
+		}
+		if (flag->plus == 1)
+			write(1, "+", 1);
+		ft_putnbr_intmax(i);
+	}
 		// не правильно работает если у нас нету флагов и мы должны вывести остачу || у нас
 //		есть флаг и мы должны вывести остачу послу отработки тут !!!
+
 	else if (flag->plus == 0 && flag->minus == 0 && flag->slash == 0 && flag->space == 0
 		&& flag->zero == 0 && flag->width == 0 && flag->precision == 0)
 		ft_putnbr_intmax(i);
