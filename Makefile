@@ -1,6 +1,6 @@
 NAME := libftprintf.a
 
-SRC := 	ft_printf.c ft_qualifier.c find.c
+SRC := 	ft_printf.c ft_qualifier.c find.c cast.c ft_putnbr_long.c itoa_b.c itoa_b_uintmax.c parsing.c
 
 OBJ_DIR := obj
 

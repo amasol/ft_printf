@@ -135,12 +135,106 @@ int		main(void)
 //	printf("(org[X])[%#X]\n", 111);
 //	ft_printf("(myy[X])[%#X]", 111);
 
-// передалть если есть точность отрабатывает не то число
-	ft_printf("(myy[d])[%+15.+6d]", 111);
-	printf("(org[d])[%+15.+6d]\n", 111);
 
 
-//	printf("(org)[%10.6d]", 111);
+// не работает !
+//	ft_printf("(myy[d])[%+.+10d]", 111);
+//	ft_printf("(myy[d])[%+.-10d]", 111);
+//	ft_printf("(myy[d])[%-.+10d]", 111);
+//	ft_printf("(myy[d])[%-.-10d]", 111);
+//------------------
+
+
+
+
+//	ft_printf("(myy[d])[%+10.6d]", 111);
+//	printf("(org[d])[%+10.6d]\n", 111);
+//
+//	ft_printf("(myy[d])[%10.6d]", 111);
+//	printf("(org[d])[%10.6d]\n", 111);
+
+//	ft_printf("(myy[d])[%+15.6d]", 111);
+//	printf("(org[d])[%+15.6d]\n", 111);
+
+//	ft_printf("(myy[d])[%.6d]", 111);
+//	printf("(org[d])[%.6d]\n", 111);
+//
+//	ft_printf("(myy[d])[%6d]", 111);
+//	printf("(org[d])[%6d]\n", 111);
+//
+//	ft_printf("(myy[d])[%-10.6d]", 111);
+//	printf("(org[d])[%-10.6d]\n", 111);
+//
+//	printf("(org)[%+10d]\n", 111);
+//	ft_printf("(myy)[%+10d]", 111);
+
+//	ft_printf("(myy[d])[%+10.6d]", 111);
+//	printf("(org[d])[%+10.6d]\n", 111);
+
+//	printf("(org)[%-10d]", 111);
+//	ft_printf("(myy)[%-10d]", 111);
+
+//	printf("(org)[%-10d]", 111);
+//	ft_printf("(myy)[%-10d]", 111);
+
+	//отменяет все до +10
+//	printf("(org)[%.15.1515.15.+10d]", 111);
+
+
+//----------------
+//	printf("(org)[%15.+10d]\n", 111);
+//	ft_printf("(myy)[%15.+10d]\n", 111);
+//
+//	ft_printf("(myy[d])[%+15.+6d]", 111);
+//	ft_printf("(myy[d])[%+15.+6d]", 111);
+
+
+//	ft_printf("(myy[d])[%-15.+6d]\n", 111);
+//	printf("(org[d])[%-15.+6d]\n", 111);
+
+
+	// используеться аргумент ближний к d
+//	printf("(org[d])[%-+50.6d]\n", 111);
+
+//	printf("(org[d])[%15.+6d]\n", 111);
+//	ft_printf("(myy[d])[%15.+6d]\n", 111);
+
+//	printf("(org[d])[%-6d]\n", 111);
+
+	//----------------------
+
+
+	ft_printf("(myy[d])[%%d]", 111);
+	printf("(org[d])[%%d]\n\n", 111);
+
+
+//	ft_printf("(myy[d])[%-.10d]", 111);
+//	printf("(org[d])[%-.10d]\n\n", 111);
+
+//	ft_printf("(myy[d])[%+-.10d]", 111);
+//	printf("(org[d])[%+-.10d]\n", 111);
+
+
+
+	//-------------------------
+//	ft_printf("(myy[d])[%-7d]", 111);
+//	printf("(org[d])[%-7d]\n", 111);
+
+	//-------------------------
+
+//	ft_printf("(myy[d])[%20.15+d]", 111);
+//	printf("(org[d])[%20.15+d]\n", 111);
+
+//	ft_printf("(myy[d])[%-+15.6d]", 111);
+//	printf("(org[d])[%-+15.6d]\n", 111);
+
+
+//	ft_printf("(myy[d])[%-+015.6d]", 111);
+//	printf("(org[d])[%-+015.6d]\n", 111);
+
+//	printf("(org)[%  +  d]\n", -111);
+//	ft_printf("(myy)[%  +  d]\n", -111);
+
 
 	return (0);
 }

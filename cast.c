@@ -45,18 +45,18 @@ intmax_t	entry_minus(intmax_t i, t_inf *inf, t_flag *flag)
 	inf->count 		= 0;
 	inf->count_two	= 0;
 	j = ft_count(i);
-//	if (inf->width_two > 0 && flag->precision == 1)
-//		inf->count_two = (j <= inf->width_two) ? inf->width_two - j : j;
 	if (inf->width > 0)
 		inf->count = (j <= inf->width) ? inf->width - j : j;
-	if (inf->count > 0 && (flag->plus == 1))
-		inf->count = inf->count - 1;
-	if (inf->width > 0 && inf->width_two > 0)
+	if (flag->plus == 1 || inf->tmp == 1 || flag->space == 1)
 	{
-		if (inf->width_two > 0 && flag->precision == 1)
-			inf->count_two = (j <= inf->width_two) ? inf->width_two - j : j;
-		inf->count = inf->width - inf->width_two;
+		if (inf->width_two == 0)
+			inf->count = inf->count - 1;
 	}
+	if (inf->width_two > 0)
+		inf->count_two = (inf->width_two > inf->width) ? inf->width_two - inf->width : 0;
+//		inf->count_two = inf->width_two - inf->width;
+	if (inf->count_two > 0 && (flag->plus == 1 || inf->tmp == 1))
+		inf->count_two = inf->count_two - 1;
 	return (0);
 }
 

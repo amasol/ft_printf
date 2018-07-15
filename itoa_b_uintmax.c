@@ -1,6 +1,6 @@
 #include "ft_printf.h"
 
-static	int		count(uintmax_t nbr, int base)
+static	int		count(uintmax_t nbr, unsigned base)
 {
 	int i;
 
@@ -62,7 +62,7 @@ static	void		ft_bukv_m(uintmax_t nbr, int len, char *str)
 		str[len] = 'f';
 }
 
-static	void		transform(uintmax_t nbr, int len, int base, char *str)
+static	void		transform(uintmax_t nbr, int len, unsigned base, char *str)
 {
 	while (nbr >= base)
 	{
@@ -79,7 +79,7 @@ static	void		transform(uintmax_t nbr, int len, int base, char *str)
 		str[len] = nbr % base + 48;
 }
 
-char			*ft_itoa_base_uintmax(uintmax_t nbr, int base, char c)
+char			*ft_itoa_base_uintmax(uintmax_t nbr, unsigned base, char c)
 {
 	char	*str;
 	int		len;

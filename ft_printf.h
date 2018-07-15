@@ -61,6 +61,9 @@ typedef	struct	s_inf
 	int			width_two;
 	int 		count;
 	int 		count_two;
+	int 		count_three;
+	int 		count_four;
+	int			tmp;
 }				t_inf;
 
 void			initialization_flag(t_flag *flag, t_inf *inf);
@@ -76,7 +79,7 @@ int				ft_printf(const char *format, ...);
 void			pars_spec(char *format, va_list lst, t_flag *flag, t_inf *inf);
 int				ft_qualifier(char s);
 char			*ft_itoa_base(intmax_t num, int base, char c);
-char			*ft_itoa_base_uintmax(uintmax_t nbr, int base, char c);
+char			*ft_itoa_base_uintmax(uintmax_t nbr, unsigned base, char c);
 
 //----------------------------------------------------
 //void			cast(va_list lst, char *format);
@@ -103,10 +106,11 @@ void				parsing_one(char *str, t_flag *flag);
 void				parsing_two(char *str, t_flag *flag);
 int					parsing_three(char *str, t_inf *inf, t_flag *flag);
 void				parsing_four(char *str, t_flag *flag, t_inf *inf);
+void				parsing_five(char *str, t_inf *inf);
 int					ft_flag_check(char c);
 int					output_after(char *format);
-static int			is_zero(char *str);
-
+int					is_zero(char *str);
+void				cancellation_flags(t_flag *flag, t_inf *inf, char *str);
 
 //int					ft_flag(char format);
 //int					ft_length_hh(char format);
@@ -117,7 +121,7 @@ static int			is_zero(char *str);
 //int				ft_length_z(char *tmp);
 //int				treatment(char *str, va_list lst);
 
-void				ft_putnbr_intmax(long nb);
+void				ft_putnbr_intmax(intmax_t nb);
 intmax_t		 	ft_count(intmax_t n);
 
 #endif

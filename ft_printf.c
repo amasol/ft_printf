@@ -25,7 +25,7 @@ int				ft_printf(const char *format, ...)
 	}
 	if (*format)
 	{
-		if (*format == '%')
+		if (*format == '%' && *(format + 1) != '%')
 		{
 			format++;
 			parsing((char *)format, lst);
@@ -43,7 +43,22 @@ int				ft_printf(const char *format, ...)
 				format++;
 			}
 		}
-
+		if (*format == '%' && *(format + 1) == '%')
+		{
+			write(1, "%", 1);
+			format = format + 2;
+//			parsing((char *)format, lst);
+			while (ft_isdigit(*format) || (*format == '-') || (*format == '+')|| ft_flag_check(*format)
+				   /*|| ft_qualifier(*format)*/ || (*format == ' ') || (*format == '.'))
+				format++;
+			if (ft_qualifier(*format))
+				format++;
+			while (*format != '\0')
+			{
+				ft_putchar(*format);
+				format++;
+			}
+		}
 /*		while (*format)
 		{
 			while (ft_isdigit(*format) || (*format == '-'))

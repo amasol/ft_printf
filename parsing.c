@@ -33,15 +33,17 @@ void				parsing(char *str, va_list lst)
 	while (!(ft_qualifier(str[i])))
 	{
 		if (inf.width_two == 0)
-			parsing_four(&str[i], &flag, &inf);
+			parsing_four(str, &flag, &inf);
+		if (inf.width == 0)
+			parsing_three(&str[i], &inf, &flag);
+		if (inf.count_three == 0)
+			parsing_five(&str[i], &inf);
 		if (inf.width == 0)
 			parsing_three(&str[i], &inf, &flag);
 		i++;
 	}
 	if (ft_qualifier(str[i]))
 		pars_spec(&str[i], lst, &flag, &inf);
-//	printf("slash[%d]\n", flag.slash);
-//	printf("space[%d]\n", flag.l);
 }
 
 void			initialization_flag(t_flag *flag, t_inf *inf)
@@ -65,6 +67,9 @@ void			initialization_flag(t_flag *flag, t_inf *inf)
 	flag->ban				= 0;
 	inf->width				= 0;
 	inf->width_two			= 0;
+	inf->count_three		= 0;
+	inf->count_four			= 0;
+	inf->tmp				= 0;
 }
 
 void			parsing_one(char *str, t_flag *flag)
@@ -86,6 +91,8 @@ void			parsing_one(char *str, t_flag *flag)
 			flag->zero = 1;
 		if (str[i] == '.')
 			flag->precision = 1;
+		if (ft_isdigit(str[i]))
+			flag->width = 1;
 		i++;
 	}
 }
@@ -117,25 +124,48 @@ void			parsing_two(char *str, t_flag *flag)
 int			parsing_three(char *str, t_inf *inf, t_flag *flag)
 {
 	int i;
+	int k;
 
 	i = 0;
-	while (!(*str == '+' ||  *str == '-') && (flag->plus == 1 || flag->minus == 1))
-		str++;
-	if (*str == '+' || *str == '-')
+	k = 0;
+	if (ft_isdigit(*str) && flag->precision == 1)
 	{
-		if (ft_isdigit(*str - 1))
-			inf->width = 0;
+		while (*str != '.')
+			str++;
+		if (str[i] == '.' && flag->precision == 1)
+		{
+			if (str[i + 1] == '+' || str[i + 1] == '-' ||
+				str[i + 1] == ' ' || str[i + 1] == '#')
+			{
+				flag->precision = 0;
+				inf->width_two = 0;
+			}
+		}
+		if (ft_isdigit(str[i + 1]) && flag->precision == 1)
+		{
+			inf->width = ft_atoi(&str[i + 1]);
+			k = 1;
+		}
 	}
-	if (flag->minus == 1 || flag->zero == 1 || flag->width == 1 ||
-		flag->plus == 1 || flag->precision == 1)
+//	if ((flag->minus == 1 || flag->zero == 1 || flag->width == 1 ||
+//		flag->plus == 1 || flag->precision == 1) && k != 1)
+	if (k != 1)
 	{
-		while (str[i] == '+' || str[i] == '0' || str[i] == '-')
+		while (str[i] == '+' || str[i] == '0' || str[i] == '-' ||
+				str[i] == '.' || str[i] == ' ')
 			i++;
-		// передалть если есть точность отрабатывает не то число
 		if  (str[i] >= '1' && str[i] <= '9')
 		{
 			inf->width = ft_atoi(&str[i]);
+			inf->count_four = 1;
 		}
+	}
+	while (*str == '+' || *str == '-' || *str == ' ' || *str == '#')
+		str++;
+	if (ft_isdigit(*str) && inf->width_two > 0)
+	{
+		inf->width = 0;
+		inf->count_four = 1;
 	}
 	return (1);
 }
@@ -145,24 +175,56 @@ void			parsing_four(char *str, t_flag *flag, t_inf *inf)
 	int i;
 
 	i = 0;
-	if (ft_isdigit(*str)) //  перенести в флаги
-		flag->width = 1;
-	if (flag->space == 1) // просмотреть что делает и зачем
-	{
-//		flag->minus = 0;
-		flag->width = 0;
-	}
-	while (str[i] == '+' || str[i] == '0' || str[i] == '-')
+//	if (flag->space == 1) // просмотреть что делает и зачем
+//		flag->width = 0;
+	while (str[i] == '+' || str[i] == '0' || str[i] == '-' || str[i] == ' ')
 		i++;
 	if (str[i] == '.' && flag->precision == 1)
 	{
 		i++;
+		if (str[i] >= '1' && str[i] <= '9')
+			inf->width_two = ft_atoi(&str[i]);
+	}
+	else if (ft_isdigit(str[i]) && inf->count_three != 1)
+	{
 		if  (str[i] >= '1' && str[i] <= '9')
 			inf->width_two = ft_atoi(&str[i]);
 	}
 }
 
-static int		is_zero(char *str)
+
+void		parsing_five(char *str, t_inf *inf)
+{
+	int i;
+	int k;
+
+	i = 0;
+	k = 0;
+	if (inf->width_two > 0 && inf->width == 0 && inf->count_four == 0)
+		inf->width = inf->width_two;
+	while (ft_flag_check(str[i]))
+		i++;
+	if (str[i])
+	{
+		while (ft_isdigit(str[i]))
+		{
+			k = 1;
+			i++;
+		}
+		while (ft_flag_check(str[i]))
+			i++;
+		while (ft_isdigit(str[i]))
+		{
+			k = 2;
+			i++;
+		}
+		if (k == 1)
+			inf->width_two = 0;
+	}
+	inf->count_three = 1;
+}
+
+int		is_zero(char *str)
 {
 	int i;
 
