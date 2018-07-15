@@ -193,10 +193,6 @@ int 		ft_flag_p(va_list lst, char *format)
 
 
 
-
-
-
-
 void		cast_flag(t_inf *inf, intmax_t i, t_flag *flag, char *str)
 {
 	// флаг -

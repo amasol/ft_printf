@@ -204,8 +204,8 @@ int		main(void)
 	//----------------------
 
 
-	ft_printf("(myy[d])[%%d]", 111);
-	printf("(org[d])[%%d]\n\n", 111);
+	ft_printf("(myy[d])[%d%s]", 111);
+	printf("(org[d])[%d]\n\n", 111);
 
 
 //	ft_printf("(myy[d])[%-.10d]", 111);

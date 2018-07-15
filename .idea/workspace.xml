@@ -12,30 +12,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="337cb4d5-d388-4bc3-82e0-e0e62c1f56a3" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Makefile" afterPath="$PROJECT_DIR$/Makefile" />
       <change beforePath="$PROJECT_DIR$/a.out" afterPath="$PROJECT_DIR$/a.out" />
-      <change beforePath="$PROJECT_DIR$/cast.c" afterPath="$PROJECT_DIR$/cast.c" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/cast.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/cast.c.o" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/find.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/find.c.o" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_printf.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_printf.c.o" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_qualifier.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_qualifier.c.o" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/itoa_b_uintmax.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/itoa_b_uintmax.c.o" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/main.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/main.c.o" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/parsing.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/parsing.c.o" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/ft_printf" afterPath="$PROJECT_DIR$/cmake-build-debug/ft_printf" />
       <change beforePath="$PROJECT_DIR$/find.c" afterPath="$PROJECT_DIR$/find.c" />
-      <change beforePath="$PROJECT_DIR$/ft_printf.c" afterPath="$PROJECT_DIR$/ft_printf.c" />
-      <change beforePath="$PROJECT_DIR$/ft_printf.h" afterPath="$PROJECT_DIR$/ft_printf.h" />
-      <change beforePath="$PROJECT_DIR$/ft_qualifier.c" afterPath="$PROJECT_DIR$/ft_qualifier.c" />
-      <change beforePath="$PROJECT_DIR$/itoa_b_uintmax.c" afterPath="$PROJECT_DIR$/itoa_b_uintmax.c" />
-      <change beforePath="$PROJECT_DIR$/libft/libft.a" afterPath="$PROJECT_DIR$/libft/libft.a" />
-      <change beforePath="$PROJECT_DIR$/libftprintf.a" afterPath="$PROJECT_DIR$/libftprintf.a" />
       <change beforePath="$PROJECT_DIR$/main.c" afterPath="$PROJECT_DIR$/main.c" />
-      <change beforePath="$PROJECT_DIR$/obj/find.o" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/obj/ft_printf.o" afterPath="$PROJECT_DIR$/obj/ft_printf.o" />
-      <change beforePath="$PROJECT_DIR$/obj/ft_qualifier.o" afterPath="$PROJECT_DIR$/obj/ft_qualifier.o" />
-      <change beforePath="$PROJECT_DIR$/parsing.c" afterPath="$PROJECT_DIR$/parsing.c" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -58,8 +37,8 @@
               <file leaf-file-name="cast.c" pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/cast.c">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="863">
-                      <caret line="49" column="44" lean-forward="false" selection-start-line="49" selection-start-column="44" selection-end-line="49" selection-end-column="44" />
+                    <state relative-caret-position="465">
+                      <caret line="62" column="67" lean-forward="false" selection-start-line="62" selection-start-column="67" selection-end-line="62" selection-end-column="67" />
                       <folding />
                     </state>
                   </provider>
@@ -81,11 +60,11 @@
           </split-first>
           <split-second>
             <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-              <file leaf-file-name="find.c" pinned="false" current-in-tab="false">
+              <file leaf-file-name="find.c" pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/find.c">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="3653">
-                      <caret line="199" column="12" lean-forward="false" selection-start-line="199" selection-start-column="12" selection-end-line="199" selection-end-column="12" />
+                    <state relative-caret-position="579">
+                      <caret line="234" column="40" lean-forward="true" selection-start-line="234" selection-start-column="40" selection-end-line="234" selection-end-column="40" />
                       <folding />
                     </state>
                   </provider>
@@ -101,10 +80,10 @@
                   </provider>
                 </entry>
               </file>
-              <file leaf-file-name="ft_printf.c" pinned="false" current-in-tab="true">
+              <file leaf-file-name="ft_printf.c" pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/ft_printf.c">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="765">
+                    <state relative-caret-position="-883">
                       <caret line="56" column="13" lean-forward="true" selection-start-line="56" selection-start-column="13" selection-end-line="56" selection-end-column="13" />
                       <folding />
                     </state>
@@ -150,8 +129,8 @@
           <file leaf-file-name="main.c" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/main.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="735">
-                  <caret line="205" column="0" lean-forward="true" selection-start-line="205" selection-start-column="0" selection-end-line="205" selection-end-column="0" />
+                <state relative-caret-position="781">
+                  <caret line="207" column="27" lean-forward="true" selection-start-line="207" selection-start-column="27" selection-end-line="207" selection-end-column="27" />
                   <folding />
                 </state>
               </provider>
@@ -193,9 +172,9 @@
         <option value="$PROJECT_DIR$/ft_printf.h" />
         <option value="$PROJECT_DIR$/cast.c" />
         <option value="$PROJECT_DIR$/parsing.c" />
+        <option value="$PROJECT_DIR$/ft_printf.c" />
         <option value="$PROJECT_DIR$/find.c" />
         <option value="$PROJECT_DIR$/main.c" />
-        <option value="$PROJECT_DIR$/ft_printf.c" />
       </list>
     </option>
   </component>
@@ -243,7 +222,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="terminal" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="SearchEverywhereHistoryKey" value="vim&#9;ACTION&#9;VimPluginToggle&#10;color&#9;ACTION&#9;ChangeColorScheme" />
   </component>
   <component name="RunDashboard">
@@ -274,7 +253,7 @@
     <option name="remove_strategy" value="false" />
   </component>
   <component name="SvnConfiguration">
-    <configuration />
+    <configuration>$USER_HOME$/.subversion</configuration>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -375,12 +354,12 @@
       <workItem from="1531563028960" duration="3400000" />
       <workItem from="1531570859966" duration="11225000" />
       <workItem from="1531649583671" duration="4616000" />
-      <workItem from="1531659381824" duration="4932000" />
+      <workItem from="1531659381824" duration="6583000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="402941000" />
+    <option name="totallyTimeSpent" value="404592000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -396,15 +375,15 @@
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.076408036" sideWeight="0.49105147" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32906628" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" x="10" y="501" width="2539" height="437" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29668674" sideWeight="0.4986215" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.32906628" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" x="10" y="501" width="2539" height="437" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.29668674" sideWeight="0.4986215" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32680723" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33283132" sideWeight="0.50452936" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33283132" sideWeight="0.50452936" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294509" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33283132" sideWeight="0.50452936" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33283132" sideWeight="0.50452936" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32906628" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.22063252" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22030075" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.076408036" sideWeight="0.50894856" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32680723" sideWeight="0.49547064" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -726,22 +705,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cast.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="863">
-          <caret line="49" column="44" lean-forward="false" selection-start-line="49" selection-start-column="44" selection-end-line="49" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ft_putnbr_long.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="759">
-          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/libft/ft_isdigit.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -758,14 +721,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/find.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3653">
-          <caret line="199" column="12" lean-forward="false" selection-start-line="199" selection-start-column="12" selection-end-line="199" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/parsing.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="764">
@@ -774,18 +729,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.c">
+    <entry file="file://$PROJECT_DIR$/ft_putnbr_long.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="205" column="0" lean-forward="true" selection-start-line="205" selection-start-column="0" selection-end-line="205" selection-end-column="0" />
+        <state relative-caret-position="759">
+          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ft_printf.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
+        <state relative-caret-position="-883">
           <caret line="56" column="13" lean-forward="true" selection-start-line="56" selection-start-column="13" selection-end-line="56" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="781">
+          <caret line="207" column="27" lean-forward="true" selection-start-line="207" selection-start-column="27" selection-end-line="207" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cast.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="62" column="67" lean-forward="false" selection-start-line="62" selection-start-column="67" selection-end-line="62" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/find.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="579">
+          <caret line="234" column="40" lean-forward="true" selection-start-line="234" selection-start-column="40" selection-end-line="234" selection-end-column="40" />
           <folding />
         </state>
       </provider>
