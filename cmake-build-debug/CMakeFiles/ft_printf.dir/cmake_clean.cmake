@@ -70,6 +70,12 @@ file(REMOVE_RECURSE
   "CMakeFiles/ft_printf.dir/parsing.c.o"
   "CMakeFiles/ft_printf.dir/ft_putnbr_long.c.o"
   "CMakeFiles/ft_printf.dir/cast.c.o"
+  "CMakeFiles/ft_printf.dir/cast_flag_Ddi.c.o"
+  "CMakeFiles/ft_printf.dir/cast_flag_Ss.c.o"
+  "CMakeFiles/ft_printf.dir/cast_flag_Xx.c.o"
+  "CMakeFiles/ft_printf.dir/cast_flag_Uu.c.o"
+  "CMakeFiles/ft_printf.dir/cast_flag_Oo.c.o"
+  "CMakeFiles/ft_printf.dir/cast_flag_p.c.o"
   "ft_printf.pdb"
   "ft_printf"
 )

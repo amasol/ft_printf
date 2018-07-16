@@ -47,9 +47,9 @@ intmax_t	entry_minus(intmax_t i, t_inf *inf, t_flag *flag)
 	j = ft_count(i);
 	if (inf->width > 0)
 		inf->count = (j <= inf->width) ? inf->width - j : j;
-	if (flag->plus == 1 || inf->tmp == 1 || flag->space == 1)
+	if (flag->plus == 1 || inf->tmp == 1 || flag->space == 1 || inf->minus_value == 1)
 	{
-		if (inf->width_two == 0)
+		if (inf->width_two == 0 || inf->minus_value == 1)
 			inf->count = inf->count - 1;
 	}
 	if (inf->width_two > 0)

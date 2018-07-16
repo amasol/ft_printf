@@ -83,6 +83,24 @@
 		<Unit filename="/Users/amasol/amasol/project/ft_printf/cast.c">
 			<Option target="ft_printf"/>
 		</Unit>
+		<Unit filename="/Users/amasol/amasol/project/ft_printf/cast_flag_Ddi.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/amasol/amasol/project/ft_printf/cast_flag_Oo.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/amasol/amasol/project/ft_printf/cast_flag_Ss.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/amasol/amasol/project/ft_printf/cast_flag_Uu.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/amasol/amasol/project/ft_printf/cast_flag_Xx.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/amasol/amasol/project/ft_printf/cast_flag_p.c">
+			<Option target="ft_printf"/>
+		</Unit>
 		<Unit filename="/Users/amasol/amasol/project/ft_printf/find.c">
 			<Option target="ft_printf"/>
 		</Unit>

@@ -17,33 +17,35 @@
 
 #include "ft_printf.h"
 
-void				parsing(char *str, va_list lst)
+void				parsing(char *str, va_list lst, t_inf *inf)
 {
 	t_flag	flag;
-	t_inf 	inf;
+//	t_inf 	inf;
 	int 	i;
 
 	i = 0;
 	if (str[i])
 	{
-		initialization_flag(&flag, &inf);
+		initialization_flag(&flag, inf);
 		parsing_one(&str[i], &flag);
 		parsing_two(&str[i], &flag);
 	}
 	while (!(ft_qualifier(str[i])))
 	{
-		if (inf.width_two == 0)
-			parsing_four(str, &flag, &inf);
-		if (inf.width == 0)
-			parsing_three(&str[i], &inf, &flag);
-		if (inf.count_three == 0)
-			parsing_five(&str[i], &inf);
-		if (inf.width == 0)
-			parsing_three(&str[i], &inf, &flag);
+		if (inf->width_two == 0)
+			parsing_four(str, &flag, inf);
+		if (inf->width == 0)
+			parsing_three(&str[i], inf, &flag);
+		if (inf->count_three == 0)
+			parsing_five(&str[i], inf);
+		if (inf->width == 0)
+			parsing_three(&str[i], inf, &flag);
 		i++;
 	}
 	if (ft_qualifier(str[i]))
-		pars_spec(&str[i], lst, &flag, &inf);
+		pars_spec(&str[i], lst, &flag, inf);
+	output_after(&str[i], inf);
+	inf->count_format +=  i;
 }
 
 void			initialization_flag(t_flag *flag, t_inf *inf)
@@ -70,6 +72,8 @@ void			initialization_flag(t_flag *flag, t_inf *inf)
 	inf->count_three		= 0;
 	inf->count_four			= 0;
 	inf->tmp				= 0;
+	inf->count_format		= 0;
+	inf->minus_value		= 0;
 }
 
 void			parsing_one(char *str, t_flag *flag)
@@ -103,7 +107,7 @@ void			parsing_two(char *str, t_flag *flag)
 
 	i = 0;
 	// поменять местами по приоритетности с z по hh
-	if (str[i])
+	while (str[i])
 	{
 		if (str[i] == 'h' && str[i + 1] == 'h')
 			flag->hh = 1;
@@ -117,7 +121,7 @@ void			parsing_two(char *str, t_flag *flag)
 			flag->j = 1;
 		if (str[i] == 'z')
 			flag->z = 1;
-//		i++;
+		i++;
 	}
 }
 
@@ -134,8 +138,8 @@ int			parsing_three(char *str, t_inf *inf, t_flag *flag)
 			str++;
 		if (str[i] == '.' && flag->precision == 1)
 		{
-			if (str[i + 1] == '+' || str[i + 1] == '-' ||
-				str[i + 1] == ' ' || str[i + 1] == '#')
+			if ((str[i + 1] == '+' || str[i + 1] == '-' ||
+				str[i + 1] == ' ' || str[i + 1] == '#'))
 			{
 				flag->precision = 0;
 				inf->width_two = 0;
@@ -152,7 +156,7 @@ int			parsing_three(char *str, t_inf *inf, t_flag *flag)
 	if (k != 1)
 	{
 		while (str[i] == '+' || str[i] == '0' || str[i] == '-' ||
-				str[i] == '.' || str[i] == ' ')
+				str[i] == '.' || str[i] == ' ' || ft_flag_check(str[i]))
 			i++;
 		if  (str[i] >= '1' && str[i] <= '9')
 		{
@@ -160,7 +164,7 @@ int			parsing_three(char *str, t_inf *inf, t_flag *flag)
 			inf->count_four = 1;
 		}
 	}
-	while (*str == '+' || *str == '-' || *str == ' ' || *str == '#')
+	while (*str == '+' || *str == '-' || *str == ' ' || *str == '#' || ft_flag_check(str[i]))
 		str++;
 	if (ft_isdigit(*str) && inf->width_two > 0)
 	{

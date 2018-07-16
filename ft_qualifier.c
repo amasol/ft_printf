@@ -51,36 +51,40 @@ int			ft_refinement(char s)
 }
 
 
+void				output_after(char *format, t_inf *inf)
+{
+	int i;
+
+	i = 0;
+	while (ft_isdigit(format[i]) || (format[i] == '-') || (format[i] == '+')
+		   || ft_flag_check(format[i]) || (format[i] == ' ') || (format[i] == '.'))
+		i++;
+	if (ft_qualifier(format[i]))
+		i++;
+	while (format[i] != '%' && format[i] != '\0')
+	{
+		ft_putchar(format[i]);
+		i++;
+	}
+	inf->count_format = i;
+}
 
 //-------------------проверить отдельно функцию ....
 
 
 int			ft_flag_check(char c)
 {
-//	if (c == 'h' || c == 'l'
-//		|| c == 'j' || c == 'z'
-//		|| c == '#' || c == '%')
 	if (c == '+' || c == '-'
 		|| c == '#' || c == '.'
-		|| c == ' ')
-		return (1);
-	else
-		return (0);
-}
-
-/*
-int			ft_flag_check(char c)
-{
-	if (c == 'h' || c == 'l'
+		|| c == ' ' || c == 'h'
 		|| c == 'j' || c == 'z'
-		|| c == '+' || c == '-'
-		|| c == '0' || c == '#'
-		|| c == '%')
+		|| c == 'l' || (c == 'l' && c + 1 == 'l') ||
+		(c == 'h' && c + 1 == 'h'))
 		return (1);
 	else
 		return (0);
 }
-
+/*
 int			ft_flag(char format)
 {
 	if (format == 'h' && format + 1 == 'h')
@@ -105,60 +109,6 @@ int			ft_flag(char format)
 		return (10);
 	else if (format == '%' && format + 1 == '%')
 		return (11);
-	return (0);
-}
-*/
-// -------------------------------------------------
-/*
-int		ft_length_hh(char format)
-{
-//	if (format == 'h' && format + 1 == 'h')
-	if (format == 'h')
-	{
-//		format = (char)va_arg(int, lst);
-		write(1, "hello world", 15);
-	}
-	return (1);
-}
-*/
-/*
-int		ft_length_h(char *tmp)
-{
-	int i;
-
-	i = 0;
-	return (0);
-}
-
-int		ft_length_ll(char *tmp)
-{
-	int i;
-
-	i = 0;
-	return (0);
-}
-
-int		ft_length_l(char *tmp)
-{
-	int i;
-
-	i = 0;
-	return (0);
-}
-
-int		ft_length_j(char *tmp)
-{
-	int i;
-
-	i = 0;
-	return (0);
-}
-
-int		ft_length_z(char *tmp)
-{
-	int i;
-
-	i = 0;
 	return (0);
 }
 */

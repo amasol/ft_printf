@@ -204,8 +204,9 @@ int		main(void)
 	//----------------------
 
 
-	ft_printf("(myy[d])[%d%s]", 111);
-	printf("(org[d])[%d]\n\n", 111);
+//	printf("(org[d])[%10d]\n\n", 1111);
+//	printf("(org[d])[%10.20s]\n\n", "text");
+//	printf("(org[d])[%10.20s]\n\n", "text");
 
 
 //	ft_printf("(myy[d])[%-.10d]", 111);
@@ -217,16 +218,23 @@ int		main(void)
 
 
 	//-------------------------
-//	ft_printf("(myy[d])[%-7d]", 111);
-//	printf("(org[d])[%-7d]\n", 111);
+//	ft_printf("(myy[d])[%d]", 111);
+//	printf("(org[d])[%d]\n", 111);
 
+//не работает..
+//	ft_printf("(myy[d])[%.h10d]",-21474831111111);
+
+//	ft_printf("(myy[d])[%10.10d]",-21474831111111);
+	ft_printf("(myy[d])[%10.h6d]",-21474831111111);
+	printf("(org[d])[%10.h6d]\n\n", -21474831111111);
+//	printf("(org[d])[%h10d]\n\n", -21474831111111);
 	//-------------------------
 
 //	ft_printf("(myy[d])[%20.15+d]", 111);
 //	printf("(org[d])[%20.15+d]\n", 111);
 
-//	ft_printf("(myy[d])[%-+15.6d]", 111);
-//	printf("(org[d])[%-+15.6d]\n", 111);
+//	ft_printf("(myy[d])[%-+15.+6d]", 111);
+//	printf("(org[d])[%-+15.+6d]\n", 111);
 
 
 //	ft_printf("(myy[d])[%-+015.6d]", 111);

@@ -5,6 +5,12 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
   "/Users/amasol/amasol/project/ft_printf/cast.c" "/Users/amasol/amasol/project/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/cast.c.o"
+  "/Users/amasol/amasol/project/ft_printf/cast_flag_Ddi.c" "/Users/amasol/amasol/project/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/cast_flag_Ddi.c.o"
+  "/Users/amasol/amasol/project/ft_printf/cast_flag_Oo.c" "/Users/amasol/amasol/project/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/cast_flag_Oo.c.o"
+  "/Users/amasol/amasol/project/ft_printf/cast_flag_Ss.c" "/Users/amasol/amasol/project/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/cast_flag_Ss.c.o"
+  "/Users/amasol/amasol/project/ft_printf/cast_flag_Uu.c" "/Users/amasol/amasol/project/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/cast_flag_Uu.c.o"
+  "/Users/amasol/amasol/project/ft_printf/cast_flag_Xx.c" "/Users/amasol/amasol/project/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/cast_flag_Xx.c.o"
+  "/Users/amasol/amasol/project/ft_printf/cast_flag_p.c" "/Users/amasol/amasol/project/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/cast_flag_p.c.o"
   "/Users/amasol/amasol/project/ft_printf/find.c" "/Users/amasol/amasol/project/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/find.c.o"
   "/Users/amasol/amasol/project/ft_printf/ft_printf.c" "/Users/amasol/amasol/project/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_printf.c.o"
   "/Users/amasol/amasol/project/ft_printf/ft_putnbr_long.c" "/Users/amasol/amasol/project/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_putnbr_long.c.o"

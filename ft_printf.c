@@ -15,6 +15,7 @@
 int				ft_printf(const char *format, ...)
 {
 	va_list		lst;
+	t_inf		inf;
 
 	va_start(lst, format);
 	while (*format != '%')
@@ -25,31 +26,19 @@ int				ft_printf(const char *format, ...)
 	}
 	if (*format)
 	{
-		if (*format == '%' && *(format + 1) != '%')
+//		if (*format == '%' && *(format + 1) != '%')
+		while (*format == '%' && *(format + 1) != '%')
 		{
 			format++;
-			parsing((char *)format, lst);
-//			pars_spec((char *)format, lst);   перенес в другую функцию!
-
-			//вывод
-			while (ft_isdigit(*format) || (*format == '-') || (*format == '+')|| ft_flag_check(*format)
-					/*|| ft_qualifier(*format)*/ || (*format == ' ') || (*format == '.'))
-				format++;
-			if (ft_qualifier(*format))
-				format++;
-			while (*format != '\0')
-			{
-				ft_putchar(*format);
-				format++;
-			}
+			parsing((char *)format, lst, &inf);
+			format += inf.count_format;
 		}
-		if (*format == '%' && *(format + 1) == '%')
+/*		if (*format == '%' && *(format + 1) == '%')
 		{
 			write(1, "%", 1);
 			format = format + 2;
-//			parsing((char *)format, lst);
-			while (ft_isdigit(*format) || (*format == '-') || (*format == '+')|| ft_flag_check(*format)
-				   /*|| ft_qualifier(*format)*/ || (*format == ' ') || (*format == '.'))
+			while (ft_isdigit(*format) || (*format == '-') || (*format == '+')
+					|| ft_flag_check(*format) || (*format == ' ') || (*format == '.'))
 				format++;
 			if (ft_qualifier(*format))
 				format++;
@@ -58,7 +47,9 @@ int				ft_printf(const char *format, ...)
 				ft_putchar(*format);
 				format++;
 			}
-		}
+		}*/
+
+
 /*		while (*format)
 		{
 			while (ft_isdigit(*format) || (*format == '-'))

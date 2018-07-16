@@ -76,4 +76,11 @@ add_executable(ft_printf
         itoa_b_uintmax.c
         parsing.c
         ft_putnbr_long.c
-        cast.c)
+        cast.c
+        cast_flag_Ddi.c
+        cast_flag_Ss.c
+#        cast_flag_Cc.c
+        cast_flag_Xx.c
+        cast_flag_Uu.c
+        cast_flag_Oo.c
+        cast_flag_p.c)

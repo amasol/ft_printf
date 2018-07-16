@@ -150,6 +150,168 @@ cast.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/cast.c.s
 .PHONY : cast.c.s
 
+cast_flag_Ddi.o: cast_flag_Ddi.c.o
+
+.PHONY : cast_flag_Ddi.o
+
+# target to build an object file
+cast_flag_Ddi.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/cast_flag_Ddi.c.o
+.PHONY : cast_flag_Ddi.c.o
+
+cast_flag_Ddi.i: cast_flag_Ddi.c.i
+
+.PHONY : cast_flag_Ddi.i
+
+# target to preprocess a source file
+cast_flag_Ddi.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/cast_flag_Ddi.c.i
+.PHONY : cast_flag_Ddi.c.i
+
+cast_flag_Ddi.s: cast_flag_Ddi.c.s
+
+.PHONY : cast_flag_Ddi.s
+
+# target to generate assembly for a file
+cast_flag_Ddi.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/cast_flag_Ddi.c.s
+.PHONY : cast_flag_Ddi.c.s
+
+cast_flag_Oo.o: cast_flag_Oo.c.o
+
+.PHONY : cast_flag_Oo.o
+
+# target to build an object file
+cast_flag_Oo.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/cast_flag_Oo.c.o
+.PHONY : cast_flag_Oo.c.o
+
+cast_flag_Oo.i: cast_flag_Oo.c.i
+
+.PHONY : cast_flag_Oo.i
+
+# target to preprocess a source file
+cast_flag_Oo.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/cast_flag_Oo.c.i
+.PHONY : cast_flag_Oo.c.i
+
+cast_flag_Oo.s: cast_flag_Oo.c.s
+
+.PHONY : cast_flag_Oo.s
+
+# target to generate assembly for a file
+cast_flag_Oo.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/cast_flag_Oo.c.s
+.PHONY : cast_flag_Oo.c.s
+
+cast_flag_Ss.o: cast_flag_Ss.c.o
+
+.PHONY : cast_flag_Ss.o
+
+# target to build an object file
+cast_flag_Ss.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/cast_flag_Ss.c.o
+.PHONY : cast_flag_Ss.c.o
+
+cast_flag_Ss.i: cast_flag_Ss.c.i
+
+.PHONY : cast_flag_Ss.i
+
+# target to preprocess a source file
+cast_flag_Ss.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/cast_flag_Ss.c.i
+.PHONY : cast_flag_Ss.c.i
+
+cast_flag_Ss.s: cast_flag_Ss.c.s
+
+.PHONY : cast_flag_Ss.s
+
+# target to generate assembly for a file
+cast_flag_Ss.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/cast_flag_Ss.c.s
+.PHONY : cast_flag_Ss.c.s
+
+cast_flag_Uu.o: cast_flag_Uu.c.o
+
+.PHONY : cast_flag_Uu.o
+
+# target to build an object file
+cast_flag_Uu.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/cast_flag_Uu.c.o
+.PHONY : cast_flag_Uu.c.o
+
+cast_flag_Uu.i: cast_flag_Uu.c.i
+
+.PHONY : cast_flag_Uu.i
+
+# target to preprocess a source file
+cast_flag_Uu.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/cast_flag_Uu.c.i
+.PHONY : cast_flag_Uu.c.i
+
+cast_flag_Uu.s: cast_flag_Uu.c.s
+
+.PHONY : cast_flag_Uu.s
+
+# target to generate assembly for a file
+cast_flag_Uu.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/cast_flag_Uu.c.s
+.PHONY : cast_flag_Uu.c.s
+
+cast_flag_Xx.o: cast_flag_Xx.c.o
+
+.PHONY : cast_flag_Xx.o
+
+# target to build an object file
+cast_flag_Xx.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/cast_flag_Xx.c.o
+.PHONY : cast_flag_Xx.c.o
+
+cast_flag_Xx.i: cast_flag_Xx.c.i
+
+.PHONY : cast_flag_Xx.i
+
+# target to preprocess a source file
+cast_flag_Xx.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/cast_flag_Xx.c.i
+.PHONY : cast_flag_Xx.c.i
+
+cast_flag_Xx.s: cast_flag_Xx.c.s
+
+.PHONY : cast_flag_Xx.s
+
+# target to generate assembly for a file
+cast_flag_Xx.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/cast_flag_Xx.c.s
+.PHONY : cast_flag_Xx.c.s
+
+cast_flag_p.o: cast_flag_p.c.o
+
+.PHONY : cast_flag_p.o
+
+# target to build an object file
+cast_flag_p.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/cast_flag_p.c.o
+.PHONY : cast_flag_p.c.o
+
+cast_flag_p.i: cast_flag_p.c.i
+
+.PHONY : cast_flag_p.i
+
+# target to preprocess a source file
+cast_flag_p.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/cast_flag_p.c.i
+.PHONY : cast_flag_p.c.i
+
+cast_flag_p.s: cast_flag_p.c.s
+
+.PHONY : cast_flag_p.s
+
+# target to generate assembly for a file
+cast_flag_p.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/cast_flag_p.c.s
+.PHONY : cast_flag_p.c.s
+
 find.o: find.c.o
 
 .PHONY : find.o
@@ -2052,6 +2214,24 @@ help:
 	@echo "... cast.o"
 	@echo "... cast.i"
 	@echo "... cast.s"
+	@echo "... cast_flag_Ddi.o"
+	@echo "... cast_flag_Ddi.i"
+	@echo "... cast_flag_Ddi.s"
+	@echo "... cast_flag_Oo.o"
+	@echo "... cast_flag_Oo.i"
+	@echo "... cast_flag_Oo.s"
+	@echo "... cast_flag_Ss.o"
+	@echo "... cast_flag_Ss.i"
+	@echo "... cast_flag_Ss.s"
+	@echo "... cast_flag_Uu.o"
+	@echo "... cast_flag_Uu.i"
+	@echo "... cast_flag_Uu.s"
+	@echo "... cast_flag_Xx.o"
+	@echo "... cast_flag_Xx.i"
+	@echo "... cast_flag_Xx.s"
+	@echo "... cast_flag_p.o"
+	@echo "... cast_flag_p.i"
+	@echo "... cast_flag_p.s"
 	@echo "... find.o"
 	@echo "... find.i"
 	@echo "... find.s"

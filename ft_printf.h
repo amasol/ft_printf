@@ -64,6 +64,8 @@ typedef	struct	s_inf
 	int 		count_three;
 	int 		count_four;
 	int			tmp;
+	int			count_format;
+	int			minus_value;
 }				t_inf;
 
 void			initialization_flag(t_flag *flag, t_inf *inf);
@@ -83,45 +85,53 @@ char			*ft_itoa_base_uintmax(uintmax_t nbr, unsigned base, char c);
 
 //----------------------------------------------------
 //void			cast(va_list lst, char *format);
+intmax_t		minus_value_Ddi(intmax_t i, t_flag *flag, t_inf *inf);
 intmax_t		cast_intmax(intmax_t i, t_flag *flag);
 uintmax_t		cast_uintmax(uintmax_t i, t_flag *flag);
 intmax_t		entry_minus(intmax_t i, t_inf *inf, t_flag *flag);
-void			cast_flag(t_inf *inf, intmax_t i, t_flag *flag, char *format);
+
+
+//-------------------------------------
+void			cast_flag_Ddi(t_inf *inf, intmax_t i, t_flag *flag, char *format);
+void			cast_flag_Cc(t_inf *inf, t_flag *flag, char *format, uintmax_t j);
+
+//void			cast_flag_Ss(t_inf *inf, t_flag *flag, char *format);
+//void			cast_flag_Xx(t_inf *inf, t_flag *flag, char *format);
+//void			cast_flag_Uu(t_inf *inf, t_flag *flag, char *format);
+//void			cast_flag_Oo(t_inf *inf, t_flag *flag, char *format);
+//void			cast_flag_p(t_inf *inf, t_flag *flag, char *format);
+
+void				cancellation_flags_Ddi(t_flag *flag, t_inf *inf);
+//void				cancellation_flags_Cc(t_flag *flag, t_inf *inf);
 
 //-------------------------специфыкаторы
 int				ft_refinement(char s);
 int				ft_flag_Ddi(va_list lst, char *format, t_flag *flag, t_inf *inf);
-int				ft_flag_Ss(va_list lst, char *format);
-int				ft_flag_Cc(va_list lst, char *format, t_flag *flag);
+int				ft_flag_Ss(va_list lst, char *format, t_inf *inf);
+int				ft_flag_Cc(va_list lst, char *format, t_flag *flag, t_inf *inf);
 int				ft_flag_Xx(va_list lst, char *format, t_flag *flag, t_inf *inf);
-int				ft_flag_Uu(va_list lst, char *format, t_flag *flag);
+int				ft_flag_Uu(va_list lst, char *format, t_flag *flag, t_inf *inf);
 int				ft_flag_Oo(va_list lst, char *format, t_flag *flag, t_inf *inf);
-int				ft_flag_p(va_list lst, char *format);
+int				ft_flag_p(va_list lst, char *format, t_inf *inf);
 //----------------------------------------------------
 
 //-------------------флаги
 //---------------обработка длинный всех флагов!
-void				parsing(char *str, va_list lst);
-void				parsing_one(char *str, t_flag *flag);
-void				parsing_two(char *str, t_flag *flag);
-int					parsing_three(char *str, t_inf *inf, t_flag *flag);
-void				parsing_four(char *str, t_flag *flag, t_inf *inf);
-void				parsing_five(char *str, t_inf *inf);
-int					ft_flag_check(char c);
-int					output_after(char *format);
-int					is_zero(char *str);
-void				cancellation_flags(t_flag *flag, t_inf *inf, char *str);
+void			parsing(char *str, va_list lst, t_inf *inf);
+void			parsing_one(char *str, t_flag *flag);
+void			parsing_two(char *str, t_flag *flag);
+int				parsing_three(char *str, t_inf *inf, t_flag *flag);
+void			parsing_four(char *str, t_flag *flag, t_inf *inf);
+void			parsing_five(char *str, t_inf *inf);
+int				ft_flag_check(char c);
+void			output_after(char *format, t_inf *inf);
+int				is_zero(char *str);
 
 //int					ft_flag(char format);
 //int					ft_length_hh(char format);
-//int				ft_length_h(char *tmp);
-//int				ft_length_ll(char *tmp);
-//int				ft_length_l(char *tmp);
-//int				ft_length_j(char *tmp);
-//int				ft_length_z(char *tmp);
-//int				treatment(char *str, va_list lst);
+//int					treatment(char *str, va_list lst);
 
-void				ft_putnbr_intmax(intmax_t nb);
-intmax_t		 	ft_count(intmax_t n);
+void			ft_putnbr_intmax(intmax_t nb);
+intmax_t		ft_count(intmax_t n);
 
 #endif
