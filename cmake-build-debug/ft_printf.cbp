@@ -311,7 +311,7 @@
 		<Unit filename="/Users/amasol/amasol/project/ft_printf/libft/libft.h">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/amasol/amasol/project/ft_printf/main.c">
+		<Unit filename="/Users/amasol/amasol/project/ft_printf/main2.c">
 			<Option target="ft_printf"/>
 		</Unit>
 		<Unit filename="/Users/amasol/amasol/project/ft_printf/parsing.c">

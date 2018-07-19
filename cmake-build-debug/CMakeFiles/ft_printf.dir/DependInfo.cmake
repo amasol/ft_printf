@@ -79,7 +79,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/amasol/amasol/project/ft_printf/libft/ft_strtrim.c" "/Users/amasol/amasol/project/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/libft/ft_strtrim.c.o"
   "/Users/amasol/amasol/project/ft_printf/libft/ft_tolower.c" "/Users/amasol/amasol/project/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/libft/ft_tolower.c.o"
   "/Users/amasol/amasol/project/ft_printf/libft/ft_toupper.c" "/Users/amasol/amasol/project/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/libft/ft_toupper.c.o"
-  "/Users/amasol/amasol/project/ft_printf/main.c" "/Users/amasol/amasol/project/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/main.c.o"
+  "/Users/amasol/amasol/project/ft_printf/main2.c" "/Users/amasol/amasol/project/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/main2.c.o"
   "/Users/amasol/amasol/project/ft_printf/parsing.c" "/Users/amasol/amasol/project/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/parsing.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")

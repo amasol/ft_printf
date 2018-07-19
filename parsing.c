@@ -69,6 +69,8 @@ void			initialization_flag(t_flag *flag, t_inf *inf)
 	flag->ban				= 0;
 	inf->width				= 0;
 	inf->width_two			= 0;
+	inf->count				= 0;
+	inf->count_two			= 0;
 	inf->count_three		= 0;
 	inf->count_four			= 0;
 	inf->tmp				= 0;

@@ -71,7 +71,7 @@ add_executable(ft_printf
         ft_printf.c
         ft_printf.h
         ft_qualifier.c
-        main.c
+#        main.c
         itoa_b.c
         itoa_b_uintmax.c
         parsing.c
@@ -83,4 +83,5 @@ add_executable(ft_printf
         cast_flag_Xx.c
         cast_flag_Uu.c
         cast_flag_Oo.c
-        cast_flag_p.c)
+        cast_flag_p.c
+        main2.c)

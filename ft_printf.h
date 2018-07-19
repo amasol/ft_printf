@@ -15,7 +15,7 @@
 
 # define APPLY (flag->hh || flag->h || flag->l \
 			|| flag->ll || flag->j || flag->z)
-# define LY (inf->width || flag->zero)
+# define LY (inf->width  || inf->width_two || flag->zero)
 
 # include "./libft/libft.h"
 

@@ -220,10 +220,10 @@ CMakeFiles/ft_printf.dir/libft/ft_tolower.c.o
 CMakeFiles/ft_printf.dir/libft/ft_toupper.c.o
  /Users/amasol/amasol/project/ft_printf/libft/ft_toupper.c
  /Users/amasol/amasol/project/ft_printf/libft/libft.h
-CMakeFiles/ft_printf.dir/main.c.o
+CMakeFiles/ft_printf.dir/main2.c.o
  /Users/amasol/amasol/project/ft_printf/./libft/libft.h
  /Users/amasol/amasol/project/ft_printf/ft_printf.h
- /Users/amasol/amasol/project/ft_printf/main.c
+ /Users/amasol/amasol/project/ft_printf/main2.c
 CMakeFiles/ft_printf.dir/parsing.c.o
  /Users/amasol/amasol/project/ft_printf/./libft/libft.h
  /Users/amasol/amasol/project/ft_printf/ft_printf.h
