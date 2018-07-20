@@ -48,9 +48,23 @@ void		cast_flag_Ddi(t_inf *inf, intmax_t i, t_flag *flag, char *str)
 		}
 		ft_putnbr_intmax(i);
 	}
-
+		// просто флаг d, i
+//	else if ()
+//	{
+//		if (flag->space == 1)
+//			write(1, " ", 1);
+//		if (flag->plus == 1 || inf->tmp == 1)
+//			write(1, "+", 1);
+//		while (inf->count > 0)
+//		{
+//			write(1, "0", 1);
+//			inf->count--;
+//		}
+//		ft_putnbr_intmax(i);
+//	}
 		// 		флаг	 ширины
-	else if (inf->count >= 0 && flag->width == 1 && flag->precision == 0 && flag->minus != 1)
+	else if (inf->count >= 0 && flag->width == 1 && flag->precision == 0 &&
+				flag->minus != 1 && inf->minus_value != 1)
 	{
 		if (flag->space == 1)
 			inf->count = inf->count + 1;
@@ -67,7 +81,8 @@ void		cast_flag_Ddi(t_inf *inf, intmax_t i, t_flag *flag, char *str)
 		ft_putnbr_intmax(i);
 	}
 		//	флаг	 ширины и флаг minus
-	else if (flag->width == 1 && flag->precision == 0 && inf->width > 0 && (flag->minus == 1 || inf->minus_value == 1))
+	else if (flag->width == 1 && flag->precision == 0 &&
+			inf->width > 0 && (flag->minus == 1 || inf->minus_value == 1) && flag->h == 0)
 	{
 		if (flag->space == 1)
 			inf->count = inf->count + 1;
@@ -85,6 +100,23 @@ void		cast_flag_Ddi(t_inf *inf, intmax_t i, t_flag *flag, char *str)
 			inf->count--;
 		}
 	}
+		//	флаг	 ширины + модификаторы и флаг minus
+	else if (inf->count >= 0 && flag->width == 1 && flag->precision == 0 &&
+			inf->minus_value == 1 && flag->h == 1)
+	{
+		if (flag->space == 1)
+			inf->count = inf->count + 1;
+		if (flag->space == 1)
+			write(1, " ", 1);
+		while (inf->count > 0 && flag->space != 1)
+		{
+			write(1, " ", 1);
+			inf->count--;
+		}
+		if ((inf->minus_value == 1) && flag->plus == 0)
+			write(1, "-", 1);
+		ft_putnbr_intmax(i);
+	}
 		// 		флаг	 ширины + когда аргумент по кол-ву с оденаковый с шириной !
 	else if (inf->count == 0 && flag->width == 1 && flag->precision == 0 )
 	{
@@ -92,8 +124,13 @@ void		cast_flag_Ddi(t_inf *inf, intmax_t i, t_flag *flag, char *str)
 			inf->count -= 1;
 		if (flag->space == 1)
 			inf->count = inf->count + 1;
+		if (flag->space == 1)
+			write(1, " ", 1);
+		if (flag->plus == 1 || inf->tmp == 1)
+			write(1, "+", 1);
 		ft_putnbr_intmax(i);
 	}
+
 	else if ((flag->zero == 0 || flag->minus == 0) && flag->plus == 1 && flag->precision == 0 &&
 			 inf->width == 0)
 	{
@@ -140,13 +177,15 @@ void		cast_flag_Ddi(t_inf *inf, intmax_t i, t_flag *flag, char *str)
 		}
 		if (flag->plus == 1 || inf->tmp == 1)
 			write(1, "+", 1);
+		if (inf->minus_value == 1 && flag->minus == 0)
+			write(1, "-", 1);
 		while (inf->count > 0 )
 		{
 			write(1, "0", 1);
 			inf->count--;
 		}
-		if (inf->minus_value == 1 && flag->minus == 0)
-			write(1, "-", 1);
+//		if (inf->minus_value == 1 && flag->minus == 0)
+//			write(1, "-", 1);
 		ft_putnbr_intmax(i);
 	}
 	/*	точность (ширина - точность )
@@ -231,9 +270,15 @@ void		cast_flag_Ddi(t_inf *inf, intmax_t i, t_flag *flag, char *str)
 		// не правильно работает если у нас нету флагов и мы должны вывести остачу || у нас
 //		есть флаг и мы должны вывести остачу послу отработки тут !!!
 
-	else if (flag->plus == 0 && flag->minus == 0 && flag->slash == 0 && flag->space == 0
+	else if (flag->plus == 0 && flag->slash == 0 && flag->space == 0
 			 && flag->zero == 0 && flag->width == 0 && flag->precision == 0)
+	{
+		if (inf->minus_value == 1 || flag->minus == 1 )
+			write(1, "-", 1);
+		if (flag->plus == 1 || inf->tmp == 1)
+			write(1, "+", 1);
 		ft_putnbr_intmax(i);
+	}
 }
 
 void				cancellation_flags_Ddi(t_flag *flag, t_inf *inf)
@@ -252,6 +297,11 @@ void				cancellation_flags_Ddi(t_flag *flag, t_inf *inf)
 
 intmax_t 			minus_value_Ddi(intmax_t i, t_flag *flag, t_inf *inf)
 {
+	if (i < 0)
+	{
+		flag->space	= 0;
+		flag->plus 	= 0;
+	}
 	if ((i < 0 && flag->minus == 0) || (i < 0 && flag->minus == 1))
 	{
 		inf->minus_value = 1;

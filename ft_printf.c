@@ -18,7 +18,7 @@ int				ft_printf(const char *format, ...)
 	t_inf		inf;
 
 	va_start(lst, format);
-	while (*format != '%')
+	while (*format != '%' && *format != '\0')
 //	while ((*format != '%') && (!(ft_flag_check(*format))))
 	{
 		ft_putchar(*format);
@@ -48,19 +48,11 @@ int				ft_printf(const char *format, ...)
 				format++;
 			}
 		}*/
-
-
-/*		while (*format)
-		{
-			while (ft_isdigit(*format) || (*format == '-'))
-				format++;
-			ft_putchar(*format);
-			format++;
-		}*/
 	}
 	write(1, "\n", 1);
 	va_end(lst);
 	return (0);
+//	return (res);
 }
 
 /*

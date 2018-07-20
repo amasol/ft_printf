@@ -134,14 +134,15 @@ int			parsing_three(char *str, t_inf *inf, t_flag *flag)
 
 	i = 0;
 	k = 0;
-	if (ft_isdigit(*str) && flag->precision == 1)
+//	if (ft_isdigit(*str) && flag->precision == 1 )
+	if ((ft_flag_check((*str)) ||ft_isdigit(*str)) && flag->precision == 1 )
 	{
 		while (*str != '.')
 			str++;
 		if (str[i] == '.' && flag->precision == 1)
 		{
 			if ((str[i + 1] == '+' || str[i + 1] == '-' ||
-				str[i + 1] == ' ' || str[i + 1] == '#'))
+				str[i + 1] == ' ' || str[i + 1] == '#' || ft_flag_check(str[i + 1])))
 			{
 				flag->precision = 0;
 				inf->width_two = 0;
@@ -166,9 +167,9 @@ int			parsing_three(char *str, t_inf *inf, t_flag *flag)
 			inf->count_four = 1;
 		}
 	}
-	while (*str == '+' || *str == '-' || *str == ' ' || *str == '#' || ft_flag_check(str[i]))
+	while (*str == '+' || *str == '-' || *str == ' ' || *str == '#' || ft_flag_check(*str))
 		str++;
-	if (ft_isdigit(*str) && inf->width_two > 0)
+	if (ft_isdigit(*str) && inf->width_two > 0 && k != 1)
 	{
 		inf->width = 0;
 		inf->count_four = 1;
@@ -183,7 +184,7 @@ void			parsing_four(char *str, t_flag *flag, t_inf *inf)
 	i = 0;
 //	if (flag->space == 1) // просмотреть что делает и зачем
 //		flag->width = 0;
-	while (str[i] == '+' || str[i] == '0' || str[i] == '-' || str[i] == ' ')
+	while (str[i] == '+' || str[i] == '0' || str[i] == '-' || str[i] == ' ' || ft_flag_check(str[i]))
 		i++;
 	if (str[i] == '.' && flag->precision == 1)
 	{
@@ -243,7 +244,7 @@ int		is_zero(char *str)
 			return (0);
 		i++;
 	}
-	return (0);
+	return (1);
 }
 
 
