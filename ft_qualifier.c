@@ -63,7 +63,7 @@ void				output_after(char *format, t_inf *inf)
 		i++;
 	while (format[i] != '%' && format[i] != '\0')
 	{
-		ft_putchar(format[i]);
+		inf->result += write(1, &format[i], 1);
 		i++;
 	}
 	inf->count_format = i;

@@ -20,7 +20,6 @@
 void				parsing(char *str, va_list lst, t_inf *inf)
 {
 	t_flag	flag;
-//	t_inf 	inf;
 	int 	i;
 
 	i = 0;
@@ -76,6 +75,7 @@ void			initialization_flag(t_flag *flag, t_inf *inf)
 	inf->tmp				= 0;
 	inf->count_format		= 0;
 	inf->minus_value		= 0;
+	inf->cast_j				= 0;
 }
 
 void			parsing_one(char *str, t_flag *flag)
@@ -112,16 +112,22 @@ void			parsing_two(char *str, t_flag *flag)
 	while (str[i])
 	{
 		if (str[i] == 'h' && str[i + 1] == 'h')
+		{
 			flag->hh = 1;
-		if (str[i] == 'h')
+			i++;
+		}
+		else if (str[i] == 'h')
 			flag->h = 1;
-		if (str[i] == 'l' && str[i + 1] == 'l')
+		else if (str[i] == 'l' && str[i + 1] == 'l')
+		{
 			flag->ll = 1;
-		if (str[i] == 'l')
+			i++;
+		}
+		else if (str[i] == 'l')
 			flag->l = 1;
-		if (str[i] == 'j')
+		else if (str[i] == 'j')
 			flag->j = 1;
-		if (str[i] == 'z')
+		else if (str[i] == 'z')
 			flag->z = 1;
 		i++;
 	}

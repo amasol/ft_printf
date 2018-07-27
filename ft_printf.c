@@ -17,11 +17,13 @@ int				ft_printf(const char *format, ...)
 	va_list		lst;
 	t_inf		inf;
 
+	inf.result = 0;
 	va_start(lst, format);
 	while (*format != '%' && *format != '\0')
 //	while ((*format != '%') && (!(ft_flag_check(*format))))
 	{
-		ft_putchar(*format);
+//		ft_putchar(*format);
+		inf.result += write(1, format, 1);
 		format++;
 	}
 	if (*format)
@@ -51,8 +53,8 @@ int				ft_printf(const char *format, ...)
 	}
 	write(1, "\n", 1);
 	va_end(lst);
-	return (0);
-//	return (res);
+//	return (0);
+	return (inf.result);
 }
 
 /*

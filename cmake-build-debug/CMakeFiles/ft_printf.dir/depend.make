@@ -13,9 +13,13 @@ CMakeFiles/ft_printf.dir/cast_flag_Oo.c.o: ../cast_flag_Oo.c
 
 CMakeFiles/ft_printf.dir/cast_flag_Ss.c.o: ../cast_flag_Ss.c
 
+CMakeFiles/ft_printf.dir/cast_flag_Uu.c.o: .././libft/libft.h
 CMakeFiles/ft_printf.dir/cast_flag_Uu.c.o: ../cast_flag_Uu.c
+CMakeFiles/ft_printf.dir/cast_flag_Uu.c.o: ../ft_printf.h
 
+CMakeFiles/ft_printf.dir/cast_flag_Xx.c.o: .././libft/libft.h
 CMakeFiles/ft_printf.dir/cast_flag_Xx.c.o: ../cast_flag_Xx.c
+CMakeFiles/ft_printf.dir/cast_flag_Xx.c.o: ../ft_printf.h
 
 CMakeFiles/ft_printf.dir/cast_flag_p.c.o: ../cast_flag_p.c
 
@@ -34,6 +38,10 @@ CMakeFiles/ft_printf.dir/ft_putnbr_long.c.o: ../ft_putnbr_long.c
 CMakeFiles/ft_printf.dir/ft_qualifier.c.o: .././libft/libft.h
 CMakeFiles/ft_printf.dir/ft_qualifier.c.o: ../ft_printf.h
 CMakeFiles/ft_printf.dir/ft_qualifier.c.o: ../ft_qualifier.c
+
+CMakeFiles/ft_printf.dir/ft_strlen_uintmax.c.o: .././libft/libft.h
+CMakeFiles/ft_printf.dir/ft_strlen_uintmax.c.o: ../ft_printf.h
+CMakeFiles/ft_printf.dir/ft_strlen_uintmax.c.o: ../ft_strlen_uintmax.c
 
 CMakeFiles/ft_printf.dir/itoa_b.c.o: .././libft/libft.h
 CMakeFiles/ft_printf.dir/itoa_b.c.o: ../ft_printf.h

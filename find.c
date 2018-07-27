@@ -142,37 +142,66 @@ int			ft_flag_Xx(va_list lst, char *format, t_flag *flag, t_inf *inf)
 	if (format[k] == 'x')
 	{
 		i = (APPLY) ? (cast_uintmax(i, flag)) : (unsigned int)i;
+//		flag->ban = ft_count(i);
+		cancellation_flags_Uu(flag, inf);
+		inf->cast_j += ft_strlen(ft_itoa_base_uintmax(i, 16, 'x'));
+		if (LY)
+			entry_minus(inf->cast_j, inf, flag);
 		str = ft_itoa_base_uintmax(i, 16, 'x');
-		cast_flag_Ddi(inf, i, flag, format);
-		ft_putstr(str);
+		cast_flag_Xx(inf, i, flag, str);
+//		ft_putstr(str);
 	}
-	else if (format[k] == 'X')
+//	else if (format[k] == 'X')
+//	{
+//		i = (APPLY) ? (cast_uintmax(i, flag)) : (unsigned int)i;
+//		str = ft_itoa_base_uintmax(i, 16, 'X');
+//		cast_flag_Ddi(inf, i, flag, format);
+//		ft_putstr(str);
+//	}
+	return (1);
+}
+
+
+int 		ft_flag_Uu(va_list lst, char *format, t_flag *flag, t_inf *inf)
+{
+	int			k;
+	uintmax_t	i;
+	k = 0;
+	i = va_arg(lst, uintmax_t);
+	if (format[k] == 'u')
 	{
 		i = (APPLY) ? (cast_uintmax(i, flag)) : (unsigned int)i;
-		str = ft_itoa_base_uintmax(i, 16, 'X');
-		cast_flag_Ddi(inf, i, flag, format);
-		ft_putstr(str);
+		flag->ban = ft_count(i);
+		cancellation_flags_Uu(flag, inf);
+		if (LY)
+			entry_minus(i, inf, flag);
+		cast_flag_Uu(inf, i, flag, format);
+	}
+	else if (format[k] == 'U')
+	{
+		i = (unsigned long)i;
+//		i = minus_value_Uu(i, flag, inf);
+		cancellation_flags_Uu(flag, inf);
+		if (LY)
+			entry_minus(i, inf, flag);
+		cast_flag_Uu(inf, i, flag, format);
 	}
 	return (1);
 }
 
-int 		ft_flag_Uu(va_list lst, char *format, t_flag *flag, t_inf *inf)
-{
-//	флаг j -требует что бы мы вытягивали intmax_t..
-	int			k;
-	uintmax_t	i;
-	char		*str;
-	// спецификатор (U) стоит в формате uintmax_t...какой должен быть маленькая (U)
-	k = 0;
-	i = va_arg(lst, uintmax_t);
-	if (format[k] == 'u' || format[k] == 'U')
-	{
-		i = (APPLY) ? (cast_uintmax(i, flag)) : (unsigned int)i;
-		str = ft_itoa_base_uintmax(i, 10, 'u');
-		ft_putstr(str);
-	}
-	return (1);
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 int			ft_flag_Oo(va_list lst, char *format, t_flag *flag, t_inf *inf)
 {

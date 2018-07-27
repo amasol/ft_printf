@@ -16,6 +16,7 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	@make -C $(LIBDIR)
 	@cd $(LIBDIR) && mv *.o ../obj
+
 	@ar rc $(NAME) obj/*.o
 
 $(OBJ_DIR)/%.o: ./%.c

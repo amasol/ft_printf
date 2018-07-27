@@ -12,7 +12,8 @@
 
 #include "ft_printf.h"
 
-void	ft_putnbr_intmax(intmax_t nb)
+//void	ft_putnbr_intmax(intmax_t nb)
+intmax_t	ft_putnbr_intmax(intmax_t nb)
 {
 	char c;
 
@@ -31,4 +32,22 @@ void	ft_putnbr_intmax(intmax_t nb)
 		c = nb + 48;
 		write(1, &c, 1);
 	}
+	return (nb);
+}
+
+uintmax_t	ft_putnbr_uintmax_t(uintmax_t nb)
+{
+	char c;
+
+	if (nb > 9)
+	{
+		ft_putnbr_uintmax_t(nb / 10);
+		ft_putnbr_uintmax_t((nb % 10));
+	}
+	if (nb < 10)
+	{
+		c = nb + 48;
+		write(1, &c, 1);
+	}
+	return (nb);
 }

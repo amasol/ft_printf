@@ -29,8 +29,12 @@ ft_printf.h
 /Users/amasol/amasol/project/ft_printf/cast_flag_Ss.c
 
 /Users/amasol/amasol/project/ft_printf/cast_flag_Uu.c
+ft_printf.h
+/Users/amasol/amasol/project/ft_printf/ft_printf.h
 
 /Users/amasol/amasol/project/ft_printf/cast_flag_Xx.c
+ft_printf.h
+/Users/amasol/amasol/project/ft_printf/ft_printf.h
 
 /Users/amasol/amasol/project/ft_printf/cast_flag_p.c
 
@@ -63,6 +67,10 @@ ft_printf.h
 /Users/amasol/amasol/project/ft_printf/ft_printf.h
 
 /Users/amasol/amasol/project/ft_printf/ft_qualifier.c
+ft_printf.h
+/Users/amasol/amasol/project/ft_printf/ft_printf.h
+
+/Users/amasol/amasol/project/ft_printf/ft_strlen_uintmax.c
 ft_printf.h
 /Users/amasol/amasol/project/ft_printf/ft_printf.h
 

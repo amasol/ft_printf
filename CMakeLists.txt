@@ -84,5 +84,6 @@ add_executable(ft_printf
         cast_flag_Uu.c
         cast_flag_Oo.c
         cast_flag_p.c
-        main2.c)
+        main2.c
+        ft_strlen_uintmax.c)
 #        print_test.c)

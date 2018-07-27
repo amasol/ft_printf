@@ -38,13 +38,18 @@ uintmax_t		cast_uintmax(uintmax_t i, t_flag *flag)
 
 intmax_t	entry_minus(intmax_t i, t_inf *inf, t_flag *flag)
 {// можно приминить эту функцию как для ширины так и для минуса !!!
-	int j;
+//	int j;
+//
+//	j = 0;
 
-	j = 0;
+//	j = ft_count(i);
+//	inf->cast_j = ft_count(i);
+	// сделать отдельно функцию для строк и 16 и 8 ричной системы...так как у нас тут
+	// мы должны принять уже посчитаное кол во и не как в предвидущих случаях где считали
+	// раньше
 
-	j = ft_count(i);
 	if (inf->width > 0)
-		inf->count = (j <= inf->width) ? inf->width - j : 0;
+		inf->count = (inf->cast_j <= inf->width) ? inf->width - inf->cast_j : 0;
 	if (flag->plus == 1 || inf->tmp == 1 || flag->space == 1 || inf->minus_value == 1)
 	{
 		if (inf->count > 0 && inf->width_two == 0)
@@ -53,7 +58,7 @@ intmax_t	entry_minus(intmax_t i, t_inf *inf, t_flag *flag)
 	if (inf->width_two > 0 && inf->count != 0)
 		inf->count_two = (inf->width_two > inf->width) ? inf->width_two - inf->width : 0;
 	else
-		inf->count_two = (inf->width_two >= j) ? inf->width_two - j : 0;
+		inf->count_two = (inf->width_two >= inf->cast_j) ? inf->width_two - inf->cast_j : 0;
 	if (inf->count_two > 0 && (flag->plus == 1 || inf->tmp == 1))
 		inf->count_two = inf->count_two - 1;
 //	if (inf->count == 0 && inf->count_two > 0 && inf->minus_value == 0)

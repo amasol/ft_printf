@@ -76,6 +76,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/ft_printf.dir/cast_flag_Oo.c.o"
   "CMakeFiles/ft_printf.dir/cast_flag_p.c.o"
   "CMakeFiles/ft_printf.dir/main2.c.o"
+  "CMakeFiles/ft_printf.dir/ft_strlen_uintmax.c.o"
   "ft_printf.pdb"
   "ft_printf"
 )

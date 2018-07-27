@@ -46,12 +46,12 @@ typedef struct s_flag
 
 	int		hh;
 	int		h;
-	int		ll;
 	int		l;
+	int		ll;
 	int		j;
 	int		z;
 
-	int 	ban;
+	intmax_t 	ban;
 }				t_flag;
 
 typedef	struct	s_inf
@@ -66,6 +66,8 @@ typedef	struct	s_inf
 	int			tmp;
 	int			count_format;
 	int			minus_value;
+	intmax_t	result;
+	uintmax_t	cast_j;
 }				t_inf;
 
 void			initialization_flag(t_flag *flag, t_inf *inf);
@@ -86,23 +88,25 @@ char			*ft_itoa_base_uintmax(uintmax_t nbr, unsigned base, char c);
 //----------------------------------------------------
 //void			cast(va_list lst, char *format);
 intmax_t		minus_value_Ddi(intmax_t i, t_flag *flag, t_inf *inf);
+//intmax_t		minus_value_Uu(intmax_t i, t_flag *flag, t_inf *inf);
 intmax_t		cast_intmax(intmax_t i, t_flag *flag);
 uintmax_t		cast_uintmax(uintmax_t i, t_flag *flag);
 intmax_t		entry_minus(intmax_t i, t_inf *inf, t_flag *flag);
-
+//entry_minus нужно что бы принемал и uintmax_t!!!!
 
 //-------------------------------------
 void			cast_flag_Ddi(t_inf *inf, intmax_t i, t_flag *flag, char *format);
-void			cast_flag_Cc(t_inf *inf, t_flag *flag, char *format, uintmax_t j);
+void			cast_flag_Uu(t_inf *inf, uintmax_t i, t_flag *flag, char *format);
+void			cast_flag_Xx(t_inf *inf, uintmax_t i, t_flag *flag, char *str);
 
+//void			cast_flag_Cc(t_inf *inf, t_flag *flag, char *format, uintmax_t j);
 //void			cast_flag_Ss(t_inf *inf, t_flag *flag, char *format);
-//void			cast_flag_Xx(t_inf *inf, t_flag *flag, char *format);
-//void			cast_flag_Uu(t_inf *inf, t_flag *flag, char *format);
 //void			cast_flag_Oo(t_inf *inf, t_flag *flag, char *format);
 //void			cast_flag_p(t_inf *inf, t_flag *flag, char *format);
 
 void				cancellation_flags_Ddi(t_flag *flag, t_inf *inf);
 //void				cancellation_flags_Cc(t_flag *flag, t_inf *inf);
+void				cancellation_flags_Uu(t_flag *flag, t_inf *inf);
 
 //-------------------------специфыкаторы
 int				ft_refinement(char s);
@@ -131,7 +135,10 @@ int				is_zero(char *str);
 //int					ft_length_hh(char format);
 //int					treatment(char *str, va_list lst);
 
-void			ft_putnbr_intmax(intmax_t nb);
+//void			ft_putnbr_intmax(intmax_t nb);
+intmax_t		ft_putnbr_intmax(intmax_t nb);
+uintmax_t		ft_putnbr_uintmax_t(uintmax_t nb);
+uintmax_t		ft_strlen_uintmax(const char *s);
 intmax_t		ft_count(intmax_t n);
 
 #endif

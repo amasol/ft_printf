@@ -420,6 +420,33 @@ ft_qualifier.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_qualifier.c.s
 .PHONY : ft_qualifier.c.s
 
+ft_strlen_uintmax.o: ft_strlen_uintmax.c.o
+
+.PHONY : ft_strlen_uintmax.o
+
+# target to build an object file
+ft_strlen_uintmax.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_strlen_uintmax.c.o
+.PHONY : ft_strlen_uintmax.c.o
+
+ft_strlen_uintmax.i: ft_strlen_uintmax.c.i
+
+.PHONY : ft_strlen_uintmax.i
+
+# target to preprocess a source file
+ft_strlen_uintmax.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_strlen_uintmax.c.i
+.PHONY : ft_strlen_uintmax.c.i
+
+ft_strlen_uintmax.s: ft_strlen_uintmax.c.s
+
+.PHONY : ft_strlen_uintmax.s
+
+# target to generate assembly for a file
+ft_strlen_uintmax.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_strlen_uintmax.c.s
+.PHONY : ft_strlen_uintmax.c.s
+
 itoa_b.o: itoa_b.c.o
 
 .PHONY : itoa_b.o
@@ -2244,6 +2271,9 @@ help:
 	@echo "... ft_qualifier.o"
 	@echo "... ft_qualifier.i"
 	@echo "... ft_qualifier.s"
+	@echo "... ft_strlen_uintmax.o"
+	@echo "... ft_strlen_uintmax.i"
+	@echo "... ft_strlen_uintmax.s"
 	@echo "... itoa_b.o"
 	@echo "... itoa_b.i"
 	@echo "... itoa_b.s"
