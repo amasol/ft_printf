@@ -47,10 +47,10 @@ void		cast_flag_Uu(t_inf *inf, uintmax_t i, t_flag *flag, char *str)
 	else if (inf->count >= 0 && flag->width == 1 && flag->precision == 0 &&
 			 flag->minus != 1 && inf->minus_value != 1)
 	{
-		if (flag->space == 1)
-			inf->count = inf->count + 1;
-		if (flag->plus == 1 && flag->ban != inf->width)
-			inf->count = inf->count + 1;
+//		if (flag->space == 1)
+//			inf->count = inf->count + 1;
+//		if (flag->plus == 1 && flag->ban != inf->width)
+//			inf->count = inf->count + 1;
 		while (inf->count > 0)
 		{
 			inf->result += write(1, " ", 1);
@@ -65,15 +65,15 @@ void		cast_flag_Uu(t_inf *inf, uintmax_t i, t_flag *flag, char *str)
 	else if (flag->width == 1 && flag->precision == 0 &&
 			 inf->width > 0 && (flag->minus == 1) && flag->h == 0)
 	{
-		if (flag->space == 1)
-			inf->count = inf->count + 1;
+//		if (flag->space == 1)
+//			inf->count = inf->count + 1;
 //		if (inf->tmp == 1 && inf->minus_value == 0)
 //			inf->result += write(1, "+", 1);
 		if (flag->space == 1)
 			inf->result += write(1, " ", 1);
 		inf->result += ft_count(ft_putnbr_uintmax_t(i));
-		if (flag->minus == 1 && flag->ban < inf->width && inf->tmp == 1)
-			inf->result += write(1, " ", 1);
+//		if (flag->minus == 1 && flag->ban < inf->width && inf->tmp == 1)
+//			inf->result += write(1, " ", 1);
 		while (inf->count > 0 && flag->space != 1)
 		{
 			inf->result += write(1, " ", 1);
@@ -98,15 +98,9 @@ void		cast_flag_Uu(t_inf *inf, uintmax_t i, t_flag *flag, char *str)
 		// 		флаг	 ширины + когда аргумент по кол-ву с оденаковый с шириной !
 	else if (inf->count == 0 && flag->width == 1 && flag->precision == 0 )
 	{
-		if (inf->count == 1 && flag->plus == 1)
-			inf->count -= 1;
-		if (flag->space == 1)
-			inf->count = inf->count + 1;
-//		if (flag->space == 1)
-//			inf->result += write(1, " ", 1);
-//		if (flag->plus == 1 || inf->tmp == 1)
-//			inf->result += write(1, "+", 1);
 		inf->result += ft_count(ft_putnbr_uintmax_t(i));
+//		inf->result += write(1, " ", 1);
+//		inf->count_two--;
 	}
 
 	else if ((flag->zero == 0 || flag->minus == 0) && flag->plus == 1 && flag->precision == 0 &&
@@ -148,7 +142,7 @@ void		cast_flag_Uu(t_inf *inf, uintmax_t i, t_flag *flag, char *str)
 	else if (flag->precision == 1 && inf->count >= 0 && inf->count_two >= 0 && flag->minus == 0)
 	{
 		inf->count_two = (inf->minus_value == 1) ? inf->count_two -= 1 : inf->count_two;
-		inf->count_two = (flag->plus == 1) ? inf->count_two += 1 : inf->count_two;
+//		inf->count_two = (flag->plus == 1) ? inf->count_two += 1 : inf->count_two;
 		while (inf->count_two > 0)
 		{
 			inf->result += write(1, " ", 1);

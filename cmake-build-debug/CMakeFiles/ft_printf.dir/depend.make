@@ -9,9 +9,13 @@ CMakeFiles/ft_printf.dir/cast_flag_Ddi.c.o: .././libft/libft.h
 CMakeFiles/ft_printf.dir/cast_flag_Ddi.c.o: ../cast_flag_Ddi.c
 CMakeFiles/ft_printf.dir/cast_flag_Ddi.c.o: ../ft_printf.h
 
+CMakeFiles/ft_printf.dir/cast_flag_Oo.c.o: .././libft/libft.h
 CMakeFiles/ft_printf.dir/cast_flag_Oo.c.o: ../cast_flag_Oo.c
+CMakeFiles/ft_printf.dir/cast_flag_Oo.c.o: ../ft_printf.h
 
+CMakeFiles/ft_printf.dir/cast_flag_Ss.c.o: .././libft/libft.h
 CMakeFiles/ft_printf.dir/cast_flag_Ss.c.o: ../cast_flag_Ss.c
+CMakeFiles/ft_printf.dir/cast_flag_Ss.c.o: ../ft_printf.h
 
 CMakeFiles/ft_printf.dir/cast_flag_Uu.c.o: .././libft/libft.h
 CMakeFiles/ft_printf.dir/cast_flag_Uu.c.o: ../cast_flag_Uu.c

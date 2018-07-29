@@ -75,7 +75,8 @@ void			initialization_flag(t_flag *flag, t_inf *inf)
 	inf->tmp				= 0;
 	inf->count_format		= 0;
 	inf->minus_value		= 0;
-	inf->cast_j				= 0;
+	inf->uint_j				= 0;
+	inf->intm_j				= 0;
 }
 
 void			parsing_one(char *str, t_flag *flag)

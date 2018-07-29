@@ -67,7 +67,8 @@ typedef	struct	s_inf
 	int			count_format;
 	int			minus_value;
 	intmax_t	result;
-	uintmax_t	cast_j;
+	uintmax_t	uint_j;
+	intmax_t	intm_j;
 }				t_inf;
 
 void			initialization_flag(t_flag *flag, t_inf *inf);
@@ -91,27 +92,30 @@ intmax_t		minus_value_Ddi(intmax_t i, t_flag *flag, t_inf *inf);
 //intmax_t		minus_value_Uu(intmax_t i, t_flag *flag, t_inf *inf);
 intmax_t		cast_intmax(intmax_t i, t_flag *flag);
 uintmax_t		cast_uintmax(uintmax_t i, t_flag *flag);
-intmax_t		entry_minus(intmax_t i, t_inf *inf, t_flag *flag);
+intmax_t		entry_minus_intm(intmax_t i, t_inf *inf, t_flag *flag);
+void			entry_minus_uint(t_inf *inf, t_flag *flag);
 //entry_minus нужно что бы принемал и uintmax_t!!!!
 
 //-------------------------------------
 void			cast_flag_Ddi(t_inf *inf, intmax_t i, t_flag *flag, char *format);
 void			cast_flag_Uu(t_inf *inf, uintmax_t i, t_flag *flag, char *format);
 void			cast_flag_Xx(t_inf *inf, uintmax_t i, t_flag *flag, char *str);
+void			cast_flag_Oo(t_inf *inf, uintmax_t i, t_flag *flag, char *str);
+void			cast_flag_Ss(t_inf *inf, t_flag *flag, char *format);
 
 //void			cast_flag_Cc(t_inf *inf, t_flag *flag, char *format, uintmax_t j);
 //void			cast_flag_Ss(t_inf *inf, t_flag *flag, char *format);
-//void			cast_flag_Oo(t_inf *inf, t_flag *flag, char *format);
 //void			cast_flag_p(t_inf *inf, t_flag *flag, char *format);
 
 void				cancellation_flags_Ddi(t_flag *flag, t_inf *inf);
 //void				cancellation_flags_Cc(t_flag *flag, t_inf *inf);
 void				cancellation_flags_Uu(t_flag *flag, t_inf *inf);
+void				cancellation_flags_Oo(t_flag *flag, t_inf *inf);
 
 //-------------------------специфыкаторы
 int				ft_refinement(char s);
 int				ft_flag_Ddi(va_list lst, char *format, t_flag *flag, t_inf *inf);
-int				ft_flag_Ss(va_list lst, char *format, t_inf *inf);
+int				ft_flag_Ss(va_list lst, char *format, t_flag *flag, t_inf *inf);
 int				ft_flag_Cc(va_list lst, char *format, t_flag *flag, t_inf *inf);
 int				ft_flag_Xx(va_list lst, char *format, t_flag *flag, t_inf *inf);
 int				ft_flag_Uu(va_list lst, char *format, t_flag *flag, t_inf *inf);

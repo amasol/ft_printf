@@ -27,7 +27,7 @@ void		pars_spec(char *format, va_list lst, t_flag *flag, t_inf *inf)
 			else if (ft_refinement(format[i]) == 2)
 				ft_flag_Cc(lst, &format[i], flag, inf);
 			else if (ft_refinement(format[i]) == 3)
-				ft_flag_Ss(lst, &format[i], inf);
+				ft_flag_Ss(lst, &format[i], flag, inf);
 			else if (ft_refinement(format[i]) == 4)
 				ft_flag_Xx(lst, &format[i], flag, inf);
 			else if (ft_refinement(format[i]) == 5)
@@ -69,7 +69,7 @@ int			ft_flag_Ddi(va_list lst, char *format, t_flag *flag, t_inf *inf)
 		i = minus_value_Ddi(i, flag, inf);
 		cancellation_flags_Ddi(flag, inf);
 		if (LY)
-			entry_minus(i, inf, flag);
+			entry_minus_intm(i, inf, flag);
 		cast_flag_Ddi(inf, i, flag, format);
 	}
 	if (format[k] == 'D')
@@ -79,7 +79,7 @@ int			ft_flag_Ddi(va_list lst, char *format, t_flag *flag, t_inf *inf)
 		minus_value_Ddi(i, flag, inf);
 		cancellation_flags_Ddi(flag, inf);
 		if (LY)
-			entry_minus(i, inf, flag);
+			entry_minus_intm(i, inf, flag);
 		cast_flag_Ddi(inf, i, flag, format);
 	}
 //	flag->ban = 1;
@@ -99,8 +99,8 @@ int			ft_flag_Cc(va_list lst, char *format, t_flag *flag, t_inf *inf)
 	{
 		j = (APPLY) ? (cast_uintmax(j, flag)) : (unsigned char)j;
 //		cancellation_flags_Cc(flag, inf);
-		if (LY)
-			entry_minus(j, inf, flag);
+//		if (LY)
+//			entry_minus(j, inf, flag);
 //		cast_flag_Cc(inf, flag, format);
 
 //		ft_putchar(j);
@@ -114,24 +114,38 @@ int			ft_flag_Cc(va_list lst, char *format, t_flag *flag, t_inf *inf)
 // Если указан модификатор l, то строка интерпитируется как wchar_t*.
 // Для функции wprintf строка по умолчанию обрабатывается как wchar_t*.
 
-int			ft_flag_Ss(va_list lst, char *format, t_inf *inf)
+int			ft_flag_Ss(va_list lst, char *format, t_flag *flag, t_inf *inf)
 {
 	int 	i;
 	char	*str;
-//	wchar_t	*str;
+	wchar_t	*sstr;
+// это для S а для маленькой s мы принимаем char *
 
 	i = 0;
-//	str = va_arg(lst, wchar_t *);
-	str = va_arg(lst, char *);
 	if (format[i] == 's')
-		ft_putstr(str);
+	{
+		str = va_arg(lst, char *);
+		flag->ban = ft_strlen(str);
+		inf->uint_j += ft_strlen(str);
+		if (LY)
+			entry_minus_uint(inf, flag);
+		cast_flag_Ss(inf, flag, str);
+	}
+//	else if (format[i] == 'S')
+//	{
+//		sstr = va_arg(lst, wchar_t *);
+//		flag->ban = ft_strlen(sstr);
+//		inf->uint_j += ft_strlen(sstr);
+//		if (LY)
+//			entry_minus_uint(inf, flag);
+//		cast_flag_Ss(inf, flag, sstr);
+//	}
 	return (1);
 //	посмотреть приминение ft_putstr c wchar_t!!!!!
 }
 
 int			ft_flag_Xx(va_list lst, char *format, t_flag *flag, t_inf *inf)
 {
-//	флаг j -требует что бы мы вытягивали intmax_t..
 	int 		k;
 	uintmax_t	i;
 	char		*str;
@@ -142,22 +156,25 @@ int			ft_flag_Xx(va_list lst, char *format, t_flag *flag, t_inf *inf)
 	if (format[k] == 'x')
 	{
 		i = (APPLY) ? (cast_uintmax(i, flag)) : (unsigned int)i;
-//		flag->ban = ft_count(i);
-		cancellation_flags_Uu(flag, inf);
-		inf->cast_j += ft_strlen(ft_itoa_base_uintmax(i, 16, 'x'));
+		flag->ban = ft_strlen(ft_itoa_base_uintmax(i, 16, 'x'));
+//		cancellation_flags_Uu(flag, inf);
+		inf->uint_j += ft_strlen(ft_itoa_base_uintmax(i, 16, 'x'));
 		if (LY)
-			entry_minus(inf->cast_j, inf, flag);
+			entry_minus_uint(inf, flag);
 		str = ft_itoa_base_uintmax(i, 16, 'x');
 		cast_flag_Xx(inf, i, flag, str);
-//		ft_putstr(str);
 	}
-//	else if (format[k] == 'X')
-//	{
-//		i = (APPLY) ? (cast_uintmax(i, flag)) : (unsigned int)i;
-//		str = ft_itoa_base_uintmax(i, 16, 'X');
-//		cast_flag_Ddi(inf, i, flag, format);
-//		ft_putstr(str);
-//	}
+	else if (format[k] == 'X')
+	{
+		i = (unsigned int)i;
+		flag->ban = ft_strlen(ft_itoa_base_uintmax(i, 16, 'X'));
+//		cancellation_flags_Uu(flag, inf);
+		inf->uint_j += ft_strlen(ft_itoa_base_uintmax(i, 16, 'X'));
+		if (LY)
+			entry_minus_uint(inf, flag);
+		str = ft_itoa_base_uintmax(i, 16, 'X');
+		cast_flag_Xx(inf, i, flag, str);
+	}
 	return (1);
 }
 
@@ -172,28 +189,23 @@ int 		ft_flag_Uu(va_list lst, char *format, t_flag *flag, t_inf *inf)
 	{
 		i = (APPLY) ? (cast_uintmax(i, flag)) : (unsigned int)i;
 		flag->ban = ft_count(i);
+		inf->uint_j = ft_count(i);
 		cancellation_flags_Uu(flag, inf);
 		if (LY)
-			entry_minus(i, inf, flag);
+			entry_minus_uint(inf, flag);
 		cast_flag_Uu(inf, i, flag, format);
 	}
 	else if (format[k] == 'U')
 	{
 		i = (unsigned long)i;
-//		i = minus_value_Uu(i, flag, inf);
+		inf->uint_j = ft_count(i);
 		cancellation_flags_Uu(flag, inf);
 		if (LY)
-			entry_minus(i, inf, flag);
+			entry_minus_uint(inf, flag);
 		cast_flag_Uu(inf, i, flag, format);
 	}
 	return (1);
 }
-
-
-
-
-
-
 
 
 
@@ -208,15 +220,30 @@ int			ft_flag_Oo(va_list lst, char *format, t_flag *flag, t_inf *inf)
 	int			k;
 	uintmax_t	i;
 	char		*str;
-	// спецификатор (O) стоит в формате uintmax_t...какой должен быть маленькая (о)
+
 	k = 0;
 	i = va_arg(lst, uintmax_t);
-	if (format[k] == 'o' || format[k] == 'O')
+	if (format[k] == 'o')
 	{
 		i = (APPLY) ? (cast_uintmax(i, flag)) : (unsigned int)i;
-		str = ft_itoa_base_uintmax(i, 8, 'o');
-		cast_flag_Ddi(inf, i, flag, format);
-		ft_putstr(str);
+		flag->ban = ft_strlen(ft_itoa_base_uintmax(i, 8, 'x'));
+//		cancellation_flags_Oo(flag, inf);
+		inf->uint_j += ft_strlen(ft_itoa_base_uintmax(i, 8, 'x'));
+		if (LY)
+			entry_minus_uint(inf, flag);
+		str = ft_itoa_base_uintmax(i, 8, 'x');
+		cast_flag_Oo(inf, i, flag, str);
+	}
+	else if (format[k] == 'O')
+	{
+		i = (unsigned long)i;
+		flag->ban = ft_strlen(ft_itoa_base_uintmax(i, 8, 'X'));
+//		cancellation_flags_Oo(flag, inf);
+		inf->uint_j += ft_strlen(ft_itoa_base_uintmax(i, 8, 'X'));
+		if (LY)
+			entry_minus_uint(inf, flag);
+		str = ft_itoa_base_uintmax(i, 8, 'X');
+		cast_flag_Xx(inf, i, flag, str);
 	}
 	return (1);
 }

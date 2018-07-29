@@ -10,9 +10,13 @@ CMakeFiles/ft_printf.dir/cast_flag_Ddi.c.o
  /Users/amasol/amasol/project/ft_printf/cast_flag_Ddi.c
  /Users/amasol/amasol/project/ft_printf/ft_printf.h
 CMakeFiles/ft_printf.dir/cast_flag_Oo.c.o
+ /Users/amasol/amasol/project/ft_printf/./libft/libft.h
  /Users/amasol/amasol/project/ft_printf/cast_flag_Oo.c
+ /Users/amasol/amasol/project/ft_printf/ft_printf.h
 CMakeFiles/ft_printf.dir/cast_flag_Ss.c.o
+ /Users/amasol/amasol/project/ft_printf/./libft/libft.h
  /Users/amasol/amasol/project/ft_printf/cast_flag_Ss.c
+ /Users/amasol/amasol/project/ft_printf/ft_printf.h
 CMakeFiles/ft_printf.dir/cast_flag_Uu.c.o
  /Users/amasol/amasol/project/ft_printf/./libft/libft.h
  /Users/amasol/amasol/project/ft_printf/cast_flag_Uu.c
