@@ -21,14 +21,12 @@ $(OBJ_DIR)/%.o: ./%.c
 	@gcc -c $< -o $@
 
 clean:
-	@make clean -C $(LIBDIR)
-	@rm -rf $(OBJ)
+	rm -f $(OBJ)
+	make clean -C $(LIBDIR)
 
-main: all
-	$(CC) main.c $(NAME) libft/libft.a
 fclean: clean
-	@/bin/rm -f $(NAME)
-	@make fclean -C $(LIBDIR)
+	rm -f $(NAME)
+	make fclean -C  $(LIBDIR)
 
 re: fclean all
 
