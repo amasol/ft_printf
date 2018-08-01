@@ -56,7 +56,7 @@ typedef struct s_flag
 
 typedef	struct	s_inf
 {
-//	char		*minus;
+	char		x;
 	int			width;
 	int			width_two;
 	int 		count;
@@ -102,10 +102,10 @@ void			cast_flag_Uu(t_inf *inf, uintmax_t i, t_flag *flag, char *format);
 void			cast_flag_Xx(t_inf *inf, uintmax_t i, t_flag *flag, char *str);
 void			cast_flag_Oo(t_inf *inf, uintmax_t i, t_flag *flag, char *str);
 void			cast_flag_Ss(t_inf *inf, t_flag *flag, char *format);
+void			cast_flag_Cc(t_inf *inf, t_flag *flag, char format);
+void			cast_flag_p(t_inf *inf, t_flag *flag, char *format);
 
-//void			cast_flag_Cc(t_inf *inf, t_flag *flag, char *format, uintmax_t j);
-//void			cast_flag_Ss(t_inf *inf, t_flag *flag, char *format);
-//void			cast_flag_p(t_inf *inf, t_flag *flag, char *format);
+
 
 void				cancellation_flags_Ddi(t_flag *flag, t_inf *inf);
 //void				cancellation_flags_Cc(t_flag *flag, t_inf *inf);
@@ -120,7 +120,7 @@ int				ft_flag_Cc(va_list lst, char *format, t_flag *flag, t_inf *inf);
 int				ft_flag_Xx(va_list lst, char *format, t_flag *flag, t_inf *inf);
 int				ft_flag_Uu(va_list lst, char *format, t_flag *flag, t_inf *inf);
 int				ft_flag_Oo(va_list lst, char *format, t_flag *flag, t_inf *inf);
-int				ft_flag_p(va_list lst, char *format, t_inf *inf);
+int				ft_flag_p(va_list lst, char *format, t_flag *flag, t_inf *inf);
 //----------------------------------------------------
 
 //-------------------флаги
@@ -130,7 +130,7 @@ void			parsing_one(char *str, t_flag *flag);
 void			parsing_two(char *str, t_flag *flag);
 int				parsing_three(char *str, t_inf *inf, t_flag *flag);
 void			parsing_four(char *str, t_flag *flag, t_inf *inf);
-void			parsing_five(char *str, t_inf *inf);
+void			parsing_five(char *str, t_inf *inf, t_flag *flag);
 int				ft_flag_check(char c);
 void			output_after(char *format, t_inf *inf);
 int				is_zero(char *str);

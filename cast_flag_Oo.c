@@ -33,10 +33,6 @@ void		cast_flag_Oo(t_inf *inf, uintmax_t i, t_flag *flag, char *str)
 //		флан zero
 	else if (flag->zero == 1)
 	{
-//		if (flag->space == 1)
-//			inf->result += write(1, " ", 1);
-//		if (flag->plus == 1 || inf->tmp == 1)
-//			inf->result += write(1, "+", 1);
 		while (inf->count > 0)
 		{
 			inf->result += write(1, "0", 1);
@@ -54,16 +50,15 @@ void		cast_flag_Oo(t_inf *inf, uintmax_t i, t_flag *flag, char *str)
 	else if (inf->count >= 0 && flag->width == 1 && flag->precision == 0 &&
 			 flag->minus != 1 && inf->minus_value != 1)
 	{
-//		if (flag->plus == 1)
-//			inf->count = inf->count + 1;
+		if (flag->slash == 1)
+			inf->count -= 1;
 		while (inf->count > 0)
 		{
 			inf->result += write(1, " ", 1);
 			inf->count--;
 		}
-//		if ((flag->plus == 1 && flag->minus != 1) ||
-//			(inf->tmp == 1 && flag->minus == 1))
-//			inf->result += write(1, "+", 1);
+		if (flag->slash == 1)
+			inf->result += write(1, "0", 1);
 		inf->result += ft_strlen_uintmax(str);
 		ft_putstr(str);
 	}
@@ -109,10 +104,6 @@ void		cast_flag_Oo(t_inf *inf, uintmax_t i, t_flag *flag, char *str)
 			inf->count -= 1;
 		if (flag->space == 1)
 			inf->count = inf->count + 1;
-//		if (flag->space == 1)
-//			inf->result += write(1, " ", 1);
-//		if (flag->plus == 1 || inf->tmp == 1)
-//			inf->result += write(1, "+", 1);
 		inf->result += ft_strlen_uintmax(str);
 		ft_putstr(str);
 		while (inf->count_two > 0 && inf->count == 0)
@@ -125,8 +116,6 @@ void		cast_flag_Oo(t_inf *inf, uintmax_t i, t_flag *flag, char *str)
 	else if ((flag->zero == 0 || flag->minus == 0) && flag->plus == 1 && flag->precision == 0 &&
 			 inf->width == 0)
 	{
-//		if (flag->plus == 1 || inf->tmp == 1)
-//			inf->result += write(1, "+", 1);
 		inf->result += ft_strlen_uintmax(str);
 		ft_putstr(str);
 	}
@@ -144,8 +133,6 @@ void		cast_flag_Oo(t_inf *inf, uintmax_t i, t_flag *flag, char *str)
 //		точность (.)
 	else if (flag->precision == 1 && inf->count > 0 && inf->count_two == 0 && flag->minus != 1 )
 	{
-//		if ((flag->minus == 0) && flag->plus == 0)
-//			;
 		if ((flag->plus == 1) && flag->minus == 0 && (inf->width < inf->width_two))
 			inf->result += write(1, " ", 1);
 		while (inf->count > 0)
@@ -164,21 +151,19 @@ void		cast_flag_Oo(t_inf *inf, uintmax_t i, t_flag *flag, char *str)
 	else if (flag->precision == 1 && inf->count >= 0 && inf->count_two >= 0 && flag->minus == 0)
 	{
 		inf->count_two = (inf->minus_value == 1) ? inf->count_two -= 1 : inf->count_two;
-//		inf->count_two = (flag->plus == 1) ? inf->count_two += 1 : inf->count_two;
-
+		if (flag->slash == 1 && inf->count_two > inf->count)
+			inf->count_two -= 1;
 		while (inf->count_two > 0)
 		{
 			inf->result += write(1, " ", 1);
 			inf->count_two--;
 		}
-//		if (flag->plus == 1  && flag->ban < inf->width_two)
-//			inf->result += write(1, " ", 1);
 		while (inf->count > 0 )
 		{
 			inf->result += write(1, "0", 1);
 			inf->count--;
 		}
-		if (flag->slash == 1)
+		if (flag->slash == 1 && inf->count_two < inf->uint_j)
 			inf->result += write(1, "0", 1);
 		inf->result += ft_strlen_uintmax(str);
 		ft_putstr(str);
@@ -227,15 +212,17 @@ void		cast_flag_Oo(t_inf *inf, uintmax_t i, t_flag *flag, char *str)
 
 
 
-//	else if (flag->slash == 1)
-//	{
-//		if (*str == 'X')
-//			inf->result += write(1, "0X", 2);
-//		if (*str == 'x')
-//			inf->result += write(1, "0x", 2);
-//		if (*str == 'o' || *str == 'O')
-//			inf->result += write(1, "0", 1);
-//	}
+	else if (flag->slash == 1)
+	{
+		while (inf->count_two > 0)
+		{
+			inf->result += write(1, " ", 1);
+			inf->count_two--;
+		}
+		inf->result += write(1, "0", 1);
+		inf->result += ft_strlen_uintmax(str);
+		ft_putstr(str);
+	}
 	else if (flag->precision == 1 && flag->plus == 1)
 	{
 		while (inf->count > 0)

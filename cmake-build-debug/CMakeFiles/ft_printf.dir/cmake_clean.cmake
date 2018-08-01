@@ -71,6 +71,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/ft_printf.dir/cast.c.o"
   "CMakeFiles/ft_printf.dir/cast_flag_Ddi.c.o"
   "CMakeFiles/ft_printf.dir/cast_flag_Ss.c.o"
+  "CMakeFiles/ft_printf.dir/cast_flag_Cc.c.o"
   "CMakeFiles/ft_printf.dir/cast_flag_Xx.c.o"
   "CMakeFiles/ft_printf.dir/cast_flag_Uu.c.o"
   "CMakeFiles/ft_printf.dir/cast_flag_Oo.c.o"

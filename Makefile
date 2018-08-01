@@ -1,32 +1,31 @@
-NAME := libftprintf.a
+NAME = libftprintf.a
 
-SRC := 	ft_printf.c ft_qualifier.c find.c cast.c ft_putnbr_long.c itoa_b.c itoa_b_uintmax.c parsing.c
-        cast_flag_Ddi.c print_test.c
+SRC = ft_printf.c ft_qualifier.c find.c cast.c ft_putnbr_long.c itoa_b.c itoa_b_uintmax.c parsing.c cast_flag_Ddi.c cast_flag_Uu.c cast_flag_Cc.c cast_flag_Oo.c cast_flag_Ss.c cast_flag_p.c cast_flag_Xx.c ft_strlen_uintmax.c
 
-OBJ_DIR := obj
+CC=gcc
+HDDIRS=-I ft_printf.h
 
-FLAGS := -Wall -Wextra -Werror
+LIBDIR = ./libft
 
-LIBDIR := ./libft
-
-OBJ := $(addprefix $(OBJ_DIR)/, $(SRC:.c=.o))
+OBJ=$(SRC:.c=.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
 	@make -C $(LIBDIR)
-	@cd $(LIBDIR) && mv *.o ../obj
-
-	@ar rc $(NAME) obj/*.o
+	$(CC) -c $(SRC) $(HDDIRS) -I libft.h
+	@ar rc $(NAME) $(OBJ)
+	ranlib $(NAME)
 
 $(OBJ_DIR)/%.o: ./%.c
-	@mkdir -p $(OBJ_DIR)
-	@gcc $(FLAGS) -c $< -o $@
+	@gcc -c $< -o $@
 
 clean:
 	@make clean -C $(LIBDIR)
-	@rm -rf obj
+	@rm -rf $(OBJ)
 
+main: all
+	$(CC) main.c $(NAME) libft/libft.a
 fclean: clean
 	@/bin/rm -f $(NAME)
 	@make fclean -C $(LIBDIR)

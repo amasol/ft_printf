@@ -150,6 +150,33 @@ cast.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/cast.c.s
 .PHONY : cast.c.s
 
+cast_flag_Cc.o: cast_flag_Cc.c.o
+
+.PHONY : cast_flag_Cc.o
+
+# target to build an object file
+cast_flag_Cc.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/cast_flag_Cc.c.o
+.PHONY : cast_flag_Cc.c.o
+
+cast_flag_Cc.i: cast_flag_Cc.c.i
+
+.PHONY : cast_flag_Cc.i
+
+# target to preprocess a source file
+cast_flag_Cc.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/cast_flag_Cc.c.i
+.PHONY : cast_flag_Cc.c.i
+
+cast_flag_Cc.s: cast_flag_Cc.c.s
+
+.PHONY : cast_flag_Cc.s
+
+# target to generate assembly for a file
+cast_flag_Cc.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/cast_flag_Cc.c.s
+.PHONY : cast_flag_Cc.c.s
+
 cast_flag_Ddi.o: cast_flag_Ddi.c.o
 
 .PHONY : cast_flag_Ddi.o
@@ -2241,6 +2268,9 @@ help:
 	@echo "... cast.o"
 	@echo "... cast.i"
 	@echo "... cast.s"
+	@echo "... cast_flag_Cc.o"
+	@echo "... cast_flag_Cc.i"
+	@echo "... cast_flag_Cc.s"
 	@echo "... cast_flag_Ddi.o"
 	@echo "... cast_flag_Ddi.i"
 	@echo "... cast_flag_Ddi.s"

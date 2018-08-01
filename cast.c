@@ -56,8 +56,6 @@ void	entry_minus_uint(t_inf *inf, t_flag *flag)
 //		inf->count_two = inf->count_two - 1;
 //	if (inf->count == 0 && inf->count_two > 0 && inf->minus_value == 0)
 //		inf->count_two -= 1;
-	if (flag->slash == 1)
-		inf->count_two = inf->count_two - 1;
 //	else if (inf->count == 0 && inf->count_two == 1 && inf->minus_value == 1)
 	if (inf->count == 0 && inf->count_two == 1 && inf->minus_value == 1)
 		inf->count_two -= 1;

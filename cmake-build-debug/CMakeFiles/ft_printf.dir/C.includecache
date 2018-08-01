@@ -20,6 +20,10 @@ fcntl.h
 ft_printf.h
 /Users/amasol/amasol/project/ft_printf/ft_printf.h
 
+/Users/amasol/amasol/project/ft_printf/cast_flag_Cc.c
+ft_printf.h
+/Users/amasol/amasol/project/ft_printf/ft_printf.h
+
 /Users/amasol/amasol/project/ft_printf/cast_flag_Ddi.c
 ft_printf.h
 /Users/amasol/amasol/project/ft_printf/ft_printf.h
@@ -41,6 +45,8 @@ ft_printf.h
 /Users/amasol/amasol/project/ft_printf/ft_printf.h
 
 /Users/amasol/amasol/project/ft_printf/cast_flag_p.c
+ft_printf.h
+/Users/amasol/amasol/project/ft_printf/ft_printf.h
 
 /Users/amasol/amasol/project/ft_printf/find.c
 ft_printf.h
