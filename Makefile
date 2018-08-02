@@ -13,7 +13,7 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	@make -C $(LIBDIR)
-	$(CC) -c $(SRC) $(HDDIRS) -I libft.h
+	$(CC) -Wall -Wextra -Werror -c $(SRC) $(HDDIRS) -I libft.h
 	@ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)
 

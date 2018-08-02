@@ -15,11 +15,11 @@
 void	cast_flag_Cc(t_inf *inf, t_flag *flag, char str)
 {
 	// флаг -
-	inf->count = (inf->uint_j > inf->width) ? inf->uint_j : inf->width - inf->uint_j;
+	inf->count = (inf->uint_j > (uintmax_t)inf->width) ? inf->uint_j : inf->width - inf->uint_j;
 	if (inf->width_two > inf->width)
 		inf->count_two = (inf->width_two > inf->width) ? inf->width_two - inf->width : 0;
-	else if (inf->width_two > inf->uint_j)
-		inf->count_two = (inf->width_two > inf->uint_j) ? inf->width_two - inf->uint_j : 0;
+	else if ((uintmax_t)inf->width_two > inf->uint_j)
+		inf->count_two = ((uintmax_t)inf->width_two > inf->uint_j) ? inf->width_two - inf->uint_j : 0;
 
 
 

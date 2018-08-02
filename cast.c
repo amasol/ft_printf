@@ -36,11 +36,11 @@ uintmax_t		cast_uintmax(uintmax_t i, t_flag *flag)
 	return (0);
 }
 
-void	entry_minus_uint(t_inf *inf, t_flag *flag)
+void	entry_minus_uint(t_inf *inf/*, t_flag *flag*/)
 {
 
 	if (inf->width > 0)
-		inf->count = (inf->uint_j <= inf->width) ? inf->width - inf->uint_j : 0;
+		inf->count = (inf->uint_j <= (uintmax_t)inf->width) ? inf->width - inf->uint_j : 0;
 //	if (inf->uint_j > inf->width_two)
 //		inf->count_two = inf->uint_j - inf->width_two;
 //	if (flag->plus == 1 || inf->tmp == 1 || flag->space == 1 || inf->minus_value == 1)
@@ -51,7 +51,7 @@ void	entry_minus_uint(t_inf *inf, t_flag *flag)
 	if (inf->width_two > 0 && inf->count != 0)
 		inf->count_two = (inf->width_two > inf->width) ? inf->width_two - inf->width : 0;
 	else
-		inf->count_two = (inf->width_two >= inf->uint_j) ? inf->width_two - inf->uint_j : 0;
+		inf->count_two = ((uintmax_t)inf->width_two >= inf->uint_j) ? inf->width_two - inf->uint_j : 0;
 //	if (inf->count_two > 0 && (flag->plus == 1 || inf->tmp == 1))
 //		inf->count_two = inf->count_two - 1;
 //	if (inf->count == 0 && inf->count_two > 0 && inf->minus_value == 0)

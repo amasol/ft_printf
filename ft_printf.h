@@ -93,14 +93,14 @@ intmax_t		minus_value_Ddi(intmax_t i, t_flag *flag, t_inf *inf);
 intmax_t		cast_intmax(intmax_t i, t_flag *flag);
 uintmax_t		cast_uintmax(uintmax_t i, t_flag *flag);
 intmax_t		entry_minus_intm(intmax_t i, t_inf *inf, t_flag *flag);
-void			entry_minus_uint(t_inf *inf, t_flag *flag);
+void			entry_minus_uint(t_inf *inf/*, t_flag *flag*/);
 //entry_minus нужно что бы принемал и uintmax_t!!!!
 
 //-------------------------------------
 void			cast_flag_Ddi(t_inf *inf, intmax_t i, t_flag *flag, char *format);
 void			cast_flag_Uu(t_inf *inf, uintmax_t i, t_flag *flag, char *format);
 void			cast_flag_Xx(t_inf *inf, uintmax_t i, t_flag *flag, char *str);
-void			cast_flag_Oo(t_inf *inf, uintmax_t i, t_flag *flag, char *str);
+void			cast_flag_Oo(t_inf *inf, t_flag *flag, char *str);
 void			cast_flag_Ss(t_inf *inf, t_flag *flag, char *format);
 void			cast_flag_Cc(t_inf *inf, t_flag *flag, char format);
 void			cast_flag_p(t_inf *inf, t_flag *flag, char *format);

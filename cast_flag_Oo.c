@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-void		cast_flag_Oo(t_inf *inf, uintmax_t i, t_flag *flag, char *str)
+void		cast_flag_Oo(t_inf *inf, t_flag *flag, char *str)
 {
 	// флаг -
 	if (flag->ban > 0 && flag->plus == 1 && flag->minus != 1)
@@ -163,7 +163,7 @@ void		cast_flag_Oo(t_inf *inf, uintmax_t i, t_flag *flag, char *str)
 			inf->result += write(1, "0", 1);
 			inf->count--;
 		}
-		if (flag->slash == 1 && inf->count_two < inf->uint_j)
+		if (flag->slash == 1 && (uintmax_t)inf->count_two < inf->uint_j)
 			inf->result += write(1, "0", 1);
 		inf->result += ft_strlen_uintmax(str);
 		ft_putstr(str);
