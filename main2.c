@@ -1,4 +1,4 @@
-#include "ft_printf.h"
+#include "./includes/ft_printf.h"
 
 //int main(void)
 //{
@@ -1297,8 +1297,8 @@ int main(void)
 //
 //	ft_printf("1(myy[x])[%15.9с]\n", '3');
 //	printf("1(org[x])[%15.9с]\n", '3');
-//	ft_printf("1(myy[x])[%10.9с]", '3');
-//	printf("1(org[x])[%10.9с]\n\n", '3');
+	ft_printf("1(myy[x])[%10.9с]", '3');
+	printf("1(org[x])[%10.9с]", '3');
 //
 //	ft_printf("2(myy[x])[%-11.10с]", '3');
 //	printf("2(org[x])[%-11.10с]\n",'3');
