@@ -143,6 +143,9 @@
 		<Unit filename="/Users/amasol/amasol/project/ft_printf/srcs/ft_qualifier.c">
 			<Option target="ft_printf"/>
 		</Unit>
+		<Unit filename="/Users/amasol/amasol/project/ft_printf/srcs/ft_strchr.c">
+			<Option target="ft_printf"/>
+		</Unit>
 		<Unit filename="/Users/amasol/amasol/project/ft_printf/srcs/ft_strdel.c">
 			<Option target="ft_printf"/>
 		</Unit>
@@ -162,6 +165,9 @@
 			<Option target="ft_printf"/>
 		</Unit>
 		<Unit filename="/Users/amasol/amasol/project/ft_printf/srcs/itoa_b_uintmax.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/amasol/amasol/project/ft_printf/srcs/no_spec.c">
 			<Option target="ft_printf"/>
 		</Unit>
 		<Unit filename="/Users/amasol/amasol/project/ft_printf/srcs/parsing.c">

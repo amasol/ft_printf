@@ -31,6 +31,7 @@ void				parsing(char *str, va_list lst, t_inf *inf)
 	}
 	while (!(ft_qualifier(str[i])))
 	{
+		inf->nothing = 1;
 		if (inf->width_two == 0)
 			parsing_four(str, &flag, inf);
 		if (inf->width == 0)
@@ -44,7 +45,7 @@ void				parsing(char *str, va_list lst, t_inf *inf)
 	if (ft_qualifier(str[i]))
 		pars_spec(&str[i], lst, &flag, inf);
 	output_after(&str[i], inf);
-	inf->count_format +=  i;
+	inf->count_format += i;
 }
 
 void			initialization_flag(t_flag *flag, t_inf *inf)
@@ -77,6 +78,7 @@ void			initialization_flag(t_flag *flag, t_inf *inf)
 	inf->minus_value		= 0;
 	inf->uint_j				= 0;
 	inf->intm_j				= 0;
+	inf->nothing			= 0;
 }
 
 void			parsing_one(char *str, t_flag *flag)
@@ -254,41 +256,14 @@ int		is_zero(char *str)
 	return (1);
 }
 
-
-
-
-
-
-
-
-
-
-/*void			parsing(char format)
-{
-	if (ft_flag_check(format))
-	{
-		if (ft_flag(format) == 1)
-			ft_length_hh(format);
-		else if (ft_flag(format) == 2)
-			ft_length_ll(format);
-		else if (ft_flag(format) == 3)
-			ft_length_z(format);
-		else if (ft_flag(format) == 4)
-			ft_length_j(format);
-		else if (ft_flag(format) == 5)
-			ft_length_l(format);
-		else if (ft_flag(format) == 6)
-			ft_length_h(format);
-		else if (ft_flag(format) == 7)
-			ft_length_+(format);
-		else if (ft_flag(format) == 8)
-			ft_length_-(format);
-		else if (ft_flag(format) == 9)
-			ft_length_0(format);
-		else if (ft_flag(format) == 10)
-			ft_length_#(format);
-		else if (ft_flag(format) == 11)
-			ft_length_%%(format);
-	}
-}
- */
+//is_check_specs(&str[i], inf);
+//int		is_check_specs(char *str, t_inf *inf)
+//{
+//	int i;
+//
+//	i = 0;
+//	if (ft_qualifier(str[i]))
+//	{
+//		inf->nothing = 1;
+//	}
+//}

@@ -200,7 +200,7 @@ void			cast_flag_p(t_inf *inf, t_flag *flag, char *str)
 			inf->count_two = inf->width_two;
 			inf->count_two -= inf->width + 2;
 		}
-//		inf->result += write(1, "0x", 2);
+		inf->result += write(1, "0x", 2);
 		while (inf->count > 0)
 		{
 			inf->result += write(1, "0", 1);

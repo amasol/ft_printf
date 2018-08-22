@@ -1285,8 +1285,8 @@
 //	ft_printf("1(myy[p])[%#X]", 123456789);
 //	printf("1(org[p])[%#X]\n", 123456789);
 
-int main(void)
-{
+//int main(void)
+//{
 // обработка флага с
 //	ft_printf("1(myy[p])[%10.10c]", '3');
 //	printf("1(org[p])[%10.10c]\n", '3');
@@ -1294,11 +1294,10 @@ int main(void)
 //	printf("(myy[s])[%10с]", '3');
 //
 //
-//
-//	ft_printf("1(myy[x])[%15.9с]\n", '3');
-//	printf("1(org[x])[%15.9с]\n", '3');
-	ft_printf("1(myy[x])[%10.9с]", '3');
-	printf("1(org[x])[%10.9с]", '3');
+//	ft_printf("1(myy[x])[%15.9с]", '3');
+//	printf("1(org[x])[%15.9с]", '3');
+//	ft_printf("1(myy[x])[%10.9с]", '3');
+//	printf("1(org[x])[%10.9с]", '3');
 //
 //	ft_printf("2(myy[x])[%-11.10с]", '3');
 //	printf("2(org[x])[%-11.10с]\n",'3');
@@ -1441,25 +1440,33 @@ int main(void)
 //	printf("1(org[d])[%h-s]\n\n", 327677);
 
 
-	//появилась сега ....
-//	ft_printf("1(myy[d])[%h - 0s]", 327678);
-//	printf("1(org[d])[%h - 0s]\n", 327678);
-//	ft_printf("1(myy[d])[%h - 0s]", 327678);
-//	printf("1(org[d])[%h - 0s]\n\n", 327678);
+
+//	return (0);
+//}
+int		 main	(void)
+{
+
+//	ft_printf("|len=%i", ft_printf("привет%-12p\n", 123456789));
+//	printf("\n|len=%i", printf("привет%-12p\n", 123456789));
+
+//	ft_printf("|len=%i", ft_printf("%%\n"));
+//	printf("\n|len=%i", printf("%%\n"));
+
+//	ft_printf("%#.x %#.x %#.0x\n", 0, 0);
+//	printf("%#.x %#.x %#.0x\n", 0, 0);
+
+//	ft_printf("%s %s %s %s string. gg!\n", "this", "is", "a", "multi", "aaaaa");
+//	printf("%s %s %s %s string. gg!\n", "this", "is", "a", "multi", "aaaaa");
+
+	ft_printf("%.6s\n", NULL);
+	printf("%.2s\n", NULL);
 
 
 
-//	проверить все с пробелма # и 0 (анбихейвин)
-//	ft_printf("1(myy[d])[%0+ -15s]", 123456789);
-//	printf("1(org[d])[%0+ -15s]\n", 123456789);
-//	ft_printf("1(myy[d])[%0 - 10s]", 123456789);
-//	ft_printf("1(myy[d])[%0- 10s]", 123456789);
-//	ft_printf("1(myy[d])[%0 -10s]", 123456789);
-//	printf("1(org[d])[%0- 10s]\n", 123456789);
-//	printf("1(org[d])[%0 -10s]\n", 123456789);
-//	printf("1(org[d])[%0 - 10s]\n", 123456789);
 
 
+//	ft_printf("|len=%i", ft_printf("%s ", "this is a string"));
+//	printf("|len=%i", printf("%s ", "this is a string"));
 
 	return (0);
 }

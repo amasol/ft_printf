@@ -22,10 +22,21 @@ void		cast_flag_Ss(t_inf *inf, t_flag *flag, char *str)
 		inf->count_two = ((uintmax_t)inf->width_two > inf->uint_j) ? inf->width_two - inf->uint_j : 0;
 
 
+	if (str == NULL)
+	{
+//		if (inf->count > ft_strlen("(null)"))
+//			inf->count -= ft_strlen("(null)");
+		while (flag->width == 1 && inf->count > 0)
+		{
+//			ft_putstr("(null)");
+			ft_putstr(ft_strchr("(null)", inf->count));
+			inf->count--;
+		}
+//		inf->result += write(1, "(null)", 6);
+	}
 
 
-
-	if (inf->count > 0 && flag->minus == 1 && flag->precision == 0 && inf->width == 0)
+	else if (inf->count > 0 && flag->minus == 1 && flag->precision == 0 && inf->width == 0)
 	{
 		if (flag->space == 1)
 			inf->result += write(1, " ", 1);
@@ -66,17 +77,18 @@ void		cast_flag_Ss(t_inf *inf, t_flag *flag, char *str)
 	else if (flag->width == 1 && flag->precision == 0 &&
 			 inf->width > 0 && (flag->minus == 1) && flag->h == 0)
 	{
-		if (flag->space == 1)
-			inf->count = inf->count + 1;
-		if (flag->space == 1)
-			inf->result += write(1, " ", 1);
+//		if (flag->space == 1)
+//			inf->count = inf->count + 1;
+//		if (flag->space == 1)
+//			inf->result += write(1, " ", 1);
 		str = ft_strsub(str, 0, inf->width);
 		inf->result += ft_strlen_uintmax(str);
 		ft_putstr(str);
 		ft_strdel(&str);
 		if (flag->minus == 1 && flag->ban < inf->width && inf->tmp == 1)
 			inf->result += write(1, " ", 1);
-		while (inf->count > 0 && flag->space != 1)
+//		while (inf->count > 0 && flag->space != 1)
+		while (inf->count > 0)
 		{
 			inf->result += write(1, " ", 1);
 			inf->count--;
@@ -135,7 +147,24 @@ void		cast_flag_Ss(t_inf *inf, t_flag *flag, char *str)
 
 	else if (flag->space == 1 && flag->precision != 1)
 	{
-		inf->result += write(1, " ", 1);
+//		inf->result += write(1, " ", 1);
+//		write(1, " ", 1);
+//		str = ft_strsub(str, 0, inf->width);
+		inf->result += ft_strlen_uintmax(str);
+		ft_putstr(str);
+//		ft_strdel(&str);
+	}
+
+
+	else if (flag->precision == 1 && inf->count > 0 && inf->count_two == 0 && *str == '\0')
+	{
+		if ((flag->plus == 1) && flag->minus == 0 && (inf->width < inf->width_two))
+			inf->result += write(1, " ", 1);
+		while (inf->count_two > 0)
+		{
+			inf->result += write(1, " ", 1);
+			inf->count_two--;
+		}
 		str = ft_strsub(str, 0, inf->width);
 		inf->result += ft_strlen_uintmax(str);
 		ft_putstr(str);
@@ -143,9 +172,9 @@ void		cast_flag_Ss(t_inf *inf, t_flag *flag, char *str)
 	}
 
 
-
 //		точность (.)
-	else if (flag->precision == 1 && inf->count > 0 && inf->count_two == 0 && flag->minus != 1 )
+	else if (flag->precision == 1 && inf->count > 0 && inf->count_two == 0
+			 && flag->minus != 1  && inf->nothing == 1)
 	{
 		if ((flag->plus == 1) && flag->minus == 0 && (inf->width < inf->width_two))
 			inf->result += write(1, " ", 1);
@@ -162,13 +191,19 @@ void		cast_flag_Ss(t_inf *inf, t_flag *flag, char *str)
 
 
 //		точность (ширина + точность)
-	else if (flag->precision == 1 && inf->count >= 0 && inf->count_two >= 0 && flag->minus == 0)
+	else if (flag->precision == 1 && inf->count >= 0 && inf->count_two >= 0
+			 && flag->minus == 0 && inf->nothing == 1)
 	{
 		inf->count_two = (inf->minus_value == 1) ? inf->count_two -= 1 : inf->count_two;
 		while (inf->count_two > 0)
 		{
 			inf->result += write(1, " ", 1);
 			inf->count_two--;
+		}
+		while (inf->count > 0 && *str == '\0')
+		{
+			inf->result += write(1, " ", 1);
+			inf->count--;
 		}
 		str = ft_strsub(str, 0, inf->width);
 		inf->result += ft_strlen_uintmax(str);
@@ -183,13 +218,18 @@ void		cast_flag_Ss(t_inf *inf, t_flag *flag, char *str)
 		str = ft_strsub(str, 0, inf->width);
 		inf->result += ft_strlen_uintmax(str);
 		ft_putstr(str);
-		ft_strdel(&str);
-
-		while (inf->count_two > 0)
+//		ft_strdel(&str);
+		while (inf->count > 0 && flag->minus == 1 && *str == '\0')
+		{
+			inf->result += write(1, " ", 1);
+			inf->count--;
+		}
+		while (inf->count_two > 0 && flag->minus == 1)
 		{
 			inf->result += write(1, " ", 1);
 			inf->count_two--;
 		}
+		ft_strdel(&str);
 	}
 	else if (flag->precision == 1 && inf->count == 0 && inf->count_two > 0)
 	{
@@ -221,13 +261,14 @@ void		cast_flag_Ss(t_inf *inf, t_flag *flag, char *str)
 		ft_strdel(&str);
 	}
 
-	else if (flag->plus == 0 && flag->slash == 0 && flag->space == 0
-			 && flag->zero == 0 && flag->width == 0 && flag->precision == 0)
+//	else if (flag->plus == 0 && flag->slash == 0 && flag->space == 0
+//			 && flag->zero == 0 && flag->width == 0 && flag->precision == 0)
+	else if (inf->nothing == 0)
 	{
-		str = ft_strsub(str, 0, inf->width);
+//		str = ft_strsub(str, 0, inf->width);
 		inf->result += ft_strlen_uintmax(str);
 		ft_putstr(str);
-		ft_strdel(&str);
+//		ft_strdel(&str);
 	}
 }
 

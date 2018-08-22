@@ -35,5 +35,7 @@ add_executable(ft_printf
         srcs/cast_flag_Oo.c
         srcs/cast_flag_p.c
         main2.c
-        srcs/ft_strlen_uintmax.c)
+        srcs/ft_strlen_uintmax.c
+        srcs/no_spec.c
+        srcs/ft_strchr.c)
 #        print_test.c)

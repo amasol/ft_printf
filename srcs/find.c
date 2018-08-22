@@ -35,6 +35,8 @@ void		pars_spec(char *format, va_list lst, t_flag *flag, t_inf *inf)
 				ft_flag_Uu(lst, &format[i], flag, inf);
 			else if (ft_refinement(format[i]) == 7)
 				ft_flag_p(lst, &format[i], flag, inf);
+			else if (format[i] == '%')
+				pars_no_spec(&format[i], lst, flag, inf);
 		}
 		i++;
 	}
@@ -114,6 +116,11 @@ int			ft_flag_Ss(va_list lst, char *format, t_flag *flag, t_inf *inf)
 	if (format[i] == 's')
 	{
 		str = va_arg(lst, char *);
+		if (str == NULL)
+		{
+			cast_flag_Ss(inf, flag, str);
+			return (1);
+		}
 		flag->ban = ft_strlen(str);
 		inf->uint_j += ft_strlen(str);
 		cast_flag_Ss(inf, flag, str);
@@ -147,7 +154,6 @@ int			ft_flag_Xx(va_list lst, char *format, t_flag *flag, t_inf *inf)
 		inf->x = 'x';
 		i = (APPLY) ? (cast_uintmax(i, flag)) : (unsigned int)i;
 		flag->ban = ft_strlen(ft_itoa_base_uintmax(i, 16, 'x'));
-//		cancellation_flags_Uu(flag, inf);
 		inf->uint_j += ft_strlen(ft_itoa_base_uintmax(i, 16, 'x'));
 		if (LY)
 			entry_minus_uint(inf);
@@ -156,9 +162,8 @@ int			ft_flag_Xx(va_list lst, char *format, t_flag *flag, t_inf *inf)
 	}
 	else if (format[k] == 'X')
 	{
-		i = (unsigned int)i;
+		i = (APPLY) ? (cast_uintmax(i, flag)) : (unsigned int)i;
 		flag->ban = ft_strlen(ft_itoa_base_uintmax(i, 16, 'X'));
-//		cancellation_flags_Uu(flag, inf);
 		inf->uint_j += ft_strlen(ft_itoa_base_uintmax(i, 16, 'X'));
 		if (LY)
 			entry_minus_uint(inf);

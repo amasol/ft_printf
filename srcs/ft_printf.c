@@ -35,9 +35,9 @@ int				ft_printf(const char *format, ...)
 			parsing((char *)format, lst, &inf);
 			format += inf.count_format;
 		}
-/*		if (*format == '%' && *(format + 1) == '%')
+		if (*format == '%' && *(format + 1) == '%')
 		{
-			write(1, "%", 1);
+			inf.result += write(1, "%", 1);
 			format = format + 2;
 			while (ft_isdigit(*format) || (*format == '-') || (*format == '+')
 					|| ft_flag_check(*format) || (*format == ' ') || (*format == '.'))
@@ -49,11 +49,10 @@ int				ft_printf(const char *format, ...)
 				ft_putchar(*format);
 				format++;
 			}
-		}*/
+		}
 	}
-	// write(1, "\n", 1);
+//	write(1, "\n", 1);
 	va_end(lst);
-//	return (0);
 	return (inf.result);
 }
 

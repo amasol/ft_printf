@@ -663,6 +663,33 @@ srcs/ft_qualifier.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/ft_qualifier.c.s
 .PHONY : srcs/ft_qualifier.c.s
 
+srcs/ft_strchr.o: srcs/ft_strchr.c.o
+
+.PHONY : srcs/ft_strchr.o
+
+# target to build an object file
+srcs/ft_strchr.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/ft_strchr.c.o
+.PHONY : srcs/ft_strchr.c.o
+
+srcs/ft_strchr.i: srcs/ft_strchr.c.i
+
+.PHONY : srcs/ft_strchr.i
+
+# target to preprocess a source file
+srcs/ft_strchr.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/ft_strchr.c.i
+.PHONY : srcs/ft_strchr.c.i
+
+srcs/ft_strchr.s: srcs/ft_strchr.c.s
+
+.PHONY : srcs/ft_strchr.s
+
+# target to generate assembly for a file
+srcs/ft_strchr.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/ft_strchr.c.s
+.PHONY : srcs/ft_strchr.c.s
+
 srcs/ft_strdel.o: srcs/ft_strdel.c.o
 
 .PHONY : srcs/ft_strdel.o
@@ -852,6 +879,33 @@ srcs/itoa_b_uintmax.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/itoa_b_uintmax.c.s
 .PHONY : srcs/itoa_b_uintmax.c.s
 
+srcs/no_spec.o: srcs/no_spec.c.o
+
+.PHONY : srcs/no_spec.o
+
+# target to build an object file
+srcs/no_spec.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/no_spec.c.o
+.PHONY : srcs/no_spec.c.o
+
+srcs/no_spec.i: srcs/no_spec.c.i
+
+.PHONY : srcs/no_spec.i
+
+# target to preprocess a source file
+srcs/no_spec.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/no_spec.c.i
+.PHONY : srcs/no_spec.c.i
+
+srcs/no_spec.s: srcs/no_spec.c.s
+
+.PHONY : srcs/no_spec.s
+
+# target to generate assembly for a file
+srcs/no_spec.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/no_spec.c.s
+.PHONY : srcs/no_spec.c.s
+
 srcs/parsing.o: srcs/parsing.c.o
 
 .PHONY : srcs/parsing.o
@@ -948,6 +1002,9 @@ help:
 	@echo "... srcs/ft_qualifier.o"
 	@echo "... srcs/ft_qualifier.i"
 	@echo "... srcs/ft_qualifier.s"
+	@echo "... srcs/ft_strchr.o"
+	@echo "... srcs/ft_strchr.i"
+	@echo "... srcs/ft_strchr.s"
 	@echo "... srcs/ft_strdel.o"
 	@echo "... srcs/ft_strdel.i"
 	@echo "... srcs/ft_strdel.s"
@@ -969,6 +1026,9 @@ help:
 	@echo "... srcs/itoa_b_uintmax.o"
 	@echo "... srcs/itoa_b_uintmax.i"
 	@echo "... srcs/itoa_b_uintmax.s"
+	@echo "... srcs/no_spec.o"
+	@echo "... srcs/no_spec.i"
+	@echo "... srcs/no_spec.s"
 	@echo "... srcs/parsing.o"
 	@echo "... srcs/parsing.i"
 	@echo "... srcs/parsing.s"

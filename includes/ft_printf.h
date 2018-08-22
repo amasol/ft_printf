@@ -56,6 +56,7 @@ typedef struct s_flag
 
 typedef	struct	s_inf
 {
+	int			nothing;
 	char		x;
 	int			width;
 	int			width_two;
@@ -82,6 +83,7 @@ void			initialization_flag(t_flag *flag, t_inf *inf);
 
 int				ft_printf(const char *format, ...);
 void			pars_spec(char *format, va_list lst, t_flag *flag, t_inf *inf);
+void			pars_no_spec(char *format, va_list lst, t_flag *flag, t_inf *inf);
 int				ft_qualifier(char s);
 char			*ft_itoa_base(intmax_t num, int base, char c);
 char			*ft_itoa_base_uintmax(uintmax_t nbr, unsigned base, char c);
@@ -107,10 +109,10 @@ void			cast_flag_p(t_inf *inf, t_flag *flag, char *format);
 
 
 
-void				cancellation_flags_Ddi(t_flag *flag, t_inf *inf);
-//void				cancellation_flags_Cc(t_flag *flag, t_inf *inf);
-void				cancellation_flags_Uu(t_flag *flag, t_inf *inf);
-void				cancellation_flags_Oo(t_flag *flag, t_inf *inf);
+void			cancellation_flags_Ddi(t_flag *flag, t_inf *inf);
+//void			cancellation_flags_Cc(t_flag *flag, t_inf *inf);
+void			cancellation_flags_Uu(t_flag *flag, t_inf *inf);
+void			cancellation_flags_Oo(t_flag *flag, t_inf *inf);
 
 //-------------------------специфыкаторы
 int				ft_refinement(char s);
@@ -135,11 +137,15 @@ int				ft_flag_check(char c);
 void			output_after(char *format, t_inf *inf);
 int				is_zero(char *str);
 
+
+//int				is_check_specs(char *str, t_inf *inf);
+
 //int					ft_flag(char format);
 //int					ft_length_hh(char format);
 //int					treatment(char *str, va_list lst);
 
 //void			ft_putnbr_intmax(intmax_t nb);
+
 intmax_t		ft_putnbr_intmax(intmax_t nb);
 uintmax_t		ft_putnbr_uintmax_t(uintmax_t nb);
 uintmax_t		ft_strlen_uintmax(const char *s);
@@ -161,5 +167,6 @@ int		ft_isspace(int c);
 char	*ft_strnew(size_t size);
 void	ft_bzero(void *s, size_t n);
 int		ft_isspace(int c);
+char	*ft_strchr(const char *str, int ch);
 
 #endif

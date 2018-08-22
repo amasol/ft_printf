@@ -15,33 +15,41 @@
 void		cast_flag_Xx(t_inf *inf, uintmax_t i, t_flag *flag, char *str)
 {
 	// флаг -
+	if (flag->minus == 1)
+		flag->zero = 0;
 	if (inf->count > 0 && flag->minus == 1 && flag->precision == 0 && inf->width == 0)
 	{
 		if (flag->space == 1)
 			inf->result += write(1, " ", 1);
-//		if (flag->plus == 1 || inf->tmp == 1)
-//			inf->result += write(1, "+", 1);
-		inf->result += ft_strlen_uintmax(str);
-		ft_putstr(str);
+		if (i != 0)
+		{
+			inf->result += ft_strlen_uintmax(str);
+			ft_putstr(str);
+		}
 		while (inf->count > 0 && (!(inf->width == 1 && i == 1)))
 		{
 			inf->result += write(1, " ", 1);
 			inf->count--;
 		}
 	}
-
 //		флан zero
 	else if (flag->zero == 1)
 	{
-//		if (flag->plus == 1 || inf->tmp == 1)
-//			inf->result += write(1, "+", 1);
-		while (inf->count > 0)
+		if (flag->slash == 1 && i != 0)
+		{
+			inf->result += write(1, "0x", 2);
+			inf->count -= 2;
+		}
+		while (inf->count > 0 && i != 0)
 		{
 			inf->result += write(1, "0", 1);
 			inf->count--;
 		}
-		inf->result += ft_strlen_uintmax(str);
-		ft_putstr(str);
+		if (i != 0)
+		{
+			inf->result += ft_strlen_uintmax(str);
+			ft_putstr(str);
+		}
 		while (inf->count_two > 0)
 		{
 			inf->result += write(1, " ", 1);
@@ -59,12 +67,15 @@ void		cast_flag_Xx(t_inf *inf, uintmax_t i, t_flag *flag, char *str)
 			inf->result += write(1, " ", 1);
 			inf->count--;
 		}
-		if (inf->x == 'x')
+		if (inf->x == 'x' && flag->slash == 1 && i != 0)
 			inf->result += write(1, "0x", 2);
-		else
+		else if (flag->slash == 1 && i != 0)
 			inf->result += write(1, "0X", 2);
-		inf->result += ft_strlen_uintmax(str);
-		ft_putstr(str);
+		if (i != 0)
+		{
+			inf->result += ft_strlen_uintmax(str);
+			ft_putstr(str);
+		}
 	}
 		//	флаг	 ширины и флаг minus
 	else if (flag->width == 1 && flag->precision == 0 &&
@@ -74,8 +85,23 @@ void		cast_flag_Xx(t_inf *inf, uintmax_t i, t_flag *flag, char *str)
 			inf->count = inf->count + 1;
 		if (flag->space == 1)
 			inf->result += write(1, " ", 1);
-		inf->result += ft_strlen_uintmax(str);
-		ft_putstr(str);
+
+		if (inf->x == 'x' && flag->slash == 1 && i != 0)
+		{
+			inf->result += write(1, "0x", 2);
+			inf->count -= 2;
+		}
+		else if (flag->slash == 1 && i != 0)
+		{
+			inf->result += write(1, "0X", 2);
+			inf->count -= 2;
+		}
+
+		if (i != 0)
+		{
+			inf->result += ft_strlen_uintmax(str);
+			ft_putstr(str);
+		}
 		if (flag->minus == 1 && flag->ban < inf->width && inf->tmp == 1)
 			inf->result += write(1, " ", 1);
 		while (inf->count > 0 && flag->space != 1)
@@ -97,8 +123,11 @@ void		cast_flag_Xx(t_inf *inf, uintmax_t i, t_flag *flag, char *str)
 			inf->result += write(1, " ", 1);
 			inf->count--;
 		}
-		inf->result += ft_strlen_uintmax(str);
-		ft_putstr(str);
+		if (i != 0)
+		{
+			inf->result += ft_strlen_uintmax(str);
+			ft_putstr(str);
+		}
 	}
 		// 		флаг	 ширины + когда аргумент по кол-ву с оденаковый с шириной !
 	else if (inf->count == 0 && flag->width == 1 && flag->precision == 0 )
@@ -107,8 +136,11 @@ void		cast_flag_Xx(t_inf *inf, uintmax_t i, t_flag *flag, char *str)
 			inf->count -= 1;
 		if (flag->space == 1)
 			inf->count = inf->count + 1;
-		inf->result += ft_strlen_uintmax(str);
-		ft_putstr(str);
+		if (i != 0)
+		{
+			inf->result += ft_strlen_uintmax(str);
+			ft_putstr(str);
+		}
 		while (inf->count_two > 0 && inf->count == 0)
 		{
 			inf->result += write(1, " ", 1);
@@ -140,17 +172,25 @@ void		cast_flag_Xx(t_inf *inf, uintmax_t i, t_flag *flag, char *str)
 	{
 		if ((flag->plus == 1) && flag->minus == 0 && (inf->width < inf->width_two))
 			inf->result += write(1, " ", 1);
-		if (inf->x == 'x')
+		if (inf->x == 'x' && flag->slash == 1 && i != 0)
 			inf->result += write(1, "0x", 2);
-		else
+		else if (flag->slash == 1 && i != 0)
 			inf->result += write(1, "0X", 2);
-		while (inf->count > 0)
+		while (inf->count > 0 && i != 0)
 		{
 			inf->result += write(1, "0", 1);
 			inf->count--;
 		}
-		inf->result += ft_strlen_uintmax(str);
-		ft_putstr(str);
+		if (i != 0)
+		{
+			inf->result += ft_strlen_uintmax(str);
+			ft_putstr(str);
+		}
+		while (inf->width > 0 && i == 0)
+		{
+			inf->result += write(1, " ", 1);
+			inf->width--;
+		}
 	}
 
 
@@ -160,22 +200,31 @@ void		cast_flag_Xx(t_inf *inf, uintmax_t i, t_flag *flag, char *str)
 		inf->count_two = (inf->minus_value == 1) ? inf->count_two -= 1 : inf->count_two;
 		if (flag->slash == 1)
 			inf->count_two -= 2;
+		while (inf->width_two > 0 && i == 0)
+		{
+			inf->width_two -= inf->count_two;
+			inf->result += write(1, " ", 1);
+			inf->width_two--;
+		}
 		while (inf->count_two > 0)
 		{
 			inf->result += write(1, " ", 1);
 			inf->count_two--;
 		}
-		if (inf->x == 'x')
+		if (inf->x == 'x' && flag->slash == 1)
 			inf->result += write(1, "0x", 2);
-		else
+		else if (flag->slash == 1)
 			inf->result += write(1, "0X", 2);
 		while (inf->count > 0 )
 		{
 			inf->result += write(1, "0", 1);
 			inf->count--;
 		}
-		inf->result += ft_strlen_uintmax(str);
-		ft_putstr(str);
+		if (i != 0)
+		{
+			inf->result += ft_strlen_uintmax(str);
+			ft_putstr(str);
+		}
 	}
 
 		//		точность (ширина точность и флаг минут)
@@ -189,8 +238,11 @@ void		cast_flag_Xx(t_inf *inf, uintmax_t i, t_flag *flag, char *str)
 			inf->result += write(1, "0", 1);
 			inf->count--;
 		}
-		inf->result += ft_strlen_uintmax(str);
-		ft_putstr(str);
+		if (i != 0)
+		{
+			inf->result += ft_strlen_uintmax(str);
+			ft_putstr(str);
+		}
 //		while (inf->count_two + 1 > 0)
 
 		if (flag->minus == 1 && flag->ban > inf->width)
@@ -215,20 +267,26 @@ void		cast_flag_Xx(t_inf *inf, uintmax_t i, t_flag *flag, char *str)
 		}
 //		if (flag->plus == 1 || inf->tmp == 1)
 //			inf->result += write(1, "+", 1);
-		inf->result += ft_strlen_uintmax(str);
-		ft_putstr(str);
+		if (i != 0)
+		{
+			inf->result += ft_strlen_uintmax(str);
+			ft_putstr(str);
+		}
 	}
 
 
 
 	else if (flag->slash == 1)
 	{
-		if (inf->x == 'x')
+		if (inf->x == 'x' && i != 0)
 			inf->result += write(1, "0x", 2);
-		else
+		else if (i != 0)
 			inf->result += write(1, "0X", 2);
-		inf->result += ft_strlen_uintmax(str);
-		ft_putstr(str);
+//		if (i != 0)
+//		{
+			inf->result += ft_strlen_uintmax(str);
+			ft_putstr(str);
+//		}
 	}
 
 	else if (flag->precision == 1 && flag->plus == 1)
@@ -238,10 +296,11 @@ void		cast_flag_Xx(t_inf *inf, uintmax_t i, t_flag *flag, char *str)
 			inf->result += write(1, " ", 1);
 			inf->count--;
 		}
-//		if (flag->plus == 1 || inf->tmp == 1)
-//			inf->result += write(1, "+", 1);
-		inf->result += ft_strlen_uintmax(str);
-		ft_putstr(str);
+		if (i != 0)
+		{
+			inf->result += ft_strlen_uintmax(str);
+			ft_putstr(str);
+		}
 	}
 		// не правильно работает если у нас нету флагов и мы должны вывести остачу || у нас
 //		есть флаг и мы должны вывести остачу послу отработки тут !!!
@@ -251,8 +310,8 @@ void		cast_flag_Xx(t_inf *inf, uintmax_t i, t_flag *flag, char *str)
 	{
 //		if (flag->plus == 1 || inf->tmp == 1)
 //			inf->result += write(1, "+", 1);
-		inf->result += ft_strlen_uintmax(str);
-		ft_putstr(str);
+			inf->result += ft_strlen_uintmax(str);
+			ft_putstr(str);
 	}
 }
 
