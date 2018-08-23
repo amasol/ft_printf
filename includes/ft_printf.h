@@ -25,7 +25,7 @@
 #include <stdlib.h>
 #include <stdarg.h>
 #include <stdint.h>
-
+#include <limits.h>
 
 typedef struct s_flag
 {
@@ -102,7 +102,7 @@ void			entry_minus_uint(t_inf *inf/*, t_flag *flag*/);
 void			cast_flag_Ddi(t_inf *inf, intmax_t i, t_flag *flag, char *format);
 void			cast_flag_Uu(t_inf *inf, uintmax_t i, t_flag *flag, char *format);
 void			cast_flag_Xx(t_inf *inf, uintmax_t i, t_flag *flag, char *str);
-void			cast_flag_Oo(t_inf *inf, t_flag *flag, char *str);
+void			cast_flag_Oo(t_inf *inf, uintmax_t i, t_flag *flag, char *str);
 void			cast_flag_Ss(t_inf *inf, t_flag *flag, char *format);
 void			cast_flag_Cc(t_inf *inf, t_flag *flag, char format);
 void			cast_flag_p(t_inf *inf, t_flag *flag, char *format);
@@ -149,7 +149,8 @@ int				is_zero(char *str);
 intmax_t		ft_putnbr_intmax(intmax_t nb);
 uintmax_t		ft_putnbr_uintmax_t(uintmax_t nb);
 uintmax_t		ft_strlen_uintmax(const char *s);
-intmax_t		ft_count(intmax_t n);
+intmax_t		ft_count_int(intmax_t n);
+uintmax_t		ft_count_uint(uintmax_t n);
 
 
 //libft

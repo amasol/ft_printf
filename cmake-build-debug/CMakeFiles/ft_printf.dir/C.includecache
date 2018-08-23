@@ -19,6 +19,8 @@ stdarg.h
 -
 stdint.h
 -
+limits.h
+-
 
 /Users/amasol/amasol/project/ft_printf/includes/ft_printf.h
 stdarg.h
@@ -32,6 +34,8 @@ stdlib.h
 stdarg.h
 -
 stdint.h
+-
+limits.h
 -
 
 /Users/amasol/amasol/project/ft_printf/main2.c

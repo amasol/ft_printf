@@ -66,7 +66,7 @@ void	entry_minus_uint(t_inf *inf/*, t_flag *flag*/)
 intmax_t	entry_minus_intm(intmax_t  i, t_inf *inf, t_flag *flag)
 {// можно приминить эту функцию как для ширины так и для минуса !!!
 
-	inf->intm_j = ft_count(i);
+	inf->intm_j = ft_count_int(i);
 
 	if (inf->width > 0)
 		inf->count = (inf->intm_j <= inf->width) ? inf->width - inf->intm_j : 0;
@@ -88,9 +88,27 @@ intmax_t	entry_minus_intm(intmax_t  i, t_inf *inf, t_flag *flag)
 
 
 
-intmax_t 	ft_count(intmax_t n) // считает кол-во символов в строке
+intmax_t 	ft_count_int(intmax_t n) // считает кол-во символов в строке
 {
 	intmax_t i;
+
+	i = 0;
+	if (n <= 0)
+	{
+		i++;
+		n *= -1;
+	}
+	while (n != 0)
+	{
+		n = n / 10;
+		i++;
+	}
+	return (i);
+}
+
+uintmax_t 	ft_count_uint(uintmax_t n)
+{
+	uintmax_t i;
 
 	i = 0;
 	if (n <= 0)

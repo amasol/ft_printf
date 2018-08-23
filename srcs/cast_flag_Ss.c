@@ -24,15 +24,14 @@ void		cast_flag_Ss(t_inf *inf, t_flag *flag, char *str)
 
 	if (str == NULL)
 	{
-//		if (inf->count > ft_strlen("(null)"))
-//			inf->count -= ft_strlen("(null)");
-		while (flag->width == 1 && inf->count > 0)
+		inf->width = (inf->width == 6 || inf->width > 6) ? 6 : inf->width;
+		if (flag->width == 1 && inf->width)
 		{
-//			ft_putstr("(null)");
-			ft_putstr(ft_strchr("(null)", inf->count));
-			inf->count--;
+			inf->result += write(1, "(null)", inf->width);
+			inf->width--;
 		}
-//		inf->result += write(1, "(null)", 6);
+		else
+			inf->result += write(1, "(null)", 6);
 	}
 
 

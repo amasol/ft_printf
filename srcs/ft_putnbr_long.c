@@ -16,7 +16,14 @@
 intmax_t	ft_putnbr_intmax(intmax_t nb)
 {
 	char c;
+//	unsigned long long      mask_left;
 
+//	mask_left = -9223372036854775808U;
+	if ((unsigned long long)nb == LONG_MIN)
+	{
+		ft_putstr("-9223372036854775808");
+		return (nb);
+	}
 	if (nb < 0)
 	{
 		write(1, "-", 1);
@@ -39,6 +46,11 @@ uintmax_t	ft_putnbr_uintmax_t(uintmax_t nb)
 {
 	char c;
 
+	if ((unsigned long)nb == ULONG_MAX)
+	{
+		ft_putstr("18446744073709551574");
+		return (nb);
+	}
 	if (nb > 9)
 	{
 		ft_putnbr_uintmax_t(nb / 10);

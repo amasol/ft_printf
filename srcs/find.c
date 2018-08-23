@@ -183,8 +183,8 @@ int 		ft_flag_Uu(va_list lst, char *format, t_flag *flag, t_inf *inf)
 	if (format[k] == 'u')
 	{
 		i = (APPLY) ? (cast_uintmax(i, flag)) : (unsigned int)i;
-		flag->ban = ft_count(i);
-		inf->uint_j = ft_count(i);
+		flag->ban = ft_count_uint(i);
+		inf->uint_j = ft_count_uint(i);
 		cancellation_flags_Uu(flag, inf);
 		if (LY)
 			entry_minus_uint(inf);
@@ -193,7 +193,7 @@ int 		ft_flag_Uu(va_list lst, char *format, t_flag *flag, t_inf *inf)
 	else if (format[k] == 'U')
 	{
 		i = (unsigned long)i;
-		inf->uint_j = ft_count(i);
+		inf->uint_j = ft_count_uint(i);
 		cancellation_flags_Uu(flag, inf);
 		if (LY)
 			entry_minus_uint(inf);
@@ -222,7 +222,7 @@ int			ft_flag_Oo(va_list lst, char *format, t_flag *flag, t_inf *inf)
 		if (LY)
 			entry_minus_uint(inf);
 		str = ft_itoa_base_uintmax(i, 8, 'x');
-		cast_flag_Oo(inf, flag, str);
+		cast_flag_Oo(inf, i, flag, str);
 	}
 	else if (format[k] == 'O')
 	{

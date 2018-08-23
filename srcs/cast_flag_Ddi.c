@@ -23,7 +23,7 @@ void		cast_flag_Ddi(t_inf *inf, intmax_t i, t_flag *flag, char *str)
 			inf->result += write(1, " ", 1);
 		if (flag->plus == 1 || inf->tmp == 1)
 			inf->result += write(1, "+", 1);
-		inf->result += ft_count(ft_putnbr_intmax(i));
+		inf->result += ft_count_int(ft_putnbr_intmax(i));
 		while (inf->count > 0 && (!(inf->width == 1 && i == 1)))
 		{
 			inf->result += write(1, " ", 1);
@@ -37,6 +37,8 @@ void		cast_flag_Ddi(t_inf *inf, intmax_t i, t_flag *flag, char *str)
 //			inf->width_two == 0)
 	else if (flag->zero == 1)
 	{
+		if (inf->minus_value == 1)
+			inf->result += write(1, "-", 1);
 		if (flag->space == 1)
 			inf->result += write(1, " ", 1);
 		if (flag->plus == 1 || inf->tmp == 1)
@@ -46,7 +48,7 @@ void		cast_flag_Ddi(t_inf *inf, intmax_t i, t_flag *flag, char *str)
 			inf->result += write(1, "0", 1);
 			inf->count--;
 		}
-		inf->result += ft_count(ft_putnbr_intmax(i));
+		inf->result += ft_count_int(ft_putnbr_intmax(i));
 	}
 		// просто флаг d, i
 //	else if ()
@@ -78,7 +80,7 @@ void		cast_flag_Ddi(t_inf *inf, intmax_t i, t_flag *flag, char *str)
 			inf->result += write(1, "+", 1);
 //		if (inf->minus_value == 1)
 //			write(1, "-", 1);
-		inf->result += ft_count(ft_putnbr_intmax(i));
+		inf->result += ft_count_int(ft_putnbr_intmax(i));
 	}
 		//	флаг	 ширины и флаг minus
 	else if (flag->width == 1 && flag->precision == 0 &&
@@ -86,15 +88,25 @@ void		cast_flag_Ddi(t_inf *inf, intmax_t i, t_flag *flag, char *str)
 	{
 		if (flag->space == 1)
 			inf->count = inf->count + 1;
-//		if ((inf->minus_value == 1 && flag->minus == 1) && inf->tmp == 0)
-		if ((inf->minus_value == 1 && flag->minus == 1) && flag->plus == 0)
+		if (( flag->minus == 1 && inf->minus_value == 1) && flag->plus == 0)
 			inf->result += write(1, "-", 1);
+		if (flag->minus == 1)
+			inf->minus_value = 0;
 		else if (inf->tmp == 1 && inf->minus_value == 0)
 			inf->result += write(1, "+", 1);
 		if (flag->space == 1)
 			inf->result += write(1, " ", 1);
-		inf->result += ft_count(ft_putnbr_intmax(i));
-		while (inf->count > 0 && flag->space != 1)
+
+		while (inf->count > 0 && flag->space != 1 && inf->minus_value == 1)
+		{
+			inf->result += write(1, " ", 1);
+			inf->count--;
+		}
+//		нужно передалть
+		if ((inf->minus_value == 1) && flag->plus == 0)
+			inf->result += write(1, "-", 1);
+		inf->result += ft_count_int(ft_putnbr_intmax(i));
+		while (inf->count > 0 && flag->space != 1 && inf->minus_value == 0)
 		{
 			inf->result += write(1, " ", 1);
 			inf->count--;
@@ -115,7 +127,7 @@ void		cast_flag_Ddi(t_inf *inf, intmax_t i, t_flag *flag, char *str)
 		}
 		if ((inf->minus_value == 1) && flag->plus == 0)
 			inf->result += write(1, "-", 1);
-		inf->result += ft_count(ft_putnbr_intmax(i));
+		inf->result += ft_count_int(ft_putnbr_intmax(i));
 	}
 		// 		флаг	 ширины + когда аргумент по кол-ву с оденаковый с шириной !
 	else if (inf->count == 0 && flag->width == 1 && flag->precision == 0 )
@@ -128,7 +140,7 @@ void		cast_flag_Ddi(t_inf *inf, intmax_t i, t_flag *flag, char *str)
 			inf->result += write(1, " ", 1);
 		if (flag->plus == 1 || inf->tmp == 1)
 			inf->result += write(1, "+", 1);
-		inf->result += ft_count(ft_putnbr_intmax(i));
+		inf->result += ft_count_int(ft_putnbr_intmax(i));
 	}
 
 	else if ((flag->zero == 0 || flag->minus == 0) && flag->plus == 1 && flag->precision == 0 &&
@@ -136,14 +148,14 @@ void		cast_flag_Ddi(t_inf *inf, intmax_t i, t_flag *flag, char *str)
 	{
 		if (flag->plus == 1 || inf->tmp == 1)
 			inf->result += write(1, "+", 1);
-		inf->result += ft_count(ft_putnbr_intmax(i));
+		inf->result += ft_count_int(ft_putnbr_intmax(i));
 	}
 
 
-	else if (flag->space == 1 && flag->precision != 1)
+	else if (flag->space == 1 && flag->precision != 1 && inf->nothing == 1)
 	{
 		inf->result += write(1, " ", 1);
-		inf->result += ft_count(ft_putnbr_intmax(i));
+		inf->result += ft_count_int(ft_putnbr_intmax(i));
 	}
 
 
@@ -151,25 +163,42 @@ void		cast_flag_Ddi(t_inf *inf, intmax_t i, t_flag *flag, char *str)
 //		точность (.)
 	else if (flag->precision == 1 && inf->count > 0 && inf->count_two == 0)
 	{
+		inf->count = (inf->minus_value == 1) ? inf->count += 1 : inf->count;
 		if ((inf->minus_value == 0 && flag->minus == 0) && flag->plus == 0)
 			;
 		else if ((inf->minus_value == 1 || flag->minus == 0) && flag->plus == 0)
 			inf->result += write(1, "-", 1);
 		if ((flag->plus == 1 || inf->tmp == 1) && inf->minus_value == 0)
 			inf->result += write(1, "+", 1);
-		while (inf->count > 0)
+		while (inf->count > 0 && i != 0)
 		{
 			inf->result += write(1, "0", 1);
 			inf->count--;
 		}
-		inf->result += ft_count(ft_putnbr_intmax(i));
+		if (inf->width == inf->width_two)
+		{
+			while (inf->width > 0)
+			{
+				inf->result += write(1, "0", 1);
+				inf->width--;
+			}
+		}
+		while (inf->width > 0 && i == 0 && inf->width != inf->width_two)
+		{
+			inf->result += write(1, " ", 1) ;
+			inf->width--;
+		}
+		inf->result += (i != 0) ? ft_count_int(ft_putnbr_intmax(i)) : 0;
+//		inf->result += (i != 0) ? ft_count(ft_putnbr_intmax(i)) : write(1, " ", 1);
 	}
 
 
 //		точность (ширина + точность)
-	else if (flag->precision == 1 && inf->count >= 0 && inf->count_two >= 0 && flag->minus == 0)
+	else if (flag->precision == 1 && inf->count >= 0
+			 && inf->count_two >= 0 && flag->minus == 0 && i != 0)
 	{
 		inf->count_two = (inf->minus_value == 1) ? inf->count_two -= 1 : inf->count_two;
+//		inf->count = (i == 0 && inf->count > 0) ? inf->count += 1 : inf->count;
 		while (inf->count_two > 0)
 		{
 			inf->result += write(1, " ", 1);
@@ -179,34 +208,67 @@ void		cast_flag_Ddi(t_inf *inf, intmax_t i, t_flag *flag, char *str)
 			inf->result += write(1, "+", 1);
 		if (inf->minus_value == 1 && flag->minus == 0)
 			inf->result += write(1, "-", 1);
-		while (inf->count > 0 )
+		while (inf->count > 0)
 		{
 			inf->result += write(1, "0", 1);
 			inf->count--;
 		}
-//		if (inf->minus_value == 1 && flag->minus == 0)
-//			write(1, "-", 1);
-		inf->result += ft_count(ft_putnbr_intmax(i));
+//		while (inf->width > 0 && i == 0)
+//		{
+//			inf->result += write(1, "0", 1);
+//			inf->width--;
+//		}
+//		ft_putstr(str = (i == 0) ? 0 : str);
+//		inf->result += ft_count(ft_putnbr_intmax(i));
+		inf->result += ft_count_int(ft_putnbr_intmax(i));
+//		while (i == 0 && inf->count_two > 0)
+//		{
+//			inf->result += write(1, " ", 1);
+//			inf->count_two--;
+//		}
 	}
-	/*	точность (ширина - точность )
-	else if (flag->precision == 1 && flag->minus == 1 && inf->count > 0 &&
-			 inf->count_two > 0)
+//		ширина и точность с i == 0.
+	else if (flag->precision == 1 && inf->count >= 0 &&
+			inf->count_two >= 0 && flag->minus == 0 && i == 0)
 	{
-		if (flag->plus == 1 || inf->tmp == 1)
-			write(1, "+", 1);
-		while (inf->count > 0)
+		inf->count_two = (inf->minus_value == 1) ? inf->count_two -= 1 : inf->count_two;
+		inf->count = (i == 0 && inf->count > 0) ? inf->count += 1 : inf->count;
+		while ((inf->count_two > 0 ) && i == 0 && inf->count != 0)
 		{
-			write(1, "0", 1);
-			inf->count--;
-		}
-		ft_putnbr_intmax(i);
-		while (inf->count_two > 0)
-		{
-			write(1, " ", 1);
+			inf->result += write(1, " ", 1);
 			inf->count_two--;
 		}
-	}*/
-		//		точность (ширина точность и флаг минут)
+		while (inf->width_two > 0 && i == 0 && inf->count == 0)
+		{
+			inf->result += write(1, " ", 1);
+			inf->width_two--;
+		}
+		if (flag->plus == 1 || inf->tmp == 1)
+			inf->result += write(1, "+", 1);
+		if (inf->minus_value == 1 && flag->minus == 0)
+			inf->result += write(1, "-", 1);
+		while (inf->count > 0 && i != 0)
+		{
+//			inf->result += (i != 0) ? write(1, "0", 1) : write(1, " ", 1);
+			inf->result += write(1, "0", 1);
+			inf->count--;
+		}
+		while (inf->width > 0 && i == 0)
+		{
+			inf->result += write(1, "0", 1);
+			inf->width--;
+		}
+//		ft_putstr(str = (i == 0) ? 0 : str);
+//		inf->result += ft_count(ft_putnbr_intmax(i));
+		inf->result += (i == 0) ? 0 : ft_count_int(ft_putnbr_intmax(i));
+//		while (i == 0 && inf->count_two > 0)
+//		{
+//			inf->result += write(1, " ", 1);
+//			inf->count_two--;
+//		}
+	}
+
+
 	else if (flag->precision == 1 && flag->minus == 1 && inf->count >= 0 &&
 			 inf->count_two >= 0)
 	{
@@ -219,7 +281,7 @@ void		cast_flag_Ddi(t_inf *inf, intmax_t i, t_flag *flag, char *str)
 			inf->result += write(1, "0", 1);
 			inf->count--;
 		}
-		inf->result += ft_count(ft_putnbr_intmax(i));
+		inf->result += ft_count_int(ft_putnbr_intmax(i));
 		while (inf->count_two > 0)
 		{
 			inf->result += write(1, " ", 1);
@@ -242,7 +304,7 @@ void		cast_flag_Ddi(t_inf *inf, intmax_t i, t_flag *flag, char *str)
 		}
 		if (flag->plus == 1 || inf->tmp == 1)
 			inf->result += write(1, "+", 1);
-		inf->result += ft_count(ft_putnbr_intmax(i));
+		inf->result += ft_count_int(ft_putnbr_intmax(i));
 	}
 
 
@@ -265,7 +327,7 @@ void		cast_flag_Ddi(t_inf *inf, intmax_t i, t_flag *flag, char *str)
 		}
 		if (flag->plus == 1 || inf->tmp == 1)
 			inf->result += write(1, "+", 1);
-		inf->result += ft_count(ft_putnbr_intmax(i));
+		inf->result += ft_count_int(ft_putnbr_intmax(i));
 	}
 		// не правильно работает если у нас нету флагов и мы должны вывести остачу || у нас
 //		есть флаг и мы должны вывести остачу послу отработки тут !!!
@@ -273,12 +335,15 @@ void		cast_flag_Ddi(t_inf *inf, intmax_t i, t_flag *flag, char *str)
 	else if (flag->plus == 0 && flag->slash == 0 && flag->space == 0
 			 && flag->zero == 0 && flag->width == 0 && flag->precision == 0)
 	{
-		if (inf->minus_value == 1 || flag->minus == 1 )
+		if ((inf->minus_value == 1 || flag->minus == 1) && i != LONG_MIN)
 			inf->result += write(1, "-", 1);
 		if (flag->plus == 1 || inf->tmp == 1)
 			inf->result += write(1, "+", 1);
-		inf->result += ft_count(ft_putnbr_intmax(i));
+		inf->result += ft_count_int(ft_putnbr_intmax(i));
 	}
+
+	else if (inf->nothing == 0)
+		inf->result += ft_count_int(ft_putnbr_intmax(i));
 }
 
 void				cancellation_flags_Ddi(t_flag *flag, t_inf *inf)

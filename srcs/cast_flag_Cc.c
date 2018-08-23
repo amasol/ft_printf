@@ -22,10 +22,20 @@ void	cast_flag_Cc(t_inf *inf, t_flag *flag, char str)
 		inf->count_two = ((uintmax_t)inf->width_two > inf->uint_j) ? inf->width_two - inf->uint_j : 0;
 
 
+//	if (str == NULL)
+//	{
+//		inf->width = (inf->width == 6 || inf->width > 6) ? 6 : inf->width;
+//		if (flag->width == 1 && inf->width)
+//		{
+//			inf->result += write(1, "(null)", inf->width);
+//			inf->width--;
+//		}
+//		else
+//			inf->result += write(1, "(null)", 6);
+//	}
 
 
-
-	if (inf->count > 0 && flag->minus == 1 && flag->precision == 0 && inf->width == 0)
+	else if (inf->count > 0 && flag->minus == 1 && flag->precision == 0 && inf->width == 0)
 	{
 		if (flag->space == 1)
 			inf->result += write(1, " ", 1);
@@ -108,11 +118,12 @@ void	cast_flag_Cc(t_inf *inf, t_flag *flag, char str)
 	}
 
 
-	else if (flag->space == 1 && flag->precision != 1)
-	{
-		inf->result += write(1, " ", 1);
-		ft_putchar(str);
-	}
+//	else if (flag->space == 1 && flag->precision != 1 /*&& inf->nothing != 1*/)
+//	{
+//		inf->result += write(1, " ", 1) = (inf->nothing == 1) ?
+//		inf->result += (inf->nothing == 1) ? write(1, " ", 1) : 0;
+//		ft_putchar(str);
+//	}
 
 
 
@@ -184,5 +195,16 @@ void	cast_flag_Cc(t_inf *inf, t_flag *flag, char str)
 //		inf->result += ft_strlen_uintmax(&str);
 		ft_putchar(str);
 	}
+
+	else if (inf->nothing == 0)
+	{
+//		str = ft_strsub(str, 0, inf->width);
+//		inf->result += ft_strlen_uintmax(str);
+		ft_putchar(str);
+//		ft_strdel(&str);
+	}
+	else if (flag->space == 1)
+		ft_putchar(str);
+	inf->result += 1;
 }
 

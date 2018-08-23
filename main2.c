@@ -1458,8 +1458,22 @@ int		 main	(void)
 //	ft_printf("%s %s %s %s string. gg!\n", "this", "is", "a", "multi", "aaaaa");
 //	printf("%s %s %s %s string. gg!\n", "this", "is", "a", "multi", "aaaaa");
 
-	ft_printf("%.6s\n", NULL);
-	printf("%.2s\n", NULL);
+//	ft_printf("|len=%i", ft_printf("%d is one\n", 1));
+//	ft_printf("|len=%i", ft_printf("%#.o \n", 0));
+//	printf("\n|len=%i", printf("%d is one\n", 1));
+//	printf("\n|len=%i", printf("%#.o \n", 0));
+
+	ft_printf("% u\n", 4294967295);
+	printf("% u\n", 4294967295);
+
+//	ft_printf("%lu\n", 18446744073709551574);
+//	printf("%lu\n", 18446744073709551574);
+
+//	ft_printf("|len=->>>%i", ft_printf("%lu\n", 18446744073709551574));
+//	printf("|len=->>>%i", printf("%lu\n", 18446744073709551574));
+
+//	ft_printf("%.2c\n", NULL);
+//	printf("%.2c\n", NULL);
 
 
 

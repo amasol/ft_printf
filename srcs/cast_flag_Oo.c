@@ -12,7 +12,7 @@
 
 #include "../includes/ft_printf.h"
 
-void		cast_flag_Oo(t_inf *inf, t_flag *flag, char *str)
+void		cast_flag_Oo(t_inf *inf, uintmax_t i, t_flag *flag, char *str)
 {
 	// флаг -
 	if (flag->ban > 0 && flag->plus == 1 && flag->minus != 1)
@@ -30,16 +30,53 @@ void		cast_flag_Oo(t_inf *inf, t_flag *flag, char *str)
 		}
 	}
 
-//		флан zero
-	else if (flag->zero == 1)
+	else if (flag->slash == 1)
+	{
+		inf->count -= 1;
+		while (inf->count > 0 && flag->minus != 1)
+		{
+			inf->result += write(1, " ", 1);
+			inf->count--;
+		}
+		while (inf->count_two > 0)
+		{
+			inf->result += write(1, " ", 1);
+			inf->count_two--;
+		}
+		inf->result += write(1, "0", 1);
+		inf->result += (i != 0) ? ft_strlen_uintmax(str) : 0;
+		ft_putstr(str = (i == 0) ? 0 : str);
+		while (inf->count > 0 && flag->minus == 1)
+		{
+			inf->result += write(1, " ", 1);
+			inf->count--;
+		}
+	}
+
+
+	else if (flag->precision == 1 && flag->plus == 1)
 	{
 		while (inf->count > 0)
 		{
-			inf->result += write(1, "0", 1);
+			inf->result += write(1, " ", 1);
 			inf->count--;
 		}
 		inf->result += ft_strlen_uintmax(str);
 		ft_putstr(str);
+	}
+
+//		флан zero
+	else if (flag->zero == 1 && flag->minus != 1 && flag->slash != 1)
+	{
+		while (inf->count > 0/* && i != 0*/)
+		{
+			inf->result += write(1, "0", 1);
+			inf->count--;
+		}
+//		inf->result += ft_strlen_uintmax(str);
+		inf->result += (i != 0) ? ft_strlen_uintmax(str) : 0;
+//		ft_putstr(str);
+		ft_putstr(str = (i == 0) ? 0 : str);
 		while (inf->count_two > 0)
 		{
 			inf->result += write(1, " ", 1);
@@ -67,6 +104,11 @@ void		cast_flag_Oo(t_inf *inf, t_flag *flag, char *str)
 			 inf->width > 0 && (flag->minus == 1) && flag->h == 0)
 	{
 		inf->count = (flag->plus == 1 && flag->ban != inf->width && flag->minus != 1) ? inf->count + 1 : inf->count;
+		if (flag->slash == 1)
+		{
+			inf->result += write(1, "0", 1);
+			inf->count -= 1;
+		}
 		if (flag->space == 1)
 			inf->count = inf->count + 1;
 		if (flag->space == 1)
@@ -137,11 +179,13 @@ void		cast_flag_Oo(t_inf *inf, t_flag *flag, char *str)
 			inf->result += write(1, " ", 1);
 		while (inf->count > 0)
 		{
-			inf->result += write(1, "0", 1);
+			inf->result += (i != 0) ? write(1, "0", 1) : write(1, " ", 1);
+//			inf->result += write(1, "0", 1);
 			inf->count--;
 		}
 		inf->result += ft_strlen_uintmax(str);
-		ft_putstr(str);
+		ft_putstr(str = (i == 0) ? " " : str);
+//		ft_putstr(str);
 //		if (flag->minus == 1)
 //			inf->result += write(1, " ", 1);
 	}
@@ -153,20 +197,27 @@ void		cast_flag_Oo(t_inf *inf, t_flag *flag, char *str)
 		inf->count_two = (inf->minus_value == 1) ? inf->count_two -= 1 : inf->count_two;
 		if (flag->slash == 1 && inf->count_two > inf->count)
 			inf->count_two -= 1;
-		while (inf->count_two > 0)
+		while (inf->count_two > 0 && i != 0)
 		{
 			inf->result += write(1, " ", 1);
 			inf->count_two--;
 		}
-		while (inf->count > 0 )
+		while (i == 0 && inf->width_two > 0)
+		{
+			inf->result += write(1, " ", 1);
+			inf->width_two--;
+		}
+		while (inf->count > 0)
 		{
 			inf->result += write(1, "0", 1);
 			inf->count--;
 		}
+//		if (flag->slash == 1 && i == 0)
+//			inf->result += write(1, "0", 1);
 		if (flag->slash == 1 && (uintmax_t)inf->count_two < inf->uint_j)
 			inf->result += write(1, "0", 1);
-		inf->result += ft_strlen_uintmax(str);
-		ft_putstr(str);
+		inf->result += (i != 0) ? ft_strlen_uintmax(str) : 0;
+		ft_putstr(str = (i == 0) ? 0 : str);
 	}
 
 		//		точность (ширина точность и флаг минут)
@@ -210,31 +261,6 @@ void		cast_flag_Oo(t_inf *inf, t_flag *flag, char *str)
 		ft_putstr(str);
 	}
 
-
-
-	else if (flag->slash == 1)
-	{
-		while (inf->count_two > 0)
-		{
-			inf->result += write(1, " ", 1);
-			inf->count_two--;
-		}
-		inf->result += write(1, "0", 1);
-		inf->result += ft_strlen_uintmax(str);
-		ft_putstr(str);
-	}
-	else if (flag->precision == 1 && flag->plus == 1)
-	{
-		while (inf->count > 0)
-		{
-			inf->result += write(1, " ", 1);
-			inf->count--;
-		}
-//		if (flag->plus == 1 || inf->tmp == 1)
-//			inf->result += write(1, "+", 1);
-		inf->result += ft_strlen_uintmax(str);
-		ft_putstr(str);
-	}
 		// не правильно работает если у нас нету флагов и мы должны вывести остачу || у нас
 //		есть флаг и мы должны вывести остачу послу отработки тут !!!
 
