@@ -20,38 +20,64 @@ int				ft_printf(const char *format, ...)
 	inf.result = 0;
 	va_start(lst, format);
 	while (*format != '%' && *format != '\0')
-//	while ((*format != '%') && (!(ft_flag_check(*format))))
 	{
-//		ft_putchar(*format);
 		inf.result += write(1, format, 1);
 		format++;
 	}
 	if (*format)
 	{
-//		if (*format == '%' && *(format + 1) != '%')
-		while (*format == '%' && *(format + 1) != '%')
-		{
-			format++;
-			parsing((char *)format, lst, &inf);
-			format += inf.count_format;
-		}
-		if (*format == '%' && *(format + 1) == '%')
-		{
-			inf.result += write(1, "%", 1);
-			format = format + 2;
-			while (ft_isdigit(*format) || (*format == '-') || (*format == '+')
-					|| ft_flag_check(*format) || (*format == ' ') || (*format == '.'))
-				format++;
-			if (ft_qualifier(*format))
-				format++;
+//		while (*format == '%' && *(format + 1) != '%')
+//		{
+//			format++;
+//			parsing((char *)format, lst, &inf);
+//			format += inf.count_format;
+//		}
+//		if (*format == '%' && *(format + 1) == '%')
+//		{
+//			while (*format == '%' /*&& *(format + 1) == '%'*/)
+//			{
+//				inf.result += write(1, "%", 1);
+//				format += 2;
+//			}
+//			while (ft_isdigit(*format) || (*format == '-') || (*format == '+')
+//					|| ft_flag_check(*format) || (*format == ' ') || (*format == '.'))
+//				format++;
+//			if (ft_qualifier(*format))
+//				format++;
 			while (*format != '\0')
 			{
-				ft_putchar(*format);
-				format++;
+				if (*format == '%' && *(format + 1) == 0)
+					return (inf.result);
+				if (*format == '%' && *(format + 1) != '%')
+				{
+					format++;
+					parsing((char *)format, lst, &inf);
+					format += inf.count_format;
+				}
+				else if (*format == '%' && *(format + 1) == '%')
+				{
+					inf.result += write(1, "%", 1);
+					format += 2;
+				}
+				else if (*format == '.' && ft_qualifier(*format) == 0)
+				{
+					ft_putchar(*format);
+					inf.result += 1;
+					format++;
+				}
+//				else if (ft_isdigit(*format) || (*format == '-') || (*format == '+')
+//					|| ft_flag_check(*format) || (*format == ' ') || (*format == '.'))
+//					format++;
+				else if (ft_qualifier(*format))
+					format++;
+				else
+				{
+					ft_putchar(*format);
+					inf.result += 1;
+					format++;
+				}
 			}
-		}
 	}
-//	write(1, "\n", 1);
 	va_end(lst);
 	return (inf.result);
 }

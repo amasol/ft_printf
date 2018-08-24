@@ -137,7 +137,7 @@ void			cast_flag_p(t_inf *inf, t_flag *flag, char *str)
 	}
 
 
-	else if (flag->space == 1 && flag->precision != 1)
+	else if (flag->space == 1 && flag->precision != 1 && inf->nothing == 1)
 	{
 		inf->result += write(1, " ", 1);
 		inf->result += ft_strlen_uintmax(str);
@@ -257,8 +257,7 @@ void			cast_flag_p(t_inf *inf, t_flag *flag, char *str)
 		// не правильно работает если у нас нету флагов и мы должны вывести остачу || у нас
 //		есть флаг и мы должны вывести остачу послу отработки тут !!!
 
-	else if (flag->plus == 0 && flag->slash == 0 && flag->space == 0
-			 && flag->zero == 0 && flag->width == 0 && flag->precision == 0)
+	else if (flag->plus == 0 && flag->slash == 0 && flag->zero == 0 && flag->width == 0 && flag->precision == 0)
 	{
 //		if (flag->plus == 1 || inf->tmp == 1)
 //			inf->result += write(1, "+", 1);

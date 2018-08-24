@@ -4,11 +4,13 @@
 static	int		count(uintmax_t nbr, unsigned base)
 {
 	int i;
+	uintmax_t tmp;
 
 	i = 1;
-	while (nbr >= base)
+	tmp = nbr;
+	while (tmp >= base)
 	{
-		nbr /= base;
+		tmp /= base;
 		i++;
 	}
 	return (i);
@@ -80,8 +82,13 @@ static	void		transform(uintmax_t nbr, int len, unsigned base, char *str)
 		str[len] = nbr % base + 48;
 }
 
+/*
+ ** leaks here
+ */
+
 char			*ft_itoa_base_uintmax(uintmax_t nbr, unsigned base, char c)
 {
+	/* leaks here */
 	char	*str;
 	int		len;
 

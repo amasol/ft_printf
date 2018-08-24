@@ -145,6 +145,7 @@ int			ft_flag_Xx(va_list lst, char *format, t_flag *flag, t_inf *inf)
 	int 		k;
 	uintmax_t	i;
 	char		*str;
+	char 		*tmp;
 
 	k = 0;
 //	i = 0;
@@ -157,8 +158,11 @@ int			ft_flag_Xx(va_list lst, char *format, t_flag *flag, t_inf *inf)
 		inf->uint_j += ft_strlen(ft_itoa_base_uintmax(i, 16, 'x'));
 		if (LY)
 			entry_minus_uint(inf);
-		str = ft_itoa_base_uintmax(i, 16, 'x');
-		cast_flag_Xx(inf, i, flag, str);
+		tmp = ft_itoa_base_uintmax(i, 16, 'x');
+
+		cast_flag_Xx(inf, i, flag, tmp);
+		ft_strdel(&tmp);
+//		system("leaks a.out");
 	}
 	else if (format[k] == 'X')
 	{
@@ -167,8 +171,9 @@ int			ft_flag_Xx(va_list lst, char *format, t_flag *flag, t_inf *inf)
 		inf->uint_j += ft_strlen(ft_itoa_base_uintmax(i, 16, 'X'));
 		if (LY)
 			entry_minus_uint(inf);
-		str = ft_itoa_base_uintmax(i, 16, 'X');
-		cast_flag_Xx(inf, i, flag, str);
+		tmp = ft_itoa_base_uintmax(i, 16, 'X');
+		cast_flag_Xx(inf, i, flag, tmp);
+		ft_strdel(&tmp);
 	}
 	return (1);
 }

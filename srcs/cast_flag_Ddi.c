@@ -329,19 +329,23 @@ void		cast_flag_Ddi(t_inf *inf, intmax_t i, t_flag *flag, char *str)
 			inf->result += write(1, "+", 1);
 		inf->result += ft_count_int(ft_putnbr_intmax(i));
 	}
-		// не правильно работает если у нас нету флагов и мы должны вывести остачу || у нас
-//		есть флаг и мы должны вывести остачу послу отработки тут !!!
 
-	else if (flag->plus == 0 && flag->slash == 0 && flag->space == 0
+	else if (inf->nothing == 0 && inf->minus_value == 1 && i == LONG_MIN)
+	{
+		inf->result += ft_count_int(ft_putnbr_intmax(i));
+	}
+
+	else if (flag->slash == 0 && flag->space == 0
 			 && flag->zero == 0 && flag->width == 0 && flag->precision == 0)
 	{
-		if ((inf->minus_value == 1 || flag->minus == 1) && i != LONG_MIN)
+		if ((inf->minus_value == 1 || flag->minus == 1) && i != LONG_MIN  && i > 0)
 			inf->result += write(1, "-", 1);
+		else if (inf->minus_value == 1 && i < 0)
+			inf->result += 1;
 		if (flag->plus == 1 || inf->tmp == 1)
 			inf->result += write(1, "+", 1);
 		inf->result += ft_count_int(ft_putnbr_intmax(i));
 	}
-
 	else if (inf->nothing == 0)
 		inf->result += ft_count_int(ft_putnbr_intmax(i));
 }

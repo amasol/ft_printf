@@ -1443,6 +1443,7 @@
 
 //	return (0);
 //}
+
 int		 main	(void)
 {
 
@@ -1463,8 +1464,79 @@ int		 main	(void)
 //	printf("\n|len=%i", printf("%d is one\n", 1));
 //	printf("\n|len=%i", printf("%#.o \n", 0));
 
-	ft_printf("% u\n", 4294967295);
-	printf("% u\n", 4294967295);
+//	ft_printf("% u\n", 4294967295);
+//	printf("% u\n", 4294967295);
+
+//	ft_printf("%x\n", 505);
+//	printf("\n1\n");
+//	system("leaks a.out");
+//	ft_printf("%X\n", 505);
+//	printf("\n1\n");
+//	system("leaks a.out");
+//	ft_printf("%p\n", &ft_printf);
+//	printf("\n1\n");
+//	system("leaks a.out");
+//	ft_printf("%20.15d\n", 54321);
+//	printf("\n1\n");
+//	system("leaks a.out");
+//	ft_printf("%-10d\n", 3);
+//	printf("\n1\n");
+//	system("leaks a.out");
+//	ft_printf("% d\n", 3);
+//	printf("\n1\n");
+//	system("leaks a.out");
+//	ft_printf("%+d\n", 3);
+//	printf("\n1\n");
+//	system("leaks a.out");
+//	ft_printf("%010d\n", 1);
+//	printf("\n1\n");
+//	system("leaks a.out");
+//	ft_printf("%hhd\n", 0);
+//	printf("\n1\n");
+//	system("leaks a.out");
+//	ft_printf("%jd\n", 9223372036854775807);
+//	printf("\n1\n");
+//	system("leaks a.out");
+//	ft_printf("%zd\n", 4294967295);
+//	printf("\n1\n");
+//	system("leaks a.out");
+//	ft_printf("%\n");
+//	printf("\n1\n");
+//	system("leaks a.out");
+//	ft_printf("%U\n", 4294967295);
+//	printf("\n1\n");
+//	system("leaks a.out");
+//	ft_printf("%u\n", 4294967295);
+//	printf("\n1\n");
+//	system("leaks a.out");
+//	ft_printf("%o\n", 40);
+//	printf("\n1\n");
+//	system("leaks a.out");
+//	ft_printf("%%#08x\n", 42);
+//	printf("\n1\n");
+//	system("leaks a.out");
+//	ft_printf("%x\n", 1000);
+//	printf("\n1\n");
+//	system("leaks a.out");
+//	ft_printf("%#X\n", 1000);
+//	printf("\n1\n");
+//	system("leaks a.out");
+//	ft_printf("%s\n", NULL);
+//	printf("\n1\n");
+//	system("leaks a.out");
+//	ft_printf("%S\n", L"ݗݜशব");
+//	printf("\n1\n");
+//	system("leaks a.out");
+//	ft_printf("%s%s\n", "test", "test");
+//	printf("\n1\n");
+//	system("leaks a.out");
+//	ft_printf("%s%s%s\n", "test", "test", "test");
+//	printf("\n1\n");
+//	system("leaks a.out");
+//	ft_printf("%C\n", 15000);
+//	printf("\n1\n");
+//	system("leaks a.out");
+//	while (1);
 
 //	ft_printf("%lu\n", 18446744073709551574);
 //	printf("%lu\n", 18446744073709551574);
@@ -1472,15 +1544,29 @@ int		 main	(void)
 //	ft_printf("|len=->>>%i", ft_printf("%lu\n", 18446744073709551574));
 //	printf("|len=->>>%i", printf("%lu\n", 18446744073709551574));
 
-//	ft_printf("%.2c\n", NULL);
-//	printf("%.2c\n", NULL);
+//	ft_printf("%d", -1L);
+//	printf("%d", -1L);
+
+//	ft_printf(".%%.%%.%%.%%.%%.%%.%%.%%.");
+//	printf("\n.%%.%%.%%.%%.%%.%%.%%.%%.");
+
+//	ft_printf(".%%%%%%%%%%.");
+//	printf("\n.%%%%%%%%%.");
+
+	ft_printf("% Zoooo");
+	printf("% Zoooo");
+
+//	ft_printf("TEST %%12%d123\n", 777);
+//	printf("TEST %%12%d123\n", 777);
+
+//	ft_printf("%D", -1L);
+//	printf("%D", -1L);
 
 
+//	ft_printf("|len=%i", ft_printf("%D\n", -1L));
+//	printf("|len=%i", printf("%D\n", -1L));
 
 
-
-//	ft_printf("|len=%i", ft_printf("%s ", "this is a string"));
-//	printf("|len=%i", printf("%s ", "this is a string"));
 
 	return (0);
 }
