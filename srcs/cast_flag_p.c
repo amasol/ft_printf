@@ -20,8 +20,8 @@ void			cast_flag_p(t_inf *inf, t_flag *flag, char *str)
 		;
 	if (inf->count_two == 0 && inf->count <= 2)
 		inf->count = 0;
-//	else if (inf->count_two == 0 && inf->count > 2)
-//		inf->count -= 2;
+	else if (inf->count_two == 0 && inf->count >= 4)
+		inf->count -= 2;
 
 
 // флаг -
@@ -77,8 +77,8 @@ void			cast_flag_p(t_inf *inf, t_flag *flag, char *str)
 	else if (flag->width == 1 && flag->precision == 0 &&
 			 inf->width > 0 && (flag->minus == 1) && flag->h == 0)
 	{
-		if (inf->count_two == 0 && inf->count > 2)
-			inf->count -= 2;
+//		if (inf->count_two == 0 && inf->count > 2)
+//			inf->count -= 2;
 		if (flag->space == 1)
 			inf->count = inf->count + 1;
 		if (flag->space == 1)

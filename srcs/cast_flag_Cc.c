@@ -45,11 +45,22 @@ void	cast_flag_Cc(t_inf *inf, t_flag *flag, char str)
 //		флан zero
 	else if (flag->zero == 1)
 	{
-		ft_putchar(str);
-		while (inf->count_two > 0)
+		inf->count -= 1;
+//		while (inf->count_two > 0)
+//		{
+//			inf->result += write(1, " ", 1);
+//			inf->count_two--;
+//		}
+		while (inf->count > 0)
 		{
-			inf->result += write(1, " ", 1);
-			inf->count_two--;
+			inf->result += write(1, "0", 1);
+			inf->count--;
+		}
+		if (str == '\0')
+		{
+			ft_putchar('0');
+			ft_putchar('\0');
+			inf->result += 1;
 		}
 	}
 		// 		флаг	 ширины

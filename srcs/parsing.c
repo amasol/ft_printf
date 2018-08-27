@@ -32,6 +32,8 @@ void				parsing(char *str, va_list lst, t_inf *inf)
 	while (!(ft_qualifier(str[i])))
 	{
 		inf->nothing = 1;
+		if (is_check_specs(str[i]))
+			break ;
 		if (inf->width_two == 0)
 			parsing_four(str, &flag, inf);
 		if (inf->width == 0)
@@ -79,6 +81,7 @@ void			initialization_flag(t_flag *flag, t_inf *inf)
 	inf->uint_j				= 0;
 	inf->intm_j				= 0;
 	inf->nothing			= 0;
+	flag->nothing_flag		= 0;
 }
 
 void			parsing_one(char *str, t_flag *flag)
@@ -117,21 +120,35 @@ void			parsing_two(char *str, t_flag *flag)
 		if (str[i] == 'h' && str[i + 1] == 'h')
 		{
 			flag->hh = 1;
+			flag->nothing_flag = 1;
 			i++;
 		}
 		else if (str[i] == 'h')
+		{
 			flag->h = 1;
+			flag->nothing_flag = 1;
+		}
 		else if (str[i] == 'l' && str[i + 1] == 'l')
 		{
 			flag->ll = 1;
+			flag->nothing_flag = 1;
 			i++;
 		}
 		else if (str[i] == 'l')
+		{
 			flag->l = 1;
+			flag->nothing_flag = 1;
+		}
 		else if (str[i] == 'j')
+		{
 			flag->j = 1;
+			flag->nothing_flag = 1;
+		}
 		else if (str[i] == 'z')
+		{
 			flag->z = 1;
+			flag->nothing_flag = 1;
+		}
 		i++;
 	}
 }
@@ -257,13 +274,15 @@ int		is_zero(char *str)
 }
 
 //is_check_specs(&str[i], inf);
-//int		is_check_specs(char *str, t_inf *inf)
-//{
-//	int i;
-//
-//	i = 0;
-//	if (ft_qualifier(str[i]))
-//	{
-//		inf->nothing = 1;
-//	}
-//}
+int		is_check_specs(char s)
+{
+	if (s == 'A' || s == 'B' || s == 'E' || s == 'F'
+		|| s == 'G' || s == 'H' || s == 'I' || s == '{' || s == '}'
+		|| s == 'J' || s == 'K' || s == 'L' || s == 'M'
+		|| s == 'N' || s == 'O' || s == 'P' || s == 'Q'
+		|| s == 'R' || s == 'S' || s == 'T' || s == 'V'
+		|| s == 'W' || s == 'Y' || s == 'Z' || s == '\n')
+		return (1);
+	else
+		return (0);
+}

@@ -155,6 +155,7 @@ void		cast_flag_Uu(t_inf *inf, uintmax_t i, t_flag *flag, char *str)
 			inf->result += write(1, "0", 1);
 			inf->count--;
 		}
+		if (i != 0)
 		inf->result += ft_count_uint(ft_putnbr_uintmax_t(i));
 	}
 

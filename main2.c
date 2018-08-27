@@ -1553,18 +1553,27 @@ int		 main	(void)
 //	ft_printf(".%%%%%%%%%%.");
 //	printf("\n.%%%%%%%%%.");
 
-	ft_printf("% Zoooo");
-	printf("% Zoooo");
+//	ft_printf("%hhD", USHRT_MAX);
+//	printf("\n%hhD", USHRT_MAX);
+//
+//	ft_printf("%#.O", 0);
+//	printf("\n%#.O", 0);
+
+
 
 //	ft_printf("TEST %%12%d123\n", 777);
 //	printf("TEST %%12%d123\n", 777);
 
-//	ft_printf("%D", -1L);
-//	printf("%D", -1L);
+	ft_printf("%10.1s", "42a");
+	printf("\n%10.1s", "42a");
+
+//	ft_printf("%10.4s", "Iam41");
+//	printf("\n%10.4s", "Iam41");
 
 
-//	ft_printf("|len=%i", ft_printf("%D\n", -1L));
-//	printf("|len=%i", printf("%D\n", -1L));
+
+//	ft_printf("|len=%i", ft_printf("{%03c}", 0));
+//	printf("\n|len=%i", printf("{%03c}", 0));
 
 
 

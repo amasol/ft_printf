@@ -152,7 +152,7 @@ void		cast_flag_Ddi(t_inf *inf, intmax_t i, t_flag *flag, char *str)
 	}
 
 
-	else if (flag->space == 1 && flag->precision != 1 && inf->nothing == 1)
+	else if (flag->space == 1 && flag->precision != 1 && i > 0 && inf->nothing == 1)
 	{
 		inf->result += write(1, " ", 1);
 		inf->result += ft_count_int(ft_putnbr_intmax(i));
@@ -163,7 +163,8 @@ void		cast_flag_Ddi(t_inf *inf, intmax_t i, t_flag *flag, char *str)
 //		точность (.)
 	else if (flag->precision == 1 && inf->count > 0 && inf->count_two == 0)
 	{
-		inf->count = (inf->minus_value == 1) ? inf->count += 1 : inf->count;
+		inf->count = (inf->minus_value == 1 && inf->width_two == 0)
+					 ? inf->count += 1 : inf->count;
 		if ((inf->minus_value == 0 && flag->minus == 0) && flag->plus == 0)
 			;
 		else if ((inf->minus_value == 1 || flag->minus == 0) && flag->plus == 0)
@@ -335,12 +336,13 @@ void		cast_flag_Ddi(t_inf *inf, intmax_t i, t_flag *flag, char *str)
 		inf->result += ft_count_int(ft_putnbr_intmax(i));
 	}
 
-	else if (flag->slash == 0 && flag->space == 0
-			 && flag->zero == 0 && flag->width == 0 && flag->precision == 0)
+	else if (flag->slash == 0 &&
+			flag->zero == 0 && flag->width == 0 && flag->precision == 0)
 	{
 		if ((inf->minus_value == 1 || flag->minus == 1) && i != LONG_MIN  && i > 0)
 			inf->result += write(1, "-", 1);
-		else if (inf->minus_value == 1 && i < 0)
+			// кастыляка !!!!!
+		else if (inf->minus_value == 1 && i == -1)
 			inf->result += 1;
 		if (flag->plus == 1 || inf->tmp == 1)
 			inf->result += write(1, "+", 1);

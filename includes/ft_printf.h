@@ -50,6 +50,7 @@ typedef struct s_flag
 	int		ll;
 	int		j;
 	int		z;
+	int		nothing_flag;
 
 	intmax_t 	ban;
 }				t_flag;
@@ -125,6 +126,7 @@ int				ft_flag_Oo(va_list lst, char *format, t_flag *flag, t_inf *inf);
 int				ft_flag_p(va_list lst, char *format, t_flag *flag, t_inf *inf);
 //----------------------------------------------------
 
+
 //-------------------флаги
 //---------------обработка длинный всех флагов!
 void			parsing(char *str, va_list lst, t_inf *inf);
@@ -136,6 +138,7 @@ void			parsing_five(char *str, t_inf *inf, t_flag *flag);
 int				ft_flag_check(char c);
 void			output_after(char *format, t_inf *inf);
 int				is_zero(char *str);
+int				is_check_specs(char s);
 
 
 //int				is_check_specs(char *str, t_inf *inf);

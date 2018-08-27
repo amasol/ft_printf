@@ -49,6 +49,11 @@ void		cast_flag_Ss(t_inf *inf, t_flag *flag, char *str)
 //		флан zero
 	else if (flag->zero == 1)
 	{
+		while (inf->count > 0)
+		{
+			inf->result += write(1, "0", 1);
+			inf->count--;
+		}
 		tmp = ft_strsub(str, 0, inf->width);
 		inf->result += ft_strlen_uintmax(tmp);
 		ft_putstr(tmp);
@@ -190,11 +195,38 @@ void		cast_flag_Ss(t_inf *inf, t_flag *flag, char *str)
 	}
 
 
+		//		точность (ширина + точность когда ширина больше точности!)
+	else if (flag->precision == 1 && inf->count_two >= inf->count
+			 && flag->minus == 0 && inf->nothing == 1)
+	{
+		inf->width_two = (inf->width > inf->uint_j) ? inf->width_two - inf->uint_j : inf->width_two;
+		inf->width_two = (inf->width < inf->uint_j) ? inf->width_two - inf->width : inf->width_two;
+		while (inf->width_two > 0)
+		{
+			inf->result += write(1, " ", 1);
+			inf->width_two--;
+		}
+//		while (inf->count > 0 && *str == '\0')
+//		{
+//			inf->result += write(1, " ", 1);
+//			inf->count--;
+//		}
+		tmp = ft_strsub(str, 0, inf->width);
+		inf->result += ft_strlen_uintmax(tmp);
+		ft_putstr(tmp);
+		ft_strdel(&tmp);
+	}
+
+
+
+
 //		точность (ширина + точность)
 	else if (flag->precision == 1 && inf->count >= 0 && inf->count_two >= 0
 			 && flag->minus == 0 && inf->nothing == 1)
 	{
 		inf->count_two = (inf->minus_value == 1) ? inf->count_two -= 1 : inf->count_two;
+		inf->count_two = (inf->width_two > inf->uint_j)
+				? inf->width_two - inf->uint_j : inf->count_two;
 		while (inf->count_two > 0)
 		{
 			inf->result += write(1, " ", 1);

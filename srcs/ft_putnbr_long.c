@@ -48,7 +48,7 @@ uintmax_t	ft_putnbr_uintmax_t(uintmax_t nb)
 
 	if ((unsigned long)nb == ULONG_MAX)
 	{
-		ft_putstr("18446744073709551574");
+		ft_putstr("18446744073709551615");
 		return (nb);
 	}
 	if (nb > 9)
