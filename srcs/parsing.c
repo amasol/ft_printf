@@ -59,6 +59,7 @@ void			initialization_flag(t_flag *flag, t_inf *inf)
 	flag->zero				= 0;
 	flag->width				= 0;
 	flag->precision			= 0;
+	flag->check_precision	= 0;
 	flag->zero_precision	= 0;
 
 	flag->hh 				= 0;
@@ -101,8 +102,11 @@ void			parsing_one(char *str, t_flag *flag)
 			flag->space = 1;
 		if (!is_zero(str))
 			flag->zero = 1;
-		if (str[i] == '.')
+		if (str[i] == '.' || (ft_isdigit(str[i]) && str[i + 1] == '.'))
+		{
+			is_check_precision(&str[i], flag);
 			flag->precision = 1;
+		}
 		if (ft_isdigit(str[i]))
 			flag->width = 1;
 		i++;
@@ -209,15 +213,16 @@ void			parsing_four(char *str, t_flag *flag, t_inf *inf)
 	i = 0;
 //	if (flag->space == 1) // просмотреть что делает и зачем
 //		flag->width = 0;
-	while (str[i] == '+' || (str[i] == '0' && flag->zero != 1) || str[i] == '-' || str[i] == ' ' || ft_flag_check(str[i]))
+	while (str[i] == '+' || (str[i] == '0' && flag->zero != 1)
+		   || str[i] == '-' || str[i] == ' ' || ft_flag_check(str[i]))
 		i++;
-	if (str[i] == '.' && flag->precision == 1)
-	{
-		i++;
-		if (str[i] >= '1' && str[i] <= '9')
-			inf->width_two = ft_atoi(&str[i]);
-	}
-	else if (ft_isdigit(str[i]) && inf->count_three != 1)
+//	if (str[i] == '.' && flag->precision == 1)
+//	{
+//		i++;
+//		if (str[i] >= '1' && str[i] <= '9')
+//			inf->width_two = ft_atoi(&str[i]);
+//	}
+	if (ft_isdigit(str[i]) && inf->count_three != 1)
 	{
 		// было начало с 1 я поставил с 0.
 		if  (str[i] >= '0' && str[i] <= '9')
@@ -285,4 +290,20 @@ int		is_check_specs(char s)
 		return (1);
 	else
 		return (0);
+}
+
+
+int		is_check_precision(char *str, t_flag *flag)
+{
+	int i;
+
+	i = 0;
+	while (ft_isdigit(str[i]))
+	{
+		i++;
+		if (str[i] == '.')
+			flag->check_precision = 1;
+		return (1);
+	}
+	return (0);
 }

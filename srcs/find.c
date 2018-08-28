@@ -24,7 +24,7 @@ void		pars_spec(char *format, va_list lst, t_flag *flag, t_inf *inf)
 			if (ft_refinement(format[i]) == 1)
 				ft_flag_Ddi(lst, &format[i], flag, inf);
 			else if (ft_refinement(format[i]) == 2)
-				ft_flag_Cc(lst, &format[i], flag, inf);
+				ft_flag_c(lst, &format[i], flag, inf);
 			else if (ft_refinement(format[i]) == 3)
 				ft_flag_Ss(lst, &format[i], flag, inf);
 			else if (ft_refinement(format[i]) == 4)
@@ -95,20 +95,50 @@ int			ft_flag_Ddi(va_list lst, char *format, t_flag *flag, t_inf *inf)
 }
 
 //(С) рассматриваеться как (с) с подификатором (l)
-int			ft_flag_Cc(va_list lst, char *format, t_flag *flag, t_inf *inf)
+int			ft_flag_c(va_list lst, char *format, t_flag *flag, t_inf *inf)
 {
 	unsigned char	str;
+	wchar_t			c;
 
-	if (*format == 'c')
+	if (*format == 'c' || (*format == 'C' && MB_LEN_MAX == 1))
 	{
-		str = va_arg(lst, unsigned int);
+		if (flag->l == 1)
+		{
+			ft_flag_C(lst, format, flag, inf);
+			return (1);
+		}
+		else if (*format == 'C' && MB_LEN_MAX == 1)
+			c = va_arg(lst, wchar_t);
+		else
+			str = va_arg(lst, unsigned int);
 		flag->ban = 1;
 		inf->uint_j += 1;
-		cast_flag_Cc(inf, flag, str);
+		cast_flag_c(inf, flag, str);
 	}
-//	if (format[k] == 'C')
 	return (1);
 }
+
+//	придумать как сделать если нету локали но есть юникод, вызвать снова (с)!
+//	if (*format == 'C' && MB_LEN_MAX == 1)
+//		;
+
+//ft_flag_c(lst, &format[i], flag, inf);
+ int			ft_flag_C(va_list lst, char *format, t_flag *flag, t_inf *inf)
+ {
+	 wchar_t c;
+
+	 if (*format == 'C' && MB_LEN_MAX == 1)
+	 {
+		 ft_flag_c(lst, format, flag, inf);
+		 return (1);
+	 }
+	 if (*format == 'C' || (*format == 'c' && flag->l == 1))
+	 {
+		 c = va_arg(lst, wchar_t);
+		 cast_flag_C(inf, flag, c);
+	 }
+	 return (1);
+ }
 
 // Если указан модификатор l, то строка интерпитируется как wchar_t*.
 // Для функции wprintf строка по умолчанию обрабатывается как wchar_t*.
@@ -268,7 +298,7 @@ int 		ft_flag_p(va_list lst, char *format, t_flag *flag, t_inf *inf)
 		if (LY)
 			entry_minus_uint(inf);
 		str = ft_itoa_base_uintmax(i, 16, 'x');
-		cast_flag_p(inf, flag, str);
+		cast_flag_p(inf, i, flag, str);
 	}
 	return (1);
 }

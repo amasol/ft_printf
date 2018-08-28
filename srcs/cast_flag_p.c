@@ -12,7 +12,7 @@
 
 #include "../includes/ft_printf.h"
 
-void			cast_flag_p(t_inf *inf, t_flag *flag, char *str)
+void			cast_flag_p(t_inf *inf, uintmax_t i, t_flag *flag, char *str)
 {
 	if (inf->count_two <= 2 && flag->minus == 0)
 		inf->count_two = 0;
@@ -20,7 +20,7 @@ void			cast_flag_p(t_inf *inf, t_flag *flag, char *str)
 		;
 	if (inf->count_two == 0 && inf->count <= 2)
 		inf->count = 0;
-	else if (inf->count_two == 0 && inf->count >= 4)
+	else if (inf->count_two ==  0 && inf->count >= 4 && i == 0)
 		inf->count -= 2;
 
 
@@ -51,8 +51,11 @@ void			cast_flag_p(t_inf *inf, t_flag *flag, char *str)
 			inf->result += write(1, "0", 1);
 			inf->count--;
 		}
-		inf->result += ft_strlen_uintmax(str);
-		ft_putstr(str);
+		if (i != 0)
+		{
+			inf->result += ft_strlen_uintmax(str);
+			ft_putstr(str);
+		}
 		while (inf->count_two > 0)
 		{
 			inf->result += write(1, " ", 1);
@@ -63,7 +66,8 @@ void			cast_flag_p(t_inf *inf, t_flag *flag, char *str)
 	else if (inf->count >= 0 && flag->width == 1 && flag->precision == 0 &&
 			 flag->minus != 1 && inf->minus_value != 1)
 	{
-//		if (inf->width >)
+//		if (inf->count_two ==  0 && inf->count >= 4 && i == 0)
+//			inf->count -= 2;
 		while (inf->count > 0)
 		{
 			inf->result += write(1, " ", 1);
@@ -77,7 +81,7 @@ void			cast_flag_p(t_inf *inf, t_flag *flag, char *str)
 	else if (flag->width == 1 && flag->precision == 0 &&
 			 inf->width > 0 && (flag->minus == 1) && flag->h == 0)
 	{
-//		if (inf->count_two == 0 && inf->count > 2)
+//		if (inf->count_two ==  0 && inf->count >= 4 && i == 0)
 //			inf->count -= 2;
 		if (flag->space == 1)
 			inf->count = inf->count + 1;
@@ -150,6 +154,8 @@ void			cast_flag_p(t_inf *inf, t_flag *flag, char *str)
 //		точность (.)
 	else if (flag->precision == 1 && inf->count > 0 && inf->count_two == 0 && flag->minus != 1 )
 	{
+		if (inf->count_two ==  0 && inf->width >= 4 && i == 0)
+			inf->count += 2;
 		if ((flag->plus == 1) && flag->minus == 0 && (inf->width < inf->width_two))
 			inf->result += write(1, " ", 1);
 		inf->result += write(1, "0x", 2);
@@ -167,13 +173,18 @@ void			cast_flag_p(t_inf *inf, t_flag *flag, char *str)
 //		точность (ширина + точность)
 	else if (flag->precision == 1 && inf->count >= 0 && inf->count_two >= 0 && flag->minus == 0)
 	{
-		if (inf->width_two > inf->width + 2 && inf->width != 0)
-		{
-			inf->count_two = inf->width_two;
-			inf->count_two -= inf->width + 2;
-		}
-		if ((uintmax_t)inf->width == 0 && (uintmax_t)inf->width_two > inf->uint_j)
-			inf->count_two -= 2;
+//		if (inf->width_two > inf->width + 2 && inf->width != 0)
+//		{
+//			inf->count_two = inf->width_two;
+//			inf->count_two -= inf->width + 2;
+//		}
+		inf->count = (inf->width > inf->uint_j) ? inf->width - inf->uint_j : 0;
+		inf->uint_j += 2;
+		inf->count_two = (inf->width_two > inf->uint_j + inf->count) ?
+		 inf->width_two - (inf->uint_j + inf->count) : 0;
+
+//		if ((uintmax_t)inf->width == 0 && (uintmax_t)inf->width_two > inf->uint_j)
+//			inf->count_two -= 2;
 		while (inf->count_two > 0)
 		{
 			inf->result += write(1, " ", 1);
@@ -187,8 +198,11 @@ void			cast_flag_p(t_inf *inf, t_flag *flag, char *str)
 			inf->result += write(1, "0", 1);
 			inf->count--;
 		}
-		inf->result += ft_strlen_uintmax(str);
-		ft_putstr(str);
+		if (i != 0)
+		{
+			inf->result += ft_strlen_uintmax(str);
+			ft_putstr(str);
+		}
 	}
 
 		//		точность (ширина точность и флаг минут)

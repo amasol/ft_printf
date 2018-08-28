@@ -12,7 +12,7 @@
 
 #include "../includes/ft_printf.h"
 
-void	cast_flag_Cc(t_inf *inf, t_flag *flag, char str)
+void	cast_flag_c(t_inf *inf, t_flag *flag, char str)
 {
 	// флаг -
 	inf->count = (inf->uint_j > (uintmax_t)inf->width) ? inf->uint_j : inf->width - inf->uint_j;
@@ -218,4 +218,41 @@ void	cast_flag_Cc(t_inf *inf, t_flag *flag, char str)
 		ft_putchar(str);
 	inf->result += 1;
 }
+
+void	cast_flag_C(t_inf *inf, t_flag *flag, wchar_t c)
+{
+	inf->uint_j = ft_lenwchar(c);
+
+	//без точности
+	if (flag->width == 1 && flag->precision == 0)
+	{
+		inf->count = (inf->uint_j < inf->width) ? inf->width - inf->uint_j : inf->result;
+		while (inf->count > 0)
+		{
+			inf->result += write(1, " ", 1);
+			inf->count--;
+		}
+		ft_putwchar(c, inf);
+	}
+//		с точностью и шириной по левому краю
+	else if (flag->width == 1 && flag->precision == 1 && flag->check_precision == 1)
+	{
+		inf->count = (inf->uint_j < inf->width) ? inf->width - inf->uint_j : inf->result;
+		while (inf->count > 0)
+		{
+			inf->result += write(1, " ", 1);
+			inf->count--;
+		}
+		ft_putwchar(c, inf);
+	}
+	if (flag->width == 0 && flag->precision == 0)
+		ft_putwchar(c, inf);
+
+
+
+
+
+
+}
+
 

@@ -501,6 +501,33 @@ srcs/ft_isspace.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/ft_isspace.c.s
 .PHONY : srcs/ft_isspace.c.s
 
+srcs/ft_lenwchar.o: srcs/ft_lenwchar.c.o
+
+.PHONY : srcs/ft_lenwchar.o
+
+# target to build an object file
+srcs/ft_lenwchar.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/ft_lenwchar.c.o
+.PHONY : srcs/ft_lenwchar.c.o
+
+srcs/ft_lenwchar.i: srcs/ft_lenwchar.c.i
+
+.PHONY : srcs/ft_lenwchar.i
+
+# target to preprocess a source file
+srcs/ft_lenwchar.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/ft_lenwchar.c.i
+.PHONY : srcs/ft_lenwchar.c.i
+
+srcs/ft_lenwchar.s: srcs/ft_lenwchar.c.s
+
+.PHONY : srcs/ft_lenwchar.s
+
+# target to generate assembly for a file
+srcs/ft_lenwchar.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/ft_lenwchar.c.s
+.PHONY : srcs/ft_lenwchar.c.s
+
 srcs/ft_printf.o: srcs/ft_printf.c.o
 
 .PHONY : srcs/ft_printf.o
@@ -635,6 +662,33 @@ srcs/ft_putstr.s: srcs/ft_putstr.c.s
 srcs/ft_putstr.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/ft_putstr.c.s
 .PHONY : srcs/ft_putstr.c.s
+
+srcs/ft_putwchar.o: srcs/ft_putwchar.c.o
+
+.PHONY : srcs/ft_putwchar.o
+
+# target to build an object file
+srcs/ft_putwchar.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/ft_putwchar.c.o
+.PHONY : srcs/ft_putwchar.c.o
+
+srcs/ft_putwchar.i: srcs/ft_putwchar.c.i
+
+.PHONY : srcs/ft_putwchar.i
+
+# target to preprocess a source file
+srcs/ft_putwchar.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/ft_putwchar.c.i
+.PHONY : srcs/ft_putwchar.c.i
+
+srcs/ft_putwchar.s: srcs/ft_putwchar.c.s
+
+.PHONY : srcs/ft_putwchar.s
+
+# target to generate assembly for a file
+srcs/ft_putwchar.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/ft_putwchar.c.s
+.PHONY : srcs/ft_putwchar.c.s
 
 srcs/ft_qualifier.o: srcs/ft_qualifier.c.o
 
@@ -984,6 +1038,9 @@ help:
 	@echo "... srcs/ft_isspace.o"
 	@echo "... srcs/ft_isspace.i"
 	@echo "... srcs/ft_isspace.s"
+	@echo "... srcs/ft_lenwchar.o"
+	@echo "... srcs/ft_lenwchar.i"
+	@echo "... srcs/ft_lenwchar.s"
 	@echo "... srcs/ft_printf.o"
 	@echo "... srcs/ft_printf.i"
 	@echo "... srcs/ft_printf.s"
@@ -999,6 +1056,9 @@ help:
 	@echo "... srcs/ft_putstr.o"
 	@echo "... srcs/ft_putstr.i"
 	@echo "... srcs/ft_putstr.s"
+	@echo "... srcs/ft_putwchar.o"
+	@echo "... srcs/ft_putwchar.i"
+	@echo "... srcs/ft_putwchar.s"
 	@echo "... srcs/ft_qualifier.o"
 	@echo "... srcs/ft_qualifier.i"
 	@echo "... srcs/ft_qualifier.s"

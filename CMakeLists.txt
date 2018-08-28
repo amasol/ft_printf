@@ -37,5 +37,7 @@ add_executable(ft_printf
         main2.c
         srcs/ft_strlen_uintmax.c
         srcs/no_spec.c
-        srcs/ft_strchr.c)
+        srcs/ft_strchr.c
+        srcs/ft_putwchar.c
+        srcs/ft_lenwchar.c)
 #        print_test.c)

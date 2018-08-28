@@ -777,6 +777,54 @@ CMakeFiles/ft_printf.dir/srcs/ft_strchr.c.o.provides: CMakeFiles/ft_printf.dir/s
 CMakeFiles/ft_printf.dir/srcs/ft_strchr.c.o.provides.build: CMakeFiles/ft_printf.dir/srcs/ft_strchr.c.o
 
 
+CMakeFiles/ft_printf.dir/srcs/ft_putwchar.c.o: CMakeFiles/ft_printf.dir/flags.make
+CMakeFiles/ft_printf.dir/srcs/ft_putwchar.c.o: ../srcs/ft_putwchar.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/amasol/amasol/project/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object CMakeFiles/ft_printf.dir/srcs/ft_putwchar.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf.dir/srcs/ft_putwchar.c.o   -c /Users/amasol/amasol/project/ft_printf/srcs/ft_putwchar.c
+
+CMakeFiles/ft_printf.dir/srcs/ft_putwchar.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_printf.dir/srcs/ft_putwchar.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/amasol/amasol/project/ft_printf/srcs/ft_putwchar.c > CMakeFiles/ft_printf.dir/srcs/ft_putwchar.c.i
+
+CMakeFiles/ft_printf.dir/srcs/ft_putwchar.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf.dir/srcs/ft_putwchar.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/amasol/amasol/project/ft_printf/srcs/ft_putwchar.c -o CMakeFiles/ft_printf.dir/srcs/ft_putwchar.c.s
+
+CMakeFiles/ft_printf.dir/srcs/ft_putwchar.c.o.requires:
+
+.PHONY : CMakeFiles/ft_printf.dir/srcs/ft_putwchar.c.o.requires
+
+CMakeFiles/ft_printf.dir/srcs/ft_putwchar.c.o.provides: CMakeFiles/ft_printf.dir/srcs/ft_putwchar.c.o.requires
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/ft_putwchar.c.o.provides.build
+.PHONY : CMakeFiles/ft_printf.dir/srcs/ft_putwchar.c.o.provides
+
+CMakeFiles/ft_printf.dir/srcs/ft_putwchar.c.o.provides.build: CMakeFiles/ft_printf.dir/srcs/ft_putwchar.c.o
+
+
+CMakeFiles/ft_printf.dir/srcs/ft_lenwchar.c.o: CMakeFiles/ft_printf.dir/flags.make
+CMakeFiles/ft_printf.dir/srcs/ft_lenwchar.c.o: ../srcs/ft_lenwchar.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/amasol/amasol/project/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building C object CMakeFiles/ft_printf.dir/srcs/ft_lenwchar.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf.dir/srcs/ft_lenwchar.c.o   -c /Users/amasol/amasol/project/ft_printf/srcs/ft_lenwchar.c
+
+CMakeFiles/ft_printf.dir/srcs/ft_lenwchar.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_printf.dir/srcs/ft_lenwchar.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/amasol/amasol/project/ft_printf/srcs/ft_lenwchar.c > CMakeFiles/ft_printf.dir/srcs/ft_lenwchar.c.i
+
+CMakeFiles/ft_printf.dir/srcs/ft_lenwchar.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf.dir/srcs/ft_lenwchar.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/amasol/amasol/project/ft_printf/srcs/ft_lenwchar.c -o CMakeFiles/ft_printf.dir/srcs/ft_lenwchar.c.s
+
+CMakeFiles/ft_printf.dir/srcs/ft_lenwchar.c.o.requires:
+
+.PHONY : CMakeFiles/ft_printf.dir/srcs/ft_lenwchar.c.o.requires
+
+CMakeFiles/ft_printf.dir/srcs/ft_lenwchar.c.o.provides: CMakeFiles/ft_printf.dir/srcs/ft_lenwchar.c.o.requires
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/ft_lenwchar.c.o.provides.build
+.PHONY : CMakeFiles/ft_printf.dir/srcs/ft_lenwchar.c.o.provides
+
+CMakeFiles/ft_printf.dir/srcs/ft_lenwchar.c.o.provides.build: CMakeFiles/ft_printf.dir/srcs/ft_lenwchar.c.o
+
+
 # Object files for target ft_printf
 ft_printf_OBJECTS = \
 "CMakeFiles/ft_printf.dir/srcs/ft_atoi.c.o" \
@@ -808,7 +856,9 @@ ft_printf_OBJECTS = \
 "CMakeFiles/ft_printf.dir/main2.c.o" \
 "CMakeFiles/ft_printf.dir/srcs/ft_strlen_uintmax.c.o" \
 "CMakeFiles/ft_printf.dir/srcs/no_spec.c.o" \
-"CMakeFiles/ft_printf.dir/srcs/ft_strchr.c.o"
+"CMakeFiles/ft_printf.dir/srcs/ft_strchr.c.o" \
+"CMakeFiles/ft_printf.dir/srcs/ft_putwchar.c.o" \
+"CMakeFiles/ft_printf.dir/srcs/ft_lenwchar.c.o"
 
 # External object files for target ft_printf
 ft_printf_EXTERNAL_OBJECTS =
@@ -843,9 +893,11 @@ ft_printf: CMakeFiles/ft_printf.dir/main2.c.o
 ft_printf: CMakeFiles/ft_printf.dir/srcs/ft_strlen_uintmax.c.o
 ft_printf: CMakeFiles/ft_printf.dir/srcs/no_spec.c.o
 ft_printf: CMakeFiles/ft_printf.dir/srcs/ft_strchr.c.o
+ft_printf: CMakeFiles/ft_printf.dir/srcs/ft_putwchar.c.o
+ft_printf: CMakeFiles/ft_printf.dir/srcs/ft_lenwchar.c.o
 ft_printf: CMakeFiles/ft_printf.dir/build.make
 ft_printf: CMakeFiles/ft_printf.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/amasol/amasol/project/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Linking C executable ft_printf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/amasol/amasol/project/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Linking C executable ft_printf"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ft_printf.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -883,6 +935,8 @@ CMakeFiles/ft_printf.dir/requires: CMakeFiles/ft_printf.dir/main2.c.o.requires
 CMakeFiles/ft_printf.dir/requires: CMakeFiles/ft_printf.dir/srcs/ft_strlen_uintmax.c.o.requires
 CMakeFiles/ft_printf.dir/requires: CMakeFiles/ft_printf.dir/srcs/no_spec.c.o.requires
 CMakeFiles/ft_printf.dir/requires: CMakeFiles/ft_printf.dir/srcs/ft_strchr.c.o.requires
+CMakeFiles/ft_printf.dir/requires: CMakeFiles/ft_printf.dir/srcs/ft_putwchar.c.o.requires
+CMakeFiles/ft_printf.dir/requires: CMakeFiles/ft_printf.dir/srcs/ft_lenwchar.c.o.requires
 
 .PHONY : CMakeFiles/ft_printf.dir/requires
 

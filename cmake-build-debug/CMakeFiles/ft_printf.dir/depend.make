@@ -43,6 +43,9 @@ CMakeFiles/ft_printf.dir/srcs/ft_isdigit.c.o: ../srcs/ft_isdigit.c
 CMakeFiles/ft_printf.dir/srcs/ft_isspace.c.o: ../includes/ft_printf.h
 CMakeFiles/ft_printf.dir/srcs/ft_isspace.c.o: ../srcs/ft_isspace.c
 
+CMakeFiles/ft_printf.dir/srcs/ft_lenwchar.c.o: ../includes/ft_printf.h
+CMakeFiles/ft_printf.dir/srcs/ft_lenwchar.c.o: ../srcs/ft_lenwchar.c
+
 CMakeFiles/ft_printf.dir/srcs/ft_printf.c.o: ../includes/ft_printf.h
 CMakeFiles/ft_printf.dir/srcs/ft_printf.c.o: ../srcs/ft_printf.c
 
@@ -57,6 +60,9 @@ CMakeFiles/ft_printf.dir/srcs/ft_putnbr_long.c.o: ../srcs/ft_putnbr_long.c
 
 CMakeFiles/ft_printf.dir/srcs/ft_putstr.c.o: ../includes/ft_printf.h
 CMakeFiles/ft_printf.dir/srcs/ft_putstr.c.o: ../srcs/ft_putstr.c
+
+CMakeFiles/ft_printf.dir/srcs/ft_putwchar.c.o: ../includes/ft_printf.h
+CMakeFiles/ft_printf.dir/srcs/ft_putwchar.c.o: ../srcs/ft_putwchar.c
 
 CMakeFiles/ft_printf.dir/srcs/ft_qualifier.c.o: ../includes/ft_printf.h
 CMakeFiles/ft_printf.dir/srcs/ft_qualifier.c.o: ../srcs/ft_qualifier.c

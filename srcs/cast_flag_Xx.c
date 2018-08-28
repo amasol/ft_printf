@@ -260,10 +260,10 @@ void		cast_flag_Xx(t_inf *inf, uintmax_t i, t_flag *flag, char *str)
 			inf->result += write(1, "0", 1);
 			inf->count--;
 		}
-		while (inf->count_two > 0)
+		while (inf->width_two > 0)
 		{
 			inf->result += write(1, " ", 1);
-			inf->count_two--;
+			inf->width_two--;
 		}
 //		if (flag->plus == 1 || inf->tmp == 1)
 //			inf->result += write(1, "+", 1);

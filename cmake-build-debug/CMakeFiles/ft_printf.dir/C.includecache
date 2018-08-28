@@ -21,6 +21,8 @@ stdint.h
 -
 limits.h
 -
+locale.h
+-
 
 /Users/amasol/amasol/project/ft_printf/includes/ft_printf.h
 stdarg.h
@@ -37,10 +39,16 @@ stdint.h
 -
 limits.h
 -
+locale.h
+-
 
 /Users/amasol/amasol/project/ft_printf/main2.c
 ./includes/ft_printf.h
 /Users/amasol/amasol/project/ft_printf/./includes/ft_printf.h
+locale.h
+-
+stdio.h
+-
 
 /Users/amasol/amasol/project/ft_printf/srcs/cast.c
 ../includes/ft_printf.h
@@ -94,6 +102,10 @@ limits.h
 ../includes/ft_printf.h
 /Users/amasol/amasol/project/ft_printf/includes/ft_printf.h
 
+/Users/amasol/amasol/project/ft_printf/srcs/ft_lenwchar.c
+../includes/ft_printf.h
+/Users/amasol/amasol/project/ft_printf/includes/ft_printf.h
+
 /Users/amasol/amasol/project/ft_printf/srcs/ft_printf.c
 ../includes/ft_printf.h
 /Users/amasol/amasol/project/ft_printf/includes/ft_printf.h
@@ -111,6 +123,10 @@ limits.h
 /Users/amasol/amasol/project/ft_printf/includes/ft_printf.h
 
 /Users/amasol/amasol/project/ft_printf/srcs/ft_putstr.c
+../includes/ft_printf.h
+/Users/amasol/amasol/project/ft_printf/includes/ft_printf.h
+
+/Users/amasol/amasol/project/ft_printf/srcs/ft_putwchar.c
 ../includes/ft_printf.h
 /Users/amasol/amasol/project/ft_printf/includes/ft_printf.h
 

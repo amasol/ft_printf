@@ -25,7 +25,10 @@
 #include <stdlib.h>
 #include <stdarg.h>
 #include <stdint.h>
+
+
 #include <limits.h>
+#include <locale.h>
 
 typedef struct s_flag
 {
@@ -42,6 +45,7 @@ typedef struct s_flag
 	int 	zero;
 	int		width;
 	int		precision;
+	int		check_precision;
 	int		zero_precision;
 
 	int		hh;
@@ -105,8 +109,9 @@ void			cast_flag_Uu(t_inf *inf, uintmax_t i, t_flag *flag, char *format);
 void			cast_flag_Xx(t_inf *inf, uintmax_t i, t_flag *flag, char *str);
 void			cast_flag_Oo(t_inf *inf, uintmax_t i, t_flag *flag, char *str);
 void			cast_flag_Ss(t_inf *inf, t_flag *flag, char *format);
-void			cast_flag_Cc(t_inf *inf, t_flag *flag, char format);
-void			cast_flag_p(t_inf *inf, t_flag *flag, char *format);
+void			cast_flag_c(t_inf *inf, t_flag *flag, char format);
+void			cast_flag_C(t_inf *inf, t_flag *flag, wchar_t c);
+void			cast_flag_p(t_inf *inf, uintmax_t i, t_flag *flag, char *format);
 
 
 
@@ -119,7 +124,8 @@ void			cancellation_flags_Oo(t_flag *flag, t_inf *inf);
 int				ft_refinement(char s);
 int				ft_flag_Ddi(va_list lst, char *format, t_flag *flag, t_inf *inf);
 int				ft_flag_Ss(va_list lst, char *format, t_flag *flag, t_inf *inf);
-int				ft_flag_Cc(va_list lst, char *format, t_flag *flag, t_inf *inf);
+int				ft_flag_c(va_list lst, char *format, t_flag *flag, t_inf *inf);
+int				ft_flag_C(va_list lst, char *format, t_flag *flag, t_inf *inf);
 int				ft_flag_Xx(va_list lst, char *format, t_flag *flag, t_inf *inf);
 int				ft_flag_Uu(va_list lst, char *format, t_flag *flag, t_inf *inf);
 int				ft_flag_Oo(va_list lst, char *format, t_flag *flag, t_inf *inf);
@@ -139,6 +145,7 @@ int				ft_flag_check(char c);
 void			output_after(char *format, t_inf *inf);
 int				is_zero(char *str);
 int				is_check_specs(char s);
+int				is_check_precision(char *str, t_flag *flag);
 
 
 //int				is_check_specs(char *str, t_inf *inf);
@@ -172,5 +179,7 @@ char	*ft_strnew(size_t size);
 void	ft_bzero(void *s, size_t n);
 int		ft_isspace(int c);
 char	*ft_strchr(const char *str, int ch);
+void	ft_putwchar(wchar_t c, t_inf *inf);
+int		ft_lenwchar(wchar_t c);
 
 #endif

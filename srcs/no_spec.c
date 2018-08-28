@@ -19,9 +19,14 @@ void			pars_no_spec(char *format, va_list lst, t_flag *flag, t_inf *inf)
 	inf->width -= 1;
 	if (flag->width == 1 && flag->minus != 1)
 	{
-		while (inf->width > 0)
+		while (inf->width > 0 && flag->precision == 0)
 		{
 			inf->result += write(1, " ", 1);
+			inf->width--;
+		}
+		while (inf->width > 0 && flag->precision == 1 && flag->check_precision == 1)
+		{
+			inf->result += write(1, "0", 1);
 			inf->width--;
 		}
 		inf->result += write(1, "%", 1);

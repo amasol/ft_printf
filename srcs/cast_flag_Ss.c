@@ -23,7 +23,7 @@ void		cast_flag_Ss(t_inf *inf, t_flag *flag, char *str)
 		inf->count_two = ((uintmax_t)inf->width_two > inf->uint_j) ? inf->width_two - inf->uint_j : 0;
 
 
-	if (str == NULL)
+	if (str == NULL  && (inf->width == 6 || flag->space == 1 || inf->nothing == 0))
 	{
 		inf->width = (inf->width == 6 || inf->width > 6) ? 6 : inf->width;
 		if (flag->width == 1 && inf->width)
@@ -33,6 +33,14 @@ void		cast_flag_Ss(t_inf *inf, t_flag *flag, char *str)
 		}
 		else
 			inf->result += write(1, "(null)", 6);
+	}
+	else if (str == NULL)
+	{
+		while (flag->width == 1 && inf->width > 0)
+		{
+			inf->result += write(1, "0", 1);
+			inf->width--;
+		}
 	}
 
 
@@ -176,27 +184,51 @@ void		cast_flag_Ss(t_inf *inf, t_flag *flag, char *str)
 		ft_strdel(&tmp);
 	}
 
-
 //		точность (.)
-	else if (flag->precision == 1 && inf->count > 0 && inf->count_two == 0
-			 && flag->minus != 1  && inf->nothing == 1)
+	else if (flag->precision == 1 && inf->count > 0 && inf->width_two == 0
+			 && flag->minus != 1  && inf->nothing == 1 && flag->check_precision == 0)
 	{
+		inf->count = (inf->width > inf->uint_j) ? inf->uint_j : inf->width;
 		if ((flag->plus == 1) && flag->minus == 0 && (inf->width < inf->width_two))
 			inf->result += write(1, " ", 1);
-		while (inf->count_two > 0)
-		{
-			inf->result += write(1, " ", 1);
-			inf->count_two--;
-		}
-		tmp = ft_strsub(str, 0, inf->width);
+//		while (inf->count > 0 && inf->uint_j < inf->count)
+//		{
+//			inf->result += write(1, " ", 1);
+//			inf->count--;
+//		}
+		tmp = ft_strsub(str, 0, inf->count);
 		inf->result += ft_strlen_uintmax(tmp);
 		ft_putstr(tmp);
 		ft_strdel(&tmp);
 	}
 
+//		точность (.) && flag->precision == 1
+	else if (flag->precision == 1 && inf->count > 0 && inf->width_two == 0
+			 && flag->minus != 1  && inf->nothing == 1 && flag->check_precision == 1)
+	{
+		if ((flag->plus == 1) && flag->minus == 0 && (inf->width < inf->width_two))
+			inf->result += write(1, " ", 1);
+		while (inf->width > 0)
+		{
+			inf->result += write(1, " ", 1);
+			inf->width--;
+		}
+//		while (inf->uint_j > 0)
+//		{
+//			inf->result += write(1, " ", 1);
+//			inf->uint_j--;
+//		}
+//		tmp = ft_strsub(str, 0, inf->count);
+//		inf->result += ft_strlen_uintmax(tmp);
+//		ft_putstr(tmp);
+//		ft_strdel(&tmp);
+	}
+
 
 		//		точность (ширина + точность когда ширина больше точности!)
-	else if (flag->precision == 1 && inf->count_two >= inf->count
+//	else if (flag->precision == 1 && inf->count_two >= inf->count
+//			 && flag->minus == 0 && inf->nothing == 1)
+	else if (flag->precision == 1 && inf->width_two >= inf->width
 			 && flag->minus == 0 && inf->nothing == 1)
 	{
 		inf->width_two = (inf->width > inf->uint_j) ? inf->width_two - inf->uint_j : inf->width_two;

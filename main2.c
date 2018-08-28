@@ -1,5 +1,6 @@
 #include "./includes/ft_printf.h"
-
+#include <locale.h>
+#include <stdio.h>
 //int main(void)
 //{
 
@@ -1564,18 +1565,35 @@ int		 main	(void)
 //	ft_printf("TEST %%12%d123\n", 777);
 //	printf("TEST %%12%d123\n", 777);
 
-	ft_printf("%10.1s", "42a");
-	printf("\n%10.1s", "42a");
+//	ft_printf("%5.2s is a string", "this");
+//	printf("\n%5.2s is a string", "this");
 
-//	ft_printf("%10.4s", "Iam41");
-//	printf("\n%10.4s", "Iam41");
+//	ft_printf("%5.x %5.0x", 0, 0);
+//	printf("\n%5.x %5.0x", 0, 0);
 
-
-
-//	ft_printf("|len=%i", ft_printf("{%03c}", 0));
-//	printf("\n|len=%i", printf("{%03c}", 0));
+//	ft_printf("%o, %ho, %hho", -42, -42, -42);
+//	printf("\n%o, %ho, %hho", -42, -42, -42);
 
 
+
+//	ft_printf("|len=%i", ft_printf("%5.0x", 0));
+//	printf("\n|len=%i", printf("%5.0x", 0));
+
+
+//	ft_printf("%.1s", "asd");
+
+	setlocale(LC_ALL, "");
+
+//	wchar_t *c = L"α";
+
+
+	ft_printf("%lc", L'α');
+//	ft_printf("%5.C", L'α');
+//	printf("\n%5.C", L'α');
+
+
+//	ft_printf("|len=%i", ft_printf("\n%10C", L'α'));
+//	printf("|len=%i", printf("\n%10C", L'α'));
 
 	return (0);
 }
