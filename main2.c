@@ -1587,8 +1587,8 @@ int		 main	(void)
 //	wchar_t *c = L"α";
 
 
-	ft_printf("%lc", L'α');
-//	ft_printf("%5.C", L'α');
+	ft_printf("% C", L'α');
+	ft_printf("% C", L'α');
 //	printf("\n%5.C", L'α');
 
 
