@@ -28,7 +28,7 @@ SRC 		=	ft_printf.c \
 				ft_strlen.c ft_strsub.c ft_strdel.c ft_atoi.c ft_bzero.c\
 				ft_isdigit.c ft_strnew.c ft_isspace.c\
 				ft_putchar.c ft_putstr.c ft_lenwchar.c ft_putwchar.c \
-				ft_putnbr.c no_spec.c ft_strchr.c
+				ft_putnbr.c no_spec.c ft_strchr.c ft_strrev.c ft_strdup.c
 
 all: $(NAME)
 

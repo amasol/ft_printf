@@ -12,7 +12,7 @@
 
 #include "../includes/ft_printf.h"
 
-void		cast_flag_Ss(t_inf *inf, t_flag *flag, char *str)
+void		cast_flag_s(t_inf *inf, t_flag *flag, char *str)
 {
 	// флаг -
 	char *tmp;
@@ -23,7 +23,7 @@ void		cast_flag_Ss(t_inf *inf, t_flag *flag, char *str)
 		inf->count_two = ((uintmax_t)inf->width_two > inf->uint_j) ? inf->width_two - inf->uint_j : 0;
 
 
-	if (str == NULL  && (inf->width == 6 || flag->space == 1 || inf->nothing == 0))
+	if (str == NULL  && (inf->width == 6 || flag->space == 1 || inf->nothing == 0 || flag->plus == 1))
 	{
 		inf->width = (inf->width == 6 || inf->width > 6) ? 6 : inf->width;
 		if (flag->width == 1 && inf->width)
@@ -336,3 +336,50 @@ void		cast_flag_Ss(t_inf *inf, t_flag *flag, char *str)
 	}
 }
 
+void		cast_flag_S(t_inf *inf, t_flag *flag, wchar_t *str)
+{
+//	inf->uint_j = ft_lenwchar(c);
+//
+//	без точности
+//	if (flag->width == 1 && flag->precision == 0)
+//	{
+//		inf->count = (inf->uint_j < inf->width) ? inf->width - inf->uint_j : inf->result;
+//		while (inf->count > 0)
+//		{
+//			inf->result += write(1, " ", 1);
+//			inf->count--;
+//		}
+//		ft_putwchar(c, inf);
+//	}
+//	с
+//	точностью
+//	и
+//	шириной
+//	по
+//	левому краю
+//	else if (flag->width == 1 && flag->precision == 1 && flag->check_precision == 1)
+//	{
+//		inf->count = (inf->uint_j < inf->width) ? inf->width - inf->uint_j : inf->result;
+//		while (inf->count > 0 && c != '\0')
+//		{
+//			inf->result += write(1, " ", 1);
+//			inf->count--;
+//		}
+//		ft_putwchar(c, inf);
+//	}
+//	else if (flag->space == 1 || flag->plus == 1)
+//	{
+//	inf->count = (inf->uint_j < inf->width) ? inf->width - inf->uint_j : inf->result;
+//		inf->count = (inf->uint_j < inf->width) ? inf->width - inf->uint_j : inf->count;
+//		while (inf->count > 0 && c != '\0')
+//		{
+//			inf->result += write(1, " ", 1);
+//			inf->count--;
+//		}
+//		ft_putwchar(c, inf);
+//	}
+//	else if (flag->precision == 1)
+//		ft_putwchar(c, inf);
+//	else if (flag->width == 0 && flag->precision == 0 && flag->space == 0 && flag->plus == 0)
+//		ft_putwchar(c, inf);
+}

@@ -155,6 +155,9 @@
 		<Unit filename="/Users/amasol/amasol/project/ft_printf/srcs/ft_strdel.c">
 			<Option target="ft_printf"/>
 		</Unit>
+		<Unit filename="/Users/amasol/amasol/project/ft_printf/srcs/ft_strdup.c">
+			<Option target="ft_printf"/>
+		</Unit>
 		<Unit filename="/Users/amasol/amasol/project/ft_printf/srcs/ft_strlen.c">
 			<Option target="ft_printf"/>
 		</Unit>
@@ -162,6 +165,9 @@
 			<Option target="ft_printf"/>
 		</Unit>
 		<Unit filename="/Users/amasol/amasol/project/ft_printf/srcs/ft_strnew.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/amasol/amasol/project/ft_printf/srcs/ft_strrev.c">
 			<Option target="ft_printf"/>
 		</Unit>
 		<Unit filename="/Users/amasol/amasol/project/ft_printf/srcs/ft_strsub.c">

@@ -39,5 +39,7 @@ add_executable(ft_printf
         srcs/no_spec.c
         srcs/ft_strchr.c
         srcs/ft_putwchar.c
-        srcs/ft_lenwchar.c)
+        srcs/ft_lenwchar.c
+        srcs/ft_strrev.c
+        srcs/ft_strdup.c)
 #        print_test.c)

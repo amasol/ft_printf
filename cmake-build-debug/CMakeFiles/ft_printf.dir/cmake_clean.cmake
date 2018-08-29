@@ -31,6 +31,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/ft_printf.dir/srcs/ft_strchr.c.o"
   "CMakeFiles/ft_printf.dir/srcs/ft_putwchar.c.o"
   "CMakeFiles/ft_printf.dir/srcs/ft_lenwchar.c.o"
+  "CMakeFiles/ft_printf.dir/srcs/ft_strrev.c.o"
+  "CMakeFiles/ft_printf.dir/srcs/ft_strdup.c.o"
   "ft_printf.pdb"
   "ft_printf"
 )

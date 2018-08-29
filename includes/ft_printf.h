@@ -108,7 +108,8 @@ void			cast_flag_Ddi(t_inf *inf, intmax_t i, t_flag *flag, char *format);
 void			cast_flag_Uu(t_inf *inf, uintmax_t i, t_flag *flag, char *format);
 void			cast_flag_Xx(t_inf *inf, uintmax_t i, t_flag *flag, char *str);
 void			cast_flag_Oo(t_inf *inf, uintmax_t i, t_flag *flag, char *str);
-void			cast_flag_Ss(t_inf *inf, t_flag *flag, char *format);
+void			cast_flag_s(t_inf *inf, t_flag *flag, char *format);
+void			cast_flag_S(t_inf *inf, t_flag *flag, wchar_t *str);
 void			cast_flag_c(t_inf *inf, t_flag *flag, char format);
 void			cast_flag_C(t_inf *inf, t_flag *flag, wchar_t c);
 void			cast_flag_p(t_inf *inf, uintmax_t i, t_flag *flag, char *format);
@@ -123,7 +124,8 @@ void			cancellation_flags_Oo(t_flag *flag, t_inf *inf);
 //-------------------------специфыкаторы
 int				ft_refinement(char s);
 int				ft_flag_Ddi(va_list lst, char *format, t_flag *flag, t_inf *inf);
-int				ft_flag_Ss(va_list lst, char *format, t_flag *flag, t_inf *inf);
+int				ft_flag_s(va_list lst, char *format, t_flag *flag, t_inf *inf);
+int				ft_flag_S(va_list lst, char *format, t_flag *flag, t_inf *inf);
 int				ft_flag_c(va_list lst, char *format, t_flag *flag, t_inf *inf);
 int				ft_flag_C(va_list lst, char *format, t_flag *flag, t_inf *inf);
 int				ft_flag_Xx(va_list lst, char *format, t_flag *flag, t_inf *inf);
@@ -181,5 +183,7 @@ int		ft_isspace(int c);
 char	*ft_strchr(const char *str, int ch);
 void	ft_putwchar(wchar_t c, t_inf *inf);
 int		ft_lenwchar(wchar_t c);
+char	*ft_strrev(const char *s);
+char	*ft_strdup(const char *src);
 
 #endif

@@ -32,21 +32,21 @@ static	int		count(intmax_t nbr, int base)
 	return (i);
 }
 
-//static	void		ft_bukv_b(intmax_t nbr, int len, char *str)
-//{
-//	if (nbr == 10)
-//		str[len] = 'A';
-//	if (nbr == 11)
-//		str[len] = 'B';
-//	if (nbr == 12)
-//		str[len] = 'C';
-//	if (nbr == 13)
-//		str[len] = 'D';
-//	if (nbr == 14)
-//		str[len] = 'E';
-//	if (nbr == 15)
-//		str[len] = 'F';
-//}
+////static	void		ft_bukv_b(intmax_t nbr, int len, char *str)
+////{
+////	if (nbr == 10)
+////		str[len] = 'A';
+////	if (nbr == 11)
+////		str[len] = 'B';
+////	if (nbr == 12)
+////		str[len] = 'C';
+////	if (nbr == 13)
+////		str[len] = 'D';
+////	if (nbr == 14)
+////		str[len] = 'E';
+////	if (nbr == 15)
+////		str[len] = 'F';
+////}
 
 static	void		ft_bukv_m(intmax_t nbr, int len, char *str)
 {

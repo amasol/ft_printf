@@ -24,9 +24,19 @@ void		pars_spec(char *format, va_list lst, t_flag *flag, t_inf *inf)
 			if (ft_refinement(format[i]) == 1)
 				ft_flag_Ddi(lst, &format[i], flag, inf);
 			else if (ft_refinement(format[i]) == 2)
-				ft_flag_c(lst, &format[i], flag, inf);
+			{
+				if (format[i] == 'c' || (*format == 'c' && flag->l == 1))
+					ft_flag_c(lst, &format[i], flag, inf);
+				else
+				ft_flag_C(lst, &format[i], flag, inf);
+			}
 			else if (ft_refinement(format[i]) == 3)
-				ft_flag_Ss(lst, &format[i], flag, inf);
+			{
+				if (format[i] == 's' || (*format == 's' && flag->l == 1))
+					ft_flag_s(lst, &format[i], flag, inf);
+				else
+					ft_flag_S(lst, &format[i], flag, inf);
+			}
 			else if (ft_refinement(format[i]) == 4)
 				ft_flag_Xx(lst, &format[i], flag, inf);
 			else if (ft_refinement(format[i]) == 5)
@@ -98,7 +108,7 @@ int			ft_flag_Ddi(va_list lst, char *format, t_flag *flag, t_inf *inf)
 int			ft_flag_c(va_list lst, char *format, t_flag *flag, t_inf *inf)
 {
 	unsigned char	str;
-	wchar_t			c;
+//	wchar_t			c;
 
 	if (*format == 'c' || (*format == 'C' && MB_LEN_MAX == 1))
 	{
@@ -108,8 +118,8 @@ int			ft_flag_c(va_list lst, char *format, t_flag *flag, t_inf *inf)
 			return (1);
 		}
 		else if (*format == 'C' && MB_LEN_MAX == 1)
-			c = va_arg(lst, wchar_t);
-		else
+//			c = va_arg(lst, wchar_t);
+//		else
 			str = va_arg(lst, unsigned int);
 		flag->ban = 1;
 		inf->uint_j += 1;
@@ -132,7 +142,7 @@ int			ft_flag_c(va_list lst, char *format, t_flag *flag, t_inf *inf)
 		 ft_flag_c(lst, format, flag, inf);
 		 return (1);
 	 }
-	 if (*format == 'C' || (*format == 'c' && flag->l == 1))
+	 else if (*format == 'C' || (*format == 'c' && flag->l == 1))
 	 {
 		 c = va_arg(lst, wchar_t);
 		 cast_flag_C(inf, flag, c);
@@ -140,30 +150,39 @@ int			ft_flag_c(va_list lst, char *format, t_flag *flag, t_inf *inf)
 	 return (1);
  }
 
-// Если указан модификатор l, то строка интерпитируется как wchar_t*.
-// Для функции wprintf строка по умолчанию обрабатывается как wchar_t*.
-
-int			ft_flag_Ss(va_list lst, char *format, t_flag *flag, t_inf *inf)
+int			ft_flag_s(va_list lst, char *format, t_flag *flag, t_inf *inf)
 {
-	int 	i;
-	char	*str;
+	int i;
+	char *str;
 //	wchar_t	*sstr;
 
 	i = 0;
-	if (format[i] == 's')
+	if (format[i] == 's' || (*format == 'S' && MB_LEN_MAX == 1))
 	{
-		str = va_arg(lst, char *);
-		if (str == NULL)
+//		if (str == NULL)
+//		{
+//			cast_flag_s(inf, flag, str);
+//			return (1);
+//		}
+		if (flag->l == 1)
 		{
-			cast_flag_Ss(inf, flag, str);
+			ft_flag_S(lst, format, flag, inf);
 			return (1);
 		}
+		else if (*format == 'S' && MB_LEN_MAX == 1)
+			str = va_arg(lst, char *);
+		else
+			str = va_arg(lst, char *);
 		flag->ban = ft_strlen(str);
 		inf->uint_j += ft_strlen(str);
-		cast_flag_Ss(inf, flag, str);
+		cast_flag_s(inf, flag, str);
 	}
-//	else if (format[i] == 'S')
-//	{
+	return (1);
+}
+
+int		ft_flag_S(va_list lst, char *format, t_flag *flag, t_inf *inf)
+
+	//	else if (format[i] == 'S')
 	//	посмотреть приминение ft_putstr c wchar_t!!!!!
 
 
@@ -173,9 +192,23 @@ int			ft_flag_Ss(va_list lst, char *format, t_flag *flag, t_inf *inf)
 //		if (LY)
 //			entry_minus_uint(inf, flag);
 //		cast_flag_Ss(inf, flag, sstr);
-//	}
-	return (1);
-}
+	{
+		wchar_t		*sstr;
+
+		if (*format == 'S' && MB_LEN_MAX == 1)
+		{
+			ft_flag_s(lst, format, flag, inf);
+			return (1);
+		}
+		else if (*format == 'S' || (*format == 's' && flag->l == 1))
+		{
+			sstr = va_arg(lst, wchar_t *);
+			flag->ban = ft_strlen((char *)sstr);
+			inf->uint_j += ft_strlen((char *)sstr);
+			cast_flag_S(inf, flag, sstr);
+		}
+		return (1);
+	}
 
 int			ft_flag_Xx(va_list lst, char *format, t_flag *flag, t_inf *inf)
 {

@@ -771,6 +771,33 @@ srcs/ft_strdel.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/ft_strdel.c.s
 .PHONY : srcs/ft_strdel.c.s
 
+srcs/ft_strdup.o: srcs/ft_strdup.c.o
+
+.PHONY : srcs/ft_strdup.o
+
+# target to build an object file
+srcs/ft_strdup.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/ft_strdup.c.o
+.PHONY : srcs/ft_strdup.c.o
+
+srcs/ft_strdup.i: srcs/ft_strdup.c.i
+
+.PHONY : srcs/ft_strdup.i
+
+# target to preprocess a source file
+srcs/ft_strdup.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/ft_strdup.c.i
+.PHONY : srcs/ft_strdup.c.i
+
+srcs/ft_strdup.s: srcs/ft_strdup.c.s
+
+.PHONY : srcs/ft_strdup.s
+
+# target to generate assembly for a file
+srcs/ft_strdup.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/ft_strdup.c.s
+.PHONY : srcs/ft_strdup.c.s
+
 srcs/ft_strlen.o: srcs/ft_strlen.c.o
 
 .PHONY : srcs/ft_strlen.o
@@ -851,6 +878,33 @@ srcs/ft_strnew.s: srcs/ft_strnew.c.s
 srcs/ft_strnew.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/ft_strnew.c.s
 .PHONY : srcs/ft_strnew.c.s
+
+srcs/ft_strrev.o: srcs/ft_strrev.c.o
+
+.PHONY : srcs/ft_strrev.o
+
+# target to build an object file
+srcs/ft_strrev.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/ft_strrev.c.o
+.PHONY : srcs/ft_strrev.c.o
+
+srcs/ft_strrev.i: srcs/ft_strrev.c.i
+
+.PHONY : srcs/ft_strrev.i
+
+# target to preprocess a source file
+srcs/ft_strrev.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/ft_strrev.c.i
+.PHONY : srcs/ft_strrev.c.i
+
+srcs/ft_strrev.s: srcs/ft_strrev.c.s
+
+.PHONY : srcs/ft_strrev.s
+
+# target to generate assembly for a file
+srcs/ft_strrev.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/ft_strrev.c.s
+.PHONY : srcs/ft_strrev.c.s
 
 srcs/ft_strsub.o: srcs/ft_strsub.c.o
 
@@ -1068,6 +1122,9 @@ help:
 	@echo "... srcs/ft_strdel.o"
 	@echo "... srcs/ft_strdel.i"
 	@echo "... srcs/ft_strdel.s"
+	@echo "... srcs/ft_strdup.o"
+	@echo "... srcs/ft_strdup.i"
+	@echo "... srcs/ft_strdup.s"
 	@echo "... srcs/ft_strlen.o"
 	@echo "... srcs/ft_strlen.i"
 	@echo "... srcs/ft_strlen.s"
@@ -1077,6 +1134,9 @@ help:
 	@echo "... srcs/ft_strnew.o"
 	@echo "... srcs/ft_strnew.i"
 	@echo "... srcs/ft_strnew.s"
+	@echo "... srcs/ft_strrev.o"
+	@echo "... srcs/ft_strrev.i"
+	@echo "... srcs/ft_strrev.s"
 	@echo "... srcs/ft_strsub.o"
 	@echo "... srcs/ft_strsub.i"
 	@echo "... srcs/ft_strsub.s"

@@ -238,14 +238,27 @@ void	cast_flag_C(t_inf *inf, t_flag *flag, wchar_t c)
 	else if (flag->width == 1 && flag->precision == 1 && flag->check_precision == 1)
 	{
 		inf->count = (inf->uint_j < inf->width) ? inf->width - inf->uint_j : inf->result;
-		while (inf->count > 0)
+		while (inf->count > 0 && c != '\0')
 		{
 			inf->result += write(1, " ", 1);
 			inf->count--;
 		}
 		ft_putwchar(c, inf);
 	}
-	if (flag->width == 0 && flag->precision == 0)
+	else if (flag->space == 1 || flag->plus == 1)
+	{
+//		inf->count = (inf->uint_j < inf->width) ? inf->width - inf->uint_j : inf->result;
+		inf->count = (inf->uint_j < inf->width) ? inf->width - inf->uint_j : inf->count;
+		while (inf->count > 0 && c != '\0')
+		{
+			inf->result += write(1, " ", 1);
+			inf->count--;
+		}
+		ft_putwchar(c, inf);
+	}
+	else if (flag->precision == 1)
+		ft_putwchar(c, inf);
+	else if (flag->width == 0 && flag->precision == 0 && flag->space == 0 && flag->plus == 0)
 		ft_putwchar(c, inf);
 
 

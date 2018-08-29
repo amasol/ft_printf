@@ -1580,15 +1580,21 @@ int		 main	(void)
 //	printf("\n|len=%i", printf("%5.0x", 0));
 
 
-//	ft_printf("%.1s", "asd");
+//	ft_printf("[%+s]", 0);
+//	printf("[%+s]", 0);
 
 	setlocale(LC_ALL, "");
 
 //	wchar_t *c = L"α";
 
+	ft_printf("%S", L"αααααα");
+	printf("%S", L"αααααα");
 
-	ft_printf("% C", L'α');
-	ft_printf("% C", L'α');
+//	ft_printf("{% C}", L'α');
+//	printf("{% C}", L'α');
+
+//	ft_printf("%lc, %lc", L'ÊM-^ZM-^V', L'ÿ≠');
+//	printf("\n%lc, %lc", L'ÊM-^ZM-^V', L'ÿ≠');
 //	printf("\n%5.C", L'α');
 
 
