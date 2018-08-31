@@ -73,6 +73,9 @@ CMakeFiles/ft_printf.dir/srcs/ft_strchr.c.o: ../srcs/ft_strchr.c
 CMakeFiles/ft_printf.dir/srcs/ft_strdel.c.o: ../includes/ft_printf.h
 CMakeFiles/ft_printf.dir/srcs/ft_strdel.c.o: ../srcs/ft_strdel.c
 
+CMakeFiles/ft_printf.dir/srcs/ft_strdup.c.o: ../includes/ft_printf.h
+CMakeFiles/ft_printf.dir/srcs/ft_strdup.c.o: ../srcs/ft_strdup.c
+
 CMakeFiles/ft_printf.dir/srcs/ft_strlen.c.o: ../includes/ft_printf.h
 CMakeFiles/ft_printf.dir/srcs/ft_strlen.c.o: ../srcs/ft_strlen.c
 
@@ -81,6 +84,9 @@ CMakeFiles/ft_printf.dir/srcs/ft_strlen_uintmax.c.o: ../srcs/ft_strlen_uintmax.c
 
 CMakeFiles/ft_printf.dir/srcs/ft_strnew.c.o: ../includes/ft_printf.h
 CMakeFiles/ft_printf.dir/srcs/ft_strnew.c.o: ../srcs/ft_strnew.c
+
+CMakeFiles/ft_printf.dir/srcs/ft_strrev.c.o: ../includes/ft_printf.h
+CMakeFiles/ft_printf.dir/srcs/ft_strrev.c.o: ../srcs/ft_strrev.c
 
 CMakeFiles/ft_printf.dir/srcs/ft_strsub.c.o: ../includes/ft_printf.h
 CMakeFiles/ft_printf.dir/srcs/ft_strsub.c.o: ../srcs/ft_strsub.c

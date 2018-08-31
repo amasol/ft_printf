@@ -13,15 +13,27 @@
 #include "../includes/ft_printf.h"
 
 
-int				ft_lenwchar(wchar_t c)
+int				ft_lenwchar(wchar_t c, t_inf *inf)
 {
 	if (c <= 0x7F)
+	{
+//		inf->uint_j += 1;
 		return (1);
+	}
 	else if (c <= 0x7FF)
+	{
+//		inf->uint_j += 2;
 		return (2);
+	}
 	else if (c <= 0xFFFF)
+	{
+//		inf->uint_j += 3;
 		return (3);
+	}
 	else if (c <= 0x10FFFF)
+	{
+//		inf->uint_j += 4;
 		return (4);
+	}
 	return (0);
 }

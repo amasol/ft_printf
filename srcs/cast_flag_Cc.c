@@ -221,7 +221,7 @@ void	cast_flag_c(t_inf *inf, t_flag *flag, char str)
 
 void	cast_flag_C(t_inf *inf, t_flag *flag, wchar_t c)
 {
-	inf->uint_j = ft_lenwchar(c);
+	inf->uint_j = ft_lenwchar(c, inf);
 
 	//без точности
 	if (flag->width == 1 && flag->precision == 0)

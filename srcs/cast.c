@@ -1,7 +1,7 @@
 
 #include "../includes/ft_printf.h"
 
-intmax_t		cast_intmax(intmax_t i, t_flag *flag)
+intmax_t		cast_intmax(intmax_t i, t_flag *flag, t_inf *inf)
 {
 	if (flag->z == 1)
 		return ((size_t)i);
@@ -19,9 +19,9 @@ intmax_t		cast_intmax(intmax_t i, t_flag *flag)
 }
 
 
-uintmax_t		cast_uintmax(uintmax_t i, t_flag *flag)
+uintmax_t		cast_uintmax(uintmax_t i, t_flag *flag, t_inf *inf)
 {
-	if (flag->z)
+	if (flag->z )
 		return ((size_t)i);
 	if (flag->j)
 		return ((uintmax_t)i);

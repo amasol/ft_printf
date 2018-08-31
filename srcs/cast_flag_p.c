@@ -39,12 +39,23 @@ void			cast_flag_p(t_inf *inf, uintmax_t i, t_flag *flag, char *str)
 		}
 	}
 
+	else if (flag->zero == 1 && inf->width_two == 0 && flag->precision == 0)
+	{
+		inf->count += 1;
+		inf->result += write(1, "0x", 2);
+		while (inf->count > 0)
+		{
+			inf->result += write(1, "0", 1);
+			inf->count--;
+		}
+	}
+
 //		флан zero
 	else if (flag->zero == 1)
 	{
 //		if (flag->plus == 1 || inf->tmp == 1)
 //			inf->result += write(1, "+", 1);
-
+//		inf->count += 1;
 		inf->result += write(1, "0x", 2);
 		while (inf->count > 0)
 		{

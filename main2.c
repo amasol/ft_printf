@@ -1587,19 +1587,35 @@ int		 main	(void)
 
 //	wchar_t *c = L"α";
 
-	ft_printf("%S", L"αααααα");
-	printf("%S", L"αααααα");
+//	ft_printf("%ls, %ls", L"ÊM-^ZM-^VÁM-^BM-^I", L"ŸM-^Dÿ≠ŸM-^E ÿÆŸM-^Fÿ≤ŸM-ÿ±");
+//	printf("\n%ls, %ls", L"ÊM-^ZM-^VÁM-^BM-^I", L"ŸM-^Dÿ≠ŸM-^E ÿÆŸM-^Fÿ≤ŸM-ÿ±");
 
-//	ft_printf("{% C}", L'α');
-//	printf("{% C}", L'α');
+//	ft_printf("{% S}", L"(null)");
+//	printf("\n{% S}", L"(null)");
+
+
+//	ft_printf("%s, %s", "asdfghfdsafgbngfdgb","asdfghfefghfefdgbn");
+//	printf("\n%s, %s", "asdfghfdsafgbngfdgb","asdfghfefghfefdgbn");
+
+//	printf("%d\n", ft_printf("%15.4S\n", L"ÊM-M-^QÊM-^XØ‰∏M-ÂM-^O™ÁM-^L´„M-M-^B"));
+//	printf("%d\n",printf("%15.4S\n", L"ÊM-M-^QÊM-^XØ‰∏M-ÂM-^O™ÁM-^L´„M-M-^B"));
+
+//	ft_printf("{%10R}");
+//	printf("\n{%10R}");
+
+	ft_printf("%x", "wesdfgd");
+//	printf("\n% );
 
 //	ft_printf("%lc, %lc", L'ÊM-^ZM-^V', L'ÿ≠');
 //	printf("\n%lc, %lc", L'ÊM-^ZM-^V', L'ÿ≠');
 //	printf("\n%5.C", L'α');
 
 
-//	ft_printf("|len=%i", ft_printf("\n%10C", L'α'));
-//	printf("|len=%i", printf("\n%10C", L'α'));
+//	ft_printf("|len=[%i]", ft_printf("%15.4S", L"ÊM-M-^QÊM-^XØ‰∏M-ÂM-^O™ÁM-^L´„M-M-^B\n"));
+//	printf("|len=[%i]", printf("%15.4S", L"ÊM-M-^QÊM-^XØ‰∏M-ÂM-^O™ÁM-^L´„M-M-^B\n"));
+
+//	ft_printf("|len=[%i]", ft_printf("{%05.Z}", 0));
+//	printf("|len=[%i]", printf("{%05.Z}", 0));
 
 	return (0);
 }

@@ -73,6 +73,9 @@ CMakeFiles/ft_printf.dir/srcs/ft_strchr.c.o
 CMakeFiles/ft_printf.dir/srcs/ft_strdel.c.o
  /Users/amasol/amasol/project/ft_printf/includes/ft_printf.h
  /Users/amasol/amasol/project/ft_printf/srcs/ft_strdel.c
+CMakeFiles/ft_printf.dir/srcs/ft_strdup.c.o
+ /Users/amasol/amasol/project/ft_printf/includes/ft_printf.h
+ /Users/amasol/amasol/project/ft_printf/srcs/ft_strdup.c
 CMakeFiles/ft_printf.dir/srcs/ft_strlen.c.o
  /Users/amasol/amasol/project/ft_printf/includes/ft_printf.h
  /Users/amasol/amasol/project/ft_printf/srcs/ft_strlen.c
@@ -82,6 +85,9 @@ CMakeFiles/ft_printf.dir/srcs/ft_strlen_uintmax.c.o
 CMakeFiles/ft_printf.dir/srcs/ft_strnew.c.o
  /Users/amasol/amasol/project/ft_printf/includes/ft_printf.h
  /Users/amasol/amasol/project/ft_printf/srcs/ft_strnew.c
+CMakeFiles/ft_printf.dir/srcs/ft_strrev.c.o
+ /Users/amasol/amasol/project/ft_printf/includes/ft_printf.h
+ /Users/amasol/amasol/project/ft_printf/srcs/ft_strrev.c
 CMakeFiles/ft_printf.dir/srcs/ft_strsub.c.o
  /Users/amasol/amasol/project/ft_printf/includes/ft_printf.h
  /Users/amasol/amasol/project/ft_printf/srcs/ft_strsub.c

@@ -15,6 +15,8 @@ static	int		count(uintmax_t nbr, unsigned base)
 	}
 	return (i);
 }
+
+
 /*
 ////static	void		ft_bukv_b(uintmax_t nbr, int len, char *str)
 //{
@@ -82,13 +84,9 @@ static	void		transform(uintmax_t nbr, int len, unsigned base, char *str)
 		str[len] = nbr % base + 48;
 }
 
-/*
- ** leaks here
- */
 
 char			*ft_itoa_base_uintmax(uintmax_t nbr, unsigned base, char c)
 {
-	/* leaks here */
 	char	*str;
 	int		len;
 
@@ -100,3 +98,4 @@ char			*ft_itoa_base_uintmax(uintmax_t nbr, unsigned base, char c)
 	transform_b(str, c);
 	return (str);
 }
+

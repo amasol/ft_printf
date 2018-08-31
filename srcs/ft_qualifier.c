@@ -15,7 +15,7 @@
 			//спецификаторы
 int			ft_qualifier(char s)
 {
-	if (s == 's' || s == 'S'
+	if (s == 's' || s == 'S' || s == 'Z'
 		|| s == 'p' || s == 'd'
 		|| s == 'P' || s == 'i'
 		|| s == 'o' || s == 'O'
@@ -51,11 +51,16 @@ int			ft_refinement(char s)
 }
 
 
-void				output_after(char *format, t_inf *inf)
+int				output_after(char *format, va_list lst, t_flag *flag, t_inf *inf)
 {
 	int i;
 
 	i = 0;
+	if (format[i] == 'Z')
+	{
+		pars_hi_z(&format[i], flag, inf, lst);
+		return (1);
+	}
 	while (ft_isdigit(format[i]) || (format[i] == '-') || (format[i] == '+')
 		   || ft_flag_check(format[i]) || (format[i] == ' ') || (format[i] == '.'))
 		i++;
@@ -67,6 +72,7 @@ void				output_after(char *format, t_inf *inf)
 		i++;
 	}
 	inf->count_format = i;
+	return (1);
 }
 
 //-------------------проверить отдельно функцию ....
@@ -74,7 +80,7 @@ void				output_after(char *format, t_inf *inf)
 
 int			ft_flag_check(char c)
 {
-	if (c == '+' || c == '-'
+	if (c == '+' || c == '-' || c == 'Z'
 		|| c == '#' || c == '.'
 		|| c == ' ' || c == 'h'
 		|| c == 'j' || c == 'z'

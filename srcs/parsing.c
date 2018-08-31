@@ -46,7 +46,7 @@ void				parsing(char *str, va_list lst, t_inf *inf)
 	}
 	if (ft_qualifier(str[i]))
 		pars_spec(&str[i], lst, &flag, inf);
-	output_after(&str[i], inf);
+	output_after(&str[i], lst, &flag, inf);
 	inf->count_format += i;
 }
 
@@ -61,6 +61,7 @@ void			initialization_flag(t_flag *flag, t_inf *inf)
 	flag->precision			= 0;
 	flag->check_precision	= 0;
 	flag->zero_precision	= 0;
+	flag->Z					= 0;
 
 	flag->hh 				= 0;
 	flag->h 				= 0;
@@ -92,6 +93,8 @@ void			parsing_one(char *str, t_flag *flag)
 	i = 0;
 	while (str[i])
 	{
+		if (str[i] == 'Z')
+			flag->Z = 1;
 		if (str[i] == '+')
 			flag->plus = 1;
 		if (str[i] == '-')
@@ -119,7 +122,7 @@ void			parsing_two(char *str, t_flag *flag)
 
 	i = 0;
 	// поменять местами по приоритетности с z по hh
-	while (str[i])
+	while (str[i] && str[i] != '%')
 	{
 		if (str[i] == 'h' && str[i + 1] == 'h')
 		{

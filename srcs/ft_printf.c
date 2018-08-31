@@ -70,6 +70,7 @@ int				ft_printf(const char *format, ...)
 //					format++;
 				else if (ft_qualifier(*format))
 					format++;
+//				else if (*format != 'Z')
 				else
 				{
 					ft_putchar(*format);

@@ -30,7 +30,7 @@ void		cast_flag_Oo(t_inf *inf, uintmax_t i, t_flag *flag, char *str)
 		}
 	}
 
-	else if (flag->slash == 1)
+	else if (flag->slash == 1 && flag->precision == 0)
 	{
 		inf->count -= 1;
 		while (inf->count > 0 && flag->minus != 1)
