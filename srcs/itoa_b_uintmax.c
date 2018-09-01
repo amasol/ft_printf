@@ -1,7 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   itoa_b_uintmax.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: amasol <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/08/31 15:51:56 by amasol            #+#    #+#             */
+/*   Updated: 2018/08/31 15:51:57 by amasol           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
 
-static	int		count(uintmax_t nbr, unsigned base)
+static	int		cou(uintmax_t nbr, unsigned base)
 {
 	int i;
 	uintmax_t tmp;
@@ -15,25 +26,6 @@ static	int		count(uintmax_t nbr, unsigned base)
 	}
 	return (i);
 }
-
-
-/*
-////static	void		ft_bukv_b(uintmax_t nbr, int len, char *str)
-//{
-////	if (nbr == 10)
-////		str[len] = 'A';
-////	if (nbr == 11)
-////		str[len] = 'B';
-////	if (nbr == 12)
-////		str[len] = 'C';
-////	if (nbr == 13)
-////		str[len] = 'D';
-////	if (nbr == 14)
-////		str[len] = 'E';
-////	if (nbr == 15)
-////		str[len] = 'F';
-////}
-*/
 
 static	void		transform_b(char *str, char c)
 {
@@ -84,13 +76,12 @@ static	void		transform(uintmax_t nbr, int len, unsigned base, char *str)
 		str[len] = nbr % base + 48;
 }
 
-
 char			*ft_itoa_base_uintmax(uintmax_t nbr, unsigned base, char c)
 {
 	char	*str;
 	int		len;
 
-	len = count(nbr, base);
+	len = cou(nbr, base);
 	if (!(str = (char *)malloc(sizeof(char) * (len + 1))))
 		return (NULL);
 	str[len--] = '\0';
@@ -98,4 +89,3 @@ char			*ft_itoa_base_uintmax(uintmax_t nbr, unsigned base, char c)
 	transform_b(str, c);
 	return (str);
 }
-

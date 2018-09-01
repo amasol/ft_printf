@@ -126,6 +126,10 @@ stdio.h
 ../includes/ft_printf.h
 /Users/amasol/amasol/project/ft_printf/includes/ft_printf.h
 
+/Users/amasol/amasol/project/ft_printf/srcs/ft_putstr_len.c
+../includes/ft_printf.h
+/Users/amasol/amasol/project/ft_printf/includes/ft_printf.h
+
 /Users/amasol/amasol/project/ft_printf/srcs/ft_putwchar.c
 ../includes/ft_printf.h
 /Users/amasol/amasol/project/ft_printf/includes/ft_printf.h
@@ -134,15 +138,7 @@ stdio.h
 ../includes/ft_printf.h
 /Users/amasol/amasol/project/ft_printf/includes/ft_printf.h
 
-/Users/amasol/amasol/project/ft_printf/srcs/ft_strchr.c
-../includes/ft_printf.h
-/Users/amasol/amasol/project/ft_printf/includes/ft_printf.h
-
 /Users/amasol/amasol/project/ft_printf/srcs/ft_strdel.c
-../includes/ft_printf.h
-/Users/amasol/amasol/project/ft_printf/includes/ft_printf.h
-
-/Users/amasol/amasol/project/ft_printf/srcs/ft_strdup.c
 ../includes/ft_printf.h
 /Users/amasol/amasol/project/ft_printf/includes/ft_printf.h
 
@@ -158,15 +154,7 @@ stdio.h
 ../includes/ft_printf.h
 /Users/amasol/amasol/project/ft_printf/includes/ft_printf.h
 
-/Users/amasol/amasol/project/ft_printf/srcs/ft_strrev.c
-../includes/ft_printf.h
-/Users/amasol/amasol/project/ft_printf/includes/ft_printf.h
-
 /Users/amasol/amasol/project/ft_printf/srcs/ft_strsub.c
-../includes/ft_printf.h
-/Users/amasol/amasol/project/ft_printf/includes/ft_printf.h
-
-/Users/amasol/amasol/project/ft_printf/srcs/itoa_b.c
 ../includes/ft_printf.h
 /Users/amasol/amasol/project/ft_printf/includes/ft_printf.h
 

@@ -22,7 +22,6 @@ add_executable(ft_printf
         includes/ft_printf.h
         srcs/ft_qualifier.c
 #        main.c
-        srcs/itoa_b.c
         srcs/itoa_b_uintmax.c
         srcs/parsing.c
         srcs/ft_putnbr_long.c
@@ -37,9 +36,7 @@ add_executable(ft_printf
         main2.c
         srcs/ft_strlen_uintmax.c
         srcs/no_spec.c
-        srcs/ft_strchr.c
         srcs/ft_putwchar.c
         srcs/ft_lenwchar.c
-        srcs/ft_strrev.c
-        srcs/ft_strdup.c)
+        srcs/ft_putstr_len.c)
 #        print_test.c)

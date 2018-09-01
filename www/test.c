@@ -4,7 +4,7 @@
 #include <stdlib.h>
 
 
-static	int		count(long num, int base)
+static	int		cou(long num, int base)
 {
 	int i;
 
@@ -79,7 +79,7 @@ char			*ft_itoa_base(int num, int base)
 	int		len;
 
 	nbr = num;
-	len = count(nbr, base);
+	len = cou(nbr, base);
 	if (!(str = (char *)malloc(sizeof(char) * (len + 1))))
 		return (NULL);
 	if (nbr < 0 && base == 10)

@@ -52,23 +52,10 @@ void		pars_spec(char *format, va_list lst, t_flag *flag, t_inf *inf)
 	}
 }
 
-//if (flag->h == 1)
-//{
-//	i = (unsigned char)va_arg(lst, int);
-//	ft_putnbr(i);
-//}
-
-//if (c == 'd' || c == 'i')
-//{
-	//i = (CAST) ? (ft_cast_to_signed(i, f)) : (int)i;
-	//return (ft_collect_for_decimal(i, f));
-//}
-
 int			ft_flag_Ddi(va_list lst, char *format, t_flag *flag, t_inf *inf)
 {
 	int 			k;
-	intmax_t 	j;
-//	unsigned short 	j;
+	intmax_t 		j;
 	intmax_t		i;
 
 	j = 0;
@@ -78,10 +65,10 @@ int			ft_flag_Ddi(va_list lst, char *format, t_flag *flag, t_inf *inf)
 	{
 		i = va_arg(lst, intmax_t);
 		i = (APPLY) ? (cast_intmax(i, flag, inf)) : (int)i;
-		i = minus_value_Ddi(i, flag, inf);
+		i = min_v_Ddi(i, flag, inf);
 		cancellation_flags_Ddi(flag, inf);
 		if (LY)
-			entry_minus_intm(i, inf, flag);
+			entry_min_intm(i, inf, flag);
 		cast_flag_Ddi(inf, i, flag, format);
 	}
 	if (format[k] == 'D')
@@ -89,18 +76,13 @@ int			ft_flag_Ddi(va_list lst, char *format, t_flag *flag, t_inf *inf)
 		if (flag->hh)
 			j = (unsigned short)va_arg(lst, int);
 		else
-		{
-//			j = (intmax_t)va_arg(lst, long);
 			j = va_arg(lst, long);
-//			j = (APPLY) ? (cast_uintmax(j, flag)) : (long)j;
-		}
-		minus_value_Ddi(j, flag, inf);
+		min_v_Ddi(j, flag, inf);
 		cancellation_flags_Ddi(flag, inf);
 		if (LY)
-			entry_minus_intm(j, inf, flag);
+			entry_min_intm(j, inf, flag);
 		cast_flag_Ddi(inf, j, flag, format);
 	}
-//	flag->ban = 1;
 	 return (1);
 }
 
@@ -108,7 +90,6 @@ int			ft_flag_Ddi(va_list lst, char *format, t_flag *flag, t_inf *inf)
 int			ft_flag_c(va_list lst, char *format, t_flag *flag, t_inf *inf)
 {
 	unsigned char	str;
-//	wchar_t			c;
 
 	if (*format == 'c' || (*format == 'C' && MB_LEN_MAX == 1))
 	{
@@ -132,8 +113,6 @@ int			ft_flag_c(va_list lst, char *format, t_flag *flag, t_inf *inf)
 //	придумать как сделать если нету локали но есть юникод, вызвать снова (с)!
 //	if (*format == 'C' && MB_LEN_MAX == 1)
 //		;
-
-//ft_flag_c(lst, &format[i], flag, inf);
  int			ft_flag_C(va_list lst, char *format, t_flag *flag, t_inf *inf)
  {
 	 wchar_t c;
@@ -155,7 +134,6 @@ int			ft_flag_s(va_list lst, char *format, t_flag *flag, t_inf *inf)
 {
 	int i;
 	char *str;
-//	wchar_t	*sstr;
 
 	i = 0;
 	if (format[i] == 's' || (*format == 'S' && MB_LEN_MAX == 1))
@@ -174,7 +152,6 @@ int			ft_flag_s(va_list lst, char *format, t_flag *flag, t_inf *inf)
 			cast_flag_s(inf, flag, str);
 			return (1);
 		}
-		flag->ban = ft_strlen(str);
 		inf->uint_j += ft_strlen(str);
 		cast_flag_s(inf, flag, str);
 	}
@@ -182,38 +159,35 @@ int			ft_flag_s(va_list lst, char *format, t_flag *flag, t_inf *inf)
 }
 
 int		ft_flag_S(va_list lst, char *format, t_flag *flag, t_inf *inf)
-	{
-		wchar_t		*sstr;
+{
+	wchar_t		*sstr;
 
-		if (*format == 'S' && MB_LEN_MAX == 1)
-		{
-			ft_flag_s(lst, format, flag, inf);
-			return (1);
-		}
-		else if (*format == 'S' || (*format == 's' && flag->l == 1))
-		{
-			sstr = va_arg(lst, wchar_t *);
-			if (sstr == NULL)
-			{
-				cast_flag_S(inf, flag, sstr);
-				return (1);
-			}
-//			flag->ban = ft_strlen((char *)sstr);
-//			inf->uint_j += ft_strlen((char *)sstr);
-			cast_flag_S(inf, flag, sstr);
-		}
+	if (*format == 'S' && MB_LEN_MAX == 1)
+	{
+		ft_flag_s(lst, format, flag, inf);
 		return (1);
 	}
+	else if (*format == 'S' || (*format == 's' && flag->l == 1))
+	{
+		sstr = va_arg(lst, wchar_t *);
+		if (sstr == NULL)
+		{
+			cast_flag_S(inf, flag, sstr);
+			return (1);
+		}
+		cast_flag_S(inf, flag, sstr);
+	}
+	return (1);
+}
 
 int			ft_flag_Xx(va_list lst, char *format, t_flag *flag, t_inf *inf)
 {
 	int 		k;
 	uintmax_t	i;
-//	char		*str;
 	char 		*tmp;
 
 	k = 0;
-//	i = 0;
+	i = 0;
 	i = va_arg(lst, uintmax_t);
 	if (format[k] == 'x')
 	{
@@ -224,13 +198,10 @@ int			ft_flag_Xx(va_list lst, char *format, t_flag *flag, t_inf *inf)
 		inf->uint_j += ft_strlen(tmp =ft_itoa_base_uintmax(i, 16, 'x'));
 		free(tmp);
 		if (LY)
-			entry_minus_uint(inf);
+			entry_min_uint(inf);
 		tmp = ft_itoa_base_uintmax(i, 16, 'x');
 		cast_flag_Xx(inf, i, flag, tmp);
 		ft_strdel(&tmp);
-//		system("leaks a.out");
-//		system("leaks a.out");
-//		exit (1);
 	}
 	else if (format[k] == 'X')
 	{
@@ -241,14 +212,13 @@ int			ft_flag_Xx(va_list lst, char *format, t_flag *flag, t_inf *inf)
 		inf->uint_j += ft_strlen(tmp = ft_itoa_base_uintmax(i, 16, 'X'));
 		free(tmp);
 		if (LY)
-			entry_minus_uint(inf);
+			entry_min_uint(inf);
 		tmp = ft_itoa_base_uintmax(i, 16, 'X');
 		cast_flag_Xx(inf, i, flag, tmp);
 		ft_strdel(&tmp);
 	}
 	return (1);
 }
-
 
 int 		ft_flag_Uu(va_list lst, char *format, t_flag *flag, t_inf *inf)
 {
@@ -259,34 +229,28 @@ int 		ft_flag_Uu(va_list lst, char *format, t_flag *flag, t_inf *inf)
 	if (format[k] == 'u')
 	{
 		i = (APPLY) ? (cast_uintmax(i, flag, inf)) : (unsigned int)i;
-		flag->ban = ft_count_uint(i);
-		inf->uint_j = ft_count_uint(i);
-		cancellation_flags_Uu(flag, inf);
+		flag->ban = ft_cou_uint(i);
+		inf->uint_j = ft_cou_uint(i);
 		if (LY)
-			entry_minus_uint(inf);
+			entry_min_uint(inf);
 		cast_flag_Uu(inf, i, flag, format);
 	}
 	else if (format[k] == 'U')
 	{
 		i = (unsigned long)i;
-		inf->uint_j = ft_count_uint(i);
-		cancellation_flags_Uu(flag, inf);
+		inf->uint_j = ft_cou_uint(i);
 		if (LY)
-			entry_minus_uint(inf);
+			entry_min_uint(inf);
 		cast_flag_Uu(inf, i, flag, format);
 	}
 	return (1);
 }
-
-
-
 
 int			ft_flag_Oo(va_list lst, char *format, t_flag *flag, t_inf *inf)
 {
 	int			k;
 	uintmax_t	i;
 	char		*str;
-//	char 		*tmp;
 
 	k = 0;
 	i = va_arg(lst, uintmax_t);
@@ -295,11 +259,10 @@ int			ft_flag_Oo(va_list lst, char *format, t_flag *flag, t_inf *inf)
 		i = (APPLY) ? (cast_uintmax(i, flag, inf)) : (unsigned int)i;
 		flag->ban = ft_strlen(str = ft_itoa_base_uintmax(i, 8, 'x'));
 		free(str);
-//		cancellation_flags_Oo(flag, inf);
 		inf->uint_j += ft_strlen(str = ft_itoa_base_uintmax(i, 8, 'x'));
 		free(str);
 		if (LY)
-			entry_minus_uint(inf);
+			entry_min_uint(inf);
 		str = ft_itoa_base_uintmax(i, 8, 'x');
 		cast_flag_Oo(inf, i, flag, str);
 		ft_strdel(&str);
@@ -309,11 +272,10 @@ int			ft_flag_Oo(va_list lst, char *format, t_flag *flag, t_inf *inf)
 		i = (unsigned long)i;
 		flag->ban = ft_strlen(str = ft_itoa_base_uintmax(i, 8, 'X'));
 		free(str);
-//		cancellation_flags_Oo(flag, inf);
 		inf->uint_j += ft_strlen(str = ft_itoa_base_uintmax(i, 8, 'X'));
 		free(str);
 		if (LY)
-			entry_minus_uint(inf);
+			entry_min_uint(inf);
 		str = ft_itoa_base_uintmax(i, 8, 'X');
 		cast_flag_Xx(inf, i, flag, str);
 		ft_strdel(&str);
@@ -335,10 +297,8 @@ int 		ft_flag_p(va_list lst, char *format, t_flag *flag, t_inf *inf)
 		free(str);
 		inf->uint_j += ft_strlen(str = ft_itoa_base_uintmax(i, 16, 'x'));
 		free(str);
-//		inf->uint_j += 2;
-//		flag->ban += 2;
 		if (LY)
-			entry_minus_uint(inf);
+			entry_min_uint(inf);
 		str = ft_itoa_base_uintmax(i, 16, 'x');
 		cast_flag_p(inf, i, flag, str);
 		free(str);

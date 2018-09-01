@@ -17,27 +17,26 @@ void				ft_putwchar(wchar_t c, t_inf *inf)
 	if (c <= 0x7F)
 	{
 		ft_putchar(c);
-		inf->result += 1;
+		inf->r += 1;
 	}
 	else if (c <= 0x7FF)
 	{
 		ft_putchar((c >> 6) + 0xC0);
 		ft_putchar((c & 0x3F) + 0x80);
-		inf->result += 2;
+		inf->r += 2;
 	}
 	else if (c <= 0xFFFF)
 	{
 		ft_putchar((c >> 12) + 0xE0);
 		ft_putchar(((c >> 6) & 0x3F) + 0x80);
 		ft_putchar((c & 0x3F) + 0x80);
-		inf->result += 3;
+		inf->r += 3;
 	}
 	else if (c <= 0x10FFFF)
 	{
-		ft_putchar((c >> 18) + 0xF0);
 		ft_putchar(((c >> 12) & 0x3F) + 0x80);
 		ft_putchar(((c >> 6) & 0x3F) + 0x80);
 		ft_putchar((c & 0x3F) + 0x80);
-		inf->result += 4;
+		inf->r += 4;
 	}
 }

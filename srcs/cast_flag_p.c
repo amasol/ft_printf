@@ -14,280 +14,229 @@
 
 void			cast_flag_p(t_inf *inf, uintmax_t i, t_flag *flag, char *str)
 {
-	if (inf->count_two <= 2 && flag->minus == 0)
-		inf->count_two = 0;
-	else if (inf->count_two > 2)
+	if (inf->cou_t <= 2 && flag->min == 0)
+		inf->cou_t = 0;
+	else if (inf->cou_t > 2)
 		;
-	if (inf->count_two == 0 && inf->count <= 2)
-		inf->count = 0;
-	else if (inf->count_two ==  0 && inf->count >= 4 && i == 0)
-		inf->count -= 2;
-
+	if (inf->cou_t == 0 && inf->cou <= 2)
+		inf->cou = 0;
+	else if (inf->cou_t ==  0 && inf->cou >= 4 && i == 0)
+		inf->cou -= 2;
 
 // флаг -
-	if (inf->count > 0 && flag->minus == 1 && flag->precision == 0 && inf->width == 0)
+	if (inf->cou > 0 && flag->min == 1 && flag->preci == 0 && inf->width == 0)
 	{
 		if (flag->space == 1)
-			inf->result += write(1, " ", 1);
-		inf->result += ft_strlen_uintmax(str);
-//		inf->result += write(1, "0x", 2);
+			inf->r += write(1, " ", 1);
+		inf->r += ft_strlen_uintmax(str);
 		ft_putstr(str);
-		while (inf->count > 0 && (!(inf->width == 1)))
+		while (inf->cou > 0 && (!(inf->width == 1)))
 		{
-			inf->result += write(1, " ", 1);
-			inf->count--;
+			inf->r += write(1, " ", 1);
+			inf->cou--;
 		}
 	}
-
-	else if (flag->zero == 1 && inf->width_two == 0 && flag->precision == 0)
+	else if (flag->zero == 1 && inf->width_two == 0 && flag->preci == 0)
 	{
-		inf->count += 1;
-		inf->result += write(1, "0x", 2);
-		while (inf->count > 0)
+		inf->cou += 1;
+		inf->r += write(1, "0x", 2);
+		while (inf->cou > 0)
 		{
-			inf->result += write(1, "0", 1);
-			inf->count--;
+			inf->r += write(1, "0", 1);
+			inf->cou--;
 		}
 	}
-
 //		флан zero
 	else if (flag->zero == 1)
 	{
-//		if (flag->plus == 1 || inf->tmp == 1)
-//			inf->result += write(1, "+", 1);
-//		inf->count += 1;
-		inf->result += write(1, "0x", 2);
-		while (inf->count > 0)
+		inf->r += write(1, "0x", 2);
+		while (inf->cou > 0)
 		{
-			inf->result += write(1, "0", 1);
-			inf->count--;
+			inf->r += write(1, "0", 1);
+			inf->cou--;
 		}
 		if (i != 0)
 		{
-			inf->result += ft_strlen_uintmax(str);
+			inf->r += ft_strlen_uintmax(str);
 			ft_putstr(str);
 		}
-		while (inf->count_two > 0)
+		while (inf->cou_t > 0)
 		{
-			inf->result += write(1, " ", 1);
-			inf->count_two--;
+			inf->r += write(1, " ", 1);
+			inf->cou_t--;
 		}
 	}
-		// 		флаг	 ширины
-	else if (inf->count >= 0 && flag->width == 1 && flag->precision == 0 &&
-			 flag->minus != 1 && inf->minus_value != 1)
+	// 		флаг	 ширины
+	else if (inf->cou >= 0 && flag->width == 1 && flag->preci == 0 &&
+			 flag->min != 1 && inf->min_v != 1)
 	{
-//		if (inf->count_two ==  0 && inf->count >= 4 && i == 0)
-//			inf->count -= 2;
-		while (inf->count > 0)
+		while (inf->cou > 0)
 		{
-			inf->result += write(1, " ", 1);
-			inf->count--;
+			inf->r += write(1, " ", 1);
+			inf->cou--;
 		}
-		inf->result += ft_strlen_uintmax(str);
-		inf->result += write(1, "0x", 2);
+		inf->r += ft_strlen_uintmax(str);
+		inf->r += write(1, "0x", 2);
 		ft_putstr(str);
 	}
-		//	флаг	 ширины и флаг minus
-	else if (flag->width == 1 && flag->precision == 0 &&
-			 inf->width > 0 && (flag->minus == 1) && flag->h == 0)
-	{
-//		if (inf->count_two ==  0 && inf->count >= 4 && i == 0)
-//			inf->count -= 2;
-		if (flag->space == 1)
-			inf->count = inf->count + 1;
-		if (flag->space == 1)
-			inf->result += write(1, " ", 1);
-		inf->result += ft_strlen_uintmax(str);
-		inf->result += write(1, "0x", 2);
-		ft_putstr(str);
-		if (flag->minus == 1 && flag->ban < inf->width && inf->tmp == 1)
-			inf->result += write(1, " ", 1);
-		while (inf->count > 0 && flag->space != 1)
-		{
-			inf->result += write(1, " ", 1);
-			inf->count--;
-		}
-	}
-		//	флаг	 ширины + модификаторы и флаг minus
-	else if (inf->count >= 0 && flag->width == 1 && flag->precision == 0 &&
-			 inf->minus_value == 1 && flag->h == 1)
+	//	флаг	 ширины и флаг min
+	else if (flag->width == 1 && flag->preci == 0 &&
+			 inf->width > 0 && (flag->min == 1) && flag->h == 0)
 	{
 		if (flag->space == 1)
-			inf->count = inf->count + 1;
+			inf->cou = inf->cou + 1;
 		if (flag->space == 1)
-			inf->result += write(1, " ", 1);
-		while (inf->count > 0 && flag->space != 1)
-		{
-			inf->result += write(1, " ", 1);
-			inf->count--;
-		}
-		inf->result += ft_strlen_uintmax(str);
-//		inf->result += write(1, "0x", 2);
+			inf->r += write(1, " ", 1);
+		inf->r += ft_strlen_uintmax(str);
+		inf->r += write(1, "0x", 2);
 		ft_putstr(str);
+		if (flag->min == 1 && flag->ban < inf->width && inf->tmp == 1)
+			inf->r += write(1, " ", 1);
+		while (inf->cou > 0 && flag->space != 1)
+		{
+			inf->r += write(1, " ", 1);
+			inf->cou--;
+		}
 	}
-		// 		флаг	 ширины + когда аргумент по кол-ву с оденаковый с шириной !
-	else if (inf->count == 0 && flag->width == 1 && flag->precision == 0 )
+	//	флаг	 ширины + модификаторы и флаг min
+	else if (inf->cou >= 0 && flag->width == 1 && flag->preci == 0 &&
+			 inf->min_v == 1 && flag->h == 1)
 	{
-		if (inf->count == 1 && flag->plus == 1)
-			inf->count -= 1;
 		if (flag->space == 1)
-			inf->count = inf->count + 1;
-		inf->result += ft_strlen_uintmax(str);
-//		inf->result += write(1, "0x", 2);
-		ft_putstr(str);
-		while (inf->count_two > 0 && inf->count == 0)
+			inf->cou = inf->cou + 1;
+		if (flag->space == 1)
+			inf->r += write(1, " ", 1);
+		while (inf->cou > 0 && flag->space != 1)
 		{
-			inf->result += write(1, " ", 1);
-			inf->count_two--;
+			inf->r += write(1, " ", 1);
+			inf->cou--;
+		}
+		inf->r += ft_strlen_uintmax(str);
+		ft_putstr(str);
+	}
+// 		флаг	 ширины + когда аргумент по кол-ву с оденаковый с шириной !
+	else if (inf->cou == 0 && flag->width == 1 && flag->preci == 0 )
+	{
+		if (inf->cou == 1 && flag->plus == 1)
+			inf->cou -= 1;
+		if (flag->space == 1)
+			inf->cou = inf->cou + 1;
+		inf->r += ft_strlen_uintmax(str);
+		ft_putstr(str);
+		while (inf->cou_t > 0 && inf->cou == 0)
+		{
+			inf->r += write(1, " ", 1);
+			inf->cou_t--;
 		}
 	}
-
-	else if ((flag->zero == 0 || flag->minus == 0) && flag->plus == 1 && flag->precision == 0 &&
+	else if ((flag->zero == 0 || flag->min == 0) && flag->plus == 1 && flag->preci == 0 &&
 			 inf->width == 0)
 	{
-		inf->result += ft_strlen_uintmax(str);
-		inf->result += write(1, "0x", 2);
+		inf->r += ft_strlen_uintmax(str);
+		inf->r += write(1, "0x", 2);
 		ft_putstr(str);
 	}
-
-
-	else if (flag->space == 1 && flag->precision != 1 && inf->nothing == 1)
+	else if (flag->space == 1 && flag->preci != 1 && inf->nothi == 1)
 	{
-		inf->result += write(1, " ", 1);
-		inf->result += ft_strlen_uintmax(str);
-//		inf->result += write(1, "0x", 2);
+		inf->r += write(1, " ", 1);
+		inf->r += ft_strlen_uintmax(str);
 		ft_putstr(str);
 	}
-
-
-
 //		точность (.)
-	else if (flag->precision == 1 && inf->count > 0 && inf->count_two == 0 && flag->minus != 1 )
+	else if (flag->preci == 1 && inf->cou > 0 && inf->cou_t == 0 && flag->min != 1 )
 	{
-		if (inf->count_two ==  0 && inf->width >= 4 && i == 0)
-			inf->count += 2;
-		if ((flag->plus == 1) && flag->minus == 0 && (inf->width < inf->width_two))
-			inf->result += write(1, " ", 1);
-		inf->result += write(1, "0x", 2);
-		while (inf->count > 0)
+		if (inf->cou_t ==  0 && inf->width >= 4 && i == 0)
+			inf->cou += 2;
+		if ((flag->plus == 1) && flag->min == 0 && (inf->width < inf->width_two))
+			inf->r += write(1, " ", 1);
+		inf->r += write(1, "0x", 2);
+		while (inf->cou > 0)
 		{
-			inf->result += write(1, "0", 1);
-			inf->count--;
+			inf->r += write(1, "0", 1);
+			inf->cou--;
 		}
-		inf->result += ft_strlen_uintmax(str);
-//		inf->result += write(1, "0x", 2);
+		inf->r += ft_strlen_uintmax(str);
 		ft_putstr(str);
 	}
-
-
 //		точность (ширина + точность)
-	else if (flag->precision == 1 && inf->count >= 0 && inf->count_two >= 0 && flag->minus == 0)
+	else if (flag->preci == 1 && inf->cou >= 0 && inf->cou_t >= 0 && flag->min == 0)
 	{
-//		if (inf->width_two > inf->width + 2 && inf->width != 0)
-//		{
-//			inf->count_two = inf->width_two;
-//			inf->count_two -= inf->width + 2;
-//		}
-		inf->count = (inf->width > inf->uint_j) ? inf->width - inf->uint_j : 0;
+		inf->cou = (inf->width > inf->uint_j) ? inf->width - inf->uint_j : 0;
 		inf->uint_j += 2;
-		inf->count_two = (inf->width_two > inf->uint_j + inf->count) ?
-		 inf->width_two - (inf->uint_j + inf->count) : 0;
-
-//		if ((uintmax_t)inf->width == 0 && (uintmax_t)inf->width_two > inf->uint_j)
-//			inf->count_two -= 2;
-		while (inf->count_two > 0)
+		inf->cou_t = (inf->width_two > inf->uint_j + inf->cou) ?
+		 inf->width_two - (inf->uint_j + inf->cou) : 0;
+		while (inf->cou_t > 0)
 		{
-			inf->result += write(1, " ", 1);
-			inf->count_two--;
+			inf->r += write(1, " ", 1);
+			inf->cou_t--;
 		}
-//		if (flag->plus == 1  && flag->ban < inf->width_two)
-//			inf->result += write(1, " ", 1);
-		inf->result += write(1, "0x", 2);
-		while (inf->count > 0 )
+		inf->r += write(1, "0x", 2);
+		while (inf->cou > 0 )
 		{
-			inf->result += write(1, "0", 1);
-			inf->count--;
+			inf->r += write(1, "0", 1);
+			inf->cou--;
 		}
 		if (i != 0)
 		{
-			inf->result += ft_strlen_uintmax(str);
+			inf->r += ft_strlen_uintmax(str);
 			ft_putstr(str);
 		}
 	}
-
-		//		точность (ширина точность и флаг минут)
-	else if (flag->precision == 1 && flag->minus == 1 && inf->count >= 0 &&
-			 inf->count_two >= 0)
+	//		точность (ширина точность и флаг минут)
+	else if (flag->preci == 1 && flag->min == 1 && inf->cou >= 0 &&
+			 inf->cou_t >= 0)
 	{
 		if (inf->width_two > inf->width + 2 && inf->width != 0)
 		{
-			inf->count_two = inf->width_two;
-			inf->count_two -= inf->width + 2;
+			inf->cou_t = inf->width_two;
+			inf->cou_t -= inf->width + 2;
 		}
-		inf->result += write(1, "0x", 2);
-		while (inf->count > 0)
+		inf->r += write(1, "0x", 2);
+		while (inf->cou > 0)
 		{
-			inf->result += write(1, "0", 1);
-			inf->count--;
+			inf->r += write(1, "0", 1);
+			inf->cou--;
 		}
-		inf->result += ft_strlen_uintmax(str);
+		inf->r += ft_strlen_uintmax(str);
 		ft_putstr(str);
 
-		while (inf->count_two > 0)
+		while (inf->cou_t > 0)
 		{
-			inf->result += write(1, " ", 1);
-			inf->count_two--;
+			inf->r += write(1, " ", 1);
+			inf->cou_t--;
 		}
 	}
-	else if (flag->precision == 1 && inf->count == 0 && inf->count_two > 0)
+	else if (flag->preci == 1 && inf->cou == 0 && inf->cou_t > 0)
 	{
-		while (inf->count > 0)
+		while (inf->cou > 0)
 		{
-			inf->result += write(1, "0", 1);
-			inf->count--;
+			inf->r += write(1, "0", 1);
+			inf->cou--;
 		}
-		while (inf->count_two > 0)
+		while (inf->cou_t > 0)
 		{
-			inf->result += write(1, " ", 1);
-			inf->count_two--;
+			inf->r += write(1, " ", 1);
+			inf->cou_t--;
 		}
-		inf->result += ft_strlen_uintmax(str);
-		inf->result += write(1, "0x", 2);
+		inf->r += ft_strlen_uintmax(str);
+		inf->r += write(1, "0x", 2);
 		ft_putstr(str);
 	}
-
-
-
-//	else if (flag->slash == 1)
-//	{
-//		if (*str == 'X')
-//			inf->result += write(1, "0X", 2);
-//		if (*str == 'x')
-//			inf->result += write(1, "0x", 2);
-//		if (*str == 'o' || *str == 'O')
-//			inf->result += write(1, "0", 1);
-//	}
-	else if (flag->precision == 1 && flag->plus == 1)
+	else if (flag->preci == 1 && flag->plus == 1)
 	{
-		while (inf->count > 0)
+		while (inf->cou > 0)
 		{
-			inf->result += write(1, " ", 1);
-			inf->count--;
+			inf->r += write(1, " ", 1);
+			inf->cou--;
 		}
-		inf->result += ft_strlen_uintmax(str);
-		inf->result += write(1, "0x", 2);
+		inf->r += ft_strlen_uintmax(str);
+		inf->r += write(1, "0x", 2);
 		ft_putstr(str);
 	}
-		// не правильно работает если у нас нету флагов и мы должны вывести остачу || у нас
-//		есть флаг и мы должны вывести остачу послу отработки тут !!!
-
-	else if (flag->plus == 0 && flag->slash == 0 && flag->zero == 0 && flag->width == 0 && flag->precision == 0)
+	else if (flag->plus == 0 && flag->slash == 0 && flag->zero == 0 && flag->width == 0 && flag->preci == 0)
 	{
-//		if (flag->plus == 1 || inf->tmp == 1)
-//			inf->result += write(1, "+", 1);
-		inf->result += ft_strlen_uintmax(str);
-		inf->result += write(1, "0x", 2);
+		inf->r += ft_strlen_uintmax(str);
+		inf->r += write(1, "0x", 2);
 		ft_putstr(str);
 	}
 }

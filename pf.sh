@@ -2,5 +2,5 @@
 
 make re
 
-gcc main2.c libftprintf.a -I includes
+gcc  -Wall -Wextra -Werror main2.c libftprintf.a -I includes
 ./a.out |cat -e

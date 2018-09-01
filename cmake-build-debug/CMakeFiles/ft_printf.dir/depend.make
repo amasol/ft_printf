@@ -61,20 +61,17 @@ CMakeFiles/ft_printf.dir/srcs/ft_putnbr_long.c.o: ../srcs/ft_putnbr_long.c
 CMakeFiles/ft_printf.dir/srcs/ft_putstr.c.o: ../includes/ft_printf.h
 CMakeFiles/ft_printf.dir/srcs/ft_putstr.c.o: ../srcs/ft_putstr.c
 
+CMakeFiles/ft_printf.dir/srcs/ft_putstr_len.c.o: ../includes/ft_printf.h
+CMakeFiles/ft_printf.dir/srcs/ft_putstr_len.c.o: ../srcs/ft_putstr_len.c
+
 CMakeFiles/ft_printf.dir/srcs/ft_putwchar.c.o: ../includes/ft_printf.h
 CMakeFiles/ft_printf.dir/srcs/ft_putwchar.c.o: ../srcs/ft_putwchar.c
 
 CMakeFiles/ft_printf.dir/srcs/ft_qualifier.c.o: ../includes/ft_printf.h
 CMakeFiles/ft_printf.dir/srcs/ft_qualifier.c.o: ../srcs/ft_qualifier.c
 
-CMakeFiles/ft_printf.dir/srcs/ft_strchr.c.o: ../includes/ft_printf.h
-CMakeFiles/ft_printf.dir/srcs/ft_strchr.c.o: ../srcs/ft_strchr.c
-
 CMakeFiles/ft_printf.dir/srcs/ft_strdel.c.o: ../includes/ft_printf.h
 CMakeFiles/ft_printf.dir/srcs/ft_strdel.c.o: ../srcs/ft_strdel.c
-
-CMakeFiles/ft_printf.dir/srcs/ft_strdup.c.o: ../includes/ft_printf.h
-CMakeFiles/ft_printf.dir/srcs/ft_strdup.c.o: ../srcs/ft_strdup.c
 
 CMakeFiles/ft_printf.dir/srcs/ft_strlen.c.o: ../includes/ft_printf.h
 CMakeFiles/ft_printf.dir/srcs/ft_strlen.c.o: ../srcs/ft_strlen.c
@@ -85,14 +82,8 @@ CMakeFiles/ft_printf.dir/srcs/ft_strlen_uintmax.c.o: ../srcs/ft_strlen_uintmax.c
 CMakeFiles/ft_printf.dir/srcs/ft_strnew.c.o: ../includes/ft_printf.h
 CMakeFiles/ft_printf.dir/srcs/ft_strnew.c.o: ../srcs/ft_strnew.c
 
-CMakeFiles/ft_printf.dir/srcs/ft_strrev.c.o: ../includes/ft_printf.h
-CMakeFiles/ft_printf.dir/srcs/ft_strrev.c.o: ../srcs/ft_strrev.c
-
 CMakeFiles/ft_printf.dir/srcs/ft_strsub.c.o: ../includes/ft_printf.h
 CMakeFiles/ft_printf.dir/srcs/ft_strsub.c.o: ../srcs/ft_strsub.c
-
-CMakeFiles/ft_printf.dir/srcs/itoa_b.c.o: ../includes/ft_printf.h
-CMakeFiles/ft_printf.dir/srcs/itoa_b.c.o: ../srcs/itoa_b.c
 
 CMakeFiles/ft_printf.dir/srcs/itoa_b_uintmax.c.o: ../includes/ft_printf.h
 CMakeFiles/ft_printf.dir/srcs/itoa_b_uintmax.c.o: ../srcs/itoa_b_uintmax.c

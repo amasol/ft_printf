@@ -143,19 +143,16 @@
 		<Unit filename="/Users/amasol/amasol/project/ft_printf/srcs/ft_putstr.c">
 			<Option target="ft_printf"/>
 		</Unit>
+		<Unit filename="/Users/amasol/amasol/project/ft_printf/srcs/ft_putstr_len.c">
+			<Option target="ft_printf"/>
+		</Unit>
 		<Unit filename="/Users/amasol/amasol/project/ft_printf/srcs/ft_putwchar.c">
 			<Option target="ft_printf"/>
 		</Unit>
 		<Unit filename="/Users/amasol/amasol/project/ft_printf/srcs/ft_qualifier.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/amasol/amasol/project/ft_printf/srcs/ft_strchr.c">
-			<Option target="ft_printf"/>
-		</Unit>
 		<Unit filename="/Users/amasol/amasol/project/ft_printf/srcs/ft_strdel.c">
-			<Option target="ft_printf"/>
-		</Unit>
-		<Unit filename="/Users/amasol/amasol/project/ft_printf/srcs/ft_strdup.c">
 			<Option target="ft_printf"/>
 		</Unit>
 		<Unit filename="/Users/amasol/amasol/project/ft_printf/srcs/ft_strlen.c">
@@ -167,13 +164,7 @@
 		<Unit filename="/Users/amasol/amasol/project/ft_printf/srcs/ft_strnew.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/amasol/amasol/project/ft_printf/srcs/ft_strrev.c">
-			<Option target="ft_printf"/>
-		</Unit>
 		<Unit filename="/Users/amasol/amasol/project/ft_printf/srcs/ft_strsub.c">
-			<Option target="ft_printf"/>
-		</Unit>
-		<Unit filename="/Users/amasol/amasol/project/ft_printf/srcs/itoa_b.c">
 			<Option target="ft_printf"/>
 		</Unit>
 		<Unit filename="/Users/amasol/amasol/project/ft_printf/srcs/itoa_b_uintmax.c">

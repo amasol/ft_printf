@@ -1580,9 +1580,9 @@ int		 main	(void)
 //	printf("\n|len=%i", printf("%5.0x", 0));
 
 
-//	ft_printf("[%+s]", 0);
-//	printf("[%+s]", 0);
-
+	ft_printf("%-5c", 42);
+//	printf("\n%.u, %.0u", 0, 0);
+//
 	setlocale(LC_ALL, "");
 
 //	wchar_t *c = L"α";
@@ -1603,7 +1603,7 @@ int		 main	(void)
 //	ft_printf("{%10R}");
 //	printf("\n{%10R}");
 
-	ft_printf("%x", "wesdfgd");
+//	ft_printf("%x", "wesdfgd");
 //	printf("\n% );
 
 //	ft_printf("%lc, %lc", L'ÊM-^ZM-^V', L'ÿ≠');
@@ -1617,5 +1617,8 @@ int		 main	(void)
 //	ft_printf("|len=[%i]", ft_printf("{%05.Z}", 0));
 //	printf("|len=[%i]", printf("{%05.Z}", 0));
 
+//		system("leaks a.out");
+//		system("leaks a.out");
+//		exit (1);
 	return (0);
 }

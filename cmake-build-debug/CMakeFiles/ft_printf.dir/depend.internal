@@ -61,21 +61,18 @@ CMakeFiles/ft_printf.dir/srcs/ft_putnbr_long.c.o
 CMakeFiles/ft_printf.dir/srcs/ft_putstr.c.o
  /Users/amasol/amasol/project/ft_printf/includes/ft_printf.h
  /Users/amasol/amasol/project/ft_printf/srcs/ft_putstr.c
+CMakeFiles/ft_printf.dir/srcs/ft_putstr_len.c.o
+ /Users/amasol/amasol/project/ft_printf/includes/ft_printf.h
+ /Users/amasol/amasol/project/ft_printf/srcs/ft_putstr_len.c
 CMakeFiles/ft_printf.dir/srcs/ft_putwchar.c.o
  /Users/amasol/amasol/project/ft_printf/includes/ft_printf.h
  /Users/amasol/amasol/project/ft_printf/srcs/ft_putwchar.c
 CMakeFiles/ft_printf.dir/srcs/ft_qualifier.c.o
  /Users/amasol/amasol/project/ft_printf/includes/ft_printf.h
  /Users/amasol/amasol/project/ft_printf/srcs/ft_qualifier.c
-CMakeFiles/ft_printf.dir/srcs/ft_strchr.c.o
- /Users/amasol/amasol/project/ft_printf/includes/ft_printf.h
- /Users/amasol/amasol/project/ft_printf/srcs/ft_strchr.c
 CMakeFiles/ft_printf.dir/srcs/ft_strdel.c.o
  /Users/amasol/amasol/project/ft_printf/includes/ft_printf.h
  /Users/amasol/amasol/project/ft_printf/srcs/ft_strdel.c
-CMakeFiles/ft_printf.dir/srcs/ft_strdup.c.o
- /Users/amasol/amasol/project/ft_printf/includes/ft_printf.h
- /Users/amasol/amasol/project/ft_printf/srcs/ft_strdup.c
 CMakeFiles/ft_printf.dir/srcs/ft_strlen.c.o
  /Users/amasol/amasol/project/ft_printf/includes/ft_printf.h
  /Users/amasol/amasol/project/ft_printf/srcs/ft_strlen.c
@@ -85,15 +82,9 @@ CMakeFiles/ft_printf.dir/srcs/ft_strlen_uintmax.c.o
 CMakeFiles/ft_printf.dir/srcs/ft_strnew.c.o
  /Users/amasol/amasol/project/ft_printf/includes/ft_printf.h
  /Users/amasol/amasol/project/ft_printf/srcs/ft_strnew.c
-CMakeFiles/ft_printf.dir/srcs/ft_strrev.c.o
- /Users/amasol/amasol/project/ft_printf/includes/ft_printf.h
- /Users/amasol/amasol/project/ft_printf/srcs/ft_strrev.c
 CMakeFiles/ft_printf.dir/srcs/ft_strsub.c.o
  /Users/amasol/amasol/project/ft_printf/includes/ft_printf.h
  /Users/amasol/amasol/project/ft_printf/srcs/ft_strsub.c
-CMakeFiles/ft_printf.dir/srcs/itoa_b.c.o
- /Users/amasol/amasol/project/ft_printf/includes/ft_printf.h
- /Users/amasol/amasol/project/ft_printf/srcs/itoa_b.c
 CMakeFiles/ft_printf.dir/srcs/itoa_b_uintmax.c.o
  /Users/amasol/amasol/project/ft_printf/includes/ft_printf.h
  /Users/amasol/amasol/project/ft_printf/srcs/itoa_b_uintmax.c

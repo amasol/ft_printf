@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-static	int		count(int n)
+static	int		cou(int n)
 {
 	int i;
 
@@ -52,7 +52,7 @@ char			*ft_itoa(int n)
 	char	*str;
 	int		len;
 
-	len = count(n);
+	len = cou(n);
 	if (n < 0 && (!(str = ft_memalloc(sizeof(char) * len + 2))))
 		return (NULL);
 	if (n >= 0 && (!(str = ft_memalloc(sizeof(char) * len + 1))))

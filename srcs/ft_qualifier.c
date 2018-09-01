@@ -29,8 +29,6 @@ int			ft_qualifier(char s)
 }
 
 //			refinement - уточнение ...
-//	использовать уже когда пройдут вся возможная длинна, если она есть!
-
 int			ft_refinement(char s)
 {
 	if (s == 'D' || s == 'd' || s == 'i')
@@ -50,8 +48,7 @@ int			ft_refinement(char s)
 	return (0);
 }
 
-
-int				output_after(char *format, va_list lst, t_flag *flag, t_inf *inf)
+int			output_after(char *format, va_list lst, t_flag *flag, t_inf *inf)
 {
 	int i;
 
@@ -61,22 +58,20 @@ int				output_after(char *format, va_list lst, t_flag *flag, t_inf *inf)
 		pars_hi_z(&format[i], flag, inf, lst);
 		return (1);
 	}
-	while (ft_isdigit(format[i]) || (format[i] == '-') || (format[i] == '+')
-		   || ft_flag_check(format[i]) || (format[i] == ' ') || (format[i] == '.'))
+	while (ft_isdigit(format[i]) || (format[i] == '-')
+		|| (format[i] == '+') || ft_flag_check(format[i])
+		|| (format[i] == ' ') || (format[i] == '.'))
 		i++;
 	if (ft_qualifier(format[i]))
 		i++;
 	while (format[i] != '%' && format[i] != '\0')
 	{
-		inf->result += write(1, &format[i], 1);
+		inf->r += write(1, &format[i], 1);
 		i++;
 	}
-	inf->count_format = i;
+	inf->cou_format = i;
 	return (1);
 }
-
-//-------------------проверить отдельно функцию ....
-
 
 int			ft_flag_check(char c)
 {
@@ -90,31 +85,3 @@ int			ft_flag_check(char c)
 	else
 		return (0);
 }
-/*
-int			ft_flag(char format)
-{
-	if (format == 'h' && format + 1 == 'h')
-		return (1);
-	else if (format == 'l' && format + 1 == 'l')
-		return (2);
-	else if (format == 'z')
-		return (3);
-	else if (format == 'j')
-		return (4);
-	else if (format == 'l')
-		return (5);
-	else if (format == 'h')
-		return (6);
-	else if (format == '+')
-		return (7);
-	else if (format == '-')
-		return (8);
-	else if (format == '0')
-		return (9);
-	else if (format == '#')
-		return (10);
-	else if (format == '%' && format + 1 == '%')
-		return (11);
-	return (0);
-}
-*/

@@ -12,13 +12,10 @@
 
 #include "../includes/ft_printf.h"
 
-//void	ft_putnbr_intmax(intmax_t nb)
 intmax_t	ft_putnbr_intmax(intmax_t nb)
 {
 	char c;
-//	unsigned long long      mask_left;
 
-//	mask_left = -9223372036854775808U;
 	if ((unsigned long long)nb == LONG_MIN)
 	{
 		ft_putstr("-9223372036854775808");

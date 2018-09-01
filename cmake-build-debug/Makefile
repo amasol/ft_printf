@@ -663,6 +663,33 @@ srcs/ft_putstr.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/ft_putstr.c.s
 .PHONY : srcs/ft_putstr.c.s
 
+srcs/ft_putstr_len.o: srcs/ft_putstr_len.c.o
+
+.PHONY : srcs/ft_putstr_len.o
+
+# target to build an object file
+srcs/ft_putstr_len.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/ft_putstr_len.c.o
+.PHONY : srcs/ft_putstr_len.c.o
+
+srcs/ft_putstr_len.i: srcs/ft_putstr_len.c.i
+
+.PHONY : srcs/ft_putstr_len.i
+
+# target to preprocess a source file
+srcs/ft_putstr_len.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/ft_putstr_len.c.i
+.PHONY : srcs/ft_putstr_len.c.i
+
+srcs/ft_putstr_len.s: srcs/ft_putstr_len.c.s
+
+.PHONY : srcs/ft_putstr_len.s
+
+# target to generate assembly for a file
+srcs/ft_putstr_len.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/ft_putstr_len.c.s
+.PHONY : srcs/ft_putstr_len.c.s
+
 srcs/ft_putwchar.o: srcs/ft_putwchar.c.o
 
 .PHONY : srcs/ft_putwchar.o
@@ -717,33 +744,6 @@ srcs/ft_qualifier.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/ft_qualifier.c.s
 .PHONY : srcs/ft_qualifier.c.s
 
-srcs/ft_strchr.o: srcs/ft_strchr.c.o
-
-.PHONY : srcs/ft_strchr.o
-
-# target to build an object file
-srcs/ft_strchr.c.o:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/ft_strchr.c.o
-.PHONY : srcs/ft_strchr.c.o
-
-srcs/ft_strchr.i: srcs/ft_strchr.c.i
-
-.PHONY : srcs/ft_strchr.i
-
-# target to preprocess a source file
-srcs/ft_strchr.c.i:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/ft_strchr.c.i
-.PHONY : srcs/ft_strchr.c.i
-
-srcs/ft_strchr.s: srcs/ft_strchr.c.s
-
-.PHONY : srcs/ft_strchr.s
-
-# target to generate assembly for a file
-srcs/ft_strchr.c.s:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/ft_strchr.c.s
-.PHONY : srcs/ft_strchr.c.s
-
 srcs/ft_strdel.o: srcs/ft_strdel.c.o
 
 .PHONY : srcs/ft_strdel.o
@@ -770,33 +770,6 @@ srcs/ft_strdel.s: srcs/ft_strdel.c.s
 srcs/ft_strdel.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/ft_strdel.c.s
 .PHONY : srcs/ft_strdel.c.s
-
-srcs/ft_strdup.o: srcs/ft_strdup.c.o
-
-.PHONY : srcs/ft_strdup.o
-
-# target to build an object file
-srcs/ft_strdup.c.o:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/ft_strdup.c.o
-.PHONY : srcs/ft_strdup.c.o
-
-srcs/ft_strdup.i: srcs/ft_strdup.c.i
-
-.PHONY : srcs/ft_strdup.i
-
-# target to preprocess a source file
-srcs/ft_strdup.c.i:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/ft_strdup.c.i
-.PHONY : srcs/ft_strdup.c.i
-
-srcs/ft_strdup.s: srcs/ft_strdup.c.s
-
-.PHONY : srcs/ft_strdup.s
-
-# target to generate assembly for a file
-srcs/ft_strdup.c.s:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/ft_strdup.c.s
-.PHONY : srcs/ft_strdup.c.s
 
 srcs/ft_strlen.o: srcs/ft_strlen.c.o
 
@@ -879,33 +852,6 @@ srcs/ft_strnew.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/ft_strnew.c.s
 .PHONY : srcs/ft_strnew.c.s
 
-srcs/ft_strrev.o: srcs/ft_strrev.c.o
-
-.PHONY : srcs/ft_strrev.o
-
-# target to build an object file
-srcs/ft_strrev.c.o:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/ft_strrev.c.o
-.PHONY : srcs/ft_strrev.c.o
-
-srcs/ft_strrev.i: srcs/ft_strrev.c.i
-
-.PHONY : srcs/ft_strrev.i
-
-# target to preprocess a source file
-srcs/ft_strrev.c.i:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/ft_strrev.c.i
-.PHONY : srcs/ft_strrev.c.i
-
-srcs/ft_strrev.s: srcs/ft_strrev.c.s
-
-.PHONY : srcs/ft_strrev.s
-
-# target to generate assembly for a file
-srcs/ft_strrev.c.s:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/ft_strrev.c.s
-.PHONY : srcs/ft_strrev.c.s
-
 srcs/ft_strsub.o: srcs/ft_strsub.c.o
 
 .PHONY : srcs/ft_strsub.o
@@ -932,33 +878,6 @@ srcs/ft_strsub.s: srcs/ft_strsub.c.s
 srcs/ft_strsub.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/ft_strsub.c.s
 .PHONY : srcs/ft_strsub.c.s
-
-srcs/itoa_b.o: srcs/itoa_b.c.o
-
-.PHONY : srcs/itoa_b.o
-
-# target to build an object file
-srcs/itoa_b.c.o:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/itoa_b.c.o
-.PHONY : srcs/itoa_b.c.o
-
-srcs/itoa_b.i: srcs/itoa_b.c.i
-
-.PHONY : srcs/itoa_b.i
-
-# target to preprocess a source file
-srcs/itoa_b.c.i:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/itoa_b.c.i
-.PHONY : srcs/itoa_b.c.i
-
-srcs/itoa_b.s: srcs/itoa_b.c.s
-
-.PHONY : srcs/itoa_b.s
-
-# target to generate assembly for a file
-srcs/itoa_b.c.s:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/itoa_b.c.s
-.PHONY : srcs/itoa_b.c.s
 
 srcs/itoa_b_uintmax.o: srcs/itoa_b_uintmax.c.o
 
@@ -1110,21 +1029,18 @@ help:
 	@echo "... srcs/ft_putstr.o"
 	@echo "... srcs/ft_putstr.i"
 	@echo "... srcs/ft_putstr.s"
+	@echo "... srcs/ft_putstr_len.o"
+	@echo "... srcs/ft_putstr_len.i"
+	@echo "... srcs/ft_putstr_len.s"
 	@echo "... srcs/ft_putwchar.o"
 	@echo "... srcs/ft_putwchar.i"
 	@echo "... srcs/ft_putwchar.s"
 	@echo "... srcs/ft_qualifier.o"
 	@echo "... srcs/ft_qualifier.i"
 	@echo "... srcs/ft_qualifier.s"
-	@echo "... srcs/ft_strchr.o"
-	@echo "... srcs/ft_strchr.i"
-	@echo "... srcs/ft_strchr.s"
 	@echo "... srcs/ft_strdel.o"
 	@echo "... srcs/ft_strdel.i"
 	@echo "... srcs/ft_strdel.s"
-	@echo "... srcs/ft_strdup.o"
-	@echo "... srcs/ft_strdup.i"
-	@echo "... srcs/ft_strdup.s"
 	@echo "... srcs/ft_strlen.o"
 	@echo "... srcs/ft_strlen.i"
 	@echo "... srcs/ft_strlen.s"
@@ -1134,15 +1050,9 @@ help:
 	@echo "... srcs/ft_strnew.o"
 	@echo "... srcs/ft_strnew.i"
 	@echo "... srcs/ft_strnew.s"
-	@echo "... srcs/ft_strrev.o"
-	@echo "... srcs/ft_strrev.i"
-	@echo "... srcs/ft_strrev.s"
 	@echo "... srcs/ft_strsub.o"
 	@echo "... srcs/ft_strsub.i"
 	@echo "... srcs/ft_strsub.s"
-	@echo "... srcs/itoa_b.o"
-	@echo "... srcs/itoa_b.i"
-	@echo "... srcs/itoa_b.s"
 	@echo "... srcs/itoa_b_uintmax.o"
 	@echo "... srcs/itoa_b_uintmax.i"
 	@echo "... srcs/itoa_b_uintmax.s"

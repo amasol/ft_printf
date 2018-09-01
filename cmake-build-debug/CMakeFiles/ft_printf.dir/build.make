@@ -393,33 +393,9 @@ CMakeFiles/ft_printf.dir/srcs/ft_qualifier.c.o.provides: CMakeFiles/ft_printf.di
 CMakeFiles/ft_printf.dir/srcs/ft_qualifier.c.o.provides.build: CMakeFiles/ft_printf.dir/srcs/ft_qualifier.c.o
 
 
-CMakeFiles/ft_printf.dir/srcs/itoa_b.c.o: CMakeFiles/ft_printf.dir/flags.make
-CMakeFiles/ft_printf.dir/srcs/itoa_b.c.o: ../srcs/itoa_b.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/amasol/amasol/project/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/ft_printf.dir/srcs/itoa_b.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf.dir/srcs/itoa_b.c.o   -c /Users/amasol/amasol/project/ft_printf/srcs/itoa_b.c
-
-CMakeFiles/ft_printf.dir/srcs/itoa_b.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_printf.dir/srcs/itoa_b.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/amasol/amasol/project/ft_printf/srcs/itoa_b.c > CMakeFiles/ft_printf.dir/srcs/itoa_b.c.i
-
-CMakeFiles/ft_printf.dir/srcs/itoa_b.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf.dir/srcs/itoa_b.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/amasol/amasol/project/ft_printf/srcs/itoa_b.c -o CMakeFiles/ft_printf.dir/srcs/itoa_b.c.s
-
-CMakeFiles/ft_printf.dir/srcs/itoa_b.c.o.requires:
-
-.PHONY : CMakeFiles/ft_printf.dir/srcs/itoa_b.c.o.requires
-
-CMakeFiles/ft_printf.dir/srcs/itoa_b.c.o.provides: CMakeFiles/ft_printf.dir/srcs/itoa_b.c.o.requires
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/itoa_b.c.o.provides.build
-.PHONY : CMakeFiles/ft_printf.dir/srcs/itoa_b.c.o.provides
-
-CMakeFiles/ft_printf.dir/srcs/itoa_b.c.o.provides.build: CMakeFiles/ft_printf.dir/srcs/itoa_b.c.o
-
-
 CMakeFiles/ft_printf.dir/srcs/itoa_b_uintmax.c.o: CMakeFiles/ft_printf.dir/flags.make
 CMakeFiles/ft_printf.dir/srcs/itoa_b_uintmax.c.o: ../srcs/itoa_b_uintmax.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/amasol/amasol/project/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/ft_printf.dir/srcs/itoa_b_uintmax.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/amasol/amasol/project/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/ft_printf.dir/srcs/itoa_b_uintmax.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf.dir/srcs/itoa_b_uintmax.c.o   -c /Users/amasol/amasol/project/ft_printf/srcs/itoa_b_uintmax.c
 
 CMakeFiles/ft_printf.dir/srcs/itoa_b_uintmax.c.i: cmake_force
@@ -443,7 +419,7 @@ CMakeFiles/ft_printf.dir/srcs/itoa_b_uintmax.c.o.provides.build: CMakeFiles/ft_p
 
 CMakeFiles/ft_printf.dir/srcs/parsing.c.o: CMakeFiles/ft_printf.dir/flags.make
 CMakeFiles/ft_printf.dir/srcs/parsing.c.o: ../srcs/parsing.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/amasol/amasol/project/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/ft_printf.dir/srcs/parsing.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/amasol/amasol/project/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/ft_printf.dir/srcs/parsing.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf.dir/srcs/parsing.c.o   -c /Users/amasol/amasol/project/ft_printf/srcs/parsing.c
 
 CMakeFiles/ft_printf.dir/srcs/parsing.c.i: cmake_force
@@ -467,7 +443,7 @@ CMakeFiles/ft_printf.dir/srcs/parsing.c.o.provides.build: CMakeFiles/ft_printf.d
 
 CMakeFiles/ft_printf.dir/srcs/ft_putnbr_long.c.o: CMakeFiles/ft_printf.dir/flags.make
 CMakeFiles/ft_printf.dir/srcs/ft_putnbr_long.c.o: ../srcs/ft_putnbr_long.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/amasol/amasol/project/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/ft_printf.dir/srcs/ft_putnbr_long.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/amasol/amasol/project/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/ft_printf.dir/srcs/ft_putnbr_long.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf.dir/srcs/ft_putnbr_long.c.o   -c /Users/amasol/amasol/project/ft_printf/srcs/ft_putnbr_long.c
 
 CMakeFiles/ft_printf.dir/srcs/ft_putnbr_long.c.i: cmake_force
@@ -491,7 +467,7 @@ CMakeFiles/ft_printf.dir/srcs/ft_putnbr_long.c.o.provides.build: CMakeFiles/ft_p
 
 CMakeFiles/ft_printf.dir/srcs/cast.c.o: CMakeFiles/ft_printf.dir/flags.make
 CMakeFiles/ft_printf.dir/srcs/cast.c.o: ../srcs/cast.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/amasol/amasol/project/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/ft_printf.dir/srcs/cast.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/amasol/amasol/project/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/ft_printf.dir/srcs/cast.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf.dir/srcs/cast.c.o   -c /Users/amasol/amasol/project/ft_printf/srcs/cast.c
 
 CMakeFiles/ft_printf.dir/srcs/cast.c.i: cmake_force
@@ -515,7 +491,7 @@ CMakeFiles/ft_printf.dir/srcs/cast.c.o.provides.build: CMakeFiles/ft_printf.dir/
 
 CMakeFiles/ft_printf.dir/srcs/cast_flag_Ddi.c.o: CMakeFiles/ft_printf.dir/flags.make
 CMakeFiles/ft_printf.dir/srcs/cast_flag_Ddi.c.o: ../srcs/cast_flag_Ddi.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/amasol/amasol/project/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/ft_printf.dir/srcs/cast_flag_Ddi.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/amasol/amasol/project/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/ft_printf.dir/srcs/cast_flag_Ddi.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf.dir/srcs/cast_flag_Ddi.c.o   -c /Users/amasol/amasol/project/ft_printf/srcs/cast_flag_Ddi.c
 
 CMakeFiles/ft_printf.dir/srcs/cast_flag_Ddi.c.i: cmake_force
@@ -539,7 +515,7 @@ CMakeFiles/ft_printf.dir/srcs/cast_flag_Ddi.c.o.provides.build: CMakeFiles/ft_pr
 
 CMakeFiles/ft_printf.dir/srcs/cast_flag_Ss.c.o: CMakeFiles/ft_printf.dir/flags.make
 CMakeFiles/ft_printf.dir/srcs/cast_flag_Ss.c.o: ../srcs/cast_flag_Ss.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/amasol/amasol/project/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/ft_printf.dir/srcs/cast_flag_Ss.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/amasol/amasol/project/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/ft_printf.dir/srcs/cast_flag_Ss.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf.dir/srcs/cast_flag_Ss.c.o   -c /Users/amasol/amasol/project/ft_printf/srcs/cast_flag_Ss.c
 
 CMakeFiles/ft_printf.dir/srcs/cast_flag_Ss.c.i: cmake_force
@@ -563,7 +539,7 @@ CMakeFiles/ft_printf.dir/srcs/cast_flag_Ss.c.o.provides.build: CMakeFiles/ft_pri
 
 CMakeFiles/ft_printf.dir/srcs/cast_flag_Cc.c.o: CMakeFiles/ft_printf.dir/flags.make
 CMakeFiles/ft_printf.dir/srcs/cast_flag_Cc.c.o: ../srcs/cast_flag_Cc.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/amasol/amasol/project/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/ft_printf.dir/srcs/cast_flag_Cc.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/amasol/amasol/project/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/ft_printf.dir/srcs/cast_flag_Cc.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf.dir/srcs/cast_flag_Cc.c.o   -c /Users/amasol/amasol/project/ft_printf/srcs/cast_flag_Cc.c
 
 CMakeFiles/ft_printf.dir/srcs/cast_flag_Cc.c.i: cmake_force
@@ -587,7 +563,7 @@ CMakeFiles/ft_printf.dir/srcs/cast_flag_Cc.c.o.provides.build: CMakeFiles/ft_pri
 
 CMakeFiles/ft_printf.dir/srcs/cast_flag_Xx.c.o: CMakeFiles/ft_printf.dir/flags.make
 CMakeFiles/ft_printf.dir/srcs/cast_flag_Xx.c.o: ../srcs/cast_flag_Xx.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/amasol/amasol/project/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/ft_printf.dir/srcs/cast_flag_Xx.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/amasol/amasol/project/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/ft_printf.dir/srcs/cast_flag_Xx.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf.dir/srcs/cast_flag_Xx.c.o   -c /Users/amasol/amasol/project/ft_printf/srcs/cast_flag_Xx.c
 
 CMakeFiles/ft_printf.dir/srcs/cast_flag_Xx.c.i: cmake_force
@@ -611,7 +587,7 @@ CMakeFiles/ft_printf.dir/srcs/cast_flag_Xx.c.o.provides.build: CMakeFiles/ft_pri
 
 CMakeFiles/ft_printf.dir/srcs/cast_flag_Uu.c.o: CMakeFiles/ft_printf.dir/flags.make
 CMakeFiles/ft_printf.dir/srcs/cast_flag_Uu.c.o: ../srcs/cast_flag_Uu.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/amasol/amasol/project/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/ft_printf.dir/srcs/cast_flag_Uu.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/amasol/amasol/project/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/ft_printf.dir/srcs/cast_flag_Uu.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf.dir/srcs/cast_flag_Uu.c.o   -c /Users/amasol/amasol/project/ft_printf/srcs/cast_flag_Uu.c
 
 CMakeFiles/ft_printf.dir/srcs/cast_flag_Uu.c.i: cmake_force
@@ -635,7 +611,7 @@ CMakeFiles/ft_printf.dir/srcs/cast_flag_Uu.c.o.provides.build: CMakeFiles/ft_pri
 
 CMakeFiles/ft_printf.dir/srcs/cast_flag_Oo.c.o: CMakeFiles/ft_printf.dir/flags.make
 CMakeFiles/ft_printf.dir/srcs/cast_flag_Oo.c.o: ../srcs/cast_flag_Oo.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/amasol/amasol/project/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/ft_printf.dir/srcs/cast_flag_Oo.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/amasol/amasol/project/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/ft_printf.dir/srcs/cast_flag_Oo.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf.dir/srcs/cast_flag_Oo.c.o   -c /Users/amasol/amasol/project/ft_printf/srcs/cast_flag_Oo.c
 
 CMakeFiles/ft_printf.dir/srcs/cast_flag_Oo.c.i: cmake_force
@@ -659,7 +635,7 @@ CMakeFiles/ft_printf.dir/srcs/cast_flag_Oo.c.o.provides.build: CMakeFiles/ft_pri
 
 CMakeFiles/ft_printf.dir/srcs/cast_flag_p.c.o: CMakeFiles/ft_printf.dir/flags.make
 CMakeFiles/ft_printf.dir/srcs/cast_flag_p.c.o: ../srcs/cast_flag_p.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/amasol/amasol/project/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/ft_printf.dir/srcs/cast_flag_p.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/amasol/amasol/project/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/ft_printf.dir/srcs/cast_flag_p.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf.dir/srcs/cast_flag_p.c.o   -c /Users/amasol/amasol/project/ft_printf/srcs/cast_flag_p.c
 
 CMakeFiles/ft_printf.dir/srcs/cast_flag_p.c.i: cmake_force
@@ -683,7 +659,7 @@ CMakeFiles/ft_printf.dir/srcs/cast_flag_p.c.o.provides.build: CMakeFiles/ft_prin
 
 CMakeFiles/ft_printf.dir/main2.c.o: CMakeFiles/ft_printf.dir/flags.make
 CMakeFiles/ft_printf.dir/main2.c.o: ../main2.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/amasol/amasol/project/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object CMakeFiles/ft_printf.dir/main2.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/amasol/amasol/project/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/ft_printf.dir/main2.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf.dir/main2.c.o   -c /Users/amasol/amasol/project/ft_printf/main2.c
 
 CMakeFiles/ft_printf.dir/main2.c.i: cmake_force
@@ -707,7 +683,7 @@ CMakeFiles/ft_printf.dir/main2.c.o.provides.build: CMakeFiles/ft_printf.dir/main
 
 CMakeFiles/ft_printf.dir/srcs/ft_strlen_uintmax.c.o: CMakeFiles/ft_printf.dir/flags.make
 CMakeFiles/ft_printf.dir/srcs/ft_strlen_uintmax.c.o: ../srcs/ft_strlen_uintmax.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/amasol/amasol/project/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object CMakeFiles/ft_printf.dir/srcs/ft_strlen_uintmax.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/amasol/amasol/project/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object CMakeFiles/ft_printf.dir/srcs/ft_strlen_uintmax.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf.dir/srcs/ft_strlen_uintmax.c.o   -c /Users/amasol/amasol/project/ft_printf/srcs/ft_strlen_uintmax.c
 
 CMakeFiles/ft_printf.dir/srcs/ft_strlen_uintmax.c.i: cmake_force
@@ -731,7 +707,7 @@ CMakeFiles/ft_printf.dir/srcs/ft_strlen_uintmax.c.o.provides.build: CMakeFiles/f
 
 CMakeFiles/ft_printf.dir/srcs/no_spec.c.o: CMakeFiles/ft_printf.dir/flags.make
 CMakeFiles/ft_printf.dir/srcs/no_spec.c.o: ../srcs/no_spec.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/amasol/amasol/project/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object CMakeFiles/ft_printf.dir/srcs/no_spec.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/amasol/amasol/project/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object CMakeFiles/ft_printf.dir/srcs/no_spec.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf.dir/srcs/no_spec.c.o   -c /Users/amasol/amasol/project/ft_printf/srcs/no_spec.c
 
 CMakeFiles/ft_printf.dir/srcs/no_spec.c.i: cmake_force
@@ -753,33 +729,9 @@ CMakeFiles/ft_printf.dir/srcs/no_spec.c.o.provides: CMakeFiles/ft_printf.dir/src
 CMakeFiles/ft_printf.dir/srcs/no_spec.c.o.provides.build: CMakeFiles/ft_printf.dir/srcs/no_spec.c.o
 
 
-CMakeFiles/ft_printf.dir/srcs/ft_strchr.c.o: CMakeFiles/ft_printf.dir/flags.make
-CMakeFiles/ft_printf.dir/srcs/ft_strchr.c.o: ../srcs/ft_strchr.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/amasol/amasol/project/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object CMakeFiles/ft_printf.dir/srcs/ft_strchr.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf.dir/srcs/ft_strchr.c.o   -c /Users/amasol/amasol/project/ft_printf/srcs/ft_strchr.c
-
-CMakeFiles/ft_printf.dir/srcs/ft_strchr.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_printf.dir/srcs/ft_strchr.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/amasol/amasol/project/ft_printf/srcs/ft_strchr.c > CMakeFiles/ft_printf.dir/srcs/ft_strchr.c.i
-
-CMakeFiles/ft_printf.dir/srcs/ft_strchr.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf.dir/srcs/ft_strchr.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/amasol/amasol/project/ft_printf/srcs/ft_strchr.c -o CMakeFiles/ft_printf.dir/srcs/ft_strchr.c.s
-
-CMakeFiles/ft_printf.dir/srcs/ft_strchr.c.o.requires:
-
-.PHONY : CMakeFiles/ft_printf.dir/srcs/ft_strchr.c.o.requires
-
-CMakeFiles/ft_printf.dir/srcs/ft_strchr.c.o.provides: CMakeFiles/ft_printf.dir/srcs/ft_strchr.c.o.requires
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/ft_strchr.c.o.provides.build
-.PHONY : CMakeFiles/ft_printf.dir/srcs/ft_strchr.c.o.provides
-
-CMakeFiles/ft_printf.dir/srcs/ft_strchr.c.o.provides.build: CMakeFiles/ft_printf.dir/srcs/ft_strchr.c.o
-
-
 CMakeFiles/ft_printf.dir/srcs/ft_putwchar.c.o: CMakeFiles/ft_printf.dir/flags.make
 CMakeFiles/ft_printf.dir/srcs/ft_putwchar.c.o: ../srcs/ft_putwchar.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/amasol/amasol/project/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object CMakeFiles/ft_printf.dir/srcs/ft_putwchar.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/amasol/amasol/project/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object CMakeFiles/ft_printf.dir/srcs/ft_putwchar.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf.dir/srcs/ft_putwchar.c.o   -c /Users/amasol/amasol/project/ft_printf/srcs/ft_putwchar.c
 
 CMakeFiles/ft_printf.dir/srcs/ft_putwchar.c.i: cmake_force
@@ -803,7 +755,7 @@ CMakeFiles/ft_printf.dir/srcs/ft_putwchar.c.o.provides.build: CMakeFiles/ft_prin
 
 CMakeFiles/ft_printf.dir/srcs/ft_lenwchar.c.o: CMakeFiles/ft_printf.dir/flags.make
 CMakeFiles/ft_printf.dir/srcs/ft_lenwchar.c.o: ../srcs/ft_lenwchar.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/amasol/amasol/project/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building C object CMakeFiles/ft_printf.dir/srcs/ft_lenwchar.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/amasol/amasol/project/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object CMakeFiles/ft_printf.dir/srcs/ft_lenwchar.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf.dir/srcs/ft_lenwchar.c.o   -c /Users/amasol/amasol/project/ft_printf/srcs/ft_lenwchar.c
 
 CMakeFiles/ft_printf.dir/srcs/ft_lenwchar.c.i: cmake_force
@@ -825,52 +777,28 @@ CMakeFiles/ft_printf.dir/srcs/ft_lenwchar.c.o.provides: CMakeFiles/ft_printf.dir
 CMakeFiles/ft_printf.dir/srcs/ft_lenwchar.c.o.provides.build: CMakeFiles/ft_printf.dir/srcs/ft_lenwchar.c.o
 
 
-CMakeFiles/ft_printf.dir/srcs/ft_strrev.c.o: CMakeFiles/ft_printf.dir/flags.make
-CMakeFiles/ft_printf.dir/srcs/ft_strrev.c.o: ../srcs/ft_strrev.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/amasol/amasol/project/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building C object CMakeFiles/ft_printf.dir/srcs/ft_strrev.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf.dir/srcs/ft_strrev.c.o   -c /Users/amasol/amasol/project/ft_printf/srcs/ft_strrev.c
+CMakeFiles/ft_printf.dir/srcs/ft_putstr_len.c.o: CMakeFiles/ft_printf.dir/flags.make
+CMakeFiles/ft_printf.dir/srcs/ft_putstr_len.c.o: ../srcs/ft_putstr_len.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/amasol/amasol/project/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object CMakeFiles/ft_printf.dir/srcs/ft_putstr_len.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf.dir/srcs/ft_putstr_len.c.o   -c /Users/amasol/amasol/project/ft_printf/srcs/ft_putstr_len.c
 
-CMakeFiles/ft_printf.dir/srcs/ft_strrev.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_printf.dir/srcs/ft_strrev.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/amasol/amasol/project/ft_printf/srcs/ft_strrev.c > CMakeFiles/ft_printf.dir/srcs/ft_strrev.c.i
+CMakeFiles/ft_printf.dir/srcs/ft_putstr_len.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_printf.dir/srcs/ft_putstr_len.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/amasol/amasol/project/ft_printf/srcs/ft_putstr_len.c > CMakeFiles/ft_printf.dir/srcs/ft_putstr_len.c.i
 
-CMakeFiles/ft_printf.dir/srcs/ft_strrev.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf.dir/srcs/ft_strrev.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/amasol/amasol/project/ft_printf/srcs/ft_strrev.c -o CMakeFiles/ft_printf.dir/srcs/ft_strrev.c.s
+CMakeFiles/ft_printf.dir/srcs/ft_putstr_len.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf.dir/srcs/ft_putstr_len.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/amasol/amasol/project/ft_printf/srcs/ft_putstr_len.c -o CMakeFiles/ft_printf.dir/srcs/ft_putstr_len.c.s
 
-CMakeFiles/ft_printf.dir/srcs/ft_strrev.c.o.requires:
+CMakeFiles/ft_printf.dir/srcs/ft_putstr_len.c.o.requires:
 
-.PHONY : CMakeFiles/ft_printf.dir/srcs/ft_strrev.c.o.requires
+.PHONY : CMakeFiles/ft_printf.dir/srcs/ft_putstr_len.c.o.requires
 
-CMakeFiles/ft_printf.dir/srcs/ft_strrev.c.o.provides: CMakeFiles/ft_printf.dir/srcs/ft_strrev.c.o.requires
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/ft_strrev.c.o.provides.build
-.PHONY : CMakeFiles/ft_printf.dir/srcs/ft_strrev.c.o.provides
+CMakeFiles/ft_printf.dir/srcs/ft_putstr_len.c.o.provides: CMakeFiles/ft_printf.dir/srcs/ft_putstr_len.c.o.requires
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/ft_putstr_len.c.o.provides.build
+.PHONY : CMakeFiles/ft_printf.dir/srcs/ft_putstr_len.c.o.provides
 
-CMakeFiles/ft_printf.dir/srcs/ft_strrev.c.o.provides.build: CMakeFiles/ft_printf.dir/srcs/ft_strrev.c.o
-
-
-CMakeFiles/ft_printf.dir/srcs/ft_strdup.c.o: CMakeFiles/ft_printf.dir/flags.make
-CMakeFiles/ft_printf.dir/srcs/ft_strdup.c.o: ../srcs/ft_strdup.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/amasol/amasol/project/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building C object CMakeFiles/ft_printf.dir/srcs/ft_strdup.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf.dir/srcs/ft_strdup.c.o   -c /Users/amasol/amasol/project/ft_printf/srcs/ft_strdup.c
-
-CMakeFiles/ft_printf.dir/srcs/ft_strdup.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_printf.dir/srcs/ft_strdup.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/amasol/amasol/project/ft_printf/srcs/ft_strdup.c > CMakeFiles/ft_printf.dir/srcs/ft_strdup.c.i
-
-CMakeFiles/ft_printf.dir/srcs/ft_strdup.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf.dir/srcs/ft_strdup.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/amasol/amasol/project/ft_printf/srcs/ft_strdup.c -o CMakeFiles/ft_printf.dir/srcs/ft_strdup.c.s
-
-CMakeFiles/ft_printf.dir/srcs/ft_strdup.c.o.requires:
-
-.PHONY : CMakeFiles/ft_printf.dir/srcs/ft_strdup.c.o.requires
-
-CMakeFiles/ft_printf.dir/srcs/ft_strdup.c.o.provides: CMakeFiles/ft_printf.dir/srcs/ft_strdup.c.o.requires
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/ft_strdup.c.o.provides.build
-.PHONY : CMakeFiles/ft_printf.dir/srcs/ft_strdup.c.o.provides
-
-CMakeFiles/ft_printf.dir/srcs/ft_strdup.c.o.provides.build: CMakeFiles/ft_printf.dir/srcs/ft_strdup.c.o
+CMakeFiles/ft_printf.dir/srcs/ft_putstr_len.c.o.provides.build: CMakeFiles/ft_printf.dir/srcs/ft_putstr_len.c.o
 
 
 # Object files for target ft_printf
@@ -889,7 +817,6 @@ ft_printf_OBJECTS = \
 "CMakeFiles/ft_printf.dir/srcs/find.c.o" \
 "CMakeFiles/ft_printf.dir/srcs/ft_printf.c.o" \
 "CMakeFiles/ft_printf.dir/srcs/ft_qualifier.c.o" \
-"CMakeFiles/ft_printf.dir/srcs/itoa_b.c.o" \
 "CMakeFiles/ft_printf.dir/srcs/itoa_b_uintmax.c.o" \
 "CMakeFiles/ft_printf.dir/srcs/parsing.c.o" \
 "CMakeFiles/ft_printf.dir/srcs/ft_putnbr_long.c.o" \
@@ -904,11 +831,9 @@ ft_printf_OBJECTS = \
 "CMakeFiles/ft_printf.dir/main2.c.o" \
 "CMakeFiles/ft_printf.dir/srcs/ft_strlen_uintmax.c.o" \
 "CMakeFiles/ft_printf.dir/srcs/no_spec.c.o" \
-"CMakeFiles/ft_printf.dir/srcs/ft_strchr.c.o" \
 "CMakeFiles/ft_printf.dir/srcs/ft_putwchar.c.o" \
 "CMakeFiles/ft_printf.dir/srcs/ft_lenwchar.c.o" \
-"CMakeFiles/ft_printf.dir/srcs/ft_strrev.c.o" \
-"CMakeFiles/ft_printf.dir/srcs/ft_strdup.c.o"
+"CMakeFiles/ft_printf.dir/srcs/ft_putstr_len.c.o"
 
 # External object files for target ft_printf
 ft_printf_EXTERNAL_OBJECTS =
@@ -927,7 +852,6 @@ ft_printf: CMakeFiles/ft_printf.dir/srcs/ft_strlen.c.o
 ft_printf: CMakeFiles/ft_printf.dir/srcs/find.c.o
 ft_printf: CMakeFiles/ft_printf.dir/srcs/ft_printf.c.o
 ft_printf: CMakeFiles/ft_printf.dir/srcs/ft_qualifier.c.o
-ft_printf: CMakeFiles/ft_printf.dir/srcs/itoa_b.c.o
 ft_printf: CMakeFiles/ft_printf.dir/srcs/itoa_b_uintmax.c.o
 ft_printf: CMakeFiles/ft_printf.dir/srcs/parsing.c.o
 ft_printf: CMakeFiles/ft_printf.dir/srcs/ft_putnbr_long.c.o
@@ -942,14 +866,12 @@ ft_printf: CMakeFiles/ft_printf.dir/srcs/cast_flag_p.c.o
 ft_printf: CMakeFiles/ft_printf.dir/main2.c.o
 ft_printf: CMakeFiles/ft_printf.dir/srcs/ft_strlen_uintmax.c.o
 ft_printf: CMakeFiles/ft_printf.dir/srcs/no_spec.c.o
-ft_printf: CMakeFiles/ft_printf.dir/srcs/ft_strchr.c.o
 ft_printf: CMakeFiles/ft_printf.dir/srcs/ft_putwchar.c.o
 ft_printf: CMakeFiles/ft_printf.dir/srcs/ft_lenwchar.c.o
-ft_printf: CMakeFiles/ft_printf.dir/srcs/ft_strrev.c.o
-ft_printf: CMakeFiles/ft_printf.dir/srcs/ft_strdup.c.o
+ft_printf: CMakeFiles/ft_printf.dir/srcs/ft_putstr_len.c.o
 ft_printf: CMakeFiles/ft_printf.dir/build.make
 ft_printf: CMakeFiles/ft_printf.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/amasol/amasol/project/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Linking C executable ft_printf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/amasol/amasol/project/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Linking C executable ft_printf"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ft_printf.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -971,7 +893,6 @@ CMakeFiles/ft_printf.dir/requires: CMakeFiles/ft_printf.dir/srcs/ft_strlen.c.o.r
 CMakeFiles/ft_printf.dir/requires: CMakeFiles/ft_printf.dir/srcs/find.c.o.requires
 CMakeFiles/ft_printf.dir/requires: CMakeFiles/ft_printf.dir/srcs/ft_printf.c.o.requires
 CMakeFiles/ft_printf.dir/requires: CMakeFiles/ft_printf.dir/srcs/ft_qualifier.c.o.requires
-CMakeFiles/ft_printf.dir/requires: CMakeFiles/ft_printf.dir/srcs/itoa_b.c.o.requires
 CMakeFiles/ft_printf.dir/requires: CMakeFiles/ft_printf.dir/srcs/itoa_b_uintmax.c.o.requires
 CMakeFiles/ft_printf.dir/requires: CMakeFiles/ft_printf.dir/srcs/parsing.c.o.requires
 CMakeFiles/ft_printf.dir/requires: CMakeFiles/ft_printf.dir/srcs/ft_putnbr_long.c.o.requires
@@ -986,11 +907,9 @@ CMakeFiles/ft_printf.dir/requires: CMakeFiles/ft_printf.dir/srcs/cast_flag_p.c.o
 CMakeFiles/ft_printf.dir/requires: CMakeFiles/ft_printf.dir/main2.c.o.requires
 CMakeFiles/ft_printf.dir/requires: CMakeFiles/ft_printf.dir/srcs/ft_strlen_uintmax.c.o.requires
 CMakeFiles/ft_printf.dir/requires: CMakeFiles/ft_printf.dir/srcs/no_spec.c.o.requires
-CMakeFiles/ft_printf.dir/requires: CMakeFiles/ft_printf.dir/srcs/ft_strchr.c.o.requires
 CMakeFiles/ft_printf.dir/requires: CMakeFiles/ft_printf.dir/srcs/ft_putwchar.c.o.requires
 CMakeFiles/ft_printf.dir/requires: CMakeFiles/ft_printf.dir/srcs/ft_lenwchar.c.o.requires
-CMakeFiles/ft_printf.dir/requires: CMakeFiles/ft_printf.dir/srcs/ft_strrev.c.o.requires
-CMakeFiles/ft_printf.dir/requires: CMakeFiles/ft_printf.dir/srcs/ft_strdup.c.o.requires
+CMakeFiles/ft_printf.dir/requires: CMakeFiles/ft_printf.dir/srcs/ft_putstr_len.c.o.requires
 
 .PHONY : CMakeFiles/ft_printf.dir/requires
 

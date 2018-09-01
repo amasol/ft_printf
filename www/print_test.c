@@ -513,7 +513,7 @@ int	main(void)
 #endif
 #ifdef LENGTH
 	TITLE("Number options(field width and length modifiers):\n");
-	printf("\t|%5s|\t|%5s|\t|%20s|\t|%20s|\t|%20s|\t|%10s|\t|%10s|\n", "hh", "h", "l", "ll","j", "z", "nothing" );
+	printf("\t|%5s|\t|%5s|\t|%20s|\t|%20s|\t|%20s|\t|%10s|\t|%10s|\n", "hh", "h", "l", "ll","j", "z", "nothi" );
 	{
 # define CNV "i"
 		printf("\n   |"CNV"|:\n");

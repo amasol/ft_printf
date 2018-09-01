@@ -15,257 +15,79 @@
 void	cast_flag_c(t_inf *inf, t_flag *flag, char str)
 {
 	// флаг -
-	inf->count = (inf->uint_j > (uintmax_t)inf->width) ? inf->uint_j : inf->width - inf->uint_j;
+	inf->cou = (inf->uint_j > (uintmax_t)inf->width)? inf->uint_j: inf->width - inf->uint_j;
 	if (inf->width_two > inf->width)
-		inf->count_two = (inf->width_two > inf->width) ? inf->width_two - inf->width : 0;
-	else if ((uintmax_t)inf->width_two > inf->uint_j)
-		inf->count_two = ((uintmax_t)inf->width_two > inf->uint_j) ? inf->width_two - inf->uint_j : 0;
+		inf->cou_t = (inf->width_two > inf->width) ? inf->width_two - inf->width : 0;
 
-
-//	if (str == NULL)
-//	{
-//		inf->width = (inf->width == 6 || inf->width > 6) ? 6 : inf->width;
-//		if (flag->width == 1 && inf->width)
-//		{
-//			inf->result += write(1, "(null)", inf->width);
-//			inf->width--;
-//		}
-//		else
-//			inf->result += write(1, "(null)", 6);
-//	}
-
-
-	else if (inf->count > 0 && flag->minus == 1 && flag->precision == 0 && inf->width == 0)
+	else if (inf->cou > 0 && flag->min == 1 && flag->preci == 0 && inf->width == 0)
 	{
-		if (flag->space == 1)
-			inf->result += write(1, " ", 1);
+		inf->r = (flag->space == 1) ? inf->r += write(1, " ", 1) : inf->r;
 		ft_putchar(str);
 	}
-
 //		флан zero
 	else if (flag->zero == 1)
 	{
-		inf->count -= 1;
-//		while (inf->count_two > 0)
-//		{
-//			inf->result += write(1, " ", 1);
-//			inf->count_two--;
-//		}
-		while (inf->count > 0)
-		{
-			inf->result += write(1, "0", 1);
-			inf->count--;
-		}
+		inf->cou -= 1;
+		inf->r = (inf->cou > 0) ? inf->r += ft_ps_l("0", inf->cou) : inf->r;
 		if (str == '\0')
 		{
 			ft_putchar('0');
 			ft_putchar('\0');
-			inf->result += 1;
+			inf->r += 1;
 		}
 	}
-		// 		флаг	 ширины
-	else if (inf->count >= 0 && flag->width == 1 && flag->precision == 0 &&
-			 flag->minus != 1 && inf->minus_value != 1)
+	// 		флаг	 ширины
+	else if (inf->cou >= 0 && flag->width == 1 && flag->preci == 0 &&
+			 flag->min != 1 && inf->min_v != 1)
 	{
-		while (inf->count > 0)
-		{
-			inf->result += write(1, " ", 1);
-			inf->count--;
-		}
+		inf->r = (inf->cou > 0) ? inf->r += ft_ps_l(" ", inf->cou) : inf->r;
 		ft_putchar(str);
 	}
-		//	флаг	 ширины и флаг minus
-	else if (flag->width == 1 && flag->precision == 0 &&
-			 inf->width > 0 && (flag->minus == 1) && flag->h == 0)
+	//	флаг	 ширины и флаг min
+	else if (flag->width == 1 && flag->preci == 0 && flag->min == 1)
 	{
-		if (flag->space == 1)
-			inf->count = inf->count + 1;
-		if (flag->space == 1)
-			inf->result += write(1, " ", 1);
 		ft_putchar(str);
-		if (flag->minus == 1 && flag->ban < inf->width && inf->tmp == 1)
-			inf->result += write(1, " ", 1);
-		while (inf->count > 0 && flag->space != 1)
-		{
-			inf->result += write(1, " ", 1);
-			inf->count--;
-		}
+		inf->r = (inf->cou > 0) ? inf->r += ft_ps_l(" ", inf->cou) : inf->r;
 	}
-		//	флаг	 ширины + модификаторы и флаг minus
-	else if (inf->count >= 0 && flag->width == 1 && flag->precision == 0 &&
-			 inf->minus_value == 1 && flag->h == 1)
-	{
-		if (flag->space == 1)
-			inf->count = inf->count + 1;
-		if (flag->space == 1)
-			inf->result += write(1, " ", 1);
-		while (inf->count > 0 && flag->space != 1)
-		{
-			inf->result += write(1, " ", 1);
-			inf->count--;
-		}
-		ft_putchar(str);
-	}
-		// 		флаг	 ширины + когда аргумент по кол-ву с оденаковый с шириной !
-	else if (inf->count == 0 && flag->width == 1 && flag->precision == 0 )
-	{
-		if (inf->count == 1 && flag->plus == 1)
-			inf->count -= 1;
-		if (flag->space == 1)
-			inf->count = inf->count + 1;
-		ft_putchar(str);
-		while (inf->count_two > 0 && inf->count == 0)
-		{
-			inf->result += write(1, " ", 1);
-			inf->count_two--;
-		}
-	}
-
-	else if ((flag->zero == 0 || flag->minus == 0) && flag->plus == 1 && flag->precision == 0 &&
-			 inf->width == 0)
-	{
-		if (inf->width == 0 && inf->count > 0)
-		ft_putchar(str);
-	}
-
-
-//	else if (flag->space == 1 && flag->precision != 1 /*&& inf->nothing != 1*/)
-//	{
-//		inf->result += write(1, " ", 1) = (inf->nothing == 1) ?
-//		inf->result += (inf->nothing == 1) ? write(1, " ", 1) : 0;
-//		ft_putchar(str);
-//	}
-
-
-
 //		точность (.)
-	else if (flag->precision == 1 && inf->count > 0 && inf->count_two == 0 && flag->minus != 1 )
+	else if (flag->preci == 1 && inf->cou > 0 && inf->cou_t == 0 && flag->min != 1 )
 	{
-		if ((flag->plus == 1) && flag->minus == 0 && (inf->width < inf->width_two))
-			inf->result += write(1, " ", 1);
-		while (inf->count_two > 0)
-		{
-			inf->result += write(1, " ", 1);
-			inf->count_two--;
-		}
+		if ((flag->plus == 1) && flag->min == 0 && (inf->width < inf->width_two))
+			inf->r += write(1, " ", 1);
 		ft_putchar(str);
 	}
-
-
-//		точность (ширина + точность)
-	else if (flag->precision == 1 && inf->count >= 0 && inf->count_two >= 0 && flag->minus == 0)
-	{
-		inf->count_two = (inf->minus_value == 1) ? inf->count_two -= 1 : inf->count_two;
-		while (inf->count_two > 0)
-		{
-			inf->result += write(1, " ", 1);
-			inf->count_two--;
-		}
+	else if (inf->nothi == 0)
 		ft_putchar(str);
-	}
-
-		//		точность (ширина точность и флаг минут)
-	else if (flag->precision == 1 && flag->minus == 1 && inf->count >= 0 &&
-			 inf->count_two >= 0)
-	{
-		ft_putchar(str);
-
-		while (inf->count_two > 0)
-		{
-			inf->result += write(1, " ", 1);
-			inf->count_two--;
-		}
-	}
-	else if (flag->precision == 1 && inf->count == 0 && inf->count_two > 0)
-	{
-		while (inf->count > 0)
-		{
-			inf->result += write(1, "0", 1);
-			inf->count--;
-		}
-		while (inf->count_two > 0)
-		{
-			inf->result += write(1, " ", 1);
-			inf->count_two--;
-		}
-		ft_putchar(str);
-	}
-	else if (flag->precision == 1 && flag->plus == 1)
-	{
-		while (inf->count > 0)
-		{
-			inf->result += write(1, " ", 1);
-			inf->count--;
-		}
-		ft_putchar(str);
-	}
-
-	else if (flag->plus == 0 && flag->slash == 0 && flag->space == 0
-			 && flag->zero == 0 && flag->width == 0 && flag->precision == 0)
-	{
-//		inf->result += ft_strlen_uintmax(&str);
-		ft_putchar(str);
-	}
-
-	else if (inf->nothing == 0)
-	{
-//		str = ft_strsub(str, 0, inf->width);
-//		inf->result += ft_strlen_uintmax(str);
-		ft_putchar(str);
-//		ft_strdel(&str);
-	}
 	else if (flag->space == 1)
 		ft_putchar(str);
-	inf->result += 1;
+	inf->r += 1;
 }
 
 void	cast_flag_C(t_inf *inf, t_flag *flag, wchar_t c)
 {
-	inf->uint_j = ft_lenwchar(c, inf);
-
-	//без точности
-	if (flag->width == 1 && flag->precision == 0)
+	inf->uint_j = ft_lenwchar(c);
+	if (flag->width == 1 && flag->preci == 0)
 	{
-		inf->count = (inf->uint_j < inf->width) ? inf->width - inf->uint_j : inf->result;
-		while (inf->count > 0)
-		{
-			inf->result += write(1, " ", 1);
-			inf->count--;
-		}
+		inf->cou = (inf->uint_j < inf->width) ? inf->width - inf->uint_j : inf->r;
+		inf->r = (inf->cou > 0) ? inf->r += ft_ps_l(" ", inf->cou) : inf->r;
 		ft_putwchar(c, inf);
 	}
-//		с точностью и шириной по левому краю
-	else if (flag->width == 1 && flag->precision == 1 && flag->check_precision == 1)
+	else if (flag->width == 1 && flag->preci == 1 && flag->check_preci == 1)
 	{
-		inf->count = (inf->uint_j < inf->width) ? inf->width - inf->uint_j : inf->result;
-		while (inf->count > 0 && c != '\0')
-		{
-			inf->result += write(1, " ", 1);
-			inf->count--;
-		}
+		inf->cou = (inf->uint_j < inf->width) ? inf->width - inf->uint_j : inf->r;
+		inf->r = (inf->cou > 0) ? inf->r += ft_ps_l(" ", inf->cou) : inf->r;
 		ft_putwchar(c, inf);
 	}
 	else if (flag->space == 1 || flag->plus == 1)
 	{
-//		inf->count = (inf->uint_j < inf->width) ? inf->width - inf->uint_j : inf->result;
-		inf->count = (inf->uint_j < inf->width) ? inf->width - inf->uint_j : inf->count;
-		while (inf->count > 0 && c != '\0')
-		{
-			inf->result += write(1, " ", 1);
-			inf->count--;
-		}
+		inf->cou = (inf->uint_j < inf->width) ? inf->width - inf->uint_j : inf->cou;
+		inf->r = (inf->cou > 0) ? inf->r += ft_ps_l(" ", inf->cou) : inf->r;
 		ft_putwchar(c, inf);
 	}
-	else if (flag->precision == 1)
+	else if (flag->preci == 1)
 		ft_putwchar(c, inf);
-	else if (flag->width == 0 && flag->precision == 0 && flag->space == 0 && flag->plus == 0)
+	else if (flag->width == 0 && flag->preci == 0 && flag->space == 0 && flag->plus == 0)
 		ft_putwchar(c, inf);
-
-
-
-
-
-
 }
 
 

@@ -17,127 +17,46 @@ int				ft_printf(const char *format, ...)
 	va_list		lst;
 	t_inf		inf;
 
-	inf.result = 0;
+	inf.r = 0;
 	va_start(lst, format);
 	while (*format != '%' && *format != '\0')
 	{
-		inf.result += write(1, format, 1);
+		inf.r += write(1, format, 1);
 		format++;
 	}
 	if (*format)
 	{
-//		while (*format == '%' && *(format + 1) != '%')
-//		{
-//			format++;
-//			parsing((char *)format, lst, &inf);
-//			format += inf.count_format;
-//		}
-//		if (*format == '%' && *(format + 1) == '%')
-//		{
-//			while (*format == '%' /*&& *(format + 1) == '%'*/)
-//			{
-//				inf.result += write(1, "%", 1);
-//				format += 2;
-//			}
-//			while (ft_isdigit(*format) || (*format == '-') || (*format == '+')
-//					|| ft_flag_check(*format) || (*format == ' ') || (*format == '.'))
-//				format++;
-//			if (ft_qualifier(*format))
-//				format++;
-			while (*format != '\0')
+		while (*format != '\0')
+		{
+			if (*format == '%' && *(format + 1) == 0)
+				return (inf.r);
+			if (*format == '%' && *(format + 1) != '%')
 			{
-				if (*format == '%' && *(format + 1) == 0)
-					return (inf.result);
-				if (*format == '%' && *(format + 1) != '%')
-				{
-					format++;
-					parsing((char *)format, lst, &inf);
-					format += inf.count_format;
-				}
-				else if (*format == '%' && *(format + 1) == '%')
-				{
-					inf.result += write(1, "%", 1);
-					format += 2;
-				}
-				else if (*format == '.' && ft_qualifier(*format) == 0)
-				{
-					ft_putchar(*format);
-					inf.result += 1;
-					format++;
-				}
-//				else if (ft_isdigit(*format) || (*format == '-') || (*format == '+')
-//					|| ft_flag_check(*format) || (*format == ' ') || (*format == '.'))
-//					format++;
-				else if (ft_qualifier(*format))
-					format++;
-//				else if (*format != 'Z')
-				else
-				{
-					ft_putchar(*format);
-					inf.result += 1;
-					format++;
-				}
+				format++;
+				parsing((char *)format, lst, &inf);
+				format += inf.cou_format;
 			}
-	}
-	va_end(lst);
-	return (inf.result);
-}
-
-/*
- * //			output_after((char *)format);
- *
- *
-int		output_after(char *format)
-{
-	int i;
-	int j;
-
-	i = 0;
-	j = 0;
-	if (format[j])
-	{
-//		if (ft_qualifier(format[j])) // не пропустит если будет какие то флаги без %
-//			i++;
-		if (format[j] && i == 0)
-		{
-			write(1, &format[j], 1);
-			j++;
+			else if (*format == '%' && *(format + 1) == '%')
+			{
+				inf.r += write(1, "%", 1);
+				format += 2;
+			}
+			else if (*format == '.' && ft_qualifier(*format) == 0)
+			{
+				ft_putchar(*format);
+				inf.r += 1;
+				format++;
+			}
+			else if (ft_qualifier(*format))
+				format++;
+			else
+			{
+				ft_putchar(*format);
+				inf.r += 1;
+				format++;
+			}
 		}
 	}
-	return (0);
-}
-*/
-
-
-
-
-
-
-/*
-int				ft_printf(const char *format, ...)
-{
-	int i;
-	va_list		lst;
-
-	i = 0;
-	va_start(lst, format);
-	while (format[i])
-	{
-		if (format[i] == '%')
-		{
-			i++;
-//			parsing(*format);
-			parsing((char *)&format[i]);
-//			pars(*format, lst);
-		}
-		else
-			ft_putchar(format[i]);
-//		pars((char *)format, lst);
-//		form(&format);
-		i++;
-	}
-//	write(1, "\n", 1);
 	va_end(lst);
-	return (0);
+	return (inf.r);
 }
-*/

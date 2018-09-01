@@ -1,35 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_ps_l.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amasol <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/10/30 18:09:44 by amasol            #+#    #+#             */
-/*   Updated: 2017/11/11 19:22:44 by amasol           ###   ########.fr       */
+/*   Created: 2018/09/01 14:00:27 by amasol            #+#    #+#             */
+/*   Updated: 2018/09/01 14:00:29 by amasol           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
 
-char	*ft_strdup(const char *src)
+int		ft_ps_l(char const *str, int i)
 {
-	char	*str;
-	int		k;
-	int		i;
+	int j;
 
-	i = 0;
-	k = 0;
-	while (src[k] != '\0')
-		k++;
-	str = (char*)malloc(sizeof(*str) * (k) + 1);
-	if (str == NULL)
-		return (NULL);
-	while (i < k)
+	j = 0;
+	if (str[j] != '\0')
 	{
-		str[i] = src[i];
-		i++;
+		while (j < i)
+		{
+			ft_putchar(*str);
+			j++;
+		}
 	}
-	str[k] = '\0';
-	return (str);
+	return (i);
 }
