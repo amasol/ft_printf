@@ -38,7 +38,7 @@ $(OBJ_DIR)/%.o:$(SRC_DIR)/%.c
 
 $(NAME):
 	@mkdir -p $(OBJ_DIR)
-	@$(MAKE) $(flgS) $(OBJ)
+	@$(MAKE) $(OBJ)
 	@ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)
 
