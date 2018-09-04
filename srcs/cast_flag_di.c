@@ -35,7 +35,7 @@ static int	cast_flg_di_h4(t_inf *inf, intmax_t i, t_flg *flg, char *str)
 	}
 	if (g_lob < inf->r)
 		return (1);
-	cast_flg_di_h5(inf, i, flg, str);
+	cast_flg_di_h5(inf, i, flg);
 	return (0);
 }
 

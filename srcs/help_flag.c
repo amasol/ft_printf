@@ -23,7 +23,7 @@ int			ft_flg_x(va_list lst, char *format, t_flg *flg, t_inf *inf)
 	if (format[k] == 'x')
 	{
 		inf->x = 'x';
-		i = (APPLY) ? (cast_uintmax(i, flg, inf)) : (unsigned int)i;
+		i = (APPLY) ? (cast_uintmax(i, flg)) : (unsigned int)i;
 		tmp = ft_itoa_base_uintmax(i, 16, 'x');
 		inf->un_j += ft_strlen(tmp);
 		free(tmp);
@@ -45,7 +45,7 @@ int			ft_flg_u(va_list lst, char *format, t_flg *flg, t_inf *inf)
 	i = va_arg(lst, uintmax_t);
 	if (format[k] == 'u')
 	{
-		i = (APPLY) ? (cast_uintmax(i, flg, inf)) : (unsigned int)i;
+		i = (APPLY) ? (cast_uintmax(i, flg)) : (unsigned int)i;
 		inf->un_j = ft_cou_uint(i);
 		if (LY)
 			entry_min_uint(inf);
@@ -95,7 +95,7 @@ int			ft_flg_o(va_list lst, char *format, t_flg *flg, t_inf *inf)
 	i = va_arg(lst, uintmax_t);
 	if (format[k] == 'o')
 	{
-		i = (APPLY) ? (cast_uintmax(i, flg, inf)) : (unsigned int)i;
+		i = (APPLY) ? (cast_uintmax(i, flg)) : (unsigned int)i;
 		str = ft_itoa_base_uintmax(i, 8, 'x');
 		inf->un_j += ft_strlen(str);
 		free(str);

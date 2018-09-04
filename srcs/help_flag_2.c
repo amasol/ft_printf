@@ -111,7 +111,7 @@ int			ft_flg_xx(va_list lst, char *format, t_flg *flg, t_inf *inf)
 	if (format[k] == 'X')
 	{
 		inf->x = 'X';
-		i = (APPLY) ? (cast_uintmax(i, flg, inf)) : (unsigned int)i;
+		i = (APPLY) ? (cast_uintmax(i, flg)) : (unsigned int)i;
 		tmp = ft_itoa_base_uintmax(i, 16, 'X');
 		inf->un_j += ft_strlen(tmp);
 		free(tmp);

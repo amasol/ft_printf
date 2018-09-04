@@ -114,7 +114,7 @@ int			ft_flg_di(va_list lst, char *format, t_flg *flg, t_inf *inf)
 	if (format[k] == 'd' || format[k] == 'i')
 	{
 		i = va_arg(lst, intmax_t);
-		i = (APPLY) ? (cast_intmax(i, flg, inf)) : (int)i;
+		i = (APPLY) ? (cast_intmax(i, flg)) : (int)i;
 		i = min_v_di(i, flg, inf);
 		cancellation_flgs_di(flg, inf);
 		if (LY)

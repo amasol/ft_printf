@@ -16,7 +16,7 @@ intmax_t	ft_putnbr_intmax(intmax_t nb)
 {
 	char c;
 
-	if ((unsigned long long)nb == LONG_MIN)
+	if (nb == LONG_MIN)
 	{
 		ft_putstr("-9223372036854775808");
 		return (nb);

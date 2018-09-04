@@ -57,10 +57,10 @@ typedef struct	s_inf
 	int			tmp;
 	int			cou_format;
 	int			min_v;
-	intmax_t	r;
-	intmax_t	r_h;
-	uintmax_t	un_j;
-	intmax_t	intm_j;
+	int			r;
+	int			r_h;
+	int			un_j;
+	int			intm_j;
 }				t_inf;
 
 int				ft_printf(const char *format, ...);
@@ -70,8 +70,8 @@ void			pars_no_spec(t_flg *flg, t_inf *inf);
 int				pars_hi_z(char *format, t_flg *flg, t_inf *inf, va_list lst);
 int				ft_qualifier(char s);
 intmax_t		min_v_di(intmax_t i, t_flg *flg, t_inf *inf);
-intmax_t		cast_intmax(intmax_t i, t_flg *flg, t_inf *inf);
-uintmax_t		cast_uintmax(uintmax_t i, t_flg *flg, t_inf *inf);
+intmax_t		cast_intmax(intmax_t i, t_flg *flg);
+uintmax_t		cast_uintmax(uintmax_t i, t_flg *flg);
 intmax_t		entry_min_intm(intmax_t i, t_inf *inf, t_flg *flg);
 void			entry_min_uint(t_inf *inf);
 /*
@@ -117,10 +117,8 @@ int				output_after(char *format, va_list lst,
 int				is_zero(char *str);
 int				is_check_specs(char s);
 int				is_check_preci(char *str, t_flg *flg);
-int				cast_flg_di_h5(t_inf *inf, intmax_t i,
-					t_flg *flg, char *str);
-int				cast_flg_p_h5(t_inf *inf, uintmax_t i,
-					t_flg *flg, char *str);
+int				cast_flg_di_h5(t_inf *inf, intmax_t i, t_flg *flg);
+int				cast_flg_p_h5(t_inf *inf, t_flg *flg, char *str);
 int				cast_flg_s_h5(t_inf *inf, t_flg *flg, char *str, char *tmp);
 int				cast_flg_ss_h5(t_inf *inf, t_flg *flg, wchar_t *str);
 int				cast_flg_x_h5(t_inf *inf, uintmax_t i,

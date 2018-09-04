@@ -1557,8 +1557,7 @@ int		 main	(void)
 //	ft_printf("%hhD", USHRT_MAX);
 //	printf("\n%hhD", USHRT_MAX);
 //
-	ft_printf("%-.2s is a string", "");
-	printf("\n%-.2s is a string", "");
+//	printf("\n%-.2s is a string", "");
 
 
 
@@ -1604,8 +1603,12 @@ int		 main	(void)
 //	ft_printf("%s, %s", "asdfghfdsafgbngfdgb","asdfghfefghfefdgbn");
 //	printf("\n%s, %s", "asdfghfdsafgbngfdgb","asdfghfefghfefdgbn");
 
-//	printf("%d\n", ft_printf("%15.4S\n", L"ÊM-M-^QÊM-^XØ‰∏M-ÂM-^O™ÁM-^L´„M-M-^B"));
-//	printf("%d\n",printf("%15.4S\n", L"ÊM-M-^QÊM-^XØ‰∏M-ÂM-^O™ÁM-^L´„M-M-^B"));
+//	char *str = "123";
+//	ft_printf("{%-12p}", &str);
+//	printf("\n{%-12p}", &str);
+
+	ft_printf("%5.4S", L"ÊM-M-^QÊM-^XØ‰∏M-ÂM-^O™ÁM-^L´„M-M-^B");
+	printf("\n%5.4S", L"ÊM-M-^QÊM-^XØ‰∏M-ÂM-^O™ÁM-^L´„M-M-^B");
 
 //	ft_printf("{%10R}");
 //	printf("\n{%10R}");
@@ -1618,8 +1621,8 @@ int		 main	(void)
 //	printf("\n%5.C", L'α');
 
 
-//	ft_printf("|len=[%i]", ft_printf("%15.4S", L"ÊM-M-^QÊM-^XØ‰∏M-ÂM-^O™ÁM-^L´„M-M-^B"));
-//	printf("|len=[%i]", printf("%15.4S", L"ÊM-M-^QÊM-^XØ‰∏M-ÂM-^O™ÁM-^L´„M-M-^B"));
+//	ft_printf("|len=[%i]", ft_printf("%10.4S", L"ÊM-M-^QÊM-^XØ‰∏M-ÂM-^O™ÁM-^L´„M-M-^B"));
+//	printf("|len=[%i]", printf("%10.4S", L"ÊM-M-^QÊM-^XØ‰∏M-ÂM-^O™ÁM-^L´„M-M-^B"));
 
 //	ft_printf("|len=[%i]", ft_printf("{%05.Z}", 0));
 //	printf("|len=[%i]", printf("{%05.Z}", 0));

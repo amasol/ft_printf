@@ -14,7 +14,7 @@
 NAME = libftprintf.a
 
 CC = gcc
-#flgS = -Wall -Wextra -Werror
+flgS = -Wall -Wextra -Werror
 
 OBJ_DIR		= ./obj
 SRC_DIR 	= ./srcs

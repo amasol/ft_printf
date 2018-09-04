@@ -33,7 +33,7 @@ static int		cast_flg_p_h4(t_inf *inf, uintmax_t i, t_flg *flg, char *str)
 	}
 	if (g_lob < inf->r)
 		return (1);
-	cast_flg_p_h5(inf, i, flg, str);
+	cast_flg_p_h5(inf, flg, str);
 	return (0);
 }
 
@@ -127,9 +127,10 @@ int				cast_flg_p(t_inf *inf, uintmax_t i, t_flg *flg, char *str)
 	{
 		inf->cou -= 2;
 		inf->r += write(1, "0x", 2);
-		inf->r += ft_strlen_uintmax(str);
+		inf->r += ft_strlen(str);
 		ft_putstr(str);
-		inf->cou = (inf->un_j > inf->cou) ? inf->un_j - inf->cou : inf->cou;
+		inf->cou = (inf->un_j > inf->cou && inf->cou > 0)
+			? inf->un_j - inf->cou : inf->cou;
 		inf->r = (inf->cou > 0) ? inf->r += ps_l(" ", inf->cou) : inf->r;
 	}
 	if (g_lob < inf->r)

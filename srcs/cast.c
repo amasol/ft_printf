@@ -12,7 +12,7 @@
 
 #include "../includes/ft_printf.h"
 
-intmax_t		cast_intmax(intmax_t i, t_flg *flg, t_inf *inf)
+intmax_t		cast_intmax(intmax_t i, t_flg *flg)
 {
 	if (flg->z == 1)
 		return ((size_t)i);
@@ -29,7 +29,7 @@ intmax_t		cast_intmax(intmax_t i, t_flg *flg, t_inf *inf)
 	return (0);
 }
 
-uintmax_t		cast_uintmax(uintmax_t i, t_flg *flg, t_inf *inf)
+uintmax_t		cast_uintmax(uintmax_t i, t_flg *flg)
 {
 	if (flg->z)
 		return ((size_t)i);
@@ -49,13 +49,13 @@ uintmax_t		cast_uintmax(uintmax_t i, t_flg *flg, t_inf *inf)
 void			entry_min_uint(t_inf *inf)
 {
 	if (inf->wid > 0)
-		inf->cou = (inf->un_j <= (uintmax_t)inf->wid)
+		inf->cou = (inf->un_j <= inf->wid)
 			? inf->wid - inf->un_j : 0;
 	if (inf->wid_t > 0 && inf->cou != 0)
 		inf->cou_t = (inf->wid_t > inf->wid)
 			? inf->wid_t - inf->wid : 0;
 	else
-		inf->cou_t = ((uintmax_t)inf->wid_t >= inf->un_j)
+		inf->cou_t = (inf->wid_t >= inf->un_j)
 			? inf->wid_t - inf->un_j : 0;
 	if (inf->cou == 0 && inf->cou_t == 1 && inf->min_v == 1)
 		inf->cou_t -= 1;

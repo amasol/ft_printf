@@ -12,7 +12,7 @@
 
 #include "../includes/ft_printf.h"
 
-int			cast_flg_di_h5(t_inf *inf, intmax_t i, t_flg *flg, char *str)
+int			cast_flg_di_h5(t_inf *inf, intmax_t i, t_flg *flg)
 {
 	if (flg->slash == 0 &&
 		flg->zero == 0 && flg->wid == 0 && flg->preci == 0)
@@ -28,7 +28,7 @@ int			cast_flg_di_h5(t_inf *inf, intmax_t i, t_flg *flg, char *str)
 	return (0);
 }
 
-int			cast_flg_p_h5(t_inf *inf, uintmax_t i, t_flg *flg, char *str)
+int			cast_flg_p_h5(t_inf *inf, t_flg *flg, char *str)
 {
 	if (flg->pls == 0 && flg->slash == 0 && flg->zero == 0
 		&& flg->wid == 0 && flg->preci == 0)
