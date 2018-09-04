@@ -13,51 +13,8 @@
   <component name="ChangeListManager">
     <list default="true" id="337cb4d5-d388-4bc3-82e0-e0e62c1f56a3" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Makefile" afterPath="$PROJECT_DIR$/Makefile" />
-      <change beforePath="$PROJECT_DIR$/includes/ft_printf.h" afterPath="$PROJECT_DIR$/includes/ft_printf.h" />
-      <change beforePath="$PROJECT_DIR$/libft/Makefile" afterPath="$PROJECT_DIR$/libft/Makefile" />
       <change beforePath="$PROJECT_DIR$/libft/libft.a" afterPath="$PROJECT_DIR$/libft/libft.a" />
       <change beforePath="$PROJECT_DIR$/libftprintf.a" afterPath="$PROJECT_DIR$/libftprintf.a" />
-      <change beforePath="$PROJECT_DIR$/obj/cast.o" afterPath="$PROJECT_DIR$/obj/cast.o" />
-      <change beforePath="$PROJECT_DIR$/obj/cast_flag_Ss.o" afterPath="$PROJECT_DIR$/obj/cast_flag_Ss.o" />
-      <change beforePath="$PROJECT_DIR$/obj/cast_flag_c.o" afterPath="$PROJECT_DIR$/obj/cast_flag_c.o" />
-      <change beforePath="$PROJECT_DIR$/obj/cast_flag_di.o" afterPath="$PROJECT_DIR$/obj/cast_flag_di.o" />
-      <change beforePath="$PROJECT_DIR$/obj/cast_flag_o.o" afterPath="$PROJECT_DIR$/obj/cast_flag_o.o" />
-      <change beforePath="$PROJECT_DIR$/obj/cast_flag_p.o" afterPath="$PROJECT_DIR$/obj/cast_flag_p.o" />
-      <change beforePath="$PROJECT_DIR$/obj/cast_flag_s.o" afterPath="$PROJECT_DIR$/obj/cast_flag_s.o" />
-      <change beforePath="$PROJECT_DIR$/obj/cast_flag_u.o" afterPath="$PROJECT_DIR$/obj/cast_flag_u.o" />
-      <change beforePath="$PROJECT_DIR$/obj/cast_flag_x.o" afterPath="$PROJECT_DIR$/obj/cast_flag_x.o" />
-      <change beforePath="$PROJECT_DIR$/obj/find.o" afterPath="$PROJECT_DIR$/obj/find.o" />
-      <change beforePath="$PROJECT_DIR$/obj/ft_qualifier.o" afterPath="$PROJECT_DIR$/obj/ft_qualifier.o" />
-      <change beforePath="$PROJECT_DIR$/obj/help.o" afterPath="$PROJECT_DIR$/obj/help.o" />
-      <change beforePath="$PROJECT_DIR$/obj/help_2.o" afterPath="$PROJECT_DIR$/obj/help_2.o" />
-      <change beforePath="$PROJECT_DIR$/obj/help_3.o" afterPath="$PROJECT_DIR$/obj/help_3.o" />
-      <change beforePath="$PROJECT_DIR$/obj/help_flag.o" afterPath="$PROJECT_DIR$/obj/help_flag.o" />
-      <change beforePath="$PROJECT_DIR$/obj/help_flag_2.o" afterPath="$PROJECT_DIR$/obj/help_flag_2.o" />
-      <change beforePath="$PROJECT_DIR$/obj/no_spec.o" afterPath="$PROJECT_DIR$/obj/no_spec.o" />
-      <change beforePath="$PROJECT_DIR$/obj/parsing.o" afterPath="$PROJECT_DIR$/obj/parsing.o" />
-      <change beforePath="$PROJECT_DIR$/srcs/cast.c" afterPath="$PROJECT_DIR$/srcs/cast.c" />
-      <change beforePath="$PROJECT_DIR$/srcs/cast_flag_Ss.c" afterPath="$PROJECT_DIR$/srcs/cast_flag_Ss.c" />
-      <change beforePath="$PROJECT_DIR$/srcs/cast_flag_c.c" afterPath="$PROJECT_DIR$/srcs/cast_flag_c.c" />
-      <change beforePath="$PROJECT_DIR$/srcs/cast_flag_di.c" afterPath="$PROJECT_DIR$/srcs/cast_flag_di.c" />
-      <change beforePath="$PROJECT_DIR$/srcs/cast_flag_o.c" afterPath="$PROJECT_DIR$/srcs/cast_flag_o.c" />
-      <change beforePath="$PROJECT_DIR$/srcs/cast_flag_p.c" afterPath="$PROJECT_DIR$/srcs/cast_flag_p.c" />
-      <change beforePath="$PROJECT_DIR$/srcs/cast_flag_s.c" afterPath="$PROJECT_DIR$/srcs/cast_flag_s.c" />
-      <change beforePath="$PROJECT_DIR$/srcs/cast_flag_u.c" afterPath="$PROJECT_DIR$/srcs/cast_flag_u.c" />
-      <change beforePath="$PROJECT_DIR$/srcs/cast_flag_x.c" afterPath="$PROJECT_DIR$/srcs/cast_flag_x.c" />
-      <change beforePath="$PROJECT_DIR$/srcs/find.c" afterPath="$PROJECT_DIR$/srcs/find.c" />
-      <change beforePath="$PROJECT_DIR$/srcs/ft_qualifier.c" afterPath="$PROJECT_DIR$/srcs/ft_qualifier.c" />
-      <change beforePath="$PROJECT_DIR$/srcs/help.c" afterPath="$PROJECT_DIR$/srcs/help.c" />
-      <change beforePath="$PROJECT_DIR$/srcs/help_2.c" afterPath="$PROJECT_DIR$/srcs/help_2.c" />
-      <change beforePath="$PROJECT_DIR$/srcs/help_3.c" afterPath="$PROJECT_DIR$/srcs/help_3.c" />
-      <change beforePath="$PROJECT_DIR$/srcs/help_flag.c" afterPath="$PROJECT_DIR$/srcs/help_flag.c" />
-      <change beforePath="$PROJECT_DIR$/srcs/help_flag_2.c" afterPath="$PROJECT_DIR$/srcs/help_flag_2.c" />
-      <change beforePath="$PROJECT_DIR$/srcs/no_spec.c" afterPath="$PROJECT_DIR$/srcs/no_spec.c" />
-      <change beforePath="$PROJECT_DIR$/srcs/parsing.c" afterPath="$PROJECT_DIR$/srcs/parsing.c" />
-      <change beforePath="$PROJECT_DIR$/www/Makefile" afterPath="$PROJECT_DIR$/www/Makefile" />
-      <change beforePath="$PROJECT_DIR$/www/print_test.c" afterPath="$PROJECT_DIR$/www/print_test.c" />
-      <change beforePath="$PROJECT_DIR$/www/rabota/makefl_test" afterPath="$PROJECT_DIR$/www/rabota/makefl_test" />
-      <change beforePath="$PROJECT_DIR$/www/test_printf.c" afterPath="$PROJECT_DIR$/www/test_printf.c" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -68,7 +25,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="100819" />
+    <option name="totalTimeSeconds" value="100944" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FavoritesManager">
@@ -92,7 +49,7 @@
             <entry file="file://$PROJECT_DIR$/includes/ft_printf.h">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="598">
-                  <caret line="26" column="21" lean-forward="true" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
+                  <caret line="26" column="21" lean-forward="false" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
                   <folding>
                     <element signature="e#1061#1081#0" expanded="true" />
                   </folding>
@@ -103,8 +60,8 @@
           <file leaf-file-name="Makefile" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Makefile">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="896">
-                  <caret line="39" column="16" lean-forward="true" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
+                <state relative-caret-position="712">
+                  <caret line="40" column="19" lean-forward="true" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="19" />
                   <folding />
                 </state>
               </provider>
@@ -501,12 +458,12 @@
       <workItem from="1535878892537" duration="18158000" />
       <workItem from="1535902566923" duration="11008000" />
       <workItem from="1535966726275" duration="30250000" />
-      <workItem from="1536056713972" duration="19806000" />
+      <workItem from="1536056713972" duration="19918000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="776871000" />
+    <option name="totallyTimeSpent" value="776983000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -530,7 +487,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33283132" sideWeight="0.50452936" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32857144" sideWeight="0.49547064" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2857143" sideWeight="0.6927924" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2857143" sideWeight="0.6927924" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.076408036" sideWeight="0.50894856" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47669172" sideWeight="0.26112643" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -967,7 +924,7 @@
     <entry file="file://$PROJECT_DIR$/includes/ft_printf.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="598">
-          <caret line="26" column="21" lean-forward="true" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
+          <caret line="26" column="21" lean-forward="false" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
           <folding>
             <element signature="e#1061#1081#0" expanded="true" />
           </folding>
@@ -976,8 +933,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Makefile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="896">
-          <caret line="39" column="16" lean-forward="true" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
+        <state relative-caret-position="712">
+          <caret line="40" column="19" lean-forward="true" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="19" />
           <folding />
         </state>
       </provider>
