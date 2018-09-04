@@ -4,7 +4,7 @@ SRC := 	ft_printf.c
 
 OBJ_DIR := obj
 
-FLAGS := -Wall -Wextra -Werror
+flgS := -Wall -Wextra -Werror
 
 LIBDIR := ./libft
 
@@ -19,7 +19,7 @@ $(NAME): $(OBJ)
 
 $(OBJ_DIR)/%.o: ./%.c
 	@mkdir -p $(OBJ_DIR)
-	@gcc $(FLAGS) -c $< -o $@
+	@gcc $(flgS) -c $< -o $@
 
 clean:
 	@make clean -C $(LIBDIR)

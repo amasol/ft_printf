@@ -12,46 +12,45 @@
 
 #include "../includes/ft_printf.h"
 
-int			ft_flag_c(va_list lst, char *format, t_flag *flag, t_inf *inf)
+int			ft_flg_c(va_list lst, char *format, t_flg *flg, t_inf *inf)
 {
 	unsigned char	str;
 
 	if (*format == 'c' || (*format == 'C' && MB_LEN_MAX == 1))
 	{
-		if (flag->l == 1)
+		if (flg->l == 1)
 		{
-			ft_flag_cc(lst, format, flag, inf);
+			ft_flg_cc(lst, format, flg, inf);
 			return (1);
 		}
 		else if (*format == 'C' && MB_LEN_MAX == 1)
 			str = va_arg(lst, unsigned int);
 		else
 			str = va_arg(lst, unsigned int);
-		flag->ban = 1;
 		inf->un_j += 1;
-		cast_flag_c(inf, flag, str);
+		cast_flg_c(inf, flg, str);
 	}
 	return (1);
 }
 
-int			ft_flag_cc(va_list lst, char *format, t_flag *flag, t_inf *inf)
+int			ft_flg_cc(va_list lst, char *format, t_flg *flg, t_inf *inf)
 {
 	wchar_t c;
 
 	if (*format == 'C' && MB_LEN_MAX == 1)
 	{
-		ft_flag_c(lst, format, flag, inf);
+		ft_flg_c(lst, format, flg, inf);
 		return (1);
 	}
-	else if (*format == 'C' || (*format == 'c' && flag->l == 1))
+	else if (*format == 'C' || (*format == 'c' && flg->l == 1))
 	{
 		c = va_arg(lst, wchar_t);
-		cast_flag_cc(inf, flag, c);
+		cast_flg_cc(inf, flg, c);
 	}
 	return (1);
 }
 
-int			ft_flag_s(va_list lst, char *format, t_flag *flag, t_inf *inf)
+int			ft_flg_s(va_list lst, char *format, t_flg *flg, t_inf *inf)
 {
 	int		i;
 	char	*str;
@@ -59,9 +58,9 @@ int			ft_flag_s(va_list lst, char *format, t_flag *flag, t_inf *inf)
 	i = 0;
 	if (format[i] == 's' || (*format == 'S' && MB_LEN_MAX == 1))
 	{
-		if (flag->l == 1)
+		if (flg->l == 1)
 		{
-			ft_flag_ss(lst, format, flag, inf);
+			ft_flg_ss(lst, format, flg, inf);
 			return (1);
 		}
 		else if (*format == 'S' && MB_LEN_MAX == 1)
@@ -70,38 +69,38 @@ int			ft_flag_s(va_list lst, char *format, t_flag *flag, t_inf *inf)
 			str = va_arg(lst, char *);
 		if (str == NULL)
 		{
-			cast_flag_s(inf, flag, str);
+			cast_flg_s(inf, flg, str);
 			return (1);
 		}
 		inf->un_j += ft_strlen(str);
-		cast_flag_s(inf, flag, str);
+		cast_flg_s(inf, flg, str);
 	}
 	return (1);
 }
 
-int			ft_flag_ss(va_list lst, char *format, t_flag *flag, t_inf *inf)
+int			ft_flg_ss(va_list lst, char *format, t_flg *flg, t_inf *inf)
 {
 	wchar_t		*sstr;
 
 	if (*format == 'S' && MB_LEN_MAX == 1)
 	{
-		ft_flag_s(lst, format, flag, inf);
+		ft_flg_s(lst, format, flg, inf);
 		return (1);
 	}
-	else if (*format == 'S' || (*format == 's' && flag->l == 1))
+	else if (*format == 'S' || (*format == 's' && flg->l == 1))
 	{
 		sstr = va_arg(lst, wchar_t *);
 		if (sstr == NULL)
 		{
-			cast_flag_ss(inf, flag, sstr);
+			cast_flg_ss(inf, flg, sstr);
 			return (1);
 		}
-		cast_flag_ss(inf, flag, sstr);
+		cast_flg_ss(inf, flg, sstr);
 	}
 	return (1);
 }
 
-int			ft_flag_xx(va_list lst, char *format, t_flag *flag, t_inf *inf)
+int			ft_flg_xx(va_list lst, char *format, t_flg *flg, t_inf *inf)
 {
 	int			k;
 	uintmax_t	i;
@@ -112,15 +111,14 @@ int			ft_flag_xx(va_list lst, char *format, t_flag *flag, t_inf *inf)
 	if (format[k] == 'X')
 	{
 		inf->x = 'X';
-		i = (APPLY) ? (cast_uintmax(i, flag, inf)) : (unsigned int)i;
+		i = (APPLY) ? (cast_uintmax(i, flg, inf)) : (unsigned int)i;
 		tmp = ft_itoa_base_uintmax(i, 16, 'X');
-		flag->ban = ft_strlen(tmp);
 		inf->un_j += ft_strlen(tmp);
 		free(tmp);
 		if (LY)
 			entry_min_uint(inf);
 		tmp = ft_itoa_base_uintmax(i, 16, 'X');
-		cast_flag_x(inf, i, flag, tmp);
+		cast_flg_x(inf, i, flg, tmp);
 		ft_strdel(&tmp);
 	}
 	return (1);

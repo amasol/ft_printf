@@ -1,6 +1,6 @@
 NAME = libftprintf.a
 CC := gcc
-FLAGS := -Wall -Wextra -Werror
+flgS := -Wall -Wextra -Werror
 source_dirs := . src
 HEADER := ft_printf.h
 MAKE := make
@@ -26,7 +26,7 @@ all: $(NAME)
 # notdir - deletes name of all directories;
 # patsubst - creates from .c to .o;
 # wildcard - extends the requisites of variable
-# @$(CC) $(FLAGS) $^ $(LIBFT) -o $@ 
+# @$(CC) $(flgS) $^ $(LIBFT) -o $@
 $(NAME): $(OBJ)
 	$(sublibft)
 	ar rc $@ $^ $(LIBFT)
@@ -37,7 +37,7 @@ VPATH := $(source_dirs)
 
 # Instruction for makefile which explains him how he can get ".o" files
 %.o: %.c $(HEADER)
-	$(CC) $(FLAGS) -c $(addprefix -I, $(source_dirs)) $<
+	$(CC) $(flgS) -c $(addprefix -I, $(source_dirs)) $<
 
 re: fclean all
 

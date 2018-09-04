@@ -12,30 +12,30 @@
 
 #include "../includes/ft_printf.h"
 
-void		cast_flag_u(t_inf *inf, uintmax_t i, t_flag *flag)
+void		cast_flg_u(t_inf *inf, uintmax_t i, t_flg *flg)
 {
-	if (flag->zero == 1 && i != 0)
+	if (flg->zero == 1 && i != 0)
 	{
 		inf->r = (inf->cou > 0) ? inf->r += ps_l("0", inf->cou) : inf->r;
 		inf->r += ft_cou_uint(ft_putnbr_uintmax_t(i));
 	}
-	else if ((flag->wid == 1 && flag->preci == 0 && flag->min != 1) ||
-			(flag->wid == 1 && flag->min == 1))
+	else if ((flg->wid == 1 && flg->preci == 0 && flg->min != 1) ||
+			(flg->wid == 1 && flg->min == 1))
 	{
-		inf->r = (flag->min != 1) ? inf->r += ps_l(" ", inf->cou) : inf->r;
+		inf->r = (flg->min != 1) ? inf->r += ps_l(" ", inf->cou) : inf->r;
 		inf->r += ft_cou_uint(ft_putnbr_uintmax_t(i));
-		inf->r = (flag->min == 1) ? inf->r += ps_l(" ", inf->cou) : inf->r;
+		inf->r = (flg->min == 1) ? inf->r += ps_l(" ", inf->cou) : inf->r;
 	}
-	else if ((flag->pls == 1) || (flag->space == 1 && flag->preci != 1))
+	else if ((flg->pls == 1) || (flg->space == 1 && flg->preci != 1))
 		inf->r += ft_cou_uint(ft_putnbr_uintmax_t(i));
-	else if (flag->preci == 1 && flag->min == 0)
+	else if (flg->preci == 1 && flg->min == 0)
 	{
 		inf->r = (inf->cou_t > 0) ? inf->r += ps_l(" ", inf->cou_t) : inf->r;
 		inf->r = (inf->cou > 0) ? inf->r += ps_l("0", inf->cou) : inf->r;
 		if (i != 0)
 			inf->r += ft_cou_uint(ft_putnbr_uintmax_t(i));
 	}
-	else if (flag->pls == 0 && flag->slash == 0 && flag->space == 0
-			&& flag->zero == 0 && flag->wid == 0 && flag->preci == 0)
+	else if (flg->pls == 0 && flg->slash == 0 && flg->space == 0
+			&& flg->zero == 0 && flg->wid == 0 && flg->preci == 0)
 		inf->r += ft_cou_uint(ft_putnbr_uintmax_t(i));
 }

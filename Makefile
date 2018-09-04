@@ -14,7 +14,7 @@
 NAME = libftprintf.a
 
 CC = gcc
-#FLAGS = -Wall -Wextra -Werror
+#flgS = -Wall -Wextra -Werror
 
 OBJ_DIR		= ./obj
 SRC_DIR 	= ./srcs
@@ -34,7 +34,7 @@ SRC 		=	ft_printf.c \
 all: $(NAME)
 
 $(OBJ_DIR)/%.o:$(SRC_DIR)/%.c
-	$(CC) $(FLAGS) -I $(INCL_DIR) -o $@ -c $<
+	$(CC) $(flgS) -I $(INCL_DIR) -o $@ -c $<
 
 $(NAME):
 	@mkdir -p $(OBJ_DIR)

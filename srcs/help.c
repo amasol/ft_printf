@@ -12,12 +12,12 @@
 
 #include "../includes/ft_printf.h"
 
-int			cast_flag_di_h5(t_inf *inf, intmax_t i, t_flag *flag, char *str)
+int			cast_flg_di_h5(t_inf *inf, intmax_t i, t_flg *flg, char *str)
 {
-	if (flag->slash == 0 &&
-		flag->zero == 0 && flag->wid == 0 && flag->preci == 0)
+	if (flg->slash == 0 &&
+		flg->zero == 0 && flg->wid == 0 && flg->preci == 0)
 	{
-		if ((inf->min_v == 1 || flag->min == 1) && i != LONG_MIN && i > 0)
+		if ((inf->min_v == 1 || flg->min == 1) && i != LONG_MIN && i > 0)
 			inf->r += write(1, "-", 1);
 		else if (inf->min_v == 1 && i == -1)
 			inf->r += 1;
@@ -28,10 +28,10 @@ int			cast_flag_di_h5(t_inf *inf, intmax_t i, t_flag *flag, char *str)
 	return (0);
 }
 
-int			cast_flag_p_h5(t_inf *inf, uintmax_t i, t_flag *flag, char *str)
+int			cast_flg_p_h5(t_inf *inf, uintmax_t i, t_flg *flg, char *str)
 {
-	if (flag->pls == 0 && flag->slash == 0 && flag->zero == 0
-		&& flag->wid == 0 && flag->preci == 0)
+	if (flg->pls == 0 && flg->slash == 0 && flg->zero == 0
+		&& flg->wid == 0 && flg->preci == 0)
 	{
 		inf->r += ft_strlen_uintmax(str);
 		inf->r += write(1, "0x", 2);
@@ -40,23 +40,23 @@ int			cast_flag_p_h5(t_inf *inf, uintmax_t i, t_flag *flag, char *str)
 	return (0);
 }
 
-int			cast_flag_s_h5(t_inf *inf, t_flag *flag, char *str, char *tmp)
+int			cast_flg_s_h5(t_inf *inf, t_flg *flg, char *str, char *tmp)
 {
-	if ((flag->pls == 1 && flag->preci == 0 && inf->wid == 0)
-		|| (flag->space == 1 && flag->preci != 1)
-		|| (flag->preci == 1 && inf->cou_t == 0 && *str == '\0'))
+	if ((flg->pls == 1 && flg->preci == 0 && inf->wid == 0)
+		|| (flg->space == 1 && flg->preci != 1)
+		|| (flg->preci == 1 && inf->cou_t == 0 && *str == '\0'))
 	{
 		inf->r += ft_strlen_uintmax(str);
 		ft_putstr(str);
 	}
-	else if (flag->preci == 1 && flag->min == 1)
+	else if (flg->preci == 1 && flg->min == 1)
 	{
 		tmp = ft_strsub(str, 0, inf->wid);
 		inf->r += ft_strlen_uintmax(tmp);
 		ft_putstr(tmp);
 		inf->r = (inf->cou > 0 && *str == '\0')
 				? inf->r += ps_l(" ", inf->cou) : inf->r;
-		inf->r = (inf->cou_t > 0 && flag->min == 1)
+		inf->r = (inf->cou_t > 0 && flg->min == 1)
 				? inf->r += ps_l(" ", inf->cou_t) : inf->r;
 		ft_strdel(&tmp);
 	}
@@ -68,13 +68,13 @@ int			cast_flag_s_h5(t_inf *inf, t_flag *flag, char *str, char *tmp)
 	return (0);
 }
 
-int			cast_flag_ss_h5(t_inf *inf, t_flag *flag, wchar_t *str)
+int			cast_flg_ss_h5(t_inf *inf, t_flg *flg, wchar_t *str)
 {
 	int i;
 
 	i = 0;
-	if ((flag->space == 1 || flag->pls == 1)
-			|| (flag->preci == 1 || flag->l == 1) || (flag->wid == 0))
+	if ((flg->space == 1 || flg->pls == 1)
+			|| (flg->preci == 1 || flg->l == 1) || (flg->wid == 0))
 	{
 		while (str[i])
 			ft_putwchar(str[i++], inf);

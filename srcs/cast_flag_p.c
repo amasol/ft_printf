@@ -14,9 +14,9 @@
 
 static int g_lob;
 
-static int		cast_flag_p_h4(t_inf *inf, uintmax_t i, t_flag *flag, char *str)
+static int		cast_flg_p_h4(t_inf *inf, uintmax_t i, t_flg *flg, char *str)
 {
-	if (flag->preci == 1 && flag->min == 1 && inf->cou >= 0)
+	if (flg->preci == 1 && flg->min == 1 && inf->cou >= 0)
 	{
 		inf->r += write(1, "0x", 2);
 		inf->r = (inf->cou > 0) ? inf->r += ps_l("0", inf->cou) : inf->r;
@@ -24,7 +24,7 @@ static int		cast_flag_p_h4(t_inf *inf, uintmax_t i, t_flag *flag, char *str)
 		ft_putstr(str);
 		inf->r = (inf->cou_t > 0) ? inf->r += ps_l(" ", inf->cou_t) : inf->r;
 	}
-	else if (flag->min == 1 && i == 0)
+	else if (flg->min == 1 && i == 0)
 	{
 		inf->r += ft_strlen_uintmax(str);
 		inf->r += write(1, "0x", 2);
@@ -33,13 +33,13 @@ static int		cast_flag_p_h4(t_inf *inf, uintmax_t i, t_flag *flag, char *str)
 	}
 	if (g_lob < inf->r)
 		return (1);
-	cast_flag_p_h5(inf, i, flag, str);
+	cast_flg_p_h5(inf, i, flg, str);
 	return (0);
 }
 
-static int		cast_flag_p_h3(t_inf *inf, uintmax_t i, t_flag *flag, char *str)
+static int		cast_flg_p_h3(t_inf *inf, uintmax_t i, t_flg *flg, char *str)
 {
-	if (flag->preci == 1 && inf->cou >= 0 && flag->min == 0)
+	if (flg->preci == 1 && inf->cou >= 0 && flg->min == 0)
 	{
 		inf->cou = (inf->wid > inf->un_j) ? inf->wid - inf->un_j : 0;
 		inf->un_j += 2;
@@ -56,25 +56,25 @@ static int		cast_flag_p_h3(t_inf *inf, uintmax_t i, t_flag *flag, char *str)
 	}
 	if (g_lob < inf->r)
 		return (1);
-	cast_flag_p_h4(inf, i, flag, str);
+	cast_flg_p_h4(inf, i, flg, str);
 	return (0);
 }
 
-static int		cast_flag_p_h2(t_inf *inf, uintmax_t i, t_flag *flag, char *str)
+static int		cast_flg_p_h2(t_inf *inf, uintmax_t i, t_flg *flg, char *str)
 {
-	if (flag->pls == 1 && flag->preci == 0 && inf->wid == 0)
+	if (flg->pls == 1 && flg->preci == 0 && inf->wid == 0)
 	{
 		inf->r += ft_strlen_uintmax(str);
 		inf->r += write(1, "0x", 2);
 		ft_putstr(str);
 	}
-	else if (flag->space == 1 && flag->preci != 1 && inf->nothi == 1)
+	else if (flg->space == 1 && flg->preci != 1 && inf->nothi == 1)
 	{
 		inf->r += write(1, " ", 1);
 		inf->r += ft_strlen_uintmax(str);
 		ft_putstr(str);
 	}
-	else if (flag->preci == 1 && inf->cou > 0 && inf->cou_t == 0)
+	else if (flg->preci == 1 && inf->cou > 0 && inf->cou_t == 0)
 	{
 		if (inf->cou_t == 0 && inf->wid >= 4 && i == 0)
 			inf->cou += 2;
@@ -85,37 +85,37 @@ static int		cast_flag_p_h2(t_inf *inf, uintmax_t i, t_flag *flag, char *str)
 	}
 	if (g_lob < inf->r)
 		return (1);
-	cast_flag_p_h3(inf, i, flag, str);
+	cast_flg_p_h3(inf, i, flg, str);
 	return (0);
 }
 
-static int		cast_flag_p_h(t_inf *inf, uintmax_t i, t_flag *flag, char *str)
+static int		cast_flg_p_h(t_inf *inf, uintmax_t i, t_flg *flg, char *str)
 {
-	if (flag->zero == 1 && i != 0)
+	if (flg->zero == 1 && i != 0)
 	{
 		inf->r += write(1, "0x", 2);
 		inf->r = (inf->cou > 0) ? inf->r += ps_l("0", inf->cou) : inf->r;
 		inf->r += ft_strlen_uintmax(str);
 		ft_putstr(str);
 	}
-	else if (flag->wid == 1 && flag->preci == 0 && flag->min != 1)
+	else if (flg->wid == 1 && flg->preci == 0 && flg->min != 1)
 	{
-		inf->r = (inf->cou > 0 && flag->zero != 1)
+		inf->r = (inf->cou > 0 && flg->zero != 1)
 				? inf->r += ps_l(" ", inf->cou) : inf->r;
 		inf->r += ft_strlen_uintmax(str);
 		inf->r += write(1, "0x", 2);
 		ft_putstr(str);
-		inf->r = (flag->zero == 1) ? inf->r += ps_l("0", inf->cou) : inf->r;
+		inf->r = (flg->zero == 1) ? inf->r += ps_l("0", inf->cou) : inf->r;
 	}
 	if (g_lob < inf->r)
 		return (1);
-	cast_flag_p_h2(inf, i, flag, str);
+	cast_flg_p_h2(inf, i, flg, str);
 	return (0);
 }
 
-int				cast_flag_p(t_inf *inf, uintmax_t i, t_flag *flag, char *str)
+int				cast_flg_p(t_inf *inf, uintmax_t i, t_flg *flg, char *str)
 {
-	if (inf->cou_t <= 2 && flag->min == 0)
+	if (inf->cou_t <= 2 && flg->min == 0)
 		inf->cou_t = 0;
 	else if (inf->cou_t > 2)
 		;
@@ -123,7 +123,7 @@ int				cast_flag_p(t_inf *inf, uintmax_t i, t_flag *flag, char *str)
 		inf->cou = 0;
 	else if (inf->cou_t == 0 && inf->cou >= 4 && i == 0)
 		inf->cou -= 2;
-	if (flag->min == 1 && flag->wid == 1 && str != NULL && i != 0)
+	if (flg->min == 1 && flg->wid == 1 && str != NULL && i != 0)
 	{
 		inf->cou -= 2;
 		inf->r += write(1, "0x", 2);
@@ -134,6 +134,6 @@ int				cast_flag_p(t_inf *inf, uintmax_t i, t_flag *flag, char *str)
 	}
 	if (g_lob < inf->r)
 		return (1);
-	cast_flag_p_h(inf, i, flag, str);
+	cast_flg_p_h(inf, i, flg, str);
 	return (0);
 }

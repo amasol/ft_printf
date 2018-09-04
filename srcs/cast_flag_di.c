@@ -14,17 +14,17 @@
 
 static int	g_lob;
 
-static int	cast_flag_di_h4(t_inf *inf, intmax_t i, t_flag *flag, char *str)
+static int	cast_flg_di_h4(t_inf *inf, intmax_t i, t_flg *flg, char *str)
 {
-	if (flag->preci == 1 && flag->min == 1)
+	if (flg->preci == 1 && flg->min == 1)
 	{
-		if ((flag->pls == 1 || inf->tmp == 1) && inf->min_v != 1)
+		if ((flg->pls == 1 || inf->tmp == 1) && inf->min_v != 1)
 			inf->r += write(1, "+", 1);
 		inf->r = (inf->cou > 0) ? inf->r += ps_l("0", inf->cou) : inf->r;
 		inf->r += ft_cou_int(ft_putnbr_intmax(i));
 		inf->r = (inf->cou_t > 0) ? inf->r += ps_l(" ", inf->cou_t) : inf->r;
 	}
-	else if (flag->slash == 1)
+	else if (flg->slash == 1)
 	{
 		if (*str == 'X')
 			inf->r += write(1, "0X", 2);
@@ -35,22 +35,22 @@ static int	cast_flag_di_h4(t_inf *inf, intmax_t i, t_flag *flag, char *str)
 	}
 	if (g_lob < inf->r)
 		return (1);
-	cast_flag_di_h5(inf, i, flag, str);
+	cast_flg_di_h5(inf, i, flg, str);
 	return (0);
 }
 
-static int	cast_flag_di_h3(t_inf *inf, intmax_t i, t_flag *flag, char *str)
+static int	cast_flg_di_h3(t_inf *inf, intmax_t i, t_flg *flg, char *str)
 {
-	if (flag->preci == 1 && inf->cou_t >= 0 && flag->min == 0 && i != 0)
+	if (flg->preci == 1 && inf->cou_t >= 0 && flg->min == 0 && i != 0)
 	{
 		inf->cou_t = (inf->min_v == 1) ? inf->cou_t -= 1 : inf->cou_t;
 		inf->r = (inf->cou_t > 0) ? inf->r += ps_l(" ", inf->cou_t) : inf->r;
-		inf->r = (flag->pls == 1) ? inf->r += write(1, "+", 1) : inf->r;
+		inf->r = (flg->pls == 1) ? inf->r += write(1, "+", 1) : inf->r;
 		inf->r = (inf->min_v == 1) ? inf->r += write(1, "-", 1) : inf->r;
 		inf->r = (inf->cou > 0) ? inf->r += ps_l("0", inf->cou) : inf->r;
 		inf->r += ft_cou_int(ft_putnbr_intmax(i));
 	}
-	else if (flag->preci == 1 && i == 0)
+	else if (flg->preci == 1 && i == 0)
 	{
 		if (inf->cou != 0 && inf->cou_t > 0)
 			inf->r += ps_l(" ", inf->cou_t);
@@ -61,22 +61,22 @@ static int	cast_flag_di_h3(t_inf *inf, intmax_t i, t_flag *flag, char *str)
 	}
 	if (g_lob < inf->r)
 		return (1);
-	cast_flag_di_h4(inf, i, flag, str);
+	cast_flg_di_h4(inf, i, flg, str);
 	return (0);
 }
 
-static int	cast_flag_di_h2(t_inf *inf, intmax_t i, t_flag *flag, char *str)
+static int	cast_flg_di_h2(t_inf *inf, intmax_t i, t_flg *flg, char *str)
 {
-	if (flag->space == 1 && flag->preci != 1 && i > 0 && inf->nothi == 1)
+	if (flg->space == 1 && flg->preci != 1 && i > 0 && inf->nothi == 1)
 	{
 		inf->r += write(1, " ", 1);
 		inf->r += ft_cou_int(ft_putnbr_intmax(i));
 	}
-	else if (flag->preci == 1 && inf->cou > 0 && inf->cou_t == 0)
+	else if (flg->preci == 1 && inf->cou > 0 && inf->cou_t == 0)
 	{
 		inf->cou = (inf->min_v == 1
 					&& inf->wid_t == 0) ? inf->cou += 1 : inf->cou;
-		if ((inf->min_v == 0 && flag->min == 0) && flag->pls == 0)
+		if ((inf->min_v == 0 && flg->min == 0) && flg->pls == 0)
 			;
 		inf->r = (inf->min_v == 1) ? inf->r += write(1, "-", 1) : inf->r;
 		if (inf->cou > 0 && i != 0)
@@ -87,61 +87,61 @@ static int	cast_flag_di_h2(t_inf *inf, intmax_t i, t_flag *flag, char *str)
 	}
 	if (g_lob < inf->r)
 		return (1);
-	cast_flag_di_h3(inf, i, flag, str);
+	cast_flg_di_h3(inf, i, flg, str);
 	return (0);
 }
 
-static int	cast_flag_di_h(t_inf *inf, intmax_t i, t_flag *flag, char *str)
+static int	cast_flg_di_h(t_inf *inf, intmax_t i, t_flg *flg, char *str)
 {
-	if (flag->wid == 1 && flag->preci == 0 && flag->h == 0)
+	if (flg->wid == 1 && flg->preci == 0 && flg->h == 0)
 	{
-		if ((flag->min == 1 && inf->min_v == 1) && flag->pls == 0)
+		if ((flg->min == 1 && inf->min_v == 1) && flg->pls == 0)
 			inf->r += write(1, "-", 1);
-		if (flag->min == 1)
+		if (flg->min == 1)
 			inf->min_v = 0;
-		if (inf->cou > 0 && flag->space != 1 && inf->min_v == 1)
+		if (inf->cou > 0 && flg->space != 1 && inf->min_v == 1)
 			inf->r += ps_l(" ", inf->cou);
 		inf->r = (inf->min_v == 1) ? inf->r += write(1, "-", 1) : inf->r;
 		inf->r += ft_cou_int(ft_putnbr_intmax(i));
-		if (inf->cou > 0 && flag->space != 1 && inf->min_v == 0)
+		if (inf->cou > 0 && flg->space != 1 && inf->min_v == 0)
 			inf->r += ps_l(" ", inf->cou);
 	}
-	else if ((flag->min == 0) && flag->pls == 1 && flag->preci == 0)
+	else if ((flg->min == 0) && flg->pls == 1 && flg->preci == 0)
 	{
 		inf->r += write(1, "+", 1);
 		inf->r += ft_cou_int(ft_putnbr_intmax(i));
 	}
 	if (g_lob < inf->r)
 		return (1);
-	cast_flag_di_h2(inf, i, flag, str);
+	cast_flg_di_h2(inf, i, flg, str);
 	return (0);
 }
 
-int			cast_flag_di(t_inf *inf, intmax_t i, t_flag *flag, char *str)
+int			cast_flg_di(t_inf *inf, intmax_t i, t_flg *flg, char *str)
 {
 	g_lob = inf->r;
-	if (inf->cou > 0 && flag->preci == 0 && inf->wid == 0)
+	if (inf->cou > 0 && flg->preci == 0 && inf->wid == 0)
 	{
 		inf->r += ft_cou_int(ft_putnbr_intmax(i));
 		if (inf->cou > 0 && (!(inf->wid == 1 && i == 1)))
 			inf->r += ps_l(" ", inf->cou);
 	}
-	else if (flag->zero == 1)
+	else if (flg->zero == 1)
 	{
-		inf->r = (flag->space == 1) ? inf->r += write(1, " ", 1) : inf->r;
+		inf->r = (flg->space == 1) ? inf->r += write(1, " ", 1) : inf->r;
 		inf->r = (inf->min_v == 1) ? inf->r += write(1, "-", 1) : inf->r;
-		inf->r = (flag->pls == 1) ? inf->r += write(1, "+", 1) : inf->r;
+		inf->r = (flg->pls == 1) ? inf->r += write(1, "+", 1) : inf->r;
 		inf->r = (inf->cou > 0) ? inf->r += ps_l("0", inf->cou) : inf->r;
 		inf->r += ft_cou_int(ft_putnbr_intmax(i));
 	}
-	else if (flag->wid == 1 && flag->preci == 0 &&
-				flag->min != 1 && inf->min_v != 1)
+	else if (flg->wid == 1 && flg->preci == 0 &&
+				flg->min != 1 && inf->min_v != 1)
 	{
 		inf->r = (inf->cou > 0) ? inf->r += ps_l(" ", inf->cou) : inf->r;
 		inf->r += ft_cou_int(ft_putnbr_intmax(i));
 	}
 	if (g_lob < inf->r)
 		return (1);
-	cast_flag_di_h(inf, i, flag, str);
+	cast_flg_di_h(inf, i, flg, str);
 	return (0);
 }

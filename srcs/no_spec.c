@@ -14,28 +14,28 @@
 
 static int g_lob;
 
-void			pars_no_spec(t_flag *flag, t_inf *inf)
+void			pars_no_spec(t_flg *flg, t_inf *inf)
 {
 	inf->wid -= 1;
-	if (flag->wid == 1 && flag->min != 1)
+	if (flg->wid == 1 && flg->min != 1)
 	{
-		inf->r = (flag->preci == 0) ? inf->r += ps_l(" ", inf->wid) : inf->r;
-		inf->r = (inf->wid > 0 && flag->preci == 1 && flag->check_preci == 1)
+		inf->r = (flg->preci == 0) ? inf->r += ps_l(" ", inf->wid) : inf->r;
+		inf->r = (inf->wid > 0 && flg->preci == 1 && flg->check_preci == 1)
 			? inf->r += ps_l("0", inf->wid) : inf->r;
 		inf->r += write(1, "%", 1);
 	}
-	else if (flag->wid == 1 && flag->min == 1)
+	else if (flg->wid == 1 && flg->min == 1)
 	{
 		inf->r += write(1, "%", 1);
 		inf->r = (inf->wid > 0) ? inf->r += ps_l(" ", inf->wid) : inf->r;
 	}
-	else if (flag->wid == 0)
+	else if (flg->wid == 0)
 		inf->r += write(1, "%", 1);
 }
 
-static void		pars_hi_z_h(char *format, t_flag *flag, t_inf *inf)
+static void		pars_hi_z_h(char *format, t_flg *flg, t_inf *inf)
 {
-	if (inf->wid > 0 && flag->min == 0 && flag->zero == 1)
+	if (inf->wid > 0 && flg->min == 0 && flg->zero == 1)
 	{
 		inf->r = (inf->wid > 0) ? inf->r += ps_l("0", inf->wid) : inf->r;
 		inf->r += write(1, "Z", 1);
@@ -51,48 +51,48 @@ static void		pars_hi_z_h(char *format, t_flag *flag, t_inf *inf)
 	}
 }
 
-int				pars_hi_z(char *format, t_flag *flag, t_inf *inf, va_list lst)
+int				pars_hi_z(char *format, t_flg *flg, t_inf *inf, va_list lst)
 {
 	intmax_t i;
 
 	g_lob = inf->r;
 	i = va_arg(lst, intmax_t);
 	inf->wid -= 1;
-	if (inf->wid > 0 && flag->min == 0 && flag->zero == 0)
+	if (inf->wid > 0 && flg->min == 0 && flg->zero == 0)
 	{
 		inf->r = (i != 0) ? inf->r += ps_l(" ", inf->wid) : inf->r;
 		inf->r += write(1, "Z", 1);
 	}
-	else if (inf->wid > 0 && flag->min == 1 && flag->zero == 0)
+	else if (inf->wid > 0 && flg->min == 1 && flg->zero == 0)
 	{
 		inf->r += write(1, "Z", 1);
 		inf->r = (i != 0) ? inf->r += ps_l(" ", inf->wid) : inf->r;
 	}
 	if (g_lob < inf->r)
 		return (1);
-	pars_hi_z_h(format, flag, inf);
+	pars_hi_z_h(format, flg, inf);
 	return (0);
 }
 
-void			cancellation_flags_di(t_flag *flag, t_inf *inf)
+void			cancellation_flgs_di(t_flg *flg, t_inf *inf)
 {
-	if (flag->min == 1 && flag->pls == 1)
+	if (flg->min == 1 && flg->pls == 1)
 	{
-		inf->tmp = flag->pls;
-		flag->pls = 0;
+		inf->tmp = flg->pls;
+		flg->pls = 0;
 	}
-	if ((flag->min == 1 || flag->preci == 1) && flag->zero == 1)
-		flag->zero = 0;
+	if ((flg->min == 1 || flg->preci == 1) && flg->zero == 1)
+		flg->zero = 0;
 }
 
-intmax_t		min_v_di(intmax_t i, t_flag *flag, t_inf *inf)
+intmax_t		min_v_di(intmax_t i, t_flg *flg, t_inf *inf)
 {
 	if (i < 0)
 	{
-		flag->space = 0;
-		flag->pls = 0;
+		flg->space = 0;
+		flg->pls = 0;
 	}
-	if ((i < 0 && flag->min == 0) || (i < 0 && flag->min == 1))
+	if ((i < 0 && flg->min == 0) || (i < 0 && flg->min == 1))
 	{
 		inf->min_v = 1;
 		i *= -1;

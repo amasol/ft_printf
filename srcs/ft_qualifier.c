@@ -54,24 +54,24 @@ int		ft_refinement(char s)
 	return (0);
 }
 
-int		output_after(char *format, va_list lst, t_flag *flag, t_inf *inf)
+int		output_after(char *format, va_list lst, t_flg *flg, t_inf *inf)
 {
 	int i;
 
 	i = 0;
 	if (format[i] == 'Z')
 	{
-		pars_hi_z(&format[i], flag, inf, lst);
+		pars_hi_z(&format[i], flg, inf, lst);
 		return (1);
 	}
-	while (ft_isdigit(format[i]) || ft_flag_check(format[i]))
+	while (ft_isdigit(format[i]) || ft_flg_check(format[i]))
 		i++;
 	if (ft_qualifier(format[i]))
 		i++;
-	if (g_help == 0 && flag->min == 0)
+	if (g_help == 0 && flg->min == 0)
 	{
 		inf->wid -= 1;
-		inf->r = (flag->wid == 1) ? inf->r += ps_l(" ", inf->wid) : inf->r;
+		inf->r = (flg->wid == 1) ? inf->r += ps_l(" ", inf->wid) : inf->r;
 	}
 	while (format[i] != '%' && format[i] != '\0')
 	{
@@ -82,7 +82,7 @@ int		output_after(char *format, va_list lst, t_flag *flag, t_inf *inf)
 	return (1);
 }
 
-int		is_check_preci(char *str, t_flag *flag)
+int		is_check_preci(char *str, t_flg *flg)
 {
 	int i;
 
@@ -91,7 +91,7 @@ int		is_check_preci(char *str, t_flag *flag)
 	{
 		i++;
 		if (str[i] == '.')
-			flag->check_preci = 1;
+			flg->check_preci = 1;
 		return (1);
 	}
 	return (0);

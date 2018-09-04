@@ -371,7 +371,7 @@ int	main(void)
 		PRINTF("|%12.8.10.6"CNV"|\t|%20.8.-12.6"CNV"|\t|%20.8.12.-6"CNV"||%20.-5.12.3"CNV"|\t|%10.8.12.6-"CNV"|",42,42,42,42,42);
 		PRINTF("|%."CNV" %.0"CNV" %0."CNV" %0.0"CNV"|\t\t|%"CNV" %.2"CNV" %2."CNV" %2.2"CNV"|\t\t\t\t",0,0,0,0,0,0,0,0);
 	}
-//Flag + - 0 and space
+//flg + - 0 and space
 	TITLE("Number options(field wid, justification, +, space and 0):\n");
 	{
 		int nmb = 42;
@@ -436,7 +436,7 @@ int	main(void)
 		PRINTF("|%-11-0"CNV"|\t|%-0+11"CNV"|\t|%11+"CNV"|\t|%-11+"CNV"|\t|%0 "CNV"|\t",nmb,nmb,nmb,nmb,nmb);nmb *= -1;
 		PRINTF("|%-11-0"CNV"|\t|%-0+11"CNV"|\t|%11+"CNV"|\t|%-11+"CNV"|\t|%0 "CNV"|",nmb,nmb,nmb,nmb,nmb);nmb *= -1;
 	}
-//Flag # for X x and o and O and i
+//flg # for X x and o and O and i
 	TITLE("Number options(field wid, presicion, justification and #):\n");
 	{
 # define CNV "o"
@@ -704,7 +704,7 @@ int	main(void)
 
 #ifdef STRANGE
 //Strange undefined tests to test the atoi of the field wid and presicion
-	TITLE("Very undefined tests(field wid, presicion and all flags) only 'd':\n");
+	TITLE("Very undefined tests(field wid, presicion and all flgs) only 'd':\n");
 	printf("Round 1:|-5.#3| |-5.#6.5| |-5.#6| |-5.#6.| |-5.#6#4| |-5.#6#.4| |-5.#6.#0| |-5.#6.#0#7|\n");
 	PRINTF("|%-5.3d| |%-5.#6.5d| |%-5.#6d| |%-5.#6.d| |%-5.#6#4d| |%-5.#6#.4d| |%-5.#6.#0d| |%-5.#6.#0#7d|", -42,42,42,42,42,42,42,42);
 	printf("\nRound 2:|.7.3|\t|07.3|\t|. 7.3|\t|.07.03| |.#7.3|  |.+7.3|\n");
