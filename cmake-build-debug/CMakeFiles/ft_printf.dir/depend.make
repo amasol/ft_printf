@@ -94,6 +94,9 @@ CMakeFiles/ft_printf.dir/srcs/help.c.o: ../srcs/help.c
 CMakeFiles/ft_printf.dir/srcs/help_2.c.o: ../includes/ft_printf.h
 CMakeFiles/ft_printf.dir/srcs/help_2.c.o: ../srcs/help_2.c
 
+CMakeFiles/ft_printf.dir/srcs/help_3.c.o: ../includes/ft_printf.h
+CMakeFiles/ft_printf.dir/srcs/help_3.c.o: ../srcs/help_3.c
+
 CMakeFiles/ft_printf.dir/srcs/help_flag.c.o: ../includes/ft_printf.h
 CMakeFiles/ft_printf.dir/srcs/help_flag.c.o: ../srcs/help_flag.c
 

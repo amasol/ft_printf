@@ -1557,8 +1557,8 @@ int		 main	(void)
 //	ft_printf("%hhD", USHRT_MAX);
 //	printf("\n%hhD", USHRT_MAX);
 //
-//	ft_printf("%%", "test");
-//	printf("\n%%", "test");
+	ft_printf("%-.2s is a string", "");
+	printf("\n%-.2s is a string", "");
 
 
 

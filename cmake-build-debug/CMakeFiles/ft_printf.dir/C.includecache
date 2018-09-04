@@ -170,6 +170,10 @@ stdio.h
 ../includes/ft_printf.h
 /Users/amasol/amasol/project/ft_printf/includes/ft_printf.h
 
+/Users/amasol/amasol/project/ft_printf/srcs/help_3.c
+../includes/ft_printf.h
+/Users/amasol/amasol/project/ft_printf/includes/ft_printf.h
+
 /Users/amasol/amasol/project/ft_printf/srcs/help_flag.c
 ../includes/ft_printf.h
 /Users/amasol/amasol/project/ft_printf/includes/ft_printf.h

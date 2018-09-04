@@ -14,13 +14,33 @@
 
 static int g_lob;
 
-static int 	ft_printf_h2(char *format, va_list lst, t_inf *inf)
-{
-	return (0);
-}
 
 static int 		ft_printf_h(char *format, va_list lst, t_inf *inf)
 {
+	while (*format != '\0')
+	{
+		inf->r_h += inf->r;
+		inf->r = 0;
+		if (*format == '%' && *(format + 1) != '%')
+		{
+			format++;
+			parsing(format, lst, &inf);
+			format += inf->cou_format;
+		}
+		else if (*format == '%' && *(format + 1) == '%')
+		{
+			inf->r += write(1, "%", 1);
+			format += 2;
+		}
+		else if (ft_qualifier(*format))
+			format++;
+		else
+		{
+			ft_putchar(*format);
+			inf->r += 1;
+			format++;
+		}
+	}
 	return (0);
 }
 
@@ -39,42 +59,33 @@ int				ft_printf(const char *format, ...)
 		inf.r += write(1, format, 1);
 		format++;
 	}
-//	ft_printf_h((char *)format, lst, &inf);
-	if (*format)
-	{
-		while (*format != '\0')
-		{
-			if (*format == '%' && *(format + 1) == 0)
-				return (inf.r);
-			inf.r_h += inf.r;
-			inf.r = 0;
-			if (*format == '%' && *(format + 1) != '%')
-			{
-				format++;
-				parsing((char *)format, lst, &inf);
-				format += inf.cou_format;
-			}
-			else if (*format == '%' && *(format + 1) == '%')
-			{
-				inf.r += write(1, "%", 1);
-				format += 2;
-			}
-			else if (*format == '.' && ft_qualifier(*format) == 0)
-			{
-				ft_putchar(*format);
-				inf.r += 1;
-				format++;
-			}
-			else if (ft_qualifier(*format))
-				format++;
-			else
-			{
-				ft_putchar(*format);
-				inf.r += 1;
-				format++;
-			}
-		}
-	}
+	if (*format == '%' && *(format + 1) == 0)
+		return (inf.r);
+	ft_printf_h((char *)format, lst, &inf);
+//	while (*format != '\0')
+//	{
+//		inf.r_h += inf.r;
+//		inf.r = 0;
+//		if (*format == '%' && *(format + 1) != '%')
+//		{
+//			format++;
+//			parsing((char *)format, lst, &inf);
+//			format += inf.cou_format;
+//		}
+//		else if (*format == '%' && *(format + 1) == '%')
+//		{
+//			inf.r += write(1, "%", 1);
+//			format += 2;
+//		}
+//		else if (ft_qualifier(*format))
+//			format++;
+//		else
+//		{
+//			ft_putchar(*format);
+//			inf.r += 1;
+//			format++;
+//		}
+//	}
 	inf.r += inf.r_h;
 	va_end(lst);
 	return (inf.r);
