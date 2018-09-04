@@ -54,31 +54,35 @@ stdio.h
 ../includes/ft_printf.h
 /Users/amasol/amasol/project/ft_printf/includes/ft_printf.h
 
-/Users/amasol/amasol/project/ft_printf/srcs/cast_flag_Cc.c
+/Users/amasol/amasol/project/ft_printf/srcs/cast_flag_c.c
 ../includes/ft_printf.h
 /Users/amasol/amasol/project/ft_printf/includes/ft_printf.h
 
-/Users/amasol/amasol/project/ft_printf/srcs/cast_flag_Ddi.c
+/Users/amasol/amasol/project/ft_printf/srcs/cast_flag_di.c
 ../includes/ft_printf.h
 /Users/amasol/amasol/project/ft_printf/includes/ft_printf.h
 
-/Users/amasol/amasol/project/ft_printf/srcs/cast_flag_Oo.c
-../includes/ft_printf.h
-/Users/amasol/amasol/project/ft_printf/includes/ft_printf.h
-
-/Users/amasol/amasol/project/ft_printf/srcs/cast_flag_Ss.c
-../includes/ft_printf.h
-/Users/amasol/amasol/project/ft_printf/includes/ft_printf.h
-
-/Users/amasol/amasol/project/ft_printf/srcs/cast_flag_Uu.c
-../includes/ft_printf.h
-/Users/amasol/amasol/project/ft_printf/includes/ft_printf.h
-
-/Users/amasol/amasol/project/ft_printf/srcs/cast_flag_Xx.c
+/Users/amasol/amasol/project/ft_printf/srcs/cast_flag_o.c
 ../includes/ft_printf.h
 /Users/amasol/amasol/project/ft_printf/includes/ft_printf.h
 
 /Users/amasol/amasol/project/ft_printf/srcs/cast_flag_p.c
+../includes/ft_printf.h
+/Users/amasol/amasol/project/ft_printf/includes/ft_printf.h
+
+/Users/amasol/amasol/project/ft_printf/srcs/cast_flag_s.c
+../includes/ft_printf.h
+/Users/amasol/amasol/project/ft_printf/includes/ft_printf.h
+
+/Users/amasol/amasol/project/ft_printf/srcs/cast_flag_ss.c
+../includes/ft_printf.h
+/Users/amasol/amasol/project/ft_printf/includes/ft_printf.h
+
+/Users/amasol/amasol/project/ft_printf/srcs/cast_flag_u.c
+../includes/ft_printf.h
+/Users/amasol/amasol/project/ft_printf/includes/ft_printf.h
+
+/Users/amasol/amasol/project/ft_printf/srcs/cast_flag_x.c
 ../includes/ft_printf.h
 /Users/amasol/amasol/project/ft_printf/includes/ft_printf.h
 
@@ -155,6 +159,10 @@ stdio.h
 /Users/amasol/amasol/project/ft_printf/includes/ft_printf.h
 
 /Users/amasol/amasol/project/ft_printf/srcs/ft_strsub.c
+../includes/ft_printf.h
+/Users/amasol/amasol/project/ft_printf/includes/ft_printf.h
+
+/Users/amasol/amasol/project/ft_printf/srcs/help.c
 ../includes/ft_printf.h
 /Users/amasol/amasol/project/ft_printf/includes/ft_printf.h
 

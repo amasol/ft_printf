@@ -89,25 +89,28 @@
 		<Unit filename="/Users/amasol/amasol/project/ft_printf/srcs/cast.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/amasol/amasol/project/ft_printf/srcs/cast_flag_Cc.c">
+		<Unit filename="/Users/amasol/amasol/project/ft_printf/srcs/cast_flag_c.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/amasol/amasol/project/ft_printf/srcs/cast_flag_Ddi.c">
+		<Unit filename="/Users/amasol/amasol/project/ft_printf/srcs/cast_flag_di.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/amasol/amasol/project/ft_printf/srcs/cast_flag_Oo.c">
-			<Option target="ft_printf"/>
-		</Unit>
-		<Unit filename="/Users/amasol/amasol/project/ft_printf/srcs/cast_flag_Ss.c">
-			<Option target="ft_printf"/>
-		</Unit>
-		<Unit filename="/Users/amasol/amasol/project/ft_printf/srcs/cast_flag_Uu.c">
-			<Option target="ft_printf"/>
-		</Unit>
-		<Unit filename="/Users/amasol/amasol/project/ft_printf/srcs/cast_flag_Xx.c">
+		<Unit filename="/Users/amasol/amasol/project/ft_printf/srcs/cast_flag_o.c">
 			<Option target="ft_printf"/>
 		</Unit>
 		<Unit filename="/Users/amasol/amasol/project/ft_printf/srcs/cast_flag_p.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/amasol/amasol/project/ft_printf/srcs/cast_flag_s.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/amasol/amasol/project/ft_printf/srcs/cast_flag_ss.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/amasol/amasol/project/ft_printf/srcs/cast_flag_u.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/amasol/amasol/project/ft_printf/srcs/cast_flag_x.c">
 			<Option target="ft_printf"/>
 		</Unit>
 		<Unit filename="/Users/amasol/amasol/project/ft_printf/srcs/find.c">
@@ -165,6 +168,12 @@
 			<Option target="ft_printf"/>
 		</Unit>
 		<Unit filename="/Users/amasol/amasol/project/ft_printf/srcs/ft_strsub.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/amasol/amasol/project/ft_printf/srcs/help.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/amasol/amasol/project/ft_printf/srcs/help_2.c">
 			<Option target="ft_printf"/>
 		</Unit>
 		<Unit filename="/Users/amasol/amasol/project/ft_printf/srcs/itoa_b_uintmax.c">

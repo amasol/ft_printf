@@ -177,167 +177,86 @@ srcs/cast.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/cast.c.s
 .PHONY : srcs/cast.c.s
 
-srcs/cast_flag_Cc.o: srcs/cast_flag_Cc.c.o
+srcs/cast_flag_c.o: srcs/cast_flag_c.c.o
 
-.PHONY : srcs/cast_flag_Cc.o
-
-# target to build an object file
-srcs/cast_flag_Cc.c.o:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/cast_flag_Cc.c.o
-.PHONY : srcs/cast_flag_Cc.c.o
-
-srcs/cast_flag_Cc.i: srcs/cast_flag_Cc.c.i
-
-.PHONY : srcs/cast_flag_Cc.i
-
-# target to preprocess a source file
-srcs/cast_flag_Cc.c.i:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/cast_flag_Cc.c.i
-.PHONY : srcs/cast_flag_Cc.c.i
-
-srcs/cast_flag_Cc.s: srcs/cast_flag_Cc.c.s
-
-.PHONY : srcs/cast_flag_Cc.s
-
-# target to generate assembly for a file
-srcs/cast_flag_Cc.c.s:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/cast_flag_Cc.c.s
-.PHONY : srcs/cast_flag_Cc.c.s
-
-srcs/cast_flag_Ddi.o: srcs/cast_flag_Ddi.c.o
-
-.PHONY : srcs/cast_flag_Ddi.o
+.PHONY : srcs/cast_flag_c.o
 
 # target to build an object file
-srcs/cast_flag_Ddi.c.o:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/cast_flag_Ddi.c.o
-.PHONY : srcs/cast_flag_Ddi.c.o
+srcs/cast_flag_c.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/cast_flag_c.c.o
+.PHONY : srcs/cast_flag_c.c.o
 
-srcs/cast_flag_Ddi.i: srcs/cast_flag_Ddi.c.i
+srcs/cast_flag_c.i: srcs/cast_flag_c.c.i
 
-.PHONY : srcs/cast_flag_Ddi.i
+.PHONY : srcs/cast_flag_c.i
 
 # target to preprocess a source file
-srcs/cast_flag_Ddi.c.i:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/cast_flag_Ddi.c.i
-.PHONY : srcs/cast_flag_Ddi.c.i
+srcs/cast_flag_c.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/cast_flag_c.c.i
+.PHONY : srcs/cast_flag_c.c.i
 
-srcs/cast_flag_Ddi.s: srcs/cast_flag_Ddi.c.s
+srcs/cast_flag_c.s: srcs/cast_flag_c.c.s
 
-.PHONY : srcs/cast_flag_Ddi.s
+.PHONY : srcs/cast_flag_c.s
 
 # target to generate assembly for a file
-srcs/cast_flag_Ddi.c.s:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/cast_flag_Ddi.c.s
-.PHONY : srcs/cast_flag_Ddi.c.s
+srcs/cast_flag_c.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/cast_flag_c.c.s
+.PHONY : srcs/cast_flag_c.c.s
 
-srcs/cast_flag_Oo.o: srcs/cast_flag_Oo.c.o
+srcs/cast_flag_di.o: srcs/cast_flag_di.c.o
 
-.PHONY : srcs/cast_flag_Oo.o
+.PHONY : srcs/cast_flag_di.o
 
 # target to build an object file
-srcs/cast_flag_Oo.c.o:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/cast_flag_Oo.c.o
-.PHONY : srcs/cast_flag_Oo.c.o
+srcs/cast_flag_di.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/cast_flag_di.c.o
+.PHONY : srcs/cast_flag_di.c.o
 
-srcs/cast_flag_Oo.i: srcs/cast_flag_Oo.c.i
+srcs/cast_flag_di.i: srcs/cast_flag_di.c.i
 
-.PHONY : srcs/cast_flag_Oo.i
+.PHONY : srcs/cast_flag_di.i
 
 # target to preprocess a source file
-srcs/cast_flag_Oo.c.i:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/cast_flag_Oo.c.i
-.PHONY : srcs/cast_flag_Oo.c.i
+srcs/cast_flag_di.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/cast_flag_di.c.i
+.PHONY : srcs/cast_flag_di.c.i
 
-srcs/cast_flag_Oo.s: srcs/cast_flag_Oo.c.s
+srcs/cast_flag_di.s: srcs/cast_flag_di.c.s
 
-.PHONY : srcs/cast_flag_Oo.s
+.PHONY : srcs/cast_flag_di.s
 
 # target to generate assembly for a file
-srcs/cast_flag_Oo.c.s:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/cast_flag_Oo.c.s
-.PHONY : srcs/cast_flag_Oo.c.s
+srcs/cast_flag_di.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/cast_flag_di.c.s
+.PHONY : srcs/cast_flag_di.c.s
 
-srcs/cast_flag_Ss.o: srcs/cast_flag_Ss.c.o
+srcs/cast_flag_o.o: srcs/cast_flag_o.c.o
 
-.PHONY : srcs/cast_flag_Ss.o
+.PHONY : srcs/cast_flag_o.o
 
 # target to build an object file
-srcs/cast_flag_Ss.c.o:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/cast_flag_Ss.c.o
-.PHONY : srcs/cast_flag_Ss.c.o
+srcs/cast_flag_o.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/cast_flag_o.c.o
+.PHONY : srcs/cast_flag_o.c.o
 
-srcs/cast_flag_Ss.i: srcs/cast_flag_Ss.c.i
+srcs/cast_flag_o.i: srcs/cast_flag_o.c.i
 
-.PHONY : srcs/cast_flag_Ss.i
-
-# target to preprocess a source file
-srcs/cast_flag_Ss.c.i:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/cast_flag_Ss.c.i
-.PHONY : srcs/cast_flag_Ss.c.i
-
-srcs/cast_flag_Ss.s: srcs/cast_flag_Ss.c.s
-
-.PHONY : srcs/cast_flag_Ss.s
-
-# target to generate assembly for a file
-srcs/cast_flag_Ss.c.s:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/cast_flag_Ss.c.s
-.PHONY : srcs/cast_flag_Ss.c.s
-
-srcs/cast_flag_Uu.o: srcs/cast_flag_Uu.c.o
-
-.PHONY : srcs/cast_flag_Uu.o
-
-# target to build an object file
-srcs/cast_flag_Uu.c.o:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/cast_flag_Uu.c.o
-.PHONY : srcs/cast_flag_Uu.c.o
-
-srcs/cast_flag_Uu.i: srcs/cast_flag_Uu.c.i
-
-.PHONY : srcs/cast_flag_Uu.i
+.PHONY : srcs/cast_flag_o.i
 
 # target to preprocess a source file
-srcs/cast_flag_Uu.c.i:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/cast_flag_Uu.c.i
-.PHONY : srcs/cast_flag_Uu.c.i
+srcs/cast_flag_o.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/cast_flag_o.c.i
+.PHONY : srcs/cast_flag_o.c.i
 
-srcs/cast_flag_Uu.s: srcs/cast_flag_Uu.c.s
+srcs/cast_flag_o.s: srcs/cast_flag_o.c.s
 
-.PHONY : srcs/cast_flag_Uu.s
-
-# target to generate assembly for a file
-srcs/cast_flag_Uu.c.s:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/cast_flag_Uu.c.s
-.PHONY : srcs/cast_flag_Uu.c.s
-
-srcs/cast_flag_Xx.o: srcs/cast_flag_Xx.c.o
-
-.PHONY : srcs/cast_flag_Xx.o
-
-# target to build an object file
-srcs/cast_flag_Xx.c.o:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/cast_flag_Xx.c.o
-.PHONY : srcs/cast_flag_Xx.c.o
-
-srcs/cast_flag_Xx.i: srcs/cast_flag_Xx.c.i
-
-.PHONY : srcs/cast_flag_Xx.i
-
-# target to preprocess a source file
-srcs/cast_flag_Xx.c.i:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/cast_flag_Xx.c.i
-.PHONY : srcs/cast_flag_Xx.c.i
-
-srcs/cast_flag_Xx.s: srcs/cast_flag_Xx.c.s
-
-.PHONY : srcs/cast_flag_Xx.s
+.PHONY : srcs/cast_flag_o.s
 
 # target to generate assembly for a file
-srcs/cast_flag_Xx.c.s:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/cast_flag_Xx.c.s
-.PHONY : srcs/cast_flag_Xx.c.s
+srcs/cast_flag_o.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/cast_flag_o.c.s
+.PHONY : srcs/cast_flag_o.c.s
 
 srcs/cast_flag_p.o: srcs/cast_flag_p.c.o
 
@@ -365,6 +284,114 @@ srcs/cast_flag_p.s: srcs/cast_flag_p.c.s
 srcs/cast_flag_p.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/cast_flag_p.c.s
 .PHONY : srcs/cast_flag_p.c.s
+
+srcs/cast_flag_s.o: srcs/cast_flag_s.c.o
+
+.PHONY : srcs/cast_flag_s.o
+
+# target to build an object file
+srcs/cast_flag_s.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/cast_flag_s.c.o
+.PHONY : srcs/cast_flag_s.c.o
+
+srcs/cast_flag_s.i: srcs/cast_flag_s.c.i
+
+.PHONY : srcs/cast_flag_s.i
+
+# target to preprocess a source file
+srcs/cast_flag_s.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/cast_flag_s.c.i
+.PHONY : srcs/cast_flag_s.c.i
+
+srcs/cast_flag_s.s: srcs/cast_flag_s.c.s
+
+.PHONY : srcs/cast_flag_s.s
+
+# target to generate assembly for a file
+srcs/cast_flag_s.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/cast_flag_s.c.s
+.PHONY : srcs/cast_flag_s.c.s
+
+srcs/cast_flag_ss.o: srcs/cast_flag_ss.c.o
+
+.PHONY : srcs/cast_flag_ss.o
+
+# target to build an object file
+srcs/cast_flag_ss.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/cast_flag_ss.c.o
+.PHONY : srcs/cast_flag_ss.c.o
+
+srcs/cast_flag_ss.i: srcs/cast_flag_ss.c.i
+
+.PHONY : srcs/cast_flag_ss.i
+
+# target to preprocess a source file
+srcs/cast_flag_ss.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/cast_flag_ss.c.i
+.PHONY : srcs/cast_flag_ss.c.i
+
+srcs/cast_flag_ss.s: srcs/cast_flag_ss.c.s
+
+.PHONY : srcs/cast_flag_ss.s
+
+# target to generate assembly for a file
+srcs/cast_flag_ss.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/cast_flag_ss.c.s
+.PHONY : srcs/cast_flag_ss.c.s
+
+srcs/cast_flag_u.o: srcs/cast_flag_u.c.o
+
+.PHONY : srcs/cast_flag_u.o
+
+# target to build an object file
+srcs/cast_flag_u.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/cast_flag_u.c.o
+.PHONY : srcs/cast_flag_u.c.o
+
+srcs/cast_flag_u.i: srcs/cast_flag_u.c.i
+
+.PHONY : srcs/cast_flag_u.i
+
+# target to preprocess a source file
+srcs/cast_flag_u.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/cast_flag_u.c.i
+.PHONY : srcs/cast_flag_u.c.i
+
+srcs/cast_flag_u.s: srcs/cast_flag_u.c.s
+
+.PHONY : srcs/cast_flag_u.s
+
+# target to generate assembly for a file
+srcs/cast_flag_u.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/cast_flag_u.c.s
+.PHONY : srcs/cast_flag_u.c.s
+
+srcs/cast_flag_x.o: srcs/cast_flag_x.c.o
+
+.PHONY : srcs/cast_flag_x.o
+
+# target to build an object file
+srcs/cast_flag_x.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/cast_flag_x.c.o
+.PHONY : srcs/cast_flag_x.c.o
+
+srcs/cast_flag_x.i: srcs/cast_flag_x.c.i
+
+.PHONY : srcs/cast_flag_x.i
+
+# target to preprocess a source file
+srcs/cast_flag_x.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/cast_flag_x.c.i
+.PHONY : srcs/cast_flag_x.c.i
+
+srcs/cast_flag_x.s: srcs/cast_flag_x.c.s
+
+.PHONY : srcs/cast_flag_x.s
+
+# target to generate assembly for a file
+srcs/cast_flag_x.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/cast_flag_x.c.s
+.PHONY : srcs/cast_flag_x.c.s
 
 srcs/find.o: srcs/find.c.o
 
@@ -879,6 +906,60 @@ srcs/ft_strsub.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/ft_strsub.c.s
 .PHONY : srcs/ft_strsub.c.s
 
+srcs/help.o: srcs/help.c.o
+
+.PHONY : srcs/help.o
+
+# target to build an object file
+srcs/help.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/help.c.o
+.PHONY : srcs/help.c.o
+
+srcs/help.i: srcs/help.c.i
+
+.PHONY : srcs/help.i
+
+# target to preprocess a source file
+srcs/help.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/help.c.i
+.PHONY : srcs/help.c.i
+
+srcs/help.s: srcs/help.c.s
+
+.PHONY : srcs/help.s
+
+# target to generate assembly for a file
+srcs/help.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/help.c.s
+.PHONY : srcs/help.c.s
+
+srcs/help_2.o: srcs/help_2.c.o
+
+.PHONY : srcs/help_2.o
+
+# target to build an object file
+srcs/help_2.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/help_2.c.o
+.PHONY : srcs/help_2.c.o
+
+srcs/help_2.i: srcs/help_2.c.i
+
+.PHONY : srcs/help_2.i
+
+# target to preprocess a source file
+srcs/help_2.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/help_2.c.i
+.PHONY : srcs/help_2.c.i
+
+srcs/help_2.s: srcs/help_2.c.s
+
+.PHONY : srcs/help_2.s
+
+# target to generate assembly for a file
+srcs/help_2.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/help_2.c.s
+.PHONY : srcs/help_2.c.s
+
 srcs/itoa_b_uintmax.o: srcs/itoa_b_uintmax.c.o
 
 .PHONY : srcs/itoa_b_uintmax.o
@@ -975,27 +1056,30 @@ help:
 	@echo "... srcs/cast.o"
 	@echo "... srcs/cast.i"
 	@echo "... srcs/cast.s"
-	@echo "... srcs/cast_flag_Cc.o"
-	@echo "... srcs/cast_flag_Cc.i"
-	@echo "... srcs/cast_flag_Cc.s"
-	@echo "... srcs/cast_flag_Ddi.o"
-	@echo "... srcs/cast_flag_Ddi.i"
-	@echo "... srcs/cast_flag_Ddi.s"
-	@echo "... srcs/cast_flag_Oo.o"
-	@echo "... srcs/cast_flag_Oo.i"
-	@echo "... srcs/cast_flag_Oo.s"
-	@echo "... srcs/cast_flag_Ss.o"
-	@echo "... srcs/cast_flag_Ss.i"
-	@echo "... srcs/cast_flag_Ss.s"
-	@echo "... srcs/cast_flag_Uu.o"
-	@echo "... srcs/cast_flag_Uu.i"
-	@echo "... srcs/cast_flag_Uu.s"
-	@echo "... srcs/cast_flag_Xx.o"
-	@echo "... srcs/cast_flag_Xx.i"
-	@echo "... srcs/cast_flag_Xx.s"
+	@echo "... srcs/cast_flag_c.o"
+	@echo "... srcs/cast_flag_c.i"
+	@echo "... srcs/cast_flag_c.s"
+	@echo "... srcs/cast_flag_di.o"
+	@echo "... srcs/cast_flag_di.i"
+	@echo "... srcs/cast_flag_di.s"
+	@echo "... srcs/cast_flag_o.o"
+	@echo "... srcs/cast_flag_o.i"
+	@echo "... srcs/cast_flag_o.s"
 	@echo "... srcs/cast_flag_p.o"
 	@echo "... srcs/cast_flag_p.i"
 	@echo "... srcs/cast_flag_p.s"
+	@echo "... srcs/cast_flag_s.o"
+	@echo "... srcs/cast_flag_s.i"
+	@echo "... srcs/cast_flag_s.s"
+	@echo "... srcs/cast_flag_ss.o"
+	@echo "... srcs/cast_flag_ss.i"
+	@echo "... srcs/cast_flag_ss.s"
+	@echo "... srcs/cast_flag_u.o"
+	@echo "... srcs/cast_flag_u.i"
+	@echo "... srcs/cast_flag_u.s"
+	@echo "... srcs/cast_flag_x.o"
+	@echo "... srcs/cast_flag_x.i"
+	@echo "... srcs/cast_flag_x.s"
 	@echo "... srcs/find.o"
 	@echo "... srcs/find.i"
 	@echo "... srcs/find.s"
@@ -1053,6 +1137,12 @@ help:
 	@echo "... srcs/ft_strsub.o"
 	@echo "... srcs/ft_strsub.i"
 	@echo "... srcs/ft_strsub.s"
+	@echo "... srcs/help.o"
+	@echo "... srcs/help.i"
+	@echo "... srcs/help.s"
+	@echo "... srcs/help_2.o"
+	@echo "... srcs/help_2.i"
+	@echo "... srcs/help_2.s"
 	@echo "... srcs/itoa_b_uintmax.o"
 	@echo "... srcs/itoa_b_uintmax.i"
 	@echo "... srcs/itoa_b_uintmax.s"

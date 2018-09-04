@@ -29,10 +29,9 @@ intmax_t		cast_intmax(intmax_t i, t_flag *flag, t_inf *inf)
 	return (0);
 }
 
-
 uintmax_t		cast_uintmax(uintmax_t i, t_flag *flag, t_inf *inf)
 {
-	if (flag->z )
+	if (flag->z)
 		return ((size_t)i);
 	if (flag->j)
 		return ((uintmax_t)i);
@@ -47,64 +46,46 @@ uintmax_t		cast_uintmax(uintmax_t i, t_flag *flag, t_inf *inf)
 	return (0);
 }
 
-void	entry_min_uint(t_inf *inf)
+void			entry_min_uint(t_inf *inf)
 {
-	if (inf->width > 0)
-		inf->cou = (inf->uint_j <= (uintmax_t)inf->width)
-			? inf->width - inf->uint_j : 0;
-	if (inf->width_two > 0 && inf->cou != 0)
-		inf->cou_t = (inf->width_two > inf->width)
-			? inf->width_two - inf->width : 0;
+	if (inf->wid > 0)
+		inf->cou = (inf->un_j <= (uintmax_t)inf->wid)
+			? inf->wid - inf->un_j : 0;
+	if (inf->wid_t > 0 && inf->cou != 0)
+		inf->cou_t = (inf->wid_t > inf->wid)
+			? inf->wid_t - inf->wid : 0;
 	else
-		inf->cou_t = ((uintmax_t)inf->width_two >= inf->uint_j)
-			? inf->width_two - inf->uint_j : 0;
+		inf->cou_t = ((uintmax_t)inf->wid_t >= inf->un_j)
+			? inf->wid_t - inf->un_j : 0;
 	if (inf->cou == 0 && inf->cou_t == 1 && inf->min_v == 1)
 		inf->cou_t -= 1;
 }
 
-intmax_t	entry_min_intm(intmax_t  i, t_inf *inf, t_flag *flag)
+intmax_t		entry_min_intm(intmax_t i, t_inf *inf, t_flag *flag)
 {
 	inf->intm_j = ft_cou_int(i);
-
-	if (inf->width > 0)
-		inf->cou = (inf->intm_j <= inf->width) ? inf->width - inf->intm_j : 0;
-	if (flag->plus == 1 || inf->tmp == 1 || flag->space == 1 || inf->min_v == 1)
+	if (inf->wid > 0)
+		inf->cou = (inf->intm_j <= inf->wid) ? inf->wid - inf->intm_j : 0;
+	if (flag->pls == 1 || inf->tmp == 1 || flag->space == 1 || inf->min_v == 1)
 	{
-		if (inf->cou > 0 && inf->width_two == 0)
+		if (inf->cou > 0 && inf->wid_t == 0)
 			inf->cou -= 1;
 	}
-	if (inf->width_two > 0 && inf->cou != 0)
-		inf->cou_t = (inf->width_two > inf->width) ? inf->width_two - inf->width : 0;
+	if (inf->wid_t > 0 && inf->cou != 0)
+		inf->cou_t = (inf->wid_t > inf->wid) ? inf->wid_t - inf->wid : 0;
 	else
-		inf->cou_t = (inf->width_two >= inf->intm_j) ? inf->width_two - inf->intm_j : 0;
-	if (inf->cou_t > 0 && (flag->plus == 1 || inf->tmp == 1))
+		inf->cou_t = (inf->wid_t >= inf->intm_j)
+			? inf->wid_t - inf->intm_j : 0;
+	if (inf->cou_t > 0 && (flag->pls == 1 || inf->tmp == 1))
 		inf->cou_t = inf->cou_t - 1;
 	else if (inf->cou == 0 && inf->cou_t == 1 && inf->min_v == 1)
 		inf->cou_t -= 1;
 	return (0);
 }
 
-intmax_t 	ft_cou_int(intmax_t n)
+intmax_t		ft_cou_int(intmax_t n)
 {
 	intmax_t i;
-
-	i = 0;
-	if (n <= 0)
-	{
-		i++;
-		n *= -1;
-	}
-	while (n != 0)
-	{
-		n = n / 10;
-		i++;
-	}
-	return (i);
-}
-
-uintmax_t 	ft_cou_uint(uintmax_t n)
-{
-	uintmax_t i;
 
 	i = 0;
 	if (n <= 0)

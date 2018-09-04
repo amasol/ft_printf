@@ -30,22 +30,17 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/progress.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/progress.make" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/srcs/cast.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/srcs/cast.c.o" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/srcs/cast_flag_Cc.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/srcs/cast_flag_Cc.c.o" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/srcs/cast_flag_Ddi.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/srcs/cast_flag_Ddi.c.o" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/srcs/cast_flag_Oo.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/srcs/cast_flag_Oo.c.o" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/srcs/cast_flag_Ddi.c.o" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/srcs/cast_flag_Oo.c.o" afterPath="" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/srcs/cast_flag_Ss.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/srcs/cast_flag_Ss.c.o" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/srcs/cast_flag_Uu.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/srcs/cast_flag_Uu.c.o" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/srcs/cast_flag_Xx.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/srcs/cast_flag_Xx.c.o" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/srcs/cast_flag_Uu.c.o" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/srcs/cast_flag_Xx.c.o" afterPath="" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/srcs/cast_flag_p.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/srcs/cast_flag_p.c.o" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/srcs/find.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/srcs/find.c.o" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/srcs/ft_lenwchar.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/srcs/ft_lenwchar.c.o" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/srcs/ft_printf.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/srcs/ft_printf.c.o" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/srcs/ft_putnbr_long.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/srcs/ft_putnbr_long.c.o" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/srcs/ft_putstr_len.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/srcs/ft_putstr_len.c.o" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/srcs/ft_putwchar.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/srcs/ft_putwchar.c.o" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/srcs/ft_qualifier.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/srcs/ft_qualifier.c.o" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/srcs/ft_strchr.c.o" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/srcs/ft_strdup.c.o" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/srcs/ft_strrev.c.o" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/srcs/itoa_b.c.o" afterPath="" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/srcs/itoa_b_uintmax.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/srcs/itoa_b_uintmax.c.o" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/srcs/no_spec.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/srcs/no_spec.c.o" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/srcs/parsing.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/srcs/parsing.c.o" />
@@ -54,53 +49,38 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/ft_printf" afterPath="$PROJECT_DIR$/cmake-build-debug/ft_printf" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/ft_printf.cbp" afterPath="$PROJECT_DIR$/cmake-build-debug/ft_printf.cbp" />
       <change beforePath="$PROJECT_DIR$/includes/ft_printf.h" afterPath="$PROJECT_DIR$/includes/ft_printf.h" />
-      <change beforePath="$PROJECT_DIR$/libft/ft_itoa.c" afterPath="$PROJECT_DIR$/libft/ft_itoa.c" />
-      <change beforePath="$PROJECT_DIR$/libft/ft_itoa.o" afterPath="$PROJECT_DIR$/libft/ft_itoa.o" />
       <change beforePath="$PROJECT_DIR$/libft/libft.a" afterPath="$PROJECT_DIR$/libft/libft.a" />
       <change beforePath="$PROJECT_DIR$/libftprintf.a" afterPath="$PROJECT_DIR$/libftprintf.a" />
       <change beforePath="$PROJECT_DIR$/main2.c" afterPath="$PROJECT_DIR$/main2.c" />
       <change beforePath="$PROJECT_DIR$/obj/cast.o" afterPath="$PROJECT_DIR$/obj/cast.o" />
-      <change beforePath="$PROJECT_DIR$/obj/cast_flag_Cc.o" afterPath="$PROJECT_DIR$/obj/cast_flag_Cc.o" />
-      <change beforePath="$PROJECT_DIR$/obj/cast_flag_Ddi.o" afterPath="$PROJECT_DIR$/obj/cast_flag_Ddi.o" />
-      <change beforePath="$PROJECT_DIR$/obj/cast_flag_Oo.o" afterPath="$PROJECT_DIR$/obj/cast_flag_Oo.o" />
+      <change beforePath="$PROJECT_DIR$/obj/cast_flag_Cc.o" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/obj/cast_flag_Ddi.o" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/obj/cast_flag_Oo.o" afterPath="" />
       <change beforePath="$PROJECT_DIR$/obj/cast_flag_Ss.o" afterPath="$PROJECT_DIR$/obj/cast_flag_Ss.o" />
-      <change beforePath="$PROJECT_DIR$/obj/cast_flag_Uu.o" afterPath="$PROJECT_DIR$/obj/cast_flag_Uu.o" />
-      <change beforePath="$PROJECT_DIR$/obj/cast_flag_Xx.o" afterPath="$PROJECT_DIR$/obj/cast_flag_Xx.o" />
+      <change beforePath="$PROJECT_DIR$/obj/cast_flag_Uu.o" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/obj/cast_flag_Xx.o" afterPath="" />
       <change beforePath="$PROJECT_DIR$/obj/cast_flag_p.o" afterPath="$PROJECT_DIR$/obj/cast_flag_p.o" />
       <change beforePath="$PROJECT_DIR$/obj/find.o" afterPath="$PROJECT_DIR$/obj/find.o" />
-      <change beforePath="$PROJECT_DIR$/obj/ft_lenwchar.o" afterPath="$PROJECT_DIR$/obj/ft_lenwchar.o" />
-      <change beforePath="$PROJECT_DIR$/obj/ft_putwchar.o" afterPath="$PROJECT_DIR$/obj/ft_putwchar.o" />
-      <change beforePath="$PROJECT_DIR$/obj/ft_strchr.o" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/obj/ft_strdup.o" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/obj/ft_strrev.o" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/obj/itoa_b.o" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/obj/itoa_b_uintmax.o" afterPath="$PROJECT_DIR$/obj/itoa_b_uintmax.o" />
+      <change beforePath="$PROJECT_DIR$/obj/ft_printf.o" afterPath="$PROJECT_DIR$/obj/ft_printf.o" />
+      <change beforePath="$PROJECT_DIR$/obj/ft_putstr_len.o" afterPath="$PROJECT_DIR$/obj/ft_putstr_len.o" />
+      <change beforePath="$PROJECT_DIR$/obj/ft_qualifier.o" afterPath="$PROJECT_DIR$/obj/ft_qualifier.o" />
       <change beforePath="$PROJECT_DIR$/obj/no_spec.o" afterPath="$PROJECT_DIR$/obj/no_spec.o" />
       <change beforePath="$PROJECT_DIR$/obj/parsing.o" afterPath="$PROJECT_DIR$/obj/parsing.o" />
-      <change beforePath="$PROJECT_DIR$/pf.sh" afterPath="$PROJECT_DIR$/pf.sh" />
       <change beforePath="$PROJECT_DIR$/srcs/cast.c" afterPath="$PROJECT_DIR$/srcs/cast.c" />
-      <change beforePath="$PROJECT_DIR$/srcs/cast_flag_Cc.c" afterPath="$PROJECT_DIR$/srcs/cast_flag_Cc.c" />
-      <change beforePath="$PROJECT_DIR$/srcs/cast_flag_Ddi.c" afterPath="$PROJECT_DIR$/srcs/cast_flag_Ddi.c" />
-      <change beforePath="$PROJECT_DIR$/srcs/cast_flag_Oo.c" afterPath="$PROJECT_DIR$/srcs/cast_flag_Oo.c" />
+      <change beforePath="$PROJECT_DIR$/srcs/cast_flag_Cc.c" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/srcs/cast_flag_Ddi.c" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/srcs/cast_flag_Oo.c" afterPath="" />
       <change beforePath="$PROJECT_DIR$/srcs/cast_flag_Ss.c" afterPath="$PROJECT_DIR$/srcs/cast_flag_Ss.c" />
-      <change beforePath="$PROJECT_DIR$/srcs/cast_flag_Uu.c" afterPath="$PROJECT_DIR$/srcs/cast_flag_Uu.c" />
-      <change beforePath="$PROJECT_DIR$/srcs/cast_flag_Xx.c" afterPath="$PROJECT_DIR$/srcs/cast_flag_Xx.c" />
+      <change beforePath="$PROJECT_DIR$/srcs/cast_flag_Uu.c" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/srcs/cast_flag_Xx.c" afterPath="" />
       <change beforePath="$PROJECT_DIR$/srcs/cast_flag_p.c" afterPath="$PROJECT_DIR$/srcs/cast_flag_p.c" />
       <change beforePath="$PROJECT_DIR$/srcs/find.c" afterPath="$PROJECT_DIR$/srcs/find.c" />
-      <change beforePath="$PROJECT_DIR$/srcs/ft_lenwchar.c" afterPath="$PROJECT_DIR$/srcs/ft_lenwchar.c" />
       <change beforePath="$PROJECT_DIR$/srcs/ft_printf.c" afterPath="$PROJECT_DIR$/srcs/ft_printf.c" />
-      <change beforePath="$PROJECT_DIR$/srcs/ft_putnbr_long.c" afterPath="$PROJECT_DIR$/srcs/ft_putnbr_long.c" />
-      <change beforePath="$PROJECT_DIR$/srcs/ft_putwchar.c" afterPath="$PROJECT_DIR$/srcs/ft_putwchar.c" />
+      <change beforePath="$PROJECT_DIR$/srcs/ft_putstr_len.c" afterPath="$PROJECT_DIR$/srcs/ft_putstr_len.c" />
       <change beforePath="$PROJECT_DIR$/srcs/ft_qualifier.c" afterPath="$PROJECT_DIR$/srcs/ft_qualifier.c" />
-      <change beforePath="$PROJECT_DIR$/srcs/ft_strchr.c" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/srcs/ft_strdup.c" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/srcs/ft_strrev.c" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/srcs/itoa_b.c" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/srcs/itoa_b_uintmax.c" afterPath="$PROJECT_DIR$/srcs/itoa_b_uintmax.c" />
       <change beforePath="$PROJECT_DIR$/srcs/no_spec.c" afterPath="$PROJECT_DIR$/srcs/no_spec.c" />
       <change beforePath="$PROJECT_DIR$/srcs/parsing.c" afterPath="$PROJECT_DIR$/srcs/parsing.c" />
       <change beforePath="$PROJECT_DIR$/www/print_test.c" afterPath="$PROJECT_DIR$/www/print_test.c" />
-      <change beforePath="$PROJECT_DIR$/www/test.c" afterPath="$PROJECT_DIR$/www/test.c" />
       <change beforePath="$PROJECT_DIR$/www/test_printf.c" afterPath="$PROJECT_DIR$/www/test_printf.c" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -112,126 +92,56 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="20557" />
+    <option name="totalTimeSeconds" value="85853" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FavoritesManager">
     <favorites_list name="ft_printf" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.6706536">
+    <splitter split-orientation="horizontal" split-proportion="0.4780983">
       <split-first>
-        <splitter split-orientation="horizontal" split-proportion="0.58126193">
-          <split-first>
-            <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-              <file leaf-file-name="cast_flag_Ss.c" pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/srcs/cast_flag_Ss.c">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="-557">
-                      <caret line="125" column="41" lean-forward="true" selection-start-line="125" selection-start-column="41" selection-end-line="125" selection-end-column="41" />
-                      <folding />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file leaf-file-name="cast_flag_Uu.c" pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/srcs/cast_flag_Uu.c">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="-898">
-                      <caret line="95" column="0" lean-forward="true" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
-                      <folding />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file leaf-file-name="find.c" pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/srcs/find.c">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="3206">
-                      <caret line="266" column="16" lean-forward="false" selection-start-line="266" selection-start-column="16" selection-end-line="266" selection-end-column="16" />
-                      <folding />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file leaf-file-name="ft_putwchar.c" pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/srcs/ft_putwchar.c">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="437">
-                      <caret line="19" column="20" lean-forward="true" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
-                      <folding />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file leaf-file-name="no_spec.c" pinned="false" current-in-tab="true">
-                <entry file="file://$PROJECT_DIR$/srcs/no_spec.c">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="598">
-                      <caret line="26" column="52" lean-forward="false" selection-start-line="26" selection-start-column="52" selection-end-line="26" selection-end-column="52" />
-                      <folding />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file leaf-file-name="cast_flag_Xx.c" pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/srcs/cast_flag_Xx.c">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="54">
-                      <caret line="206" column="5" lean-forward="false" selection-start-line="206" selection-start-column="5" selection-end-line="206" selection-end-column="5" />
-                      <folding />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file leaf-file-name="cast_flag_p.c" pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/srcs/cast_flag_p.c">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="5049">
-                      <caret line="241" column="1" lean-forward="false" selection-start-line="241" selection-start-column="1" selection-end-line="241" selection-end-column="1" />
-                      <folding />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file leaf-file-name="itoa_b_uintmax.c" pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/srcs/itoa_b_uintmax.c">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="828">
-                      <caret line="36" column="22" lean-forward="false" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
-                      <folding />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-            </leaf>
-          </split-first>
-          <split-second>
-            <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-              <file leaf-file-name="parsing.c" pinned="false" current-in-tab="true">
-                <entry file="file://$PROJECT_DIR$/srcs/parsing.c">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="108">
-                      <caret line="156" column="58" lean-forward="false" selection-start-line="156" selection-start-column="58" selection-end-line="156" selection-end-column="58" />
-                      <folding />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-            </leaf>
-          </split-second>
-        </splitter>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="find.c" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/srcs/find.c">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-5406">
+                  <caret line="50" column="13" lean-forward="true" selection-start-line="50" selection-start-column="13" selection-end-line="50" selection-end-column="13" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ft_qualifier.c" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/srcs/ft_qualifier.c">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="498">
+                  <caret line="41" column="19" lean-forward="false" selection-start-line="41" selection-start-column="19" selection-end-line="41" selection-end-column="19" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="main2.c" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/main2.c">
+          <file leaf-file-name="cast_flag_x.c" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/srcs/cast_flag_x.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="346">
-                  <caret line="1582" column="16" lean-forward="false" selection-start-line="1582" selection-start-column="16" selection-end-line="1582" selection-end-column="16" />
-                  <folding>
-                    <element signature="e#0#33#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="344">
+                  <caret line="91" column="5" lean-forward="false" selection-start-line="91" selection-start-column="5" selection-end-line="91" selection-end-column="5" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ft_printf.h" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/includes/ft_printf.h">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="810">
+                  <caret line="127" column="24" lean-forward="false" selection-start-line="127" selection-start-column="24" selection-end-line="127" selection-end-column="24" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -260,6 +170,18 @@
       <find>count_two</find>
       <find>count</find>
       <find>nothing</find>
+      <find>width_two</find>
+      <find>width</find>
+      <find>uint_j</find>
+      <find>space</find>
+      <find>spc</find>
+      <find>ft_ps_l</find>
+      <find>plus</find>
+      <find>ft_flag_Ddi</find>
+      <find>ft_flag_Oo</find>
+      <find>ft_flag_Uu</find>
+      <find>ft_flag_Xx</find>
+      <find>cast_flag_C</find>
     </findStrings>
     <replaceStrings>
       <replace>r</replace>
@@ -270,6 +192,18 @@
       <replace>cou_t</replace>
       <replace>cou</replace>
       <replace>nothi</replace>
+      <replace>wid_t</replace>
+      <replace>wid</replace>
+      <replace>un_j</replace>
+      <replace>spc</replace>
+      <replace>space</replace>
+      <replace>ps_l</replace>
+      <replace>pls</replace>
+      <replace>ft_flag_di</replace>
+      <replace>ft_flag_o</replace>
+      <replace>ft_flag_u</replace>
+      <replace>ft_flag_x</replace>
+      <replace>cast_flag_cc</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$</dir>
@@ -282,15 +216,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/cast_flag_p.c" />
-        <option value="$PROJECT_DIR$/cast_flag_Ddi.c" />
-        <option value="$PROJECT_DIR$/ft_printf.h" />
-        <option value="$PROJECT_DIR$/find.c" />
-        <option value="$PROJECT_DIR$/ft_printf.c" />
-        <option value="$PROJECT_DIR$/srcs/ft_isalnum.c" />
-        <option value="$PROJECT_DIR$/srcs/ft_isalpha.c" />
-        <option value="$PROJECT_DIR$/srcs/ft_memalloc.c" />
-        <option value="$PROJECT_DIR$/srcs/ft_memdel.c" />
         <option value="$PROJECT_DIR$/srcs/ft_putchar.c" />
         <option value="$PROJECT_DIR$/srcs/ft_putendl.c" />
         <option value="$PROJECT_DIR$/srcs/ft_putnbr.c" />
@@ -302,7 +227,6 @@
         <option value="$PROJECT_DIR$/srcs/ft_strdel.c" />
         <option value="$PROJECT_DIR$/srcs/ft_strnew.c" />
         <option value="$PROJECT_DIR$/srcs/ft_bzero.c" />
-        <option value="$PROJECT_DIR$/srcs/ft_isspace.c" />
         <option value="$PROJECT_DIR$/srcs/ft_isdigit.c" />
         <option value="$PROJECT_DIR$/srcs/ft_atoi.c" />
         <option value="$PROJECT_DIR$/srcs/ft_strchr.c" />
@@ -310,29 +234,39 @@
         <option value="$PROJECT_DIR$/srcs/ft_strrev.c" />
         <option value="$PROJECT_DIR$/srcs/ft_strdup.c" />
         <option value="$PROJECT_DIR$/srcs/itoa_b.c" />
-        <option value="$PROJECT_DIR$/srcs/cast.c" />
         <option value="$PROJECT_DIR$/srcs/itoa_b_uintmax.c" />
         <option value="$PROJECT_DIR$/pf.sh" />
-        <option value="$PROJECT_DIR$/srcs/ft_printf.c" />
-        <option value="$PROJECT_DIR$/srcs/cast_flag_Oo.c" />
-        <option value="$PROJECT_DIR$/srcs/cast_flag_p.c" />
-        <option value="$PROJECT_DIR$/srcs/cast_flag_Xx.c" />
-        <option value="$PROJECT_DIR$/srcs/ft_qualifier.c" />
         <option value="$PROJECT_DIR$/srcs/ft_putwchar.c" />
         <option value="$PROJECT_DIR$/srcs/ft_putnbr_long.c" />
         <option value="$PROJECT_DIR$/srcs/ft_lenwchar.c" />
-        <option value="$PROJECT_DIR$/srcs/cast_flag_Uu.c" />
-        <option value="$PROJECT_DIR$/srcs/find.c" />
-        <option value="$PROJECT_DIR$/includes/ft_printf.h" />
-        <option value="$PROJECT_DIR$/main2.c" />
         <option value="$PROJECT_DIR$/srcs/ft_putstr_len.c" />
-        <option value="$PROJECT_DIR$/srcs/cast_flag_Ss.c" />
-        <option value="$PROJECT_DIR$/Makefile" />
-        <option value="$PROJECT_DIR$/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/srcs/cast_flag_Ddi.c" />
-        <option value="$PROJECT_DIR$/srcs/cast_flag_Cc.c" />
         <option value="$PROJECT_DIR$/srcs/parsing.c" />
+        <option value="$PROJECT_DIR$/srcs/ft_qualifier.c" />
+        <option value="$PROJECT_DIR$/srcs/ft_isspace.c" />
+        <option value="$PROJECT_DIR$/srcs/cast_flag_Xx.c" />
+        <option value="$PROJECT_DIR$/srcs/cast_flag_Cc.c" />
+        <option value="$PROJECT_DIR$/srcs/cast_flag_Ddi.c" />
         <option value="$PROJECT_DIR$/srcs/no_spec.c" />
+        <option value="$PROJECT_DIR$/srcs/cast_flag_c.c" />
+        <option value="$PROJECT_DIR$/srcs/cast_flag_Oo.c" />
+        <option value="$PROJECT_DIR$/srcs/cast_flag_di.c" />
+        <option value="$PROJECT_DIR$/srcs/ft_printf.c" />
+        <option value="$PROJECT_DIR$/srcs/cast_flag_p.c" />
+        <option value="$PROJECT_DIR$/srcs/cast_flag_Ss.c" />
+        <option value="$PROJECT_DIR$/srcs/cast_flag_o.c" />
+        <option value="$PROJECT_DIR$/srcs/cast_flag_s.c" />
+        <option value="$PROJECT_DIR$/srcs/cast_flag_ss.c" />
+        <option value="$PROJECT_DIR$/srcs/cast_flag_Uu.c" />
+        <option value="$PROJECT_DIR$/srcs/cast_flag_u.c" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/Makefile" />
+        <option value="$PROJECT_DIR$/srcs/help_2.c" />
+        <option value="$PROJECT_DIR$/srcs/cast_flag_x.c" />
+        <option value="$PROJECT_DIR$/main2.c" />
+        <option value="$PROJECT_DIR$/srcs/help.c" />
+        <option value="$PROJECT_DIR$/srcs/cast.c" />
+        <option value="$PROJECT_DIR$/includes/ft_printf.h" />
+        <option value="$PROJECT_DIR$/srcs/find.c" />
       </list>
     </option>
   </component>
@@ -343,7 +277,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
-  <component name="ProjectFrameBounds" fullScreen="true">
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
     <option name="width" value="2560" />
     <option name="height" value="1440" />
   </component>
@@ -584,12 +518,16 @@
       <workItem from="1535732290274" duration="61000" />
       <workItem from="1535732362635" duration="232000" />
       <workItem from="1535732608204" duration="3042000" />
-      <workItem from="1535795575646" duration="15389000" />
+      <workItem from="1535795575646" duration="15471000" />
+      <workItem from="1535878892537" duration="18158000" />
+      <workItem from="1535902566923" duration="11008000" />
+      <workItem from="1535966726275" duration="30250000" />
+      <workItem from="1536056713972" duration="5161000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="697567000" />
+    <option name="totallyTimeSpent" value="762226000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -604,45 +542,25 @@
     <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.07798346" sideWeight="0.48345864" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26270184" sideWeight="0.48345864" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.32906628" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" x="10" y="501" width="2539" height="437" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29473683" sideWeight="0.11815675" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19849624" sideWeight="0.33714062" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29473683" sideWeight="0.081134304" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2857143" sideWeight="0.32808194" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.36658356" sideWeight="0.50452936" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932332" sideWeight="0.48759353" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33283132" sideWeight="0.50452936" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32857144" sideWeight="0.49547064" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19849624" sideWeight="0.6628594" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29097745" sideWeight="0.7246948" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.076408036" sideWeight="0.50894856" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29097745" sideWeight="0.33714062" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29097745" sideWeight="0.27530524" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932332" sideWeight="0.48759353" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.32906628" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" x="10" y="501" width="2539" height="437" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29473683" sideWeight="0.12288302" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19849624" sideWeight="0.3391099" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.36658356" sideWeight="0.50452936" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33283132" sideWeight="0.50452936" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32857144" sideWeight="0.49547064" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21729323" sideWeight="0.64868057" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.07798346" sideWeight="0.48345864" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932332" sideWeight="0.48759353" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.076408036" sideWeight="0.50894856" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21729323" sideWeight="0.3513194" order="11" side_tool="false" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -678,133 +596,20 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="458" />
+      <option name="time" value="509" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="CMakeRunConfiguration">
         <watch expression="format" />
+        <watch expression="str" />
       </configuration>
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/libft/ft_strlen.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="20" column="12" lean-forward="false" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/find.c" />
-    <entry file="file://$PROJECT_DIR$/ft_printf.c" />
-    <entry file="file://$PROJECT_DIR$/srcs/ft_isalpha.c" />
-    <entry file="file://$PROJECT_DIR$/srcs/ft_memdel.c" />
-    <entry file="file://$PROJECT_DIR$/srcs/ft_putendl.c" />
-    <entry file="file://$PROJECT_DIR$/srcs/ft_strcmp.c" />
-    <entry file="file://$PROJECT_DIR$/srcs/ft_strjoin.c" />
-    <entry file="file://$PROJECT_DIR$/srcs/ft_memalloc.c" />
-    <entry file="file://$PROJECT_DIR$/srcs/ft_isalnum.c" />
-    <entry file="file://$PROJECT_DIR$/git.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="8" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/ft_strdel.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/usr/include/stdio.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="779">
-          <caret line="258" column="5" lean-forward="false" selection-start-line="258" selection-start-column="5" selection-end-line="258" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/srcs/ft_strrev.c" />
     <entry file="file://$PROJECT_DIR$/srcs/ft_strdup.c" />
-    <entry file="file://$PROJECT_DIR$/srcs/ft_strlen.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/ft_isdigit.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pf.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" column="27" lean-forward="false" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/srcs/itoa_b.c" />
     <entry file="file://$PROJECT_DIR$/srcs/ft_strchr.c" />
-    <entry file="file://$PROJECT_DIR$/srcs/ft_bzero.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/ft_qualifier.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="54" column="4" lean-forward="false" selection-start-line="54" selection-start-column="4" selection-end-line="54" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/ft_isspace.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" column="8" lean-forward="false" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/ft_strlen_uintmax.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/ft_strnew.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
-          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/ft_strsub.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/ft_lenwchar.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="21" column="25" lean-forward="false" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/srcs/ft_atoi.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="368">
@@ -821,148 +626,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/ft_printf.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="873">
-          <caret line="159" column="12" lean-forward="false" selection-start-line="159" selection-start-column="12" selection-end-line="159" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main2.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="1582" column="16" lean-forward="false" selection-start-line="1582" selection-start-column="16" selection-end-line="1582" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/ft_printf.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1312">
-          <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/ft_putnbr_long.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="837">
-          <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Makefile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="30" column="51" lean-forward="false" selection-start-line="30" selection-start-column="51" selection-end-line="30" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="862">
-          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/ft_putstr_len.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/cast_flag_Oo.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="61" column="23" lean-forward="false" selection-start-line="61" selection-start-column="23" selection-end-line="61" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/cast_flag_Ddi.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2553">
-          <caret line="111" column="24" lean-forward="true" selection-start-line="111" selection-start-column="24" selection-end-line="111" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/cast.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="581">
-          <caret line="85" column="0" lean-forward="true" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/cast_flag_Cc.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/cast_flag_Uu.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-898">
-          <caret line="95" column="0" lean-forward="true" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/cast_flag_Xx.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="206" column="5" lean-forward="false" selection-start-line="206" selection-start-column="5" selection-end-line="206" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/cast_flag_p.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5049">
-          <caret line="241" column="1" lean-forward="false" selection-start-line="241" selection-start-column="1" selection-end-line="241" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/cast_flag_Ss.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-557">
-          <caret line="125" column="41" lean-forward="true" selection-start-line="125" selection-start-column="41" selection-end-line="125" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/find.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3206">
-          <caret line="266" column="16" lean-forward="false" selection-start-line="266" selection-start-column="16" selection-end-line="266" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/srcs/ft_putwchar.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="437">
-          <caret line="19" column="20" lean-forward="true" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/parsing.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="156" column="58" lean-forward="false" selection-start-line="156" selection-start-column="58" selection-end-line="156" selection-end-column="58" />
+          <caret line="19" column="20" lean-forward="false" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
           <folding />
         </state>
       </provider>
@@ -975,14 +642,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/ft_putchar.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/srcs/ft_putnbr.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="460">
@@ -991,10 +650,306 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/ft_strlen.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/ft_bzero.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/ft_strnew.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/ft_isspace.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="15" column="1" lean-forward="false" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/ft_lenwchar.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pf.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" column="27" lean-forward="false" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/cast_flag_Cc.c" />
+    <entry file="file://$PROJECT_DIR$/srcs/cast_flag_Ddi.c" />
+    <entry file="file://$PROJECT_DIR$/srcs/ft_isdigit.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/ft_putnbr_long.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="783">
+          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/ft_putchar.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/Makefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/ft_printf.cbp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/cast_flag_Oo.c" />
     <entry file="file://$PROJECT_DIR$/srcs/no_spec.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="26" column="52" lean-forward="false" selection-start-line="26" selection-start-column="52" selection-end-line="26" selection-end-column="52" />
+        <state relative-caret-position="1659">
+          <caret line="92" column="24" lean-forward="false" selection-start-line="92" selection-start-column="24" selection-end-line="92" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/ft_putstr_len.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/cast_flag_o.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/ft_printf.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/cast_flag_p.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="109" column="23" lean-forward="true" selection-start-line="109" selection-start-column="23" selection-end-line="109" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/parsing.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="815">
+          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/cast_flag_di.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="705">
+          <caret line="37" column="14" lean-forward="false" selection-start-line="37" selection-start-column="14" selection-end-line="37" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/cast_flag_c.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="723">
+          <caret line="88" column="28" lean-forward="true" selection-start-line="88" selection-start-column="28" selection-end-line="88" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/ft_strsub.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/cast_flag_Uu.c" />
+    <entry file="file://$PROJECT_DIR$/git.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="8" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/cast_flag_Xx.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2921">
+          <caret line="127" column="5" lean-forward="false" selection-start-line="127" selection-start-column="5" selection-end-line="127" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/cast_flag_ss.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1059">
+          <caret line="51" column="17" lean-forward="false" selection-start-line="51" selection-start-column="13" selection-end-line="51" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/cast_flag_u.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="716">
+          <caret line="39" column="4" lean-forward="false" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Makefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="644">
+          <caret line="28" column="63" lean-forward="false" selection-start-line="28" selection-start-column="63" selection-end-line="28" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="739">
+          <caret line="43" column="21" lean-forward="false" selection-start-line="43" selection-start-column="21" selection-end-line="43" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/ft_strlen_uintmax.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/cast_flag_s.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-337">
+          <caret line="29" column="5" lean-forward="true" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/help_2.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="14" column="17" lean-forward="true" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main2.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="1561" column="0" lean-forward="true" selection-start-line="1561" selection-start-column="0" selection-end-line="1561" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#33#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/help.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="758">
+          <caret line="84" column="12" lean-forward="true" selection-start-line="84" selection-start-column="12" selection-end-line="84" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/cast.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="65" column="32" lean-forward="false" selection-start-line="65" selection-start-column="32" selection-end-line="65" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/cast_flag_x.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="91" column="5" lean-forward="false" selection-start-line="91" selection-start-column="5" selection-end-line="91" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/ft_qualifier.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="498">
+          <caret line="41" column="19" lean-forward="false" selection-start-line="41" selection-start-column="19" selection-end-line="41" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/ft_printf.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="810">
+          <caret line="127" column="24" lean-forward="false" selection-start-line="127" selection-start-column="24" selection-end-line="127" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/find.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5406">
+          <caret line="50" column="13" lean-forward="true" selection-start-line="50" selection-start-column="13" selection-end-line="50" selection-end-column="13" />
           <folding />
         </state>
       </provider>

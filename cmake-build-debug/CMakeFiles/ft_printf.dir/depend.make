@@ -7,26 +7,29 @@ CMakeFiles/ft_printf.dir/main2.c.o: ../main2.c
 CMakeFiles/ft_printf.dir/srcs/cast.c.o: ../includes/ft_printf.h
 CMakeFiles/ft_printf.dir/srcs/cast.c.o: ../srcs/cast.c
 
-CMakeFiles/ft_printf.dir/srcs/cast_flag_Cc.c.o: ../includes/ft_printf.h
-CMakeFiles/ft_printf.dir/srcs/cast_flag_Cc.c.o: ../srcs/cast_flag_Cc.c
+CMakeFiles/ft_printf.dir/srcs/cast_flag_c.c.o: ../includes/ft_printf.h
+CMakeFiles/ft_printf.dir/srcs/cast_flag_c.c.o: ../srcs/cast_flag_c.c
 
-CMakeFiles/ft_printf.dir/srcs/cast_flag_Ddi.c.o: ../includes/ft_printf.h
-CMakeFiles/ft_printf.dir/srcs/cast_flag_Ddi.c.o: ../srcs/cast_flag_Ddi.c
+CMakeFiles/ft_printf.dir/srcs/cast_flag_di.c.o: ../includes/ft_printf.h
+CMakeFiles/ft_printf.dir/srcs/cast_flag_di.c.o: ../srcs/cast_flag_di.c
 
-CMakeFiles/ft_printf.dir/srcs/cast_flag_Oo.c.o: ../includes/ft_printf.h
-CMakeFiles/ft_printf.dir/srcs/cast_flag_Oo.c.o: ../srcs/cast_flag_Oo.c
-
-CMakeFiles/ft_printf.dir/srcs/cast_flag_Ss.c.o: ../includes/ft_printf.h
-CMakeFiles/ft_printf.dir/srcs/cast_flag_Ss.c.o: ../srcs/cast_flag_Ss.c
-
-CMakeFiles/ft_printf.dir/srcs/cast_flag_Uu.c.o: ../includes/ft_printf.h
-CMakeFiles/ft_printf.dir/srcs/cast_flag_Uu.c.o: ../srcs/cast_flag_Uu.c
-
-CMakeFiles/ft_printf.dir/srcs/cast_flag_Xx.c.o: ../includes/ft_printf.h
-CMakeFiles/ft_printf.dir/srcs/cast_flag_Xx.c.o: ../srcs/cast_flag_Xx.c
+CMakeFiles/ft_printf.dir/srcs/cast_flag_o.c.o: ../includes/ft_printf.h
+CMakeFiles/ft_printf.dir/srcs/cast_flag_o.c.o: ../srcs/cast_flag_o.c
 
 CMakeFiles/ft_printf.dir/srcs/cast_flag_p.c.o: ../includes/ft_printf.h
 CMakeFiles/ft_printf.dir/srcs/cast_flag_p.c.o: ../srcs/cast_flag_p.c
+
+CMakeFiles/ft_printf.dir/srcs/cast_flag_s.c.o: ../includes/ft_printf.h
+CMakeFiles/ft_printf.dir/srcs/cast_flag_s.c.o: ../srcs/cast_flag_s.c
+
+CMakeFiles/ft_printf.dir/srcs/cast_flag_ss.c.o: ../includes/ft_printf.h
+CMakeFiles/ft_printf.dir/srcs/cast_flag_ss.c.o: ../srcs/cast_flag_ss.c
+
+CMakeFiles/ft_printf.dir/srcs/cast_flag_u.c.o: ../includes/ft_printf.h
+CMakeFiles/ft_printf.dir/srcs/cast_flag_u.c.o: ../srcs/cast_flag_u.c
+
+CMakeFiles/ft_printf.dir/srcs/cast_flag_x.c.o: ../includes/ft_printf.h
+CMakeFiles/ft_printf.dir/srcs/cast_flag_x.c.o: ../srcs/cast_flag_x.c
 
 CMakeFiles/ft_printf.dir/srcs/find.c.o: ../includes/ft_printf.h
 CMakeFiles/ft_printf.dir/srcs/find.c.o: ../srcs/find.c
@@ -84,6 +87,9 @@ CMakeFiles/ft_printf.dir/srcs/ft_strnew.c.o: ../srcs/ft_strnew.c
 
 CMakeFiles/ft_printf.dir/srcs/ft_strsub.c.o: ../includes/ft_printf.h
 CMakeFiles/ft_printf.dir/srcs/ft_strsub.c.o: ../srcs/ft_strsub.c
+
+CMakeFiles/ft_printf.dir/srcs/help.c.o: ../includes/ft_printf.h
+CMakeFiles/ft_printf.dir/srcs/help.c.o: ../srcs/help.c
 
 CMakeFiles/ft_printf.dir/srcs/itoa_b_uintmax.c.o: ../includes/ft_printf.h
 CMakeFiles/ft_printf.dir/srcs/itoa_b_uintmax.c.o: ../srcs/itoa_b_uintmax.c

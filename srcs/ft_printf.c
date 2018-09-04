@@ -18,6 +18,7 @@ int				ft_printf(const char *format, ...)
 	t_inf		inf;
 
 	inf.r = 0;
+	inf.r_h = 0;
 	va_start(lst, format);
 	while (*format != '%' && *format != '\0')
 	{
@@ -30,6 +31,8 @@ int				ft_printf(const char *format, ...)
 		{
 			if (*format == '%' && *(format + 1) == 0)
 				return (inf.r);
+			inf.r_h += inf.r;
+			inf.r = 0;
 			if (*format == '%' && *(format + 1) != '%')
 			{
 				format++;
@@ -57,6 +60,7 @@ int				ft_printf(const char *format, ...)
 			}
 		}
 	}
+	inf.r += inf.r_h;
 	va_end(lst);
 	return (inf.r);
 }

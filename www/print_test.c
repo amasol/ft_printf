@@ -138,7 +138,7 @@ int	main(void)
 //    PRINTF("|%s|", "বিড়াল এবং খাওয়া তিমি ঘুঘু");
 //    PRINTF("|%.13s|", "АБВГДЕЖЗ");
 //    PRINTF("|%s|\t","ç±³");
-//	TITLE("String options(field width, presicion and justification):\n");
+//	TITLE("String options(field wid, presicion and justification):\n");
 	{
 		const char A[] = "this is tEEEEst!";
 		PRINTF("|%5.3s|\t\t|%3.5s|\t|%7s|\t|%7.3s|",A, A,A,NULL);
@@ -191,7 +191,7 @@ int	main(void)
 	PRINTF("|%S|  |%S|\t|%S|",L"বিড়াল এবং খাওয়া তিমি ঘুঘু", L"合気道",L"ድመቶች ሰዎች አልወደውም.");
 
 //Presicions for wide strings
-	TITLE("Wide string options(field width, presicion and justification):\n");fflush(stdout);
+	TITLE("Wide string options(field wid, presicion and justification):\n");fflush(stdout);
 	{
 		const wchar_t B[] = L"ድመቶች ሰዎች አልወደውም.";
 		PRINTF("|%5.3S|\t\t|%3.5S|\t|%7S|\t|%7.3S|",B, B,B,L"");
@@ -202,7 +202,7 @@ int	main(void)
 #endif
 
 #ifdef PTR
-	TITLE("Pointer options(field width, presicioin and justification):\n");
+	TITLE("Pointer options(field wid, presicioin and justification):\n");
 	{
 		char *ptr_c = (char*)malloc(sizeof(char));
 		int ptr_i = 43;
@@ -215,7 +215,7 @@ int	main(void)
 #endif
 
 #ifdef NUM
-	TITLE("Number options(field width and justification):\n");
+	TITLE("Number options(field wid and justification):\n");
 	printf("   |i|:\n");
 //	PRINTF("\t|%12i|\t|%12i|\t|%12i|", INT_MIN, INT_MAX,0);
 	PRINTF("\t|%012i|\t|%-12i|\t|%012i|",-42,42,42);
@@ -243,7 +243,7 @@ int	main(void)
 //	printf("\n   |X|:\n");
 //	PRINTF("\t|%12X|\t|%12X|\t|%12X|", INT_MIN, INT_MAX,0);
 //	PRINTF("\t|%012X|\t|%-12X|\t|%012X|",-42,42,42);
-//	TITLE("Number options(field width, presicion and -):\n");
+//	TITLE("Number options(field wid, presicion and -):\n");
 	{
 		int nmb = 4235;
 #define CNV "i"
@@ -372,7 +372,7 @@ int	main(void)
 		PRINTF("|%."CNV" %.0"CNV" %0."CNV" %0.0"CNV"|\t\t|%"CNV" %.2"CNV" %2."CNV" %2.2"CNV"|\t\t\t\t",0,0,0,0,0,0,0,0);
 	}
 //Flag + - 0 and space
-	TITLE("Number options(field width, justification, +, space and 0):\n");
+	TITLE("Number options(field wid, justification, +, space and 0):\n");
 	{
 		int nmb = 42;
 #define CNV "i"
@@ -437,7 +437,7 @@ int	main(void)
 		PRINTF("|%-11-0"CNV"|\t|%-0+11"CNV"|\t|%11+"CNV"|\t|%-11+"CNV"|\t|%0 "CNV"|",nmb,nmb,nmb,nmb,nmb);nmb *= -1;
 	}
 //Flag # for X x and o and O and i
-	TITLE("Number options(field width, presicion, justification and #):\n");
+	TITLE("Number options(field wid, presicion, justification and #):\n");
 	{
 # define CNV "o"
 		printf("\n   |"CNV"|:\n");
@@ -512,7 +512,7 @@ int	main(void)
 	}
 #endif
 #ifdef LENGTH
-	TITLE("Number options(field width and length modifiers):\n");
+	TITLE("Number options(field wid and length modifiers):\n");
 	printf("\t|%5s|\t|%5s|\t|%20s|\t|%20s|\t|%20s|\t|%10s|\t|%10s|\n", "hh", "h", "l", "ll","j", "z", "nothi" );
 	{
 # define CNV "i"
@@ -642,7 +642,7 @@ int	main(void)
 		PRINTF("|%5h hh"CNV"|\t|%20l ll"CNV"|", SHRT_MIN,LONG_MIN);
 		PRINTF("|%20lll"CNV"|\t|%20llll"CNV"|\t|%20hhhh"CNV"|\t|%20h"CNV"|", -42,-42,-42,-42);
 	}
-	TITLE("Very big number options(field width and length modifiers):\n");
+	TITLE("Very big number options(field wid and length modifiers):\n");
 	printf("\n\t\t|%22s|\t|%22s|\t|%22s|\t|%22s|\n", "ll + small letter", "ll + BIG letter","hh + small letter", "hh + BIG letter");
 	PRINTF("|d/D|\t|%22lld|\t|%22llD|\t|%22hhd|\t|%22hhD|", -9223372036854775808,-9223372036854775808,-9223372036854775808,-9223372036854775808);
 	PRINTF("|u/U|\t|%22llu|\t|%22llU|\t|%22hhu|\t|%22hhU|", -9223372036854775808,-9223372036854775808,-9223372036854775808,-9223372036854775808);
@@ -654,7 +654,7 @@ int	main(void)
 	PRINTF("|o/O|\t|%22zo|\t|%22zO|\t|%22jO|\t|%22jO|", -9223372036854775808,-9223372036854775808,-9223372036854775808,-9223372036854775808);
 	PRINTF("|x/X|\t|%22zx|\t|%22zX|\t|%22jx|\t|%22jX|", -9223372036854775808,-9223372036854775808,-9223372036854775808,-9223372036854775808);
 //Not number options
-	TITLE("Not number number options(field width and length modifiers):");
+	TITLE("Not number number options(field wid and length modifiers):");
 	{
 # define CNV "i"
 		printf("\n   |"CNV"|:\t|%20s|\t|%20s|\t|%20s|\t|%20s|\n", "l", "ll","hh", "h");
@@ -703,8 +703,8 @@ int	main(void)
 #endif
 
 #ifdef STRANGE
-//Strange undefined tests to test the atoi of the field width and presicion
-	TITLE("Very undefined tests(field width, presicion and all flags) only 'd':\n");
+//Strange undefined tests to test the atoi of the field wid and presicion
+	TITLE("Very undefined tests(field wid, presicion and all flags) only 'd':\n");
 	printf("Round 1:|-5.#3| |-5.#6.5| |-5.#6| |-5.#6.| |-5.#6#4| |-5.#6#.4| |-5.#6.#0| |-5.#6.#0#7|\n");
 	PRINTF("|%-5.3d| |%-5.#6.5d| |%-5.#6d| |%-5.#6.d| |%-5.#6#4d| |%-5.#6#.4d| |%-5.#6.#0d| |%-5.#6.#0#7d|", -42,42,42,42,42,42,42,42);
 	printf("\nRound 2:|.7.3|\t|07.3|\t|. 7.3|\t|.07.03| |.#7.3|  |.+7.3|\n");

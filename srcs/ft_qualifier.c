@@ -12,6 +12,7 @@
 
 #include "../includes/ft_printf.h"
 
+static int help;
 			//спецификаторы
 int			ft_qualifier(char s)
 {
@@ -23,9 +24,15 @@ int			ft_qualifier(char s)
 		|| s == 'x' || s == 'X'
 		|| s == 'c' || s == 'C'
 		|| s == '%' || s == 'D')
+	{
+		help = 1;
 		return (1);
+	}
 	else
+	{
+		help = 0;
 		return (0);
+	}
 }
 
 //			refinement - уточнение ...
@@ -53,6 +60,7 @@ int			output_after(char *format, va_list lst, t_flag *flag, t_inf *inf)
 	int i;
 
 	i = 0;
+
 	if (format[i] == 'Z')
 	{
 		pars_hi_z(&format[i], flag, inf, lst);
@@ -64,6 +72,11 @@ int			output_after(char *format, va_list lst, t_flag *flag, t_inf *inf)
 		i++;
 	if (ft_qualifier(format[i]))
 		i++;
+	if (help == 0 && flag->min == 0)
+	{
+		inf->wid -= 1;
+		inf->r = (flag->wid == 1) ? inf->r += ps_l(" ", inf->wid) :inf->r;
+	}
 	while (format[i] != '%' && format[i] != '\0')
 	{
 		inf->r += write(1, &format[i], 1);

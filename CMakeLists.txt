@@ -26,17 +26,20 @@ add_executable(ft_printf
         srcs/parsing.c
         srcs/ft_putnbr_long.c
         srcs/cast.c
-        srcs/cast_flag_Ddi.c
-        srcs/cast_flag_Ss.c
-        srcs/cast_flag_Cc.c
-        srcs/cast_flag_Xx.c
-        srcs/cast_flag_Uu.c
-        srcs/cast_flag_Oo.c
+        srcs/cast_flag_di.c
+        srcs/cast_flag_s.c
+        srcs/cast_flag_c.c
+        srcs/cast_flag_x.c
+        srcs/cast_flag_u.c
+        srcs/cast_flag_o.c
         srcs/cast_flag_p.c
         main2.c
         srcs/ft_strlen_uintmax.c
         srcs/no_spec.c
         srcs/ft_putwchar.c
         srcs/ft_lenwchar.c
-        srcs/ft_putstr_len.c)
+        srcs/ft_putstr_len.c
+        srcs/help.c
+        srcs/cast_flag_ss.c
+        srcs/help_2.c)
 #        print_test.c)

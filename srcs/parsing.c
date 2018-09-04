@@ -33,13 +33,13 @@ void				parsing(char *str, va_list lst, t_inf *inf)
 		inf->nothi = 1;
 		if (is_check_specs(str[i]))
 			break ;
-		if (inf->width_two == 0)
+		if (inf->wid_t == 0)
 			parsing_four(str, &flag, inf);
-		if (inf->width == 0)
+		if (inf->wid == 0)
 			parsing_three(&str[i], inf, &flag);
 		if (inf->cou_three == 0)
 			parsing_five(&str[i], inf, &flag);
-		if (inf->width == 0)
+		if (inf->wid == 0)
 			parsing_three(&str[i], inf, &flag);
 		i++;
 	}
@@ -51,12 +51,12 @@ void				parsing(char *str, va_list lst, t_inf *inf)
 
 void			initialization_flag(t_flag *flag, t_inf *inf)
 {
-	flag->plus				= 0;
+	flag->pls				= 0;
 	flag->min				= 0;
 	flag->slash				= 0;
 	flag->space				= 0;
 	flag->zero				= 0;
-	flag->width				= 0;
+	flag->wid				= 0;
 	flag->preci			= 0;
 	flag->check_preci	= 0;
 	flag->zero_preci	= 0;
@@ -69,8 +69,8 @@ void			initialization_flag(t_flag *flag, t_inf *inf)
 	flag->z 				= 0;
 
 	flag->ban				= 0;
-	inf->width				= 0;
-	inf->width_two			= 0;
+	inf->wid				= 0;
+	inf->wid_t			= 0;
 	inf->cou				= 0;
 	inf->cou_t			= 0;
 	inf->cou_three		= 0;
@@ -78,7 +78,7 @@ void			initialization_flag(t_flag *flag, t_inf *inf)
 	inf->tmp				= 0;
 	inf->cou_format		= 0;
 	inf->min_v		= 0;
-	inf->uint_j				= 0;
+	inf->un_j				= 0;
 	inf->intm_j				= 0;
 	inf->nothi			= 0;
 	flag->nothi_flag		= 0;
@@ -92,7 +92,7 @@ void			parsing_one(char *str, t_flag *flag)
 	while (str[i])
 	{
 		if (str[i] == '+')
-			flag->plus = 1;
+			flag->pls = 1;
 		if (str[i] == '-')
 			flag->min = 1;
 		if (str[i] == '#')
@@ -107,7 +107,7 @@ void			parsing_one(char *str, t_flag *flag)
 			flag->preci = 1;
 		}
 		if (ft_isdigit(str[i]))
-			flag->width = 1;
+			flag->wid = 1;
 		i++;
 	}
 }
@@ -157,12 +157,12 @@ int			parsing_three(char *str, t_inf *inf, t_flag *flag)
 				str[i + 1] == ' ' || str[i + 1] == '#' || ft_flag_check(str[i + 1])))
 			{
 				flag->preci = 0;
-				inf->width_two = 0;
+				inf->wid_t = 0;
 			}
 		}
 		if (ft_isdigit(str[i + 1]) && flag->preci == 1)
 		{
-			inf->width = ft_atoi(&str[i + 1]);
+			inf->wid = ft_atoi(&str[i + 1]);
 			flag->zero_preci = 1;
 		}
 	}
@@ -173,16 +173,16 @@ int			parsing_three(char *str, t_inf *inf, t_flag *flag)
 			i++;
 		if  (str[i] >= '1' && str[i] <= '9')
 		{
-			inf->width = ft_atoi(&str[i]);
+			inf->wid = ft_atoi(&str[i]);
 			inf->cou_four = 1;
 		}
 	}
 	while (*str == '+' || *str == '-' || *str == ' '
 		|| *str == '#' || ft_flag_check(*str))
 		str++;
-	if (ft_isdigit(*str) && inf->width_two > 0 && flag->zero_preci != 1)
+	if (ft_isdigit(*str) && inf->wid_t > 0 && flag->zero_preci != 1)
 	{
-		inf->width = 0;
+		inf->wid = 0;
 		inf->cou_four = 1;
 	}
 	return (1);
@@ -199,7 +199,7 @@ void			parsing_four(char *str, t_flag *flag, t_inf *inf)
 	if (ft_isdigit(str[i]) && inf->cou_three != 1)
 	{
 		if  (str[i] >= '0' && str[i] <= '9')
-			inf->width_two = ft_atoi(&str[i]);
+			inf->wid_t = ft_atoi(&str[i]);
 	}
 }
 
@@ -210,9 +210,9 @@ void		parsing_five(char *str, t_inf *inf, t_flag *flag)
 
 	i = 0;
 	k = 0;
-	if (inf->width_two > 0 && inf->width == 0 && inf->cou_four == 0
+	if (inf->wid_t > 0 && inf->wid == 0 && inf->cou_four == 0
 		&& flag->zero_preci != 1)
-		inf->width = inf->width_two;
+		inf->wid = inf->wid_t;
 	while (ft_flag_check(str[i]))
 		i++;
 	if (str[i])
@@ -230,7 +230,7 @@ void		parsing_five(char *str, t_inf *inf, t_flag *flag)
 			i++;
 		}
 		if (k == 1)
-			inf->width_two = 0;
+			inf->wid_t = 0;
 	}
 	inf->cou_three = 1;
 }

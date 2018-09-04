@@ -1557,8 +1557,8 @@ int		 main	(void)
 //	ft_printf("%hhD", USHRT_MAX);
 //	printf("\n%hhD", USHRT_MAX);
 //
-//	ft_printf("%#.O", 0);
-//	printf("\n%#.O", 0);
+//	ft_printf("%#.x %#.0x", 0, 0);
+//	printf("\n%#.x %#.0x", 0, 0);
 
 
 
@@ -1579,13 +1579,20 @@ int		 main	(void)
 //	ft_printf("|len=%i", ft_printf("%5.0x", 0));
 //	printf("\n|len=%i", printf("%5.0x", 0));
 
-
-	ft_printf("%-5c", 42);
+//	int i = 15;
+//	ft_printf("{%-30S}", L"ÊM-M-^QÊM-^XØ‰∏M-ÂM-^O™ÁM-^L´„M-M-^B");
+//	printf("\n{%-30S}", L"ÊM-M-^QÊM-^XØ‰∏M-ÂM-^O™ÁM-^L´„M-M-^B");
 //	printf("\n%.u, %.0u", 0, 0);
 //
-	setlocale(LC_ALL, "");
-
+//	setlocale(LC_ALL, "");
+//
 //	wchar_t *c = L"α";
+
+//	ft_printf("%4.s", "42");
+//	printf("\n%4.s", "42");
+//	ft_printf("%30.5S", L"ÊM-M-^QÊM-^XØ‰∏M-ÂM-^O™ÁM-^L´„M-M-^B");
+//	printf("%30.5S", L"ÊM-M-^QÊM-^XØ‰∏M-ÂM-^O™ÁM-^L´„M-M-^B");
+
 
 //	ft_printf("%ls, %ls", L"ÊM-^ZM-^VÁM-^BM-^I", L"ŸM-^Dÿ≠ŸM-^E ÿÆŸM-^Fÿ≤ŸM-ÿ±");
 //	printf("\n%ls, %ls", L"ÊM-^ZM-^VÁM-^BM-^I", L"ŸM-^Dÿ≠ŸM-^E ÿÆŸM-^Fÿ≤ŸM-ÿ±");
@@ -1611,8 +1618,8 @@ int		 main	(void)
 //	printf("\n%5.C", L'α');
 
 
-//	ft_printf("|len=[%i]", ft_printf("%15.4S", L"ÊM-M-^QÊM-^XØ‰∏M-ÂM-^O™ÁM-^L´„M-M-^B\n"));
-//	printf("|len=[%i]", printf("%15.4S", L"ÊM-M-^QÊM-^XØ‰∏M-ÂM-^O™ÁM-^L´„M-M-^B\n"));
+//	ft_printf("|len=[%i]", ft_printf("%15.4S", L"ÊM-M-^QÊM-^XØ‰∏M-ÂM-^O™ÁM-^L´„M-M-^B"));
+//	printf("|len=[%i]", printf("%15.4S", L"ÊM-M-^QÊM-^XØ‰∏M-ÂM-^O™ÁM-^L´„M-M-^B"));
 
 //	ft_printf("|len=[%i]", ft_printf("{%05.Z}", 0));
 //	printf("|len=[%i]", printf("{%05.Z}", 0));

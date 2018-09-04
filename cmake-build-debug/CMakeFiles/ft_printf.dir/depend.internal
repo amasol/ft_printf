@@ -7,27 +7,30 @@ CMakeFiles/ft_printf.dir/main2.c.o
 CMakeFiles/ft_printf.dir/srcs/cast.c.o
  /Users/amasol/amasol/project/ft_printf/includes/ft_printf.h
  /Users/amasol/amasol/project/ft_printf/srcs/cast.c
-CMakeFiles/ft_printf.dir/srcs/cast_flag_Cc.c.o
+CMakeFiles/ft_printf.dir/srcs/cast_flag_c.c.o
  /Users/amasol/amasol/project/ft_printf/includes/ft_printf.h
- /Users/amasol/amasol/project/ft_printf/srcs/cast_flag_Cc.c
-CMakeFiles/ft_printf.dir/srcs/cast_flag_Ddi.c.o
+ /Users/amasol/amasol/project/ft_printf/srcs/cast_flag_c.c
+CMakeFiles/ft_printf.dir/srcs/cast_flag_di.c.o
  /Users/amasol/amasol/project/ft_printf/includes/ft_printf.h
- /Users/amasol/amasol/project/ft_printf/srcs/cast_flag_Ddi.c
-CMakeFiles/ft_printf.dir/srcs/cast_flag_Oo.c.o
+ /Users/amasol/amasol/project/ft_printf/srcs/cast_flag_di.c
+CMakeFiles/ft_printf.dir/srcs/cast_flag_o.c.o
  /Users/amasol/amasol/project/ft_printf/includes/ft_printf.h
- /Users/amasol/amasol/project/ft_printf/srcs/cast_flag_Oo.c
-CMakeFiles/ft_printf.dir/srcs/cast_flag_Ss.c.o
- /Users/amasol/amasol/project/ft_printf/includes/ft_printf.h
- /Users/amasol/amasol/project/ft_printf/srcs/cast_flag_Ss.c
-CMakeFiles/ft_printf.dir/srcs/cast_flag_Uu.c.o
- /Users/amasol/amasol/project/ft_printf/includes/ft_printf.h
- /Users/amasol/amasol/project/ft_printf/srcs/cast_flag_Uu.c
-CMakeFiles/ft_printf.dir/srcs/cast_flag_Xx.c.o
- /Users/amasol/amasol/project/ft_printf/includes/ft_printf.h
- /Users/amasol/amasol/project/ft_printf/srcs/cast_flag_Xx.c
+ /Users/amasol/amasol/project/ft_printf/srcs/cast_flag_o.c
 CMakeFiles/ft_printf.dir/srcs/cast_flag_p.c.o
  /Users/amasol/amasol/project/ft_printf/includes/ft_printf.h
  /Users/amasol/amasol/project/ft_printf/srcs/cast_flag_p.c
+CMakeFiles/ft_printf.dir/srcs/cast_flag_s.c.o
+ /Users/amasol/amasol/project/ft_printf/includes/ft_printf.h
+ /Users/amasol/amasol/project/ft_printf/srcs/cast_flag_s.c
+CMakeFiles/ft_printf.dir/srcs/cast_flag_ss.c.o
+ /Users/amasol/amasol/project/ft_printf/includes/ft_printf.h
+ /Users/amasol/amasol/project/ft_printf/srcs/cast_flag_ss.c
+CMakeFiles/ft_printf.dir/srcs/cast_flag_u.c.o
+ /Users/amasol/amasol/project/ft_printf/includes/ft_printf.h
+ /Users/amasol/amasol/project/ft_printf/srcs/cast_flag_u.c
+CMakeFiles/ft_printf.dir/srcs/cast_flag_x.c.o
+ /Users/amasol/amasol/project/ft_printf/includes/ft_printf.h
+ /Users/amasol/amasol/project/ft_printf/srcs/cast_flag_x.c
 CMakeFiles/ft_printf.dir/srcs/find.c.o
  /Users/amasol/amasol/project/ft_printf/includes/ft_printf.h
  /Users/amasol/amasol/project/ft_printf/srcs/find.c
@@ -85,6 +88,9 @@ CMakeFiles/ft_printf.dir/srcs/ft_strnew.c.o
 CMakeFiles/ft_printf.dir/srcs/ft_strsub.c.o
  /Users/amasol/amasol/project/ft_printf/includes/ft_printf.h
  /Users/amasol/amasol/project/ft_printf/srcs/ft_strsub.c
+CMakeFiles/ft_printf.dir/srcs/help.c.o
+ /Users/amasol/amasol/project/ft_printf/includes/ft_printf.h
+ /Users/amasol/amasol/project/ft_printf/srcs/help.c
 CMakeFiles/ft_printf.dir/srcs/itoa_b_uintmax.c.o
  /Users/amasol/amasol/project/ft_printf/includes/ft_printf.h
  /Users/amasol/amasol/project/ft_printf/srcs/itoa_b_uintmax.c

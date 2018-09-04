@@ -15,7 +15,7 @@
 
 # define APPLY (flag->hh || flag->h || flag->l \
 			|| flag->ll || flag->j || flag->z)
-# define LY (inf->width  || inf->width_two || flag->zero)
+# define LY (inf->wid  || inf->wid_t || flag->zero)
 
 // # include "./libft/libft.h"
 
@@ -38,12 +38,12 @@ typedef struct s_flag
 //	int	l		= 4;
 //	int	h		= 5;
 //	int	hh		= 6;
-	int			plus;
+	int			pls;
 	int			min;
 	int			slash;
 	int			space;
 	int 		zero;
-	int			width;
+	int			wid;
 	int			preci;
 	int			check_preci;
 	int			zero_preci;
@@ -63,8 +63,8 @@ typedef	struct	s_inf
 {
 	int			nothi;
 	char		x;
-	int			width;
-	int			width_two;
+	int			wid;
+	int			wid_t;
 	int 		cou;
 	int 		cou_t;
 	int 		cou_three;
@@ -73,7 +73,8 @@ typedef	struct	s_inf
 	int			cou_format;
 	int			min_v;
 	intmax_t	r;
-	uintmax_t	uint_j;
+	intmax_t	r_h;
+	uintmax_t	un_j;
 	intmax_t	intm_j;
 }				t_inf;
 
@@ -94,37 +95,40 @@ int			ft_qualifier(char s);
 char		*ft_itoa_base_uintmax(uintmax_t nbr, unsigned base, char c);
 
 //----------------------------------------------------
-intmax_t	min_v_Ddi(intmax_t i, t_flag *flag, t_inf *inf);
+intmax_t	min_v_di(intmax_t i, t_flag *flag, t_inf *inf);
 intmax_t	cast_intmax(intmax_t i, t_flag *flag, t_inf *inf);
 uintmax_t	cast_uintmax(uintmax_t i, t_flag *flag , t_inf *inf);
 intmax_t	entry_min_intm(intmax_t i, t_inf *inf, t_flag *flag);
 void		entry_min_uint(t_inf *inf);
 
 //-------------------------------------
-void		cast_flag_Ddi(t_inf *inf, intmax_t i, t_flag *flag, char *format);
-void		cast_flag_Uu(t_inf *inf, uintmax_t i, t_flag *flag, char *format);
-void		cast_flag_Xx(t_inf *inf, uintmax_t i, t_flag *flag, char *str);
-void		cast_flag_Oo(t_inf *inf, uintmax_t i, t_flag *flag, char *str);
-void		cast_flag_s(t_inf *inf, t_flag *flag, char *format);
-void		cast_flag_S(t_inf *inf, t_flag *flag, wchar_t *str);
+int			cast_flag_di(t_inf *inf, intmax_t i, t_flag *flag, char *format);
+void		cast_flag_u(t_inf *inf, uintmax_t i, t_flag *flag);
+int			cast_flag_x(t_inf *inf, uintmax_t i, t_flag *flag, char *str);
+int			cast_flag_o(t_inf *inf, uintmax_t i, t_flag *flag, char *str);
+int			cast_flag_s(t_inf *inf, t_flag *flag, char *format);
+int			cast_flag_ss(t_inf *inf, t_flag *flag, wchar_t *str);
 void		cast_flag_c(t_inf *inf, t_flag *flag, char format);
-void		cast_flag_C(t_inf *inf, t_flag *flag, wchar_t c);
-void		cast_flag_p(t_inf *inf, uintmax_t i, t_flag *flag, char *format);
+void		cast_flag_cc(t_inf *inf, t_flag *flag, wchar_t c);
+int			cast_flag_p(t_inf *inf, uintmax_t i, t_flag *flag, char *format);
 
 
 
-void			cancellation_flags_Ddi(t_flag *flag, t_inf *inf);
+void		cancellation_flags_di(t_flag *flag, t_inf *inf);
 
 //-------------------------специфыкаторы
 int			ft_refinement(char s);
-int			ft_flag_Ddi(va_list lst, char *format, t_flag *flag, t_inf *inf);
+int			ft_flag_di(va_list lst, char *format, t_flag *flag, t_inf *inf);
+int			ft_flag_dd(va_list lst, char *format, t_flag *flag, t_inf *inf);
 int			ft_flag_s(va_list lst, char *format, t_flag *flag, t_inf *inf);
-int			ft_flag_S(va_list lst, char *format, t_flag *flag, t_inf *inf);
+int			ft_flag_ss(va_list lst, char *format, t_flag *flag, t_inf *inf);
 int			ft_flag_c(va_list lst, char *format, t_flag *flag, t_inf *inf);
-int			ft_flag_C(va_list lst, char *format, t_flag *flag, t_inf *inf);
-int			ft_flag_Xx(va_list lst, char *format, t_flag *flag, t_inf *inf);
-int			ft_flag_Uu(va_list lst, char *format, t_flag *flag, t_inf *inf);
-int			ft_flag_Oo(va_list lst, char *format, t_flag *flag, t_inf *inf);
+int			ft_flag_cc(va_list lst, char *format, t_flag *flag, t_inf *inf);
+int			ft_flag_x(va_list lst, char *format, t_flag *flag, t_inf *inf);
+int			ft_flag_xx(va_list lst, char *format, t_flag *flag, t_inf *inf);
+int			ft_flag_u(va_list lst, char *format, t_flag *flag, t_inf *inf);
+int			ft_flag_o(va_list lst, char *format, t_flag *flag, t_inf *inf);
+int			ft_flag_oo(va_list lst, char *format, t_flag *flag, t_inf *inf);
 int			ft_flag_p(va_list lst, char *format, t_flag *flag, t_inf *inf);
 //----------------------------------------------------
 
@@ -150,6 +154,12 @@ uintmax_t	ft_strlen_uintmax(const char *s);
 intmax_t	ft_cou_int(intmax_t n);
 uintmax_t	ft_cou_uint(uintmax_t n);
 
+int			cast_flag_di_h5(t_inf *inf, intmax_t i, t_flag *flag, char *str);
+int			cast_flag_p_h5(t_inf *inf, uintmax_t i, t_flag *flag, char *str);
+int			cast_flag_s_h5(t_inf *inf, t_flag *flag, char *str, char *tmp);
+int			cast_flag_ss_h5(t_inf *inf, t_flag *flag, wchar_t *str);
+int			cast_flag_x_h5(t_inf *inf, uintmax_t i, t_flag *flag, char *str);
+
 
 //libft
 
@@ -157,7 +167,7 @@ int			ft_atoi(const char *str);
 void		ft_putchar(char c);
 void		ft_putnbr(int nb);
 void		ft_putstr(char const *str);
-int			ft_ps_l(char const *str, int i);
+int			ps_l(char const *str, int i);
 void		ft_strdel(char **as);
 size_t		ft_strlen(const char *s);
 char		*ft_strsub(char const *s, unsigned int start, size_t len);
