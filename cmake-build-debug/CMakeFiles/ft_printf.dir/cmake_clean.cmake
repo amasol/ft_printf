@@ -33,6 +33,9 @@ file(REMOVE_RECURSE
   "CMakeFiles/ft_printf.dir/srcs/help.c.o"
   "CMakeFiles/ft_printf.dir/srcs/cast_flag_ss.c.o"
   "CMakeFiles/ft_printf.dir/srcs/help_2.c.o"
+  "CMakeFiles/ft_printf.dir/srcs/help_flag.c.o"
+  "CMakeFiles/ft_printf.dir/srcs/help_flag_2.c.o"
+  "CMakeFiles/ft_printf.dir/srcs/help_3.c.o"
   "ft_printf.pdb"
   "ft_printf"
 )

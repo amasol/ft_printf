@@ -176,6 +176,15 @@
 		<Unit filename="/Users/amasol/amasol/project/ft_printf/srcs/help_2.c">
 			<Option target="ft_printf"/>
 		</Unit>
+		<Unit filename="/Users/amasol/amasol/project/ft_printf/srcs/help_3.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/amasol/amasol/project/ft_printf/srcs/help_flag.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/amasol/amasol/project/ft_printf/srcs/help_flag_2.c">
+			<Option target="ft_printf"/>
+		</Unit>
 		<Unit filename="/Users/amasol/amasol/project/ft_printf/srcs/itoa_b_uintmax.c">
 			<Option target="ft_printf"/>
 		</Unit>

@@ -12,6 +12,19 @@
 
 #include "../includes/ft_printf.h"
 
+static int g_lob;
+
+static int 	ft_printf_h2(char *format, va_list lst, t_inf *inf)
+{
+	return (0);
+}
+
+static int 		ft_printf_h(char *format, va_list lst, t_inf *inf)
+{
+	return (0);
+}
+
+
 int				ft_printf(const char *format, ...)
 {
 	va_list		lst;
@@ -19,12 +32,14 @@ int				ft_printf(const char *format, ...)
 
 	inf.r = 0;
 	inf.r_h = 0;
+//	g_lob = inf.r;
 	va_start(lst, format);
 	while (*format != '%' && *format != '\0')
 	{
 		inf.r += write(1, format, 1);
 		format++;
 	}
+//	ft_printf_h((char *)format, lst, &inf);
 	if (*format)
 	{
 		while (*format != '\0')

@@ -14,8 +14,8 @@
 
 static	int		cou(uintmax_t nbr, unsigned base)
 {
-	int i;
-	uintmax_t tmp;
+	int			i;
+	uintmax_t	tmp;
 
 	i = 1;
 	tmp = nbr;
@@ -27,7 +27,7 @@ static	int		cou(uintmax_t nbr, unsigned base)
 	return (i);
 }
 
-static	void		transform_b(char *str, char c)
+static	void	transform_b(char *str, char c)
 {
 	int j;
 
@@ -43,7 +43,7 @@ static	void		transform_b(char *str, char c)
 	}
 }
 
-static	void		ft_bukv_m(uintmax_t nbr, int len, char *str)
+static	void	ft_bukv_m(uintmax_t nbr, int len, char *str)
 {
 	if (nbr == 10)
 		str[len] = 'a';
@@ -59,19 +59,19 @@ static	void		ft_bukv_m(uintmax_t nbr, int len, char *str)
 		str[len] = 'f';
 }
 
-static	void		transform(uintmax_t nbr, int len, unsigned base, char *str)
+static	void	transform(uintmax_t nbr, int len, unsigned base, char *str)
 {
 	while (nbr >= base)
 	{
 		if (nbr % base >= 10 && nbr % base <= 15 && base > 10)
-				ft_bukv_m(nbr % base, len, str);
+			ft_bukv_m(nbr % base, len, str);
 		else
 			str[len] = nbr % base + 48;
 		nbr /= base;
 		len--;
 	}
 	if (nbr % base >= 10 && nbr % base <= 15 && base > 10)
-			ft_bukv_m(nbr % base, len, str);
+		ft_bukv_m(nbr % base, len, str);
 	else
 		str[len] = nbr % base + 48;
 }

@@ -1557,8 +1557,8 @@ int		 main	(void)
 //	ft_printf("%hhD", USHRT_MAX);
 //	printf("\n%hhD", USHRT_MAX);
 //
-//	ft_printf("%#.x %#.0x", 0, 0);
-//	printf("\n%#.x %#.0x", 0, 0);
+//	ft_printf("%%", "test");
+//	printf("\n%%", "test");
 
 
 

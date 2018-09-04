@@ -89,8 +89,8 @@ void			initialization_flag(t_flag *flag, t_inf *inf);
 
 int			ft_printf(const char *format, ...);
 void		pars_spec(char *format, va_list lst, t_flag *flag, t_inf *inf);
-void		pars_no_spec(char *format, va_list lst, t_flag *flag, t_inf *inf);
-void		pars_hi_z(char *format, t_flag *flag, t_inf *inf, va_list lst);
+void		pars_no_spec(t_flag *flag, t_inf *inf);
+int			pars_hi_z(char *format, t_flag *flag, t_inf *inf, va_list lst);
 int			ft_qualifier(char s);
 char		*ft_itoa_base_uintmax(uintmax_t nbr, unsigned base, char c);
 
@@ -138,7 +138,7 @@ int			ft_flag_p(va_list lst, char *format, t_flag *flag, t_inf *inf);
 void		parsing(char *str, va_list lst, t_inf *inf);
 void		parsing_one(char *str, t_flag *flag);
 void		parsing_two(char *str, t_flag *flag);
-int			parsing_three(char *str, t_inf *inf, t_flag *flag);
+void		parsing_three(char *str, t_inf *inf, t_flag *flag);
 void		parsing_four(char *str, t_flag *flag, t_inf *inf);
 void		parsing_five(char *str, t_inf *inf, t_flag *flag);
 int			ft_flag_check(char c);

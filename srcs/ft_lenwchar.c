@@ -12,7 +12,6 @@
 
 #include "../includes/ft_printf.h"
 
-
 int				ft_lenwchar(wchar_t c)
 {
 	if (c <= 0x7F)

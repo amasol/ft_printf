@@ -41,5 +41,8 @@ add_executable(ft_printf
         srcs/ft_putstr_len.c
         srcs/help.c
         srcs/cast_flag_ss.c
-        srcs/help_2.c)
+        srcs/help_2.c
+        srcs/help_flag.c
+        srcs/help_flag_2.c
+        srcs/help_3.c)
 #        print_test.c)

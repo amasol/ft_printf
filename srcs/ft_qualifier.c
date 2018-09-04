@@ -12,9 +12,9 @@
 
 #include "../includes/ft_printf.h"
 
-static int help;
-			//спецификаторы
-int			ft_qualifier(char s)
+static int g_help;
+
+int		ft_qualifier(char s)
 {
 	if (s == 's' || s == 'S' || s == 'Z'
 		|| s == 'p' || s == 'd'
@@ -25,18 +25,17 @@ int			ft_qualifier(char s)
 		|| s == 'c' || s == 'C'
 		|| s == '%' || s == 'D')
 	{
-		help = 1;
+		g_help = 1;
 		return (1);
 	}
 	else
 	{
-		help = 0;
+		g_help = 0;
 		return (0);
 	}
 }
 
-//			refinement - уточнение ...
-int			ft_refinement(char s)
+int		ft_refinement(char s)
 {
 	if (s == 'D' || s == 'd' || s == 'i')
 		return (1);
@@ -55,27 +54,24 @@ int			ft_refinement(char s)
 	return (0);
 }
 
-int			output_after(char *format, va_list lst, t_flag *flag, t_inf *inf)
+int		output_after(char *format, va_list lst, t_flag *flag, t_inf *inf)
 {
 	int i;
 
 	i = 0;
-
 	if (format[i] == 'Z')
 	{
 		pars_hi_z(&format[i], flag, inf, lst);
 		return (1);
 	}
-	while (ft_isdigit(format[i]) || (format[i] == '-')
-		|| (format[i] == '+') || ft_flag_check(format[i])
-		|| (format[i] == ' ') || (format[i] == '.'))
+	while (ft_isdigit(format[i]) || ft_flag_check(format[i]))
 		i++;
 	if (ft_qualifier(format[i]))
 		i++;
-	if (help == 0 && flag->min == 0)
+	if (g_help == 0 && flag->min == 0)
 	{
 		inf->wid -= 1;
-		inf->r = (flag->wid == 1) ? inf->r += ps_l(" ", inf->wid) :inf->r;
+		inf->r = (flag->wid == 1) ? inf->r += ps_l(" ", inf->wid) : inf->r;
 	}
 	while (format[i] != '%' && format[i] != '\0')
 	{
@@ -86,14 +82,29 @@ int			output_after(char *format, va_list lst, t_flag *flag, t_inf *inf)
 	return (1);
 }
 
-int			ft_flag_check(char c)
+int		is_check_preci(char *str, t_flag *flag)
 {
-	if (c == '+' || c == '-' || c == 'Z'
-		|| c == '#' || c == '.'
-		|| c == ' ' || c == 'h'
-		|| c == 'j' || c == 'z'
-		|| c == 'l' || (c == 'l' && c + 1 == 'l') ||
-		(c == 'h' && c + 1 == 'h'))
+	int i;
+
+	i = 0;
+	while (ft_isdigit(str[i]))
+	{
+		i++;
+		if (str[i] == '.')
+			flag->check_preci = 1;
+		return (1);
+	}
+	return (0);
+}
+
+int		is_check_specs(char s)
+{
+	if (s == 'A' || s == 'B' || s == 'E' || s == 'F'
+		|| s == 'G' || s == 'H' || s == 'I' || s == '{' || s == '}'
+		|| s == 'J' || s == 'K' || s == 'L' || s == 'M'
+		|| s == 'N' || s == 'O' || s == 'P' || s == 'Q'
+		|| s == 'R' || s == 'S' || s == 'T' || s == 'V'
+		|| s == 'W' || s == 'Y' || s == 'Z' || s == '\n')
 		return (1);
 	else
 		return (0);

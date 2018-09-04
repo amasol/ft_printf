@@ -166,6 +166,18 @@ stdio.h
 ../includes/ft_printf.h
 /Users/amasol/amasol/project/ft_printf/includes/ft_printf.h
 
+/Users/amasol/amasol/project/ft_printf/srcs/help_2.c
+../includes/ft_printf.h
+/Users/amasol/amasol/project/ft_printf/includes/ft_printf.h
+
+/Users/amasol/amasol/project/ft_printf/srcs/help_flag.c
+../includes/ft_printf.h
+/Users/amasol/amasol/project/ft_printf/includes/ft_printf.h
+
+/Users/amasol/amasol/project/ft_printf/srcs/help_flag_2.c
+../includes/ft_printf.h
+/Users/amasol/amasol/project/ft_printf/includes/ft_printf.h
+
 /Users/amasol/amasol/project/ft_printf/srcs/itoa_b_uintmax.c
 ../includes/ft_printf.h
 /Users/amasol/amasol/project/ft_printf/includes/ft_printf.h

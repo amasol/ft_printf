@@ -960,6 +960,87 @@ srcs/help_2.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/help_2.c.s
 .PHONY : srcs/help_2.c.s
 
+srcs/help_3.o: srcs/help_3.c.o
+
+.PHONY : srcs/help_3.o
+
+# target to build an object file
+srcs/help_3.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/help_3.c.o
+.PHONY : srcs/help_3.c.o
+
+srcs/help_3.i: srcs/help_3.c.i
+
+.PHONY : srcs/help_3.i
+
+# target to preprocess a source file
+srcs/help_3.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/help_3.c.i
+.PHONY : srcs/help_3.c.i
+
+srcs/help_3.s: srcs/help_3.c.s
+
+.PHONY : srcs/help_3.s
+
+# target to generate assembly for a file
+srcs/help_3.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/help_3.c.s
+.PHONY : srcs/help_3.c.s
+
+srcs/help_flag.o: srcs/help_flag.c.o
+
+.PHONY : srcs/help_flag.o
+
+# target to build an object file
+srcs/help_flag.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/help_flag.c.o
+.PHONY : srcs/help_flag.c.o
+
+srcs/help_flag.i: srcs/help_flag.c.i
+
+.PHONY : srcs/help_flag.i
+
+# target to preprocess a source file
+srcs/help_flag.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/help_flag.c.i
+.PHONY : srcs/help_flag.c.i
+
+srcs/help_flag.s: srcs/help_flag.c.s
+
+.PHONY : srcs/help_flag.s
+
+# target to generate assembly for a file
+srcs/help_flag.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/help_flag.c.s
+.PHONY : srcs/help_flag.c.s
+
+srcs/help_flag_2.o: srcs/help_flag_2.c.o
+
+.PHONY : srcs/help_flag_2.o
+
+# target to build an object file
+srcs/help_flag_2.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/help_flag_2.c.o
+.PHONY : srcs/help_flag_2.c.o
+
+srcs/help_flag_2.i: srcs/help_flag_2.c.i
+
+.PHONY : srcs/help_flag_2.i
+
+# target to preprocess a source file
+srcs/help_flag_2.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/help_flag_2.c.i
+.PHONY : srcs/help_flag_2.c.i
+
+srcs/help_flag_2.s: srcs/help_flag_2.c.s
+
+.PHONY : srcs/help_flag_2.s
+
+# target to generate assembly for a file
+srcs/help_flag_2.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/help_flag_2.c.s
+.PHONY : srcs/help_flag_2.c.s
+
 srcs/itoa_b_uintmax.o: srcs/itoa_b_uintmax.c.o
 
 .PHONY : srcs/itoa_b_uintmax.o
@@ -1143,6 +1224,15 @@ help:
 	@echo "... srcs/help_2.o"
 	@echo "... srcs/help_2.i"
 	@echo "... srcs/help_2.s"
+	@echo "... srcs/help_3.o"
+	@echo "... srcs/help_3.i"
+	@echo "... srcs/help_3.s"
+	@echo "... srcs/help_flag.o"
+	@echo "... srcs/help_flag.i"
+	@echo "... srcs/help_flag.s"
+	@echo "... srcs/help_flag_2.o"
+	@echo "... srcs/help_flag_2.i"
+	@echo "... srcs/help_flag_2.s"
 	@echo "... srcs/itoa_b_uintmax.o"
 	@echo "... srcs/itoa_b_uintmax.i"
 	@echo "... srcs/itoa_b_uintmax.s"

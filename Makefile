@@ -26,9 +26,10 @@ SRC 		=	ft_printf.c \
 				cast_flag_c.c cast_flag_o.c cast_flag_s.c cast_flag_p.c \
 				cast_flag_x.c ft_strlen_uintmax.c help.c cast_flag_ss.c\
 				ft_strlen.c ft_strsub.c ft_strdel.c ft_atoi.c ft_bzero.c\
-				ft_isdigit.c ft_strnew.c ft_isspace.c help_2.c\
+				ft_isdigit.c ft_strnew.c ft_isspace.c help_2.c help_flag.c\
 				ft_putchar.c ft_putstr.c ft_lenwchar.c ft_putwchar.c \
-				ft_putnbr.c no_spec.c ft_putstr_len.c
+				ft_putnbr.c no_spec.c ft_putstr_len.c help_flag_2.c \
+				help_3.c
 
 all: $(NAME)
 

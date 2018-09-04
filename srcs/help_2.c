@@ -97,3 +97,32 @@ int			cast_flag_x_h5(t_inf *inf, uintmax_t i, t_flag *flag, char *str)
 	cast_flag_x_h6(inf, i, flag, str);
 	return (0);
 }
+
+int			ft_flag_check(char c)
+{
+	if (c == '+' || c == '-' || c == 'Z'
+		|| c == '#' || c == '.'
+		|| c == ' ' || c == 'h'
+		|| c == 'j' || c == 'z'
+		|| c == 'l' || (c == 'l' && c + 1 == 'l')
+		|| (c == 'h' && c + 1 == 'h'))
+		return (1);
+	else
+		return (0);
+}
+
+int			is_zero(char *str)
+{
+	int i;
+
+	i = 0;
+	while (str[i])
+	{
+		if (str[i] >= '1' && str[i] <= '9')
+			return (1);
+		else if (str[i] == '0')
+			return (0);
+		i++;
+	}
+	return (1);
+}
