@@ -1,6 +1,4 @@
 #include "./includes/ft_printf.h"
-#include <locale.h>
-#include <stdio.h>
 //int main(void)
 //{
 
@@ -1445,8 +1443,40 @@
 //	return (0);
 //}
 
+
+# include <locale.h>
 int		 main	(void)
 {
+
+//	setlocale(LC_ALL, "");
+//
+//	wchar_t *c = L"α";
+
+//	ft_printf("%15.4S", L"我是一只猫。");
+//	printf("\n%15.4S", L"我是一只猫。");
+//	ft_printf("text %% lidizzze %%%% abc", 10);;
+//	printf("\ntext %% lidizzze %%%% abc", 10);
+
+//	ft_printf("%%i Lydsssssi %i", 503);
+//	printf("\n%%i Lydsssssi %i", 503);
+
+//	ft_printf("aa%%bb");
+//	printf("\naa%%bb");
+
+
+//	ft_printf(".%%.%%.%%.%%.%%.%%.%%.%%.");
+//	printf("\n.%%.%%.%%.%%.%%.%%.%%.%%.");
+
+//	ft_printf("{%-3d-42}", -42);
+//	printf("\n{%-3d-42}", -42);
+
+	ft_printf("%-5d", 42);
+	printf("\n%-5d", 42);
+
+
+//	ft_printf("%15.4S", L"ÊM-M-^QÊM-^XØ‰∏M-ÂM-^O™ÁM-^L´„M-M-^B");
+//	printf("\n%15.4S", L"ÊM-M-^QÊM-^XØ‰∏M-ÂM-^O™ÁM-^L´„M-M-^B");
+
 
 //	ft_printf("|len=%i", ft_printf("привет%-12p\n", 123456789));
 //	printf("\n|len=%i", printf("привет%-12p\n", 123456789));
@@ -1582,10 +1612,6 @@ int		 main	(void)
 //	ft_printf("{%-30S}", L"ÊM-M-^QÊM-^XØ‰∏M-ÂM-^O™ÁM-^L´„M-M-^B");
 //	printf("\n{%-30S}", L"ÊM-M-^QÊM-^XØ‰∏M-ÂM-^O™ÁM-^L´„M-M-^B");
 //	printf("\n%.u, %.0u", 0, 0);
-//
-//	setlocale(LC_ALL, "");
-//
-//	wchar_t *c = L"α";
 
 //	ft_printf("%4.s", "42");
 //	printf("\n%4.s", "42");
@@ -1607,8 +1633,7 @@ int		 main	(void)
 //	ft_printf("{%-12p}", &str);
 //	printf("\n{%-12p}", &str);
 
-	ft_printf("%5.4S", L"ÊM-M-^QÊM-^XØ‰∏M-ÂM-^O™ÁM-^L´„M-M-^B");
-	printf("\n%5.4S", L"ÊM-M-^QÊM-^XØ‰∏M-ÂM-^O™ÁM-^L´„M-M-^B");
+
 
 //	ft_printf("{%10R}");
 //	printf("\n{%10R}");
@@ -1624,8 +1649,8 @@ int		 main	(void)
 //	ft_printf("|len=[%i]", ft_printf("%10.4S", L"ÊM-M-^QÊM-^XØ‰∏M-ÂM-^O™ÁM-^L´„M-M-^B"));
 //	printf("|len=[%i]", printf("%10.4S", L"ÊM-M-^QÊM-^XØ‰∏M-ÂM-^O™ÁM-^L´„M-M-^B"));
 
-//	ft_printf("|len=[%i]", ft_printf("{%05.Z}", 0));
-//	printf("|len=[%i]", printf("{%05.Z}", 0));
+//	printf("|len=[%i]", ft_printf(".%%.%%.%%.%%.%%.%%.%%.%%."));
+//	printf("|len=[%i]", printf(".%%.%%.%%.%%.%%.%%.%%.%%."));
 
 //		system("leaks a.out");
 //		system("leaks a.out");

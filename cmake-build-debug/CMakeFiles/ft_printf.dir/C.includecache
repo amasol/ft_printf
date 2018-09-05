@@ -15,13 +15,9 @@ stdio.h
 -
 stdlib.h
 -
-stdarg.h
--
 stdint.h
 -
 limits.h
--
-locale.h
 -
 
 /Users/amasol/amasol/project/ft_printf/includes/ft_printf.h
@@ -33,21 +29,15 @@ stdio.h
 -
 stdlib.h
 -
-stdarg.h
--
 stdint.h
 -
 limits.h
--
-locale.h
 -
 
 /Users/amasol/amasol/project/ft_printf/main2.c
 ./includes/ft_printf.h
 /Users/amasol/amasol/project/ft_printf/./includes/ft_printf.h
 locale.h
--
-stdio.h
 -
 
 /Users/amasol/amasol/project/ft_printf/srcs/cast.c

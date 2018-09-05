@@ -19,10 +19,9 @@
 # include <unistd.h>
 # include <stdio.h>
 # include <stdlib.h>
-# include <stdarg.h>
 # include <stdint.h>
 # include <limits.h>
-# include <locale.h>
+//# include <locale.h>
 
 typedef struct	s_flg
 {
@@ -61,13 +60,14 @@ typedef struct	s_inf
 	int			r_h;
 	int			un_j;
 	int			intm_j;
+	int			zz;
 }				t_inf;
 
 int				ft_printf(const char *format, ...);
 void			initialization_flg(t_flg *flg, t_inf *inf);
 void			pars_spec(char *format, va_list lst, t_flg *flg, t_inf *inf);
 void			pars_no_spec(t_flg *flg, t_inf *inf);
-int				pars_hi_z(char *format, t_flg *flg, t_inf *inf, va_list lst);
+int				pars_hi_z(t_flg *flg, t_inf *inf, va_list lst);
 int				ft_qualifier(char s);
 intmax_t		min_v_di(intmax_t i, t_flg *flg, t_inf *inf);
 intmax_t		cast_intmax(intmax_t i, t_flg *flg);
@@ -117,12 +117,6 @@ int				output_after(char *format, va_list lst,
 int				is_zero(char *str);
 int				is_check_specs(char s);
 int				is_check_preci(char *str, t_flg *flg);
-int				cast_flg_di_h5(t_inf *inf, intmax_t i, t_flg *flg);
-int				cast_flg_p_h5(t_inf *inf, t_flg *flg, char *str);
-int				cast_flg_s_h5(t_inf *inf, t_flg *flg, char *str, char *tmp);
-int				cast_flg_ss_h5(t_inf *inf, t_flg *flg, wchar_t *str);
-int				cast_flg_x_h5(t_inf *inf, uintmax_t i,
-					t_flg *flg, char *str);
 /*
 ** -------------------------- Functions libft-------------------------------
 */
@@ -151,5 +145,12 @@ uintmax_t		ft_strlen_uintmax(const char *s);
 */
 intmax_t		ft_cou_int(intmax_t n);
 uintmax_t		ft_cou_uint(uintmax_t n);
-
+int				cast_flg_di_h5(t_inf *inf, intmax_t i, t_flg *flg);
+int				cast_flg_p_h5(t_inf *inf, t_flg *flg, char *str);
+int				cast_flg_s_h5(t_inf *inf, t_flg *flg, char *str, char *tmp);
+int				cast_flg_ss_h5(t_inf *inf, t_flg *flg, wchar_t *str);
+int				cast_flg_x_h5(t_inf *inf, uintmax_t i,
+								 t_flg *flg, char *str);
+int				cast_flg_di_h6(t_inf *inf, intmax_t i, t_flg *flg, char *str);
+int				cast_flg_di_h2(t_inf *inf, intmax_t i, t_flg *flg, char *str);
 #endif

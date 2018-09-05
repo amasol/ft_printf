@@ -16,15 +16,13 @@ int			ft_flg_c(va_list lst, char *format, t_flg *flg, t_inf *inf)
 {
 	unsigned char	str;
 
-	if (*format == 'c' || (*format == 'C' && MB_LEN_MAX == 1))
+	if (*format == 'c' || (*format == 'C' && MB_CUR_MAX == 1))
 	{
 		if (flg->l == 1)
 		{
 			ft_flg_cc(lst, format, flg, inf);
 			return (1);
 		}
-		else if (*format == 'C' && MB_LEN_MAX == 1)
-			str = va_arg(lst, unsigned int);
 		else
 			str = va_arg(lst, unsigned int);
 		inf->un_j += 1;
@@ -37,7 +35,7 @@ int			ft_flg_cc(va_list lst, char *format, t_flg *flg, t_inf *inf)
 {
 	wchar_t c;
 
-	if (*format == 'C' && MB_LEN_MAX == 1)
+	if (*format == 'C' && MB_CUR_MAX == 1)
 	{
 		ft_flg_c(lst, format, flg, inf);
 		return (1);
@@ -56,14 +54,14 @@ int			ft_flg_s(va_list lst, char *format, t_flg *flg, t_inf *inf)
 	char	*str;
 
 	i = 0;
-	if (format[i] == 's' || (*format == 'S' && MB_LEN_MAX == 1))
+	if (format[i] == 's' || (*format == 'S' && MB_CUR_MAX == 1))
 	{
 		if (flg->l == 1)
 		{
 			ft_flg_ss(lst, format, flg, inf);
 			return (1);
 		}
-		else if (*format == 'S' && MB_LEN_MAX == 1)
+		else if (*format == 'S' && MB_CUR_MAX == 1)
 			str = va_arg(lst, char *);
 		else
 			str = va_arg(lst, char *);
